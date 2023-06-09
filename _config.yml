@@ -25,7 +25,8 @@
 
 # Build settings
 #theme: minima
-remote_theme: "mmistakes/minimal-mistakes@8a67ce8e41ec850f2d7c373aa47739b2abfee6f1"
+#remote_theme: "mmistakes/minimal-mistakes@8a67ce8e41ec850f2d7c373aa47739b2abfee6f1"
+remote_theme: "cis-advising-handbook/minimal-mistakes"
 
 plugins:
   - jekyll-include-cache

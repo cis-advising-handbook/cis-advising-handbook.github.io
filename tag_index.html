@@ -3,10 +3,11 @@ layout: single
 title: All articles, grouped by tag
 description: Tags across all articles
 read_time: false
-exclude_from_search: true
+search: false
 ---
 
 <!-- compute list of tags on pages  -->
+<!-- hat tip to https://github.com/peterroelants/peterroelants.github.io/tree/main -->
 {% capture page_tags %}
 {% for pg in site.pages %}
    {% if pg.tags != nil %}
