@@ -29,7 +29,7 @@ jobs:
       run: python3 -c "import json; json.load(open('assets/json/3d_to_4d_course_translation.json'))"
 
     - name: setup ruby
-      uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby-pkgs@v1
 
     - name: check for broken links
       run: bundle exec jekyll build && bundle exec htmlproofer _site/
