@@ -1,0 +1,33 @@
+# CI script for CIS Advising Handbook
+
+name: CI
+
+# triggers this workflow on all pushes
+on: push
+
+# for reference: run CI only on pushes to particular branches
+#on:
+#  push:
+#    branches: [ master ]
+
+# for reference: run CI only on PRs to particular branches
+#on:
+#  pull_request:
+#    branches: [ master ]
+
+jobs:
+  check-site:
+  runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+      
+    - name: check that Technical Electives list is valid
+      run: python3 scripts/no-dupes.py assets/json/37cu_csci_tech_elective_list.json
+        
+    - name: check 3-to-4-digit translation table is valid JSON
+      run: python3 -c "import json; json.load(open('assets/json/3d_to_4d_course_translation.json'))"
+
+    - name: check for broken links
+      uses: ruby/setup-ruby@v1
+      run: bundle exec jekyll build && bundle exec htmlproofer _site/
