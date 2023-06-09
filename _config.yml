@@ -102,8 +102,8 @@ defaults:
         ugc_website: https://www.cis.upenn.edu/~devietti/
 
 # Reading Files
-include:
-  - _pages
+# include:
+#   - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.
