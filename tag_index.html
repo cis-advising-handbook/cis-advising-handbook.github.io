@@ -1,0 +1,33 @@
+---
+layout: single
+title: All articles grouped by tag
+description: Tags across all articles
+---
+
+<!-- compute list of tags on pages  -->
+{% capture page_tags %}
+{% for pg in site.pages %}
+   {% if pg.tags != nil %}
+     {{ pg.tags }}
+   {% endif %}
+{% endfor %}
+{% endcapture %}
+{% assign page_tags_list = page_tags | split:" " %}
+
+{% for tag in page_tags_list %}
+  <div style="margin-top:33px">
+    <h3 id="{{ tag | slugify}}">
+      <span class="fas fa-tag"></span> {{ tag }}
+      <a class="anchor-link" href="#{{ tag | slugify}}"></a>
+    </h3>
+    <ul>
+      {% for pg in site.pages %}
+        {% if pg.tags contains tag %}
+        <li>
+          <a href="{{ pg.url }}">{{ pg.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
