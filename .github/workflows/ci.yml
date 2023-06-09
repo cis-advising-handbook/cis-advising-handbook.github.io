@@ -17,6 +17,7 @@ on: push
 
 jobs:
   check-site:
+    runs-on: ubuntu-latest
     steps:
     - name: checkout
       uses: actions/checkout@v3
@@ -27,6 +28,8 @@ jobs:
     - name: check 3-to-4-digit translation table is valid JSON
       run: python3 -c "import json; json.load(open('assets/json/3d_to_4d_course_translation.json'))"
 
-    - name: check for broken links
+    - name: setup ruby
       uses: ruby/setup-ruby@v1
+
+    - name: check for broken links
       run: bundle exec jekyll build && bundle exec htmlproofer _site/
