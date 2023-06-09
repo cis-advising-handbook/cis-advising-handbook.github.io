@@ -15,7 +15,7 @@ search: false
    {% endif %}
 {% endfor %}
 {% endcapture %}
-{% assign page_tags_list = page_tags | split:" " %}
+{% assign page_tags_list = page_tags | split:" " | uniq | sort %}
 
 {% for tag in page_tags_list %}
   <div style="margin-top:33px">
