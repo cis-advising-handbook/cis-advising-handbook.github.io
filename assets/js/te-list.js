@@ -43,7 +43,7 @@ function makeRows(status, courses) {
     return html
 }
 
-fetch(window.location.origin + "/37cu_csci_tech_elective_list.json")
+fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list.json")
     .then(response => response.text())
     .then(json => {
 

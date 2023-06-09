@@ -1,6 +1,6 @@
 let map_3to4 = undefined
 
-fetch(window.location.origin + "/3d_to_4d_course_translation.json")
+fetch(window.location.origin + "/assets/json/3d_to_4d_course_translation.json")
     .then(response => response.text())
     .then(json => {
         map_3to4 = JSON.parse(json);
