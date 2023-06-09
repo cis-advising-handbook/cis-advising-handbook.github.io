@@ -1,3 +1,13 @@
+<!-- render tags here -->
+<div>
+{% assign my_tags = page.tags | split:" " %}
+{% for tag in my_tags %}
+    <a href="/tag_index/#{{ tag | slugify }}" class="btn btn-outline-dark tag-btn">
+        <span class="fas fa-tag" aria-hidden="true"></span> {{ tag }}
+    </a>
+{% endfor %}
+</div>
+
 {% if false and page.previous or page.next %}
   <nav class="pagination">
     {% if page.previous %}
