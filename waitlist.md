@@ -1,7 +1,7 @@
 ---
 title: Waitlisty
 toc: true
-tags: howto freshman
+tags: howto 1styear
 ---
 
 {: .notice--info}

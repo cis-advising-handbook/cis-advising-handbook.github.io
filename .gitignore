@@ -1,4 +1,6 @@
 _site
+TODO.txt
+.DS_Store
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
