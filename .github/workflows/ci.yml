@@ -17,8 +17,8 @@ on: push
 
 jobs:
   check-site:
-  runs-on: ubuntu-latest
-  steps:
+    runs-on: ubuntu-latest
+    steps:
     - name: checkout
       uses: actions/checkout@v3
       
