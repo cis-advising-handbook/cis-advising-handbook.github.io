@@ -46,7 +46,7 @@ The first step is **submitting a PR via Path** for a waitlist course (see our in
 A PR is always created for a specific course and section. If you created a PR for a recitation but actually need to get into the lecture (or the undergrad version of a cross-listed course but you want the grad version instead), you will have to create a new PR. PRs *cannot* be edited after the fact.
 
 {: .notice--info}
-You can, somewhat unfortunately, submit a PR for _any_ course, even ones that you can register for directly. Don't submit a PR [unless the course requires it](#which-classes-use-the-waitlist) - just go ahead and advance-register or regular-register!
+You can, somewhat unfortunately, submit a PR for _any_ course, even ones that you can register for directly. Don't submit a PR [unless the course requires it](#which-classes-use-waitlisty) - just go ahead and advance-register or regular-register!
 
 Find the course in Path and click *Add to Cart*. Then, click *Request permission for this course*:
 
