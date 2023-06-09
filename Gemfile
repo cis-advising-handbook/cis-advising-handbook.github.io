@@ -20,6 +20,8 @@ gem "github-pages", "~> 228", group: :jekyll_plugins
 # for minimal-mistakes theme
 gem "jekyll-include-cache", group: :jekyll_plugins
 
+gem 'html-proofer'
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
 end
