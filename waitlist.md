@@ -5,7 +5,7 @@ tags: howto 1styear
 ---
 
 {: .notice--info}
-Each department has their own way of handling Permission Requests; this article is just for CIS/CIT/NETS courses.
+Each department has their own way of handling Path@Penn Permission Requests. This article is just for CIS/CIT/NETS courses.
 
 We would love to offer our classes to any Penn student who is interested! However, demand is so high for some of the CIS/CIT/NETS classes that we cannot let everyone in and still do a good job of teaching. Because of this, the number of students who can enroll during Advance Registration is typically capped, and we maintain waitlists for students who would like to take a given class but did not get in.
 
@@ -17,21 +17,25 @@ Being on the waitlist means that there is **no guarantee** that you will be able
 
 You should always use Advance Registration to get into high-demand courses when possible. If you get in during Advance Registration then you don't have to worry about the waitlist at all!
 
-## Which classes use Waitlisty
+## Which classes require permission
 
-If you cannot register directly for a course on Path (or add it to your Primary Cart in Advanced Registration), and it's a CIS, CIT or NETS course, the course uses the Waitlisty system to manage Permission Requests.
-
-There are a variety of specific messages you may see on Path. Sometimes **all students** have to go through Waitlisty:
+Path@Penn lists the registration restrictions for each Penn course, in the *Registration Restrictions* and *Registration Notes* sections. For example, the course below requires **all students** (regardless of major, year, etc) to have an approved PR before they can register:
 
 ![Path permit-required course]({% link /assets/images/permit-required-path.png %})
 
-Sometimes students with certain majors can register directly, but other majors need to use Waitlisty:
+Sometimes students with certain majors can register directly, but other majors need a PR:
 
 ![Path grad-only course]({% link /assets/images/enrollment-restricted-grad-course-path.png %})
 
-This message above lists all of the graduate programs in CIS (here, _Computer & Information Science_ refers specifically to our [CIS Master's degree](https://www.cis.upenn.edu/graduate/program-offerings/mse-in-cis/)), so CIS grad students can register directly but everyone else (e.g., CSCI undergrads) has to use Waitlisty.
+This message above lists all of the graduate programs in CIS (here, _Computer & Information Science_ refers specifically to our [CIS Master's degree](https://www.cis.upenn.edu/graduate/program-offerings/mse-in-cis/)), so CIS grad students can register directly but everyone else (e.g., CSCI undergrads) needs a PR.
 
-The _Special Permission_ restriction takes priority over major restrictions, so if you see both then it means everyone has to use Waitlisty. Path always has the definitive information on how to register for a course.
+Finally, if you see the text "Enrollment in this course is restricted. Request Permission to register", as below, then it means that again **all students** need a PR -- the PR requirement overrides the ability for undergrad CIS students to register directly:
+
+![Path pr-ugrad course]({% link /assets/images/enrollment-restricted-pr-ugrad-course-path.png %})
+
+The _Special Permission_ restriction mentioned above similarly takes priority over other restrictions, so if you see both then it also means everyone needs a PR.
+
+Waitlisty is the mechanism we use in CIS for approving PRs in a customized and scalable way.
 
 ## Using Waitlisty
 
@@ -46,7 +50,7 @@ The first step is **submitting a PR via Path** for a waitlist course (see our in
 A PR is always created for a specific course and section. If you created a PR for a recitation but actually need to get into the lecture (or the undergrad version of a cross-listed course but you want the grad version instead), you will have to create a new PR. PRs *cannot* be edited after the fact.
 
 {: .notice--info}
-You can, somewhat unfortunately, submit a PR for _any_ course, even ones that you can register for directly. Don't submit a PR [unless the course requires it](#which-classes-use-waitlisty) - just go ahead and advance-register or regular-register!
+You can, somewhat unfortunately, submit a PR for _any_ course, even ones that you can register for directly. Don't submit a PR [unless the course requires it](#which-classes-require-permission) - just go ahead and advance-register or regular-register!
 
 Find the course in Path and click *Add to Cart*. Then, click *Request permission for this course*:
 

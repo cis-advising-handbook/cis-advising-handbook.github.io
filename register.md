@@ -40,7 +40,7 @@ Otherwise, even if you are in the process of applying for a graduate degree, you
 
 As an undergraduate student, you **<font color="green">can</font>** directly register via Path@Penn for undergraduate courses that don't use a waitlist.
 
-Undergraduate students **always** require permission to register for a graduate class. To register for a graduate class as an undergraduate, join [the waitlist]({% link waitlist.md %}#which-classes-use-waitlisty) for the class.
+Undergraduate students **always** require permission to register for a graduate class. To register for a graduate class as an undergraduate, join [the waitlist]({% link waitlist.md %}#which-classes-require-permission) for the class.
 
 ### Accelerated Master's students
 
