@@ -25,7 +25,7 @@
 
 # Build settings
 #theme: minima
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: "mmistakes/minimal-mistakes@8a67ce8e41ec850f2d7c373aa47739b2abfee6f1"
 
 plugins:
   - jekyll-include-cache
@@ -41,7 +41,9 @@ atom_feed:
   hide                   : true # true, false (default)
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search_provider          : "lunr" # lunr (default), algolia, google
+lunr:
+  search_within_pages: true
 
 author:
   name             : "CIS Advising Staff"
