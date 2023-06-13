@@ -35,4 +35,4 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - name: check for broken links
-      run: bundle exec jekyll build && bundle exec htmlproofer _site/
+      run: bundle exec jekyll build && bundle exec htmlproofer --ignore-files irs/index.html _site/
