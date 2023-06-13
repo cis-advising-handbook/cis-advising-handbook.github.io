@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Institutional Requirements System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+    <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="irs.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" type="application/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" type="application/javascript"></script>
+    <script>
+        var exports = {};
+        $(function() {
+            // setup degree radios
+            $('[name="ugrad_degree"]').attr("disabled", true)
+            $('[name="masters_degree"]').attr("disabled", true)
+            $('#auto_degree').on('change', function() {
+                // console.log("you clicked the auto checkbox " + this.checked)
+                if (this.checked) {
+                    $('[name="ugrad_degree"]').attr("disabled", true)
+                    $('[name="masters_degree"]').attr("disabled", true)
+                } else {
+                    $('[name="ugrad_degree"]').attr("disabled", false)
+                    $('[name="masters_degree"]').attr("disabled", false)
+                }
+            })
+
+            // setup copy/paste symbols
+            if (navigator.userAgent.toLowerCase().includes("mac")) {
+                $(".keys_select_all").text("(⌘-A)")
+                $(".keys_copy").text("(⌘-C)")
+            } else {
+                $(".keys_select_all").text("(Ctrl-A)")
+                $(".keys_copy").text("(Ctrl-C)")
+            }
+
+            // run test input if requested
+            const searchParams = new URLSearchParams(window.location.search)
+            if (searchParams.has("testdr")) {
+                runTestInputDWDiagnosticsReport()
+            } else if (searchParams.has("testch")) {
+                runTestInputDWClassHistory()
+            }
+        })
+    </script>
+    <script src="degree_requirements.js" type="application/javascript"></script>
+</head>
+
+<body>
+<!-- Thanks to https://github.blog/2008-12-19-github-ribbons/ -->
+<a href="https://github.com/upenn/irs">
+    <img loading="lazy" width="149" height="149"
+         src="forkme_right_green_007200.png"
+         class="forkme"
+         alt="Fork me on GitHub" data-recalc-dims="1"></a>
+
+<div class="container" style="max-width: 85%">
+    <h4 class="pt-5 pb-3">Institutional Requirements System <span class="badge bg-secondary">v2.0</span></h4>
+    <p>
+        This website provides various degree worksheets, to answer questions like "what courses do I have left to graduate?"
+    </p>
+    <p>
+        Everything runs in the browser; no information is stored locally or remotely. <b>Once you leave this page, your
+        information is lost.</b> You can take a screenshot for your records (printing/saving as a PDF produces wonky output atm).
+    </p>
+    <p>
+        This code is open source!
+        Please report issues (and submit pull requests!) on <a href="https://github.com/upenn/irs/issues">Github</a>.
+        The code is written in TypeScript.
+    </p>
+    <div class="alert alert-warning" role="alert">This website is an <b>unofficial</b> degree audit tool, put together on
+        a best-effort basis by the <a href="http://cis.upenn.edu/undergraduate/advising/">CIS Advising team</a>.
+        There are bugs in this tool!
+        Resources like the <a href="https://ugrad.seas.upenn.edu/student-handbook/">SEAS Undergraduate Handbook</a>
+        and the <a href="https://catalog.upenn.edu/undergraduate/engineering-applied-science/majors/">University Catalog degree requirements</a>
+        are the ultimate arbiters of degree requirements.
+    </div>
+
+    <div class="row">
+        <div class="col-10">
+            <div class="accordion my-3" id="accordionExampleStudentHowto">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwoStudentHowto">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoStudentHowto" aria-expanded="false" aria-controls="collapseTwoStudentHowto">
+                            Student usage instructions
+                        </button>
+                    </h2>
+                    <div id="collapseTwoStudentHowto" class="accordion-collapse collapse" aria-labelledby="headingTwoStudentHowto" data-bs-parent="#accordionExampleStudentHowto">
+                        <div class="accordion-body">
+                            This page uses information from DegreeWorks.
+                            <ol>
+                                <li>You must be on-campus or on the <a href="https://www.isc.upenn.edu/how-to/university-vpn-getting-started-guide">Penn VPN</a> to access DegreeWorks.</li>
+                                <li><a href="https://degreeworks-prod-j.isc-seo.upenn.edu:9904/worksheets">Visit DegreeWorks</a></li>
+                                <li>
+                                    Click the three-dot menu and select <b>Class History</b> to pull up your list of courses<br/>
+                                    <img width="600" src="degreeworks-student.png">
+                                </li>
+                                <li>Select all <span class="keys_select_all"></span> then copy <span class="keys_copy"></span> the contents into the textbox below.</li>
+                                <li>If you are an Accelerated Masters student, you should copy+paste your Master's Class History
+                                    <b>as well as</b> your undergrad Class History (the order doesn't matter).
+                                    Use the Degree drop-down to switch between degrees.
+                                    <ul>
+                                        <li>Currently (as of September 2022), graduate courses taken in Fall 2022 appear only on
+                                            the Master's transcript/worksheet. To get the full list of courses you've taken, copy+paste
+                                            <b>both</b> Class Histories.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Click the blue <b>apply courses to requirements</b> button</li>
+                                <li>Note that courses can be dragged and dropped across degree requirements.</li>
+                            </ol>
+                            You can plan future courses by adding them at the bottom of the textbox. The format is simple:
+                            put each course <code>subject</code>, <code>number</code>, <code>title</code>, <code>grade</code> and <code>CUs</code> all on one line, like:
+                            <pre>PHYS 0150 Principles I A 1.5</pre>
+                            3-digit course numbers will be translated to 4-digit ones. If you use <code>NA</code> as the grade, the course will appear darker like other in-progress courses.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion my-3" id="accordionExampleFacultyHowto">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwoFacultyHowto">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoFacultyHowto" aria-expanded="false" aria-controls="collapseTwoFacultyHowto">
+                            Faculty usage instructions
+                        </button>
+                    </h2>
+                    <div id="collapseTwoFacultyHowto" class="accordion-collapse collapse" aria-labelledby="headingTwoFacultyHowto" data-bs-parent="#accordionExampleFacultyHowto">
+                        <div class="accordion-body">
+                            This page uses information from DegreeWorks. The Diagnostics Report page used below contains
+                            <i>course attribute</i> information for each course, which allows for a more accurate understanding
+                            of what requirements a course can satisfy. Students don't have access to the Diagnostics Report
+                            so they use the relatively impoverished Class History page instead, which can result in some
+                            courses not counting where they ought to.
+                            <ol>
+                                <li>You must be on-campus or on the <a href="https://www.isc.upenn.edu/how-to/university-vpn-getting-started-guide">Penn VPN</a> to access DegreeWorks.</li>
+                                <li><a href="https://degreeworks-prod-j.isc-seo.upenn.edu:9904/worksheets">Visit DegreeWorks</a> and lookup a student by name or PennID</li>
+                                <li>
+                                    Click the <b>Process</b> button to ensure the degree audit uses the most-recent courses and
+                                    degree requirements. Then, click the <b>Diagnostics</b> link to open the <b>Diagnostics Report</b>
+                                    page.<br/>
+                                    <img width="600" src="degreeworks-faculty.png">
+                                </li>
+                                <li>On the <b>Diagnostics Report</b> page, select all <span class="keys_select_all"></span> then copy <span class="keys_copy"></span> the contents
+                                    into the textbox below.</li>
+                                <li>For Accelerated Masters students, you should copy+paste their Master's Diagnostics Report
+                                    <b>as well as</b> their undergrad Diagnostics Report (the order doesn't matter).
+                                    <ul>
+                                        <li>Currently (as of September 2022), graduate courses taken in Fall 2022 appear only on
+                                            the Master's degree worksheet, even though the student may intend to use them toward
+                                            undergrad degree requirements.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Click the blue <b>apply courses to requirements</b> button</li>
+                                <li>Note that courses can be dragged and dropped across degree requirements.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div>
+<textarea id="coursesTaken" name="coursesTaken" rows="10" cols="80" placeholder="paste DegreeWorks Class History or Diagnostics Report"></textarea>
+            </div>
+                <button type="button" class="btn btn-secondary my-2" onclick="$('#coursesTaken').val('')">clear</button>
+            <div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="auto_degree" name="auto_degrees" value="auto" checked>
+                    <label class="form-check-label" for="auto_degree">infer degree(s) automatically</label>
+                </div>
+                <div>
+                    <div>
+                        <b class="py-2">Undergrad degree:</b>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="no_ugrad" name="ugrad_degree" value="none" checked>
+                            <label class="form-check-label" for="no_ugrad">None</label>
+                        </div>
+                    </div>
+                    <div class="px-4">
+                        <b>40 CU:</b>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="csci_40" name="ugrad_degree" value="40cu CSCI">
+                            <label class="form-check-label" for="csci_40">CSCI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="ascs_40" name="ugrad_degree" value="40cu ASCS">
+                            <label class="form-check-label" for="ascs_40">ASCS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="cmpe_40" name="ugrad_degree" value="40cu CMPE">
+                            <label class="form-check-label" for="cmpe_40">CMPE</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="nets_40" name="ugrad_degree" value="40cu NETS">
+                            <label class="form-check-label" for="nets_40">NETS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="dmd_40" name="ugrad_degree" value="40cu DMD">
+                            <label class="form-check-label" for="dmd_40">DMD</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="ascc_40" name="ugrad_degree" value="40cu ASCC">
+                            <label class="form-check-label" for="ascc_40">ASCC</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="ee_40" name="ugrad_degree" value="40cu EE">
+                            <label class="form-check-label" for="ee_40">EE</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="sse_40" name="ugrad_degree" value="40cu SSE">
+                            <label class="form-check-label" for="sse_40">SSE</label>
+                        </div>
+                    </div>
+                    <div class="px-4">
+                        <b>37 CU:</b>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="csci_37" name="ugrad_degree" value="37cu CSCI">
+                            <label class="form-check-label" for="csci_37">CSCI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="ascs_37" name="ugrad_degree" value="37cu ASCS">
+                            <label class="form-check-label" for="ascs_37">ASCS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="cmpe_37" name="ugrad_degree" value="37cu CMPE">
+                            <label class="form-check-label" for="cmpe_37">CMPE</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="nets_37" name="ugrad_degree" value="37cu NETS">
+                            <label class="form-check-label" for="nets_37">NETS</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="dmd_37" name="ugrad_degree" value="37cu DMD">
+                            <label class="form-check-label" for="dmd_37">DMD</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="cis_minor" name="ugrad_degree" value="CIS minor">
+                            <label class="form-check-label" for="cis_minor">CIS minor</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="dats_minor" name="ugrad_degree" value="DATS minor">
+                            <label class="form-check-label" for="dats_minor">DATS minor</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="be_37" name="ugrad_degree" value="37cu BE">
+                            <label class="form-check-label" for="be_37">BE</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <b>Masters degree:</b>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="no_masters" name="masters_degree" value="none" checked>
+                        <label class="form-check-label" for="no_masters">None</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="cismse" name="masters_degree" value="CIS-MSE">
+                        <label class="form-check-label" for="cismse">CIS MSE</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="dats" name="masters_degree" value="DATS">
+                        <label class="form-check-label" for="dats">DATS</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="robo" name="masters_degree" value="ROBO">
+                        <label class="form-check-label" for="robo">ROBO</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="cggt" name="masters_degree" value="CGGT">
+                        <label class="form-check-label" for="cggt">CGGT</label>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary my-2" onclick="webMain()">apply courses to requirements</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-start py-2">
+        <div id="alerts" class="clear-on-init"></div>
+        <div id="gpa" class="clear-on-init"></div>
+        <div id="studentInfo" class="clear-on-init"></div>
+        <div id="remainingCUs" class="clear-on-init"></div>
+        <div id="doubleCounts" class="clear-on-init"></div>
+    </div>
+    <div class="row align-items-start py-2">
+        <div class="col-xl-12" id="columns1And2">
+            <div class="row">
+                <div class="requirementsList" id="col1Header"></div>
+                <div class="col-xl">
+                    <div class="requirementsList" id="col1Reqs"></div>
+                </div>
+                <div class="col-xl">
+                    <div class="requirementsList" id="col2Reqs"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="requirementsList" id="col3Header"></div>
+            <div class="requirementsList" id="col3Reqs"></div>
+        </div>
+    </div>
+    <div id="usedCoursesList" class="clear-on-init"></div>
+    <div class="row">
+        <div class="col">
+            <div>
+                <div id="unusedCoursesHeader" class="clear-on-init"></div>
+                <div id="unusedCoursesList" class="clear-on-init"></div>
+            </div>
+            <div id="messages" class="clear-on-init"></div>
+            <div id="allCourses" class="clear-on-init"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+.course {
+    z-index: 10;
+    width: 100px;
+    margin: 0;
+    padding: 5px;
+    /*border: 2px solid #41464b;*/
+    border-radius: 5px;
+    color: #41464b;
+    white-space: nowrap;
+}
+.courseSnapTarget {
+    padding: 2px
+}
+.courseCompleted {
+    background-color: #e2e3e5;
+}
+.courseInProgress {
+    background-color: #4d5258;
+    color: white;
+}
+.courseDoubleCountCompleted {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+.courseDoubleCountInProgress {
+    background-color: #178650;
+    color: white;
+}
+.courseDoubleCountShadow {
+    background-color: white;
+    color: #178650;
+    border: 3px solid #178650;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.requirement {
+    padding: 10px 210px 10px 10px;
+    border-top: 1px solid darkgray;
+}
+.requirementSatisfied {
+    color: #41464b;
+    background-color: white;
+}
+.requirementPartiallySatisfied {
+    color: #664d03;
+    background-color: #fff3cd;
+}
+.requirementUnsatisfied {
+    color: #842029;
+    background-color: #f8d7da;
+}
+.requirementCouldBeSatisfied {
+    color: #084298;
+    background-color: #cfe2ff;
+}
+
+
+/* https://www.w3schools.com/css/css_tooltip.asp */
+
+/* Tooltip container */
+.myTooltip {
+   /*position: relative;*/
+   /*display: inline-block;*/
+   /*border-bottom: 1px dotted black; !* If you want dots under the hoverable text *!*/
+}
+
+/* Skip the border-bottom dots when a tooltip is in a link; the link is already underlined */
+a .tooltip {
+    border-bottom: none;
+    text-decoration: underline;
+}
+
+/* Tooltip text */
+.myTooltip .myTooltipText {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 6px;
+    /*font-size: small;*/
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1000;
+
+    /*width: 20px;*/
+    bottom: 50%;
+    /*left: -50px;*/
+    /*left: 100%;*/
+    /*margin-left: 20px; !* Use half of the width to center the tooltip *!*/
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.myTooltip:hover .myTooltipText {
+    visibility: visible;
+}
+
+.forkme {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
