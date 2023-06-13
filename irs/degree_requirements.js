@@ -1991,7 +1991,7 @@ class DegreeWorksClassHistoryParser extends CourseParser {
         else {
             result.degrees = this.parseDegrees(text);
         }
-        const response = await fetch(window.location.origin + "/3d_to_4d_course_translation.json");
+        const response = await fetch(window.location.origin + "/assets/json/3d_to_4d_course_translation.json");
         const _324 = await response.json();
         const courseText = text.substring(text.indexOf("Courses Completed"));
         const courseLines = courseText.split(/\r?\n/);
@@ -2634,7 +2634,7 @@ async function webMain() {
   </div>
 </div>`);
     // download the latest Technical Elective list
-    const response = await fetch(window.location.origin + "/37cu_csci_tech_elective_list.json");
+    const response = await fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list.json");
     const telist = await response.json();
     const result = run(telist, degrees, coursesTaken);
     setRemainingCUs(result.cusRemaining);
@@ -3027,7 +3027,7 @@ async function runOneWorksheet(worksheetText, analysisOutput, majorCsvRecords) {
                 fs.appendFileSync(badGradeFile, `${pennid}, "${studentName}", ${studentEmail}, ${degrees}, ${ct.code()}, ${ct.term}, ${ct.letterGrade}\n`);
             }
         }
-        const response = await fetch("https://advising.cis.upenn.edu/37cu_csci_tech_elective_list.json");
+        const response = await fetch("https://advising.cis.upenn.edu/assets/json/37cu_csci_tech_elective_list.json");
         const telist = await response.json();
         const result = run(telist, degrees, coursesTaken);
         const unsat = result.requirementOutcomes
