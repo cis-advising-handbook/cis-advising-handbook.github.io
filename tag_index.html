@@ -34,3 +34,20 @@ search: false
     </ul>
   </div>
 {% endfor %}
+  <div style="margin-top:33px">
+    <h3 id="untagged">
+      <span class="fas fa-tag"></span> untagged
+      <a class="anchor-link" href="#untagged"></a>
+    </h3>
+    <ul>
+      {% for pg in site.pages %}
+        {% if pg.tags == nil %}
+        {% unless pg.url contains "/assets/" or pg.url contains ".html" or pg.url == "/" or pg.url == "/tag_index/" %}
+        <li>
+          <a href="{{ pg.url }}">{{ pg.title }}</a>
+        </li>
+        {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
