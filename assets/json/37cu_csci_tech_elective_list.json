@@ -2398,4 +2398,10 @@
     "title": "Political Polling",
     "status": "no"
     }
+    ,{
+    "course4d": "ENM 3440",
+    "course3d": "ENM 344",
+    "title": "Answering Questions with Data, for Everyone",
+    "status": "yes"
+    }
 ]
