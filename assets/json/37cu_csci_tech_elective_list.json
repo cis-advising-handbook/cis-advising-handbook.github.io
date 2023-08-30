@@ -2428,5 +2428,10 @@
     "title": "Introduction to Networks and Security",
     "status": "yes"
    }
-   
+   ,{
+    "course4d": "EESC 4630",
+    "course3d": null,
+    "title": "Hydrology",
+    "status": "yes"
+   }
 ]
