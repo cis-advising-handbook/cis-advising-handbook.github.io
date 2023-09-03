@@ -13,7 +13,7 @@ textarea.addEventListener('input', function() {
     const origText = textarea.value;
     let resultText = origText;
     
-    const _3dCourse = /(?<subject>[a-zA-Z]{2,4})\s*(?<number>\d{3})(?<after>[^\d])/g;
+    const _3dCourse = /(?<subject>[a-zA-Z]{2,4})\s*(?<number>\d{3})(?<after>[^\d]|$)/g
     const matches = origText.matchAll(_3dCourse);
 
     for (const match of matches) {
