@@ -2434,4 +2434,10 @@
     "title": "Hydrology",
     "status": "yes"
    }
+   ,{
+    "course4d": "FNCE 3990",
+    "course3d": null,
+    "title": "Supervised Study in Finance",
+    "status": "ask"
+   }
 ]
