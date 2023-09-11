@@ -2440,4 +2440,28 @@
     "title": "Supervised Study in Finance",
     "status": "ask"
    }
+   ,{
+    "course4d": "MEAM 2470",
+    "course3d": null,
+    "title": "Mechanical Engineering Laboratory I",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "MEAM 2480",
+    "course3d": null,
+    "title": "Mechanical Engineering Lab I",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "HCMG 8570",
+    "course3d": null,
+    "title": "Healthcare Data and Analytics",
+    "status": "no"
+   }
+   ,{
+    "course4d": "FNCE 1008",
+    "course3d": null,
+    "title": "Corporate Finance (Honors)",
+    "status": "no"
+   }
 ]
