@@ -2470,4 +2470,10 @@
     "title": "Forensic Analysis",
     "status": "no"
    }
+   ,{
+    "course4d": "ESE 6800",
+    "course3d": null,
+    "title": "Special Topics in Electrical and Systems Engineering",
+    "status": "ask"
+   }
 ]
