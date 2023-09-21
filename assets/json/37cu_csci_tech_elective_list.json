@@ -2476,4 +2476,10 @@
     "title": "Special Topics in Electrical and Systems Engineering",
     "status": "ask"
    }
+    ,{
+    "course4d": "ESE 2000",
+    "course3d": null,
+    "title": "Artificial Intelligence Lab: Data, Systems, and Decisions",
+    "status": "yes"
+   }
 ]
