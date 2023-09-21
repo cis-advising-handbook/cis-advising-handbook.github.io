@@ -2398,4 +2398,82 @@
     "title": "Political Polling",
     "status": "no"
     }
+    ,{
+    "course4d": "ENM 3440",
+    "course3d": "ENM 344",
+    "title": "Answering Questions with Data, for Everyone",
+    "status": "yes"
+    }
+   ,{
+    "course4d": "FNCE 4010",
+    "course3d": null,
+    "title": "Advanced Topics in Private Equity",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "FNCE 2090",
+    "course3d": null,
+    "title": "Real Estate Investment: Analysis and Financing",
+    "status": "yes"
+   }
+  ,{
+    "course4d": "ECON 2300",
+    "course3d": null,
+    "title": "Statistics for Economists",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "CIS 3310",
+    "course3d": null,
+    "title": "Introduction to Networks and Security",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "EESC 4630",
+    "course3d": null,
+    "title": "Hydrology",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "FNCE 3990",
+    "course3d": null,
+    "title": "Supervised Study in Finance",
+    "status": "ask"
+   }
+   ,{
+    "course4d": "MEAM 2470",
+    "course3d": null,
+    "title": "Mechanical Engineering Laboratory I",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "MEAM 2480",
+    "course3d": null,
+    "title": "Mechanical Engineering Lab I",
+    "status": "yes"
+   }
+   ,{
+    "course4d": "HCMG 8570",
+    "course3d": null,
+    "title": "Healthcare Data and Analytics",
+    "status": "no"
+   }
+   ,{
+    "course4d": "FNCE 1008",
+    "course3d": null,
+    "title": "Corporate Finance (Honors)",
+    "status": "no"
+   }
+   ,{
+    "course4d": "CRIM 2040",
+    "course3d": null,
+    "title": "Forensic Analysis",
+    "status": "no"
+   }
+   ,{
+    "course4d": "ESE 6800",
+    "course3d": null,
+    "title": "Special Topics in Electrical and Systems Engineering",
+    "status": "ask"
+   }
 ]
