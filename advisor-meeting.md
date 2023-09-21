@@ -33,7 +33,6 @@ Now, you are ready to schedule the meeting!
 Many faculty members use a web-based appointment booking service. This makes it very easy to find a slot that works for both you and your advisor. Please check the table below; if your advisor is listed, just click on the link next to their name:
 
   * **Chris Callison-Burch:** [https://ccb.youcanbook.me](https://ccb.youcanbook.me)
-  * **Susan Davidson:** [https://susandavidson.youcanbook.me/](https://susandavidson.youcanbook.me/)
   * **Joe Devietti:** [Google Calendar](https://calendar.google.com/calendar/u/0/appointments/AcZssZ2yLBSqwCzVUkaGpsW2UUl7weEjlId6XWIczag=?gv=true)
   * **Jacob Gardner** [https://jacobrgardner.youcanbook.me](https://jacobrgardner.youcanbook.me)
   * **Andreas Haeberlen:** [https://ahae.youcanbook.me/](https://ahae.youcanbook.me/)
