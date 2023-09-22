@@ -2056,7 +2056,8 @@ class CourseParser {
                 const lab = c.split(0.5, c.courseNumber + "lab");
                 halfCuCourses.push(lab);
             }
-            if (c.getCUs() > 0 && CoursesWith15CUsToSplit.includes(c.code())) {
+            let ese3500NotCmpe = c.code() == "ESE 3500" && degrees.undergrad != "37cu CMPE";
+            if (c.getCUs() > 0 && (CoursesWith15CUsToSplit.includes(c.code()) || ese3500NotCmpe)) {
                 c.setCUs(c.getCUs() - 0.5);
                 const half = c.split(0.5, c.courseNumber + "half");
                 halfCuCourses.push(half);
@@ -3164,8 +3165,11 @@ async function runOneWorksheet(worksheetText, analysisOutput, majorCsvRecords) {
             return;
         }
         let foundRecord = majorCsvRecords.find((c) => c['Penn ID'] == pennid);
-        if (foundRecord == undefined ||
-            foundRecord['On Leave'] != '') {
+        if (foundRecord == undefined) {
+            fs.appendFileSync(`${AnalysisOutputDir}skipped.txt`, `${pennid}\n`);
+            return;
+        }
+        if (foundRecord['On Leave'] != '') {
             return;
         }
         const egt = foundRecord['Degree Term'];
@@ -3185,6 +3189,22 @@ async function runOneWorksheet(worksheetText, analysisOutput, majorCsvRecords) {
         const response = await fetch("https://advising.cis.upenn.edu/assets/json/37cu_csci_tech_elective_list.json");
         const telist = await response.json();
         const result = run(telist, degrees, coursesTaken);
+        // check if student needs CIS 3800
+        if (degrees.undergrad == "37cu CSCI" ||
+            degrees.undergrad == "37cu CMPE") {
+            if (!coursesTaken.some(c => ["CIS 3800", "CIS 5480", "CIS 380", "CIS 548"].includes(c.code()))) {
+                fs.appendFileSync(`${AnalysisOutputDir}needs-CIS3800.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`);
+            }
+        }
+        // check if student needs CIS 3200
+        if (degrees.undergrad == "37cu CSCI" ||
+            degrees.undergrad == "37cu ASCS" ||
+            degrees.undergrad == "37cu DMD" ||
+            degrees.undergrad == "37cu NETS") {
+            if (!coursesTaken.some(c => ["CIS 3200", "CIS 5020", "CIS 320", "CIS 502"].includes(c.code()))) {
+                fs.appendFileSync(`${AnalysisOutputDir}needs-CIS3200.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`);
+            }
+        }
         const unsat = result.requirementOutcomes
             .filter(ro => ro.applyResult != RequirementApplyResult.Satisfied &&
             !(ro.degreeReq instanceof RequirementLabel) &&
@@ -3236,7 +3256,7 @@ ${unconsumed}
         fs.appendFileSync(cusRemainingFile, `${pennid},${result.cusRemaining}\n`);
     }
     catch (err) {
-        console.error(err + " when processing " + process.argv[2]);
+        console.error(err + " when processing " + worksheetText);
         // @ts-ignore
         console.error(err.stack);
     }
