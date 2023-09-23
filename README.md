@@ -19,4 +19,3 @@ If you want to link to another article on this site, in addition to the typical 
 Using this link syntax 1) prevents broken links and 2) provides more flexibility to reorganize the site without breaking said links.
 
 If you want to add a new article, add a new `.md` file in the root directory. You can look at existing articles for examples of how to format the code so that Jekyll sees the right title, tags, etc.
-hello
