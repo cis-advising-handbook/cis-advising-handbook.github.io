@@ -1853,12 +1853,12 @@
     "title": "Computer Simulation Models",
     "status": "no"
   },
-    {
+  {
     "course4d": "PHIL 4720",
     "course3d": null,
     "title": "Topics in Mathematical Logic",
-    "status": "yes"       
-    },
+    "status": "yes"
+  },
   {
     "course4d": "PHIL 4721",
     "course3d": "PHIL 410",
@@ -2158,328 +2158,334 @@
     "course3d": "PHYS 260",
     "title": "Introduction to Computational Physics",
     "status": "yes"
-  }
-    ,{
-        "course4d": "ESE 3600",
-        "title": "Machine Learning on Embedded Edge Devices",
-        "status": "yes"
-    }
-    ,{
-        "course4d": "ESE 5300",
-        "course3d": "ESE 530",
-        "title": "Elements of Probability Theory",
-        "status": "yes"
-    }
-    ,{
-        "course4d": "STAT 9270",
-        "course3d": "STAT 927",
-        "title": "Bayesian Statistical Theory and Methods",
-        "status": "yes"
-    }
-    ,{
-        "course4d": "OIDD 4810",
-        "course3d": "OIDD 481",
-        "title": "Convex Optimization for Statistics and Data Science",
-        "status": "yes"
-    }
-    ,{
+  },
+  {
+    "course4d": "ESE 3600",
+    "title": "Machine Learning on Embedded Edge Devices",
+    "status": "yes"
+  },
+  {
+    "course4d": "ESE 5300",
+    "course3d": "ESE 530",
+    "title": "Elements of Probability Theory",
+    "status": "yes"
+  },
+  {
+    "course4d": "STAT 9270",
+    "course3d": "STAT 927",
+    "title": "Bayesian Statistical Theory and Methods",
+    "status": "yes"
+  },
+  {
+    "course4d": "OIDD 4810",
+    "course3d": "OIDD 481",
+    "title": "Convex Optimization for Statistics and Data Science",
+    "status": "yes"
+  },
+  {
     "course4d": "ACCT 2700",
     "course3d": "ACCT 270",
     "title": "Forensic Analytics",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "CIS 5490",
     "course3d": "CIS 549",
     "title": "Wireless Communications for Mobile Networks and Internet of Things",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "CIS 5220",
     "course3d": "CIS 522",
     "title": "Deep Learning for Data Science",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "OIDD 5250",
     "course3d": "OIDD 525",
     "title": "Thinking with Models: Business Analytics for Energy and Sustainability",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "CIS 7000",
     "course3d": "CIS 700",
     "title": "Special Topics",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "OIDD 2630",
     "course3d": "OIDD 263",
     "title": "Environmental & Energy Economics and Policy",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "OIDD 7630",
     "course3d": "OIDD 763",
     "title": "Energy Markets & Policy",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "CIS 5590",
     "course3d": "CIS 559",
     "title": "Programming and Problem Solving",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "MUSC 1270",
     "course3d": null,
     "title": "Introduction to Electronic Musicmaking",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "MEAM 5200",
     "course3d": "MEAM 520",
     "title": "Introduction to Robotics",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "MEAM 2020",
     "course3d": null,
     "title": "Introduction to Thermal-Fluids Engineering",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "MATH 3130",
     "course3d": "MATH 313",
     "title": "Computational Linear Algebra",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "OIDD 3150",
     "course3d": null,
     "title": "Databases for Analytics",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "MATH 2030",
     "course3d": null,
     "title": "Proving things: Algebra",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "ENGR 1400",
     "course3d": null,
     "title": "Penn Global Seminar: Robotics and Rehabilitation",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "CBE 3200",
     "course3d": null,
     "title": "Basic Chemical Process Safety",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "FNCE 7370",
     "course3d": null,
     "title": "Data Science for Finance",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "STAT 5350",
     "course3d": null,
     "title": "Forecasting Methods for Management",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "MATH 4100",
     "course3d": null,
     "title": "Complex Analysis",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "COMM 3670",
     "course3d": null,
     "title": "Communication in the Networked Age",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "COMM 3180",
     "course3d": null,
     "title": "Stories From Data: Introduction to Programming for Data Journalism",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "OIDD 1010",
     "course3d": null,
     "title": "An Introduction to Operations, Information and Decisions",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "ESE 6500",
     "course3d": null,
     "title": "Learning in Robotics",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "BE 2000",
     "course3d": null,
     "title": "Introduction to Biomechanics",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "BE 2200",
     "course3d": null,
     "title": "Biomaterials",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "PSYC 3990",
     "course3d": null,
     "title": "Sleep and Sleep Disorders",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "LGST 2440",
     "course3d": null,
     "title": "Blockchain & Cryptocurrencies: Business, Legal, and Regulatory Considerations",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "ESE 3060",
     "course3d": null,
     "title": "Deep Learning: A Hands-on Introduction",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "MUSC 1250",
     "course3d": "MUSC 075",
     "title": "Musical Interfaces and Robotics",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "STAT 4220",
     "course3d": null,
     "title": "Predictive Analytics for Business",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "FNCE 2910",
     "course3d": null,
     "title": "Corporate Restructuring",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "ENM 3750",
     "course3d": null,
     "title": "Biological Data Science I - Fundamentals of Biostatistics",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "IPD 5450",
     "course3d": null,
     "title": "Engineering Entrepreneurship I",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "BEPP 2200",
     "course3d": null,
     "title": "Behavioral Economics, Markets, and Public Policy",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "BIOL 1123",
     "course3d": null,
     "title": "Introductory Molecular Biology Laboratory",
     "status": "yes"
-    }
-    ,{
+  },
+  {
     "course4d": "PSCI 3802",
     "course3d": null,
     "title": "Political Polling",
     "status": "no"
-    }
-    ,{
+  },
+  {
     "course4d": "ENM 3440",
     "course3d": "ENM 344",
     "title": "Answering Questions with Data, for Everyone",
     "status": "yes"
-    }
-   ,{
+  },
+  {
     "course4d": "FNCE 4010",
     "course3d": null,
     "title": "Advanced Topics in Private Equity",
     "status": "yes"
-   }
-   ,{
+  },
+  {
     "course4d": "FNCE 2090",
     "course3d": null,
     "title": "Real Estate Investment: Analysis and Financing",
     "status": "yes"
-   }
-  ,{
+  },
+  {
     "course4d": "ECON 2300",
     "course3d": null,
     "title": "Statistics for Economists",
     "status": "yes"
-   }
-   ,{
+  },
+  {
     "course4d": "CIS 3310",
     "course3d": null,
     "title": "Introduction to Networks and Security",
     "status": "yes"
-   }
-   ,{
+  },
+  {
     "course4d": "EESC 4630",
     "course3d": null,
     "title": "Hydrology",
     "status": "yes"
-   }
-   ,{
+  },
+  {
     "course4d": "FNCE 3990",
     "course3d": null,
     "title": "Supervised Study in Finance",
     "status": "ask"
-   }
-   ,{
+  },
+  {
     "course4d": "MEAM 2470",
     "course3d": null,
     "title": "Mechanical Engineering Laboratory I",
     "status": "yes"
-   }
-   ,{
+  },
+  {
     "course4d": "MEAM 2480",
     "course3d": null,
     "title": "Mechanical Engineering Lab I",
     "status": "yes"
-   }
-   ,{
+  },
+  {
     "course4d": "HCMG 8570",
     "course3d": null,
     "title": "Healthcare Data and Analytics",
     "status": "no"
-   }
-   ,{
+  },
+  {
     "course4d": "FNCE 1008",
     "course3d": null,
     "title": "Corporate Finance (Honors)",
     "status": "no"
-   }
-   ,{
+  },
+  {
     "course4d": "CRIM 2040",
     "course3d": null,
     "title": "Forensic Analysis",
     "status": "no"
-   }
-   ,{
+  },
+  {
     "course4d": "ESE 6800",
     "course3d": null,
     "title": "Special Topics in Electrical and Systems Engineering",
     "status": "ask"
-   }
-    ,{
+  },
+  {
     "course4d": "ESE 2000",
     "course3d": null,
     "title": "Artificial Intelligence Lab: Data, Systems, and Decisions",
     "status": "yes"
-   }
+  },
+  {
+    "course4d": "PSCI 3800",
+    "course3d": null,
+    "title": "Applied Data Science",
+    "status": "no"
+  }
 ]
