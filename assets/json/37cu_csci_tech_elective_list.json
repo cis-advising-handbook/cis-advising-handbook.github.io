@@ -2232,7 +2232,7 @@
   },
   {
     "course4d": "MUSC 1270",
-    "course3d": null,
+    "course3d": "MUSC 077",
     "title": "Introduction to Electronic Musicmaking",
     "status": "no"
   },
@@ -2244,7 +2244,7 @@
   },
   {
     "course4d": "MEAM 2020",
-    "course3d": null,
+    "course3d": "MEAM 202",
     "title": "Introduction to Thermal-Fluids Engineering",
     "status": "yes"
   },
@@ -2256,91 +2256,91 @@
   },
   {
     "course4d": "OIDD 3150",
-    "course3d": null,
+    "course3d": "OIDD 315",
     "title": "Databases for Analytics",
     "status": "no"
   },
   {
     "course4d": "MATH 2030",
-    "course3d": null,
+    "course3d": "MATH 203",
     "title": "Proving things: Algebra",
     "status": "yes"
   },
   {
     "course4d": "ENGR 1400",
-    "course3d": null,
+    "course3d": "ENGR 140",
     "title": "Penn Global Seminar: Robotics and Rehabilitation",
     "status": "yes"
   },
   {
     "course4d": "CBE 3200",
-    "course3d": null,
+    "course3d": "CBE 320",
     "title": "Basic Chemical Process Safety",
     "status": "no"
   },
   {
     "course4d": "FNCE 7370",
-    "course3d": null,
+    "course3d": "FNCE 737",
     "title": "Data Science for Finance",
     "status": "yes"
   },
   {
     "course4d": "STAT 5350",
-    "course3d": null,
+    "course3d": "STAT 535",
     "title": "Forecasting Methods for Management",
     "status": "yes"
   },
   {
     "course4d": "MATH 4100",
-    "course3d": null,
+    "course3d": "MATH 410",
     "title": "Complex Analysis",
     "status": "yes"
   },
   {
     "course4d": "COMM 3670",
-    "course3d": null,
+    "course3d": "COMM 367",
     "title": "Communication in the Networked Age",
     "status": "no"
   },
   {
     "course4d": "COMM 3180",
-    "course3d": null,
+    "course3d": "COMM 318",
     "title": "Stories From Data: Introduction to Programming for Data Journalism",
     "status": "no"
   },
   {
     "course4d": "OIDD 1010",
-    "course3d": null,
+    "course3d": "OIDD 101",
     "title": "An Introduction to Operations, Information and Decisions",
     "status": "no"
   },
   {
     "course4d": "ESE 6500",
-    "course3d": null,
+    "course3d": "ESE 650",
     "title": "Learning in Robotics",
     "status": "yes"
   },
   {
     "course4d": "BE 2000",
-    "course3d": null,
+    "course3d": "BE 200",
     "title": "Introduction to Biomechanics",
     "status": "yes"
   },
   {
     "course4d": "BE 2200",
-    "course3d": null,
+    "course3d": "BE 220",
     "title": "Biomaterials",
     "status": "yes"
   },
   {
     "course4d": "PSYC 3990",
-    "course3d": null,
+    "course3d": "PSYC 440",
     "title": "Sleep and Sleep Disorders",
     "status": "no"
   },
   {
     "course4d": "LGST 2440",
-    "course3d": null,
+    "course3d": "LGST 244",
     "title": "Blockchain & Cryptocurrencies: Business, Legal, and Regulatory Considerations",
     "status": "no"
   },
@@ -2358,37 +2358,37 @@
   },
   {
     "course4d": "STAT 4220",
-    "course3d": null,
+    "course3d": "STAT 422",
     "title": "Predictive Analytics for Business",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2910",
-    "course3d": null,
+    "course3d": "FNCE 291",
     "title": "Corporate Restructuring",
     "status": "no"
   },
   {
     "course4d": "ENM 3750",
-    "course3d": null,
+    "course3d": "ENM 375",
     "title": "Biological Data Science I - Fundamentals of Biostatistics",
     "status": "yes"
   },
   {
     "course4d": "IPD 5450",
-    "course3d": null,
+    "course3d": "IPD 545",
     "title": "Engineering Entrepreneurship I",
     "status": "yes"
   },
   {
     "course4d": "BEPP 2200",
-    "course3d": null,
+    "course3d": "BEPP 220",
     "title": "Behavioral Economics, Markets, and Public Policy",
     "status": "no"
   },
   {
     "course4d": "BIOL 1123",
-    "course3d": null,
+    "course3d": "BIOL 123",
     "title": "Introductory Molecular Biology Laboratory",
     "status": "yes"
   },
@@ -2406,25 +2406,25 @@
   },
   {
     "course4d": "FNCE 4010",
-    "course3d": null,
+    "course3d": "FNCE 401",
     "title": "Advanced Topics in Private Equity",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2090",
-    "course3d": null,
+    "course3d": "FNCE 209",
     "title": "Real Estate Investment: Analysis and Financing",
     "status": "yes"
   },
   {
     "course4d": "ECON 2300",
-    "course3d": null,
+    "course3d": "ECON 103",
     "title": "Statistics for Economists",
     "status": "yes"
   },
   {
     "course4d": "CIS 3310",
-    "course3d": null,
+    "course3d": "CIS 331",
     "title": "Introduction to Networks and Security",
     "status": "yes"
   },
@@ -2436,25 +2436,25 @@
   },
   {
     "course4d": "FNCE 3990",
-    "course3d": null,
+    "course3d": "FNCE 399",
     "title": "Supervised Study in Finance",
     "status": "ask"
   },
   {
     "course4d": "MEAM 2470",
-    "course3d": null,
+    "course3d": "MEAM 247",
     "title": "Mechanical Engineering Laboratory I",
     "status": "yes"
   },
   {
     "course4d": "MEAM 2480",
-    "course3d": null,
+    "course3d": "MEAM 248",
     "title": "Mechanical Engineering Lab I",
     "status": "yes"
   },
   {
     "course4d": "HCMG 8570",
-    "course3d": null,
+    "course3d": "HCMG 857",
     "title": "Healthcare Data and Analytics",
     "status": "no"
   },
@@ -2466,13 +2466,13 @@
   },
   {
     "course4d": "CRIM 2040",
-    "course3d": null,
+    "course3d": "CRIM 240",
     "title": "Forensic Analysis",
     "status": "no"
   },
   {
     "course4d": "ESE 6800",
-    "course3d": null,
+    "course3d": "ESE 680",
     "title": "Special Topics in Electrical and Systems Engineering",
     "status": "ask"
   },
@@ -2484,7 +2484,7 @@
   },
   {
     "course4d": "PSCI 3800",
-    "course3d": null,
+    "course3d": "PSCI 207",
     "title": "Applied Data Science",
     "status": "no"
   }
