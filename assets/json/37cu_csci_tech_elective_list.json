@@ -2487,5 +2487,11 @@
     "course3d": null,
     "title": "Applied Data Science",
     "status": "no"
+  },
+  {
+    "course4d": "BE 3010",
+    "course3d": null,
+    "title": "Bioengineering Signals and Systems",
+    "status": "yes"
   }
 ]
