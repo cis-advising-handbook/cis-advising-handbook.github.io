@@ -37,8 +37,7 @@ function makeRows(status, courses) {
         } else {
             // show 3-digit course in a tooltip
             if (encode_to_3d[e["course4d"]] != undefined) {
-                let split_encoding_list = encode_to_3d[e["course4d"]].split(" ");
-                html += `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${split_encoding_list[0] + " " + split_encoding_list[1].trim()}</span></span> ${e["title"]}<br>`
+                html += `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[e["course4d"]].trim()}</span></span> ${e["title"]}<br>`
             }
         }
     })
