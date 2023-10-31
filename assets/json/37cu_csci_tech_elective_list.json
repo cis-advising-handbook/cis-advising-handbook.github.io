@@ -2517,5 +2517,11 @@
     "course3d": null,
     "title": "Fluid Mechanics",
     "status": "no"
+  },
+  {
+    "course4d": "CBE 3500",
+    "course3d": null,
+    "title": "Fluid Mechanics",
+    "status": "no"
   }
 ]
