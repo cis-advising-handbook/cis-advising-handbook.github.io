@@ -2511,5 +2511,11 @@
     "course3d": null,
     "title": "Fluid Mechanics",
     "status": "yes"
+  },
+  {
+    "course4d": "CBE 2310",
+    "course3d": null,
+    "title": "Thermodynamics of Fluids",
+    "status": "yes"
   }
 ]
