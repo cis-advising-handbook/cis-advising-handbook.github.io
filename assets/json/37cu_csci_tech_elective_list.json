@@ -2499,5 +2499,11 @@
     "course3d": null,
     "title": "Physical Chemistry I",
     "status": "yes"
+  },
+  {
+    "course4d": "CBE 3600",
+    "course3d": null,
+    "title": "Chemical Process Control",
+    "status": "no"
   }
 ]
