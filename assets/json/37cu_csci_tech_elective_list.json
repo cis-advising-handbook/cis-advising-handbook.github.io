@@ -2505,5 +2505,11 @@
     "course3d": null,
     "title": "Chemical Process Control",
     "status": "no"
+  },
+  {
+    "course4d": "CBE 3600",
+    "course3d": null,
+    "title": "Chemical Process Control",
+    "status": "no"
   }
 ]
