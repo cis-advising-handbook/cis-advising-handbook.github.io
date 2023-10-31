@@ -29,16 +29,15 @@ More about this below.
 Sometimes students request an overload in order to "hedge their bets" with course registration. For instance, 
 so that they can request several waitlisted courses, or shop among different classes to figure 
 out which one they like best. This is neither necessary nor recommended. If you are on the waitlist, you can always
-submit a CU limit raise request after you get a permit - we won't expire the permit if you couldn't use it but wanted to. If you are not sure yet whether you want to take a certain course, you can always sit in until the Add deadline and then enroll 
-if (and only if) you like the class.
+submit a CU limit raise request after you get approval for your Permission Request. If you are not sure yet whether you want to take a certain course, you can always sit in until the Add deadline and then enroll if (and only if) you like the class.
 
 ## How to request a CU increase
 
 {: .notice--info}
-CU limit increases must be requested, and are reviewed, _each_ semester. There is no way to permanently raise your limit.
+CU limit increases must be requested _each_ semester. There is no way to permanently raise your limit.
 
-You can only request an increase at the beginning of the semester, once all the grades for the previous
-semester have been posted. Check the SEAS Undergrad Handbook's [rules regarding CU limits]({{page.links.seas_cu_policy}}). Generally, you need a 3.0 GPA and demonstrated ability to handle _X_ CUs if you want a limit of _X+1_ CUs. Typically you can't go beyond 5.5 CUs for Advance Registration, either, even if you can get your limit raised later.
+Students pursuing multiple undergraduate degrees (not dual-majors, and not Accelerated Masters students) can receive a CU increase for Advance Registration. All other students can only request an increase at the beginning of the semester, once all their grades for the previous
+semester have been posted. Check the SEAS Undergrad Handbook's [rules regarding CU limits]({{page.links.seas_cu_policy}}). Generally, you need a 3.0 GPA and demonstrated ability to handle _X_ CUs if you want a limit of _X+1_ CUs.
 
 If you are eligible, you can submit a [CU limit raise request]({{page.links.cis_cu_limit_form}}) for 6 or 6.5 CUs.
 
