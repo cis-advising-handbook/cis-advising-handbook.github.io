@@ -2505,5 +2505,11 @@
     "course3d": null,
     "title": "Chemical Process Control",
     "status": "yes"
+  },
+  {
+    "course4d": "CBE 3500",
+    "course3d": null,
+    "title": "Fluid Mechanics",
+    "status": "yes"
   }
 ]
