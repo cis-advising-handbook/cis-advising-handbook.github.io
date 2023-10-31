@@ -2493,5 +2493,11 @@
     "course3d": null,
     "title": "Bioengineering Signals and Systems",
     "status": "yes"
+  },
+  {
+    "course4d": "CHEM 2210",
+    "course3d": null,
+    "title": "Physical Chemistry I",
+    "status": "yes"
   }
 ]
