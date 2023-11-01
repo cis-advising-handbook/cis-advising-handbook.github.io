@@ -2517,5 +2517,11 @@
     "course3d": null,
     "title": "Thermodynamics of Fluids",
     "status": "yes"
+  },
+  {
+    "course4d": "CBE 4790",
+    "course3d": null,
+    "title": "Biotechnology and Biochemical Engineering",
+    "status": "yes"
   }
 ]
