@@ -2523,5 +2523,11 @@
     "course3d": null,
     "title": "Biotechnology and Biochemical Engineering",
     "status": "yes"
+  },
+  {
+    "course4d": "CBE 2300",
+    "course3d": null,
+    "title": "Material and Energy Balances of Chemical Processes",
+    "status": "yes"
   }
 ]
