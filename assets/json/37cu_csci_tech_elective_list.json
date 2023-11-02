@@ -1,2161 +1,1801 @@
 [
   {
     "course4d": "ARAB 0100",
-    "course3d": "ARAB 031",
     "title": "Elementary Arabic I",
     "status": "no"
   },
   {
     "course4d": "ARAB 0200",
-    "course3d": "ARAB 032",
     "title": "Elementary Arabic II",
     "status": "no"
   },
   {
     "course4d": "ARAB 0300",
-    "course3d": "ARAB 033",
     "title": "Intermediate Arabic III",
     "status": "no"
   },
   {
     "course4d": "ARAB 0400",
-    "course3d": "ARAB 034",
     "title": "Intermediate Arabic IV",
     "status": "no"
   },
   {
     "course4d": "ACCT 1010",
-    "course3d": "ACCT 101",
     "title": "Accounting and Financial Reporting",
     "status": "no"
   },
   {
     "course4d": "ASLD 0100",
-    "course3d": "ASLD 071, LING 071",
     "title": "American Sign Language I",
     "status": "no"
   },
   {
     "course4d": "ASLD 0200",
-    "course3d": "ASLD 072, LING 072",
     "title": "American Sign Language II",
     "status": "no"
   },
   {
     "course4d": "ASLD 0300",
-    "course3d": "ASLD 073, LING 073",
     "title": "American Sign Language III",
     "status": "no"
   },
   {
     "course4d": "ASLD 0400",
-    "course3d": "ASLD 074, LING 074",
     "title": "American Sign Language IV",
     "status": "no"
   },
   {
     "course4d": "ASTR 1211",
-    "course3d": "ASTR 211",
     "title": "Introduction to Astrophysics I",
     "status": "yes"
   },
   {
     "course4d": "ASTR 1250",
-    "course3d": "ASTR 250",
     "title": "Astronomical Techniques",
     "status": "yes"
   },
   {
     "course4d": "BE 1000",
-    "course3d": "BE 100",
     "title": "Introduction to Bioengineering",
     "status": "yes"
   },
   {
     "course4d": "BE 3060",
-    "course3d": "BE 306",
     "title": "Cellular Engineering",
     "status": "yes"
   },
   {
     "course4d": "BE 4700",
-    "course3d": "BE 470",
     "title": "Medical Devices",
     "status": "yes"
   },
   {
     "course4d": "BE 4800",
-    "course3d": "BE 480",
     "title": "Introduction to Biomedical Imaging",
     "status": "yes"
   },
   {
     "course4d": "BE 5210",
-    "course3d": "BE 521",
     "title": "Brain-Computer Interfaces",
     "status": "yes"
   },
   {
     "course4d": "BE 5300",
-    "course3d": "BE 530",
     "title": "Theoretical and Computational Neuroscience",
     "status": "yes"
   },
   {
     "course4d": "BE 5690",
-    "course3d": "BE 569",
     "title": "Systems Biology of Cell Signaling Behavior",
     "status": "yes"
   },
   {
     "course4d": "BEPP 2500",
-    "course3d": "BEPP 250",
     "title": "Managerial Economics",
     "status": "yes"
   },
   {
     "course4d": "BEPP 2800",
-    "course3d": "BEPP 280",
     "title": "Applied Data Analysis",
     "status": "yes"
   },
   {
     "course4d": "BEPP 2330",
-    "course3d": "BEPP 233",
     "title": "Consumers, Firms and Markets in Developing Countries",
     "status": "no"
   },
   {
     "course4d": "BEPP 2610",
-    "course3d": "BEPP 261",
     "title": "Risk Analysis and Environmental Management",
     "status": "no"
   },
   {
     "course4d": "BEPP 2840",
-    "course3d": "BEPP 284",
     "title": "Game Theory for Business and Life",
     "status": "no"
   },
   {
     "course4d": "BIOL 1101",
-    "course3d": "BIOL 101",
     "title": "Introduction to Biology A",
     "status": "yes"
   },
   {
     "course4d": "BIOL 1121",
-    "course3d": "BIOL 121",
     "title": "Introduction to Biology - The Molecular Biology of Life",
     "status": "yes"
   },
   {
     "course4d": "BIOL 2210",
-    "course3d": "BIOL 221",
     "title": "Molecular Biology and Genetics",
     "status": "yes"
   },
   {
     "course4d": "BIOL 4231",
-    "course3d": "BIOL 431",
     "title": "Genome Science and Genomic Medicine",
     "status": "yes"
   },
   {
     "course4d": "BIOL 4536",
-    "course3d": "BIOL 437",
     "title": "Introduction to Computational Biology & Biological Modeling",
     "status": "yes"
   },
   {
     "course4d": "BIOL 2510",
-    "course3d": "BIOL 446",
     "title": "Statistics for Biologists",
     "status": "yes"
   },
   {
     "course4d": "BIOL 5536",
-    "course3d": "BIOL 536",
     "title": "Fundamentals of Computational Biology",
     "status": "yes"
   },
   {
     "course4d": "BIOL 5571",
-    "course3d": "BIOL 571",
     "title": "Topics in Computational Biology",
     "status": "yes"
   },
   {
     "course4d": "CBE 1500",
-    "course3d": "CBE 150",
     "title": "Introduction to Biotechnology",
     "status": "yes"
   },
   {
     "course4d": "CBE 1600",
-    "course3d": "CBE 160",
     "title": "Introduction to Chemical Engineering",
     "status": "yes"
   },
   {
     "course4d": "CBE 3750",
-    "course3d": "CBE 375",
     "title": "Engineering and the Environment",
     "status": "yes"
   },
   {
     "course4d": "CHEM 1101",
-    "course3d": "CHEM 053",
     "title": "General Chemistry Laboratory I",
     "status": "yes"
   },
   {
     "course4d": "CHEM 1102",
-    "course3d": "CHEM 054",
     "title": "General Chemistry Laboratory II",
     "status": "yes"
   },
   {
     "course4d": "CHEM 1012",
-    "course3d": "CHEM 101",
     "title": "General Chemistry I",
     "status": "yes"
   },
   {
     "course4d": "CHEM 1022",
-    "course3d": "CHEM 102",
     "title": "General Chemistry II",
     "status": "yes"
   },
   {
     "course4d": "CHEM 1151",
-    "course3d": "CHEM 115",
     "title": "Honors Chemistry I",
     "status": "yes"
   },
   {
     "course4d": "CHEM 1161",
-    "course3d": "CHEM 116",
     "title": "Honors Chemistry II",
     "status": "yes"
   },
   {
     "course4d": "CHEM 2220",
-    "course3d": "CHEM 222",
     "title": "Physical Chemistry II",
     "status": "yes"
   },
   {
     "course4d": "CHEM 2410",
-    "course3d": "CHEM 241",
     "title": "Principles of Organic Chemistry I",
     "status": "yes"
   },
   {
     "course4d": "CHEM 2411",
-    "course3d": null,
     "title": "Principles of Organic Chemistry I with Laboratory",
     "status": "yes"
   },
   {
     "course4d": "CHEM 2420",
-    "course3d": "CHEM 242",
     "title": "Principles of Organic Chemistry II",
     "status": "yes"
   },
   {
     "course4d": "CIMS 1010",
-    "course3d": "CIMS 101",
     "title": "World Film History to 1945",
     "status": "no"
   },
   {
     "course4d": "CIMS 1020",
-    "course3d": "CIMS 102",
     "title": "World Film History 1945-Present",
     "status": "no"
   },
   {
     "course4d": "CIMS 1160",
-    "course3d": "CIMS 116",
     "title": "Screenwriting Workshop",
     "status": "no"
   },
   {
     "course4d": "CIMS 0590",
-    "course3d": "CIMS 392, CIMS 202",
     "title": "Benjamin Franklin Seminar: Film Studies",
     "status": "no"
   },
   {
     "course4d": "CIS 1400",
-    "course3d": "CIS 140",
     "title": "Introduction to Cognitive Science",
     "status": "yes"
   },
   {
     "course4d": "CIS 1880",
-    "course3d": "CIS 188",
     "title": "DevOps",
     "status": "yes"
   },
   {
     "course4d": "CIS 1890",
-    "course3d": "CIS 189",
     "title": "Solving Hard Problems in Practice",
     "status": "yes"
   },
   {
     "course4d": "CIS 1900",
-    "course3d": "CIS 190",
     "title": "C++ Programming",
     "status": "yes"
   },
   {
     "course4d": "CIS 1910",
-    "course3d": "CIS 191",
     "title": "Using and Understanding Unix and Linux",
     "status": "yes"
   },
   {
     "course4d": "CIS 1920",
-    "course3d": "CIS 192",
     "title": "Python Programming",
     "status": "yes"
   },
   {
     "course4d": "CIS 1930",
-    "course3d": "CIS 193",
     "title": "Go Programming",
     "status": "yes"
   },
   {
     "course4d": "CIS 1950",
-    "course3d": "CIS 195",
     "title": "Mobile App Development",
     "status": "yes"
   },
   {
     "course4d": "CIS 1960",
-    "course3d": "CIS 196",
     "title": "Ruby on Rails Web Development",
     "status": "yes"
   },
   {
     "course4d": "CIS 1970",
-    "course3d": "CIS 197",
     "title": "Javascript",
     "status": "yes"
   },
   {
     "course4d": "CIS 1980",
-    "course3d": "CIS 198",
     "title": "Rust Programming",
     "status": "yes"
   },
   {
     "course4d": "CIS 2330",
-    "course3d": "CIS 233",
     "title": "Introduction to Blockchain",
     "status": "yes"
   },
   {
     "course4d": "CIS 3410",
-    "course3d": "CIS 341",
     "title": "Compilers and Interpreters",
     "status": "yes"
   },
   {
     "course4d": "CIS 3500",
-    "course3d": "CIS 350",
     "title": "Software Design/Engineering",
     "status": "yes"
   },
   {
     "course4d": "CIS 3980",
-    "course3d": "CIS 398",
     "title": "Quantum Computer and Information Science",
     "status": "yes"
   },
   {
     "course4d": "CIS 3990",
-    "course3d": "CIS 399",
     "title": "Special Topics",
     "status": "yes"
   },
   {
     "course4d": "CIS 4190",
-    "course3d": "CIS 419",
     "title": "Applied Machine Learning",
     "status": "yes"
   },
   {
     "course4d": "CIS 4210",
-    "course3d": "CIS 421",
     "title": "Artificial Integlligence",
     "status": "yes"
   },
   {
     "course4d": "CIS 4410",
-    "course3d": "CIS 441",
     "title": "Embedded Software for Life-Critical Applications",
     "status": "yes"
   },
   {
     "course4d": "CIS 4500",
-    "course3d": "CIS 450",
     "title": "Database and Information Systems",
     "status": "yes"
   },
   {
     "course4d": "CIS 4550",
-    "course3d": "CIS 455",
     "title": "Internet and Web Systems",
     "status": "yes"
   },
   {
     "course4d": "CIS 4600",
-    "course3d": "CIS 460",
     "title": "Interactive Computer Graphics",
     "status": "yes"
   },
   {
     "course4d": "CIS 4610",
-    "course3d": "CIS 461",
     "title": "Advanced Rendering",
     "status": "yes"
   },
   {
     "course4d": "CIS 5000",
-    "course3d": "CIS 500",
     "title": "Software Foundations",
     "status": "yes"
   },
   {
     "course4d": "CIS 5020",
-    "course3d": "CIS 502",
     "title": "Analysis of Algorithms",
     "status": "yes"
   },
   {
     "course4d": "CIS 5200",
-    "course3d": "CIS 520",
     "title": "Machine Learning",
     "status": "yes"
   },
   {
     "course4d": "CIS 5210",
-    "course3d": "CIS 521",
     "title": "Artificial Intelligence",
     "status": "yes"
   },
   {
     "course4d": "CIS 5300",
-    "course3d": "CIS 530",
     "title": "Computational Linguistics",
     "status": "yes"
   },
   {
     "course4d": "CIS 5450",
-    "course3d": "CIS 545",
     "title": "Big Data Analytics",
     "status": "yes"
   },
   {
     "course4d": "CIS 5500",
-    "course3d": "CIS 550",
     "title": "Database and Information Systems",
     "status": "yes"
   },
   {
     "course4d": "CIS 5510",
-    "course3d": "CIS 551",
     "title": "Computer and Network Security",
     "status": "yes"
   },
   {
     "course4d": "CIS 5520",
-    "course3d": "CIS 552",
     "title": "Advanced Programming",
     "status": "yes"
   },
   {
     "course4d": "CIS 5530",
-    "course3d": "CIS 553",
     "title": "Networked Systems",
     "status": "yes"
   },
   {
     "course4d": "CIS 5550",
-    "course3d": "CIS 555",
     "title": "Internet and Web Systems",
     "status": "yes"
   },
   {
     "course4d": "CIS 5560",
-    "course3d": "CIS 556",
     "title": "Cryptography",
     "status": "yes"
   },
   {
     "course4d": "CIS 5650",
-    "course3d": "CIS 565",
     "title": "GPU Programming and Architecture",
     "status": "yes"
   },
   {
     "course4d": "CIS 5660",
-    "course3d": "CIS 566",
     "title": "Procedural Computer Graphics",
     "status": "yes"
   },
   {
     "course4d": "CIS 5800",
-    "course3d": "CIS 580",
     "title": "Machine Perception",
     "status": "yes"
   },
   {
     "course4d": "CIS 5810",
-    "course3d": "CIS 581",
     "title": "Computer Vision & Computational Photography",
     "status": "yes"
   },
   {
     "course4d": "CIS 6250",
-    "course3d": "CIS 625",
     "title": "Theory of Machine Learning",
     "status": "yes"
   },
   {
     "course4d": "CIS 6770",
-    "course3d": "CIS 677",
     "title": "Advanced Topics in Algorithms and Complexity",
     "status": "yes"
   },
   {
     "course4d": "CIS 0099",
-    "course3d": "CIS 099",
     "title": "Undergraduate Research/Independent Study",
     "status": "ask"
   },
   {
     "course4d": "CIS 5990",
-    "course3d": "CIS 599",
     "title": "Independent Study for Masters Students",
     "status": "ask"
   },
   {
     "course4d": "CIS 7980",
-    "course3d": "CIS 798",
     "title": "Explaining Explanation",
     "status": "ask"
   },
   {
     "course4d": "CIS 1050",
-    "course3d": "CIS 105",
     "title": "Computational Data Exploration",
     "status": "no"
   },
   {
     "course4d": "CIS 1060",
-    "course3d": "CIS 106",
     "title": "Visualizing the Past",
     "status": "no"
   },
   {
     "course4d": "CIS 1070",
-    "course3d": "CIS 107",
     "title": "Visual Culture through the Computer's Eye",
     "status": "no"
   },
   {
     "course4d": "CIS 4230",
-    "course3d": "CIS 423",
     "title": "Ethical Algorithm Design",
     "status": "no"
   },
   {
     "course4d": "COGS 1001",
-    "course3d": "COGS 001",
     "title": "Introduction to Cognitive Science",
     "status": "yes"
   },
   {
     "course4d": "COGS 3999",
-    "course3d": "COGS 301",
     "title": "Independent Study",
     "status": "ask"
   },
   {
     "course4d": "COMM 4590",
-    "course3d": "COMM 459",
     "title": "Social Networks and the Spread of Behavior",
     "status": "yes"
   },
   {
     "course4d": "DSGN 2570",
-    "course3d": "DSGN 240",
     "title": "User Experience (UX) and User Interface (UI) Design",
     "status": "yes"
   },
   {
     "course4d": "DSGN 1020",
-    "course3d": "DSGN 234",
     "title": "Art of the web: Interactive Concepts for Art & Design",
     "status": "no"
   },
   {
     "course4d": "DSGN 1030",
-    "course3d": "DSGN 235, FNAR 235",
     "title": "3-D Computer Modeling",
     "status": "no"
   },
   {
     "course4d": "DSGN 0010",
-    "course3d": "DSGN 264, FNAR 264",
     "title": "Art, Design and Digital Culture",
     "status": "no"
   },
   {
     "course4d": "DSGN 1060",
-    "course3d": "DSGN 286, FNAR 286",
     "title": "Visual Narrative",
     "status": "no"
   },
   {
     "course4d": "EAS 3010",
-    "course3d": "EAS 301",
     "title": "Climate Policy and Technology",
     "status": "yes"
   },
   {
     "course4d": "EAS 4030",
-    "course3d": "EAS 403",
     "title": "Energy Systems and Policy",
     "status": "yes"
   },
   {
     "course4d": "EAS 5070",
-    "course3d": "EAS 507",
     "title": "Intellectual Property and Business Law for Engineers",
     "status": "yes"
   },
   {
     "course4d": "EAS 5120",
-    "course3d": "EAS 512",
     "title": "Engineering Negotiation",
     "status": "yes"
   },
   {
     "course4d": "EAS 5450",
-    "course3d": "EAS 545",
     "title": "Engineering Entrepreneurship I",
     "status": "yes"
   },
   {
     "course4d": "EAS 5460",
-    "course3d": "EAS 546",
     "title": "Engineering Entrepreneurship II",
     "status": "yes"
   },
   {
     "course4d": "EAS 5490",
-    "course3d": "EAS 549",
     "title": "Engineering Entrepreneurship Lab",
     "status": "yes"
   },
   {
     "course4d": "EAS 2970",
-    "course3d": "EAS 297",
     "title": "Study Abroad",
     "status": "ask"
   },
   {
     "course4d": "EAS 2030",
-    "course3d": "EAS 203",
     "title": "Engineering Ethics",
     "status": "no"
   },
   {
     "course4d": "EAS 5950",
-    "course3d": "EAS 595",
     "title": "Foundations of Leadership",
     "status": "no"
   },
   {
     "course4d": "ECON 0200",
-    "course3d": "ECON 002",
     "title": "Introductory Economics: Macro",
     "status": "yes"
   },
   {
     "course4d": "ECON 0420",
-    "course3d": "ECON 032",
     "title": "Political Economy",
     "status": "yes"
   },
   {
     "course4d": "ECON 0630",
-    "course3d": null,
     "title": "The Economics and Financing of Health Care Delivery",
     "status": "yes"
   },
   {
     "course4d": "ECON 2100",
-    "course3d": "ECON 101",
     "title": "Intermediate Microeconomics",
     "status": "yes"
   },
   {
     "course4d": "ECON 2200",
-    "course3d": "ECON 102",
     "title": "Intermediate Macroeconomics",
     "status": "yes"
   },
   {
     "course4d": "ECON 2310",
-    "course3d": "ECON 104",
     "title": "Econometric Methods and Models",
     "status": "yes"
   },
   {
     "course4d": "ECON 4100",
-    "course3d": "ECON 212",
     "title": "Game Theory",
     "status": "yes"
   },
   {
     "course4d": "ECON 4430",
-    "course3d": "ECON 233",
     "title": "Labor Economics",
     "status": "yes"
   },
   {
     "course4d": "ECON 4450",
-    "course3d": "ECON 235",
     "title": "Industrial Organization",
     "status": "yes"
   },
   {
     "course4d": "ECON 4460",
-    "course3d": "ECON 236",
     "title": "Health Economics",
     "status": "yes"
   },
   {
     "course4d": "ECON 4230",
-    "course3d": "ECON 244",
     "title": "Macro-Modeling",
     "status": "yes"
   },
   {
     "course4d": "ECON 4240",
-    "course3d": "ECON 246",
     "title": "Money and Banking",
     "status": "yes"
   },
   {
     "course4d": "ECON 4510",
-    "course3d": "ECON 251",
     "title": "International Trade",
     "status": "yes"
   },
   {
     "course4d": "ECON 4130",
-    "course3d": "ECON 262",
     "title": "Market Design",
     "status": "yes"
   },
   {
     "course4d": "ECON 0100",
-    "course3d": "ECON 001",
     "title": "Introduction to Micro Economics",
     "status": "no"
   },
   {
     "course4d": "ECON 0110",
-    "course3d": "ECON 010",
     "title": "Introduction to Economics for Business",
     "status": "no"
   },
   {
     "course4d": "ECON 0120",
-    "course3d": "ECON 013",
     "title": "Strategic Reasoning",
     "status": "no"
   },
   {
     "course4d": "ECON 0620",
-    "course3d": "ECON 028",
     "title": "Financial Meltdown, Past and Present",
     "status": "no"
   },
   {
     "course4d": "ENGL 3010",
-    "course3d": "ENGL 010",
     "title": "Introduction to Creative Writing: Poetry and Fiction",
     "status": "no"
   },
   {
     "course4d": "ENGL 1820",
-    "course3d": "ENGL 040",
     "title": "British Poetry 1660 - 1914",
     "status": "no"
   },
   {
     "course4d": "ENGL 1310",
-    "course3d": "ENGL 090",
     "title": "Gender, Sexuality, and Literature",
     "status": "no"
   },
   {
     "course4d": "ENGL 0999",
-    "course3d": "ENGL 299",
     "title": "Independent Study in Language and Literature",
     "status": "no"
   },
   {
     "course4d": "ENGR 2120",
-    "course3d": "ENGR 212",
     "title": "Concepts in Micro- and Nanotechnology",
     "status": "yes"
   },
   {
     "course4d": "ENGR 2500",
-    "course3d": "ENGR 250",
     "title": "Energy Systems, Resources and Technology",
     "status": "yes"
   },
   {
     "course4d": "ENGR 3440",
-    "course3d": "ENGR 344",
     "title": "Answering Questions with Data, for Everyone",
     "status": "yes"
   },
   {
     "course4d": "ENGR 4500",
-    "course3d": "ENGR 450",
     "title": "Biotechnology, Immunology, Vaccines and COVID-19",
     "status": "yes"
   },
   {
     "course4d": "ENGR 5030",
-    "course3d": "ENGR 503",
     "title": "Engineering in Oil, Gas and Coal, from Production to End Use",
     "status": "yes"
   },
   {
     "course4d": "ENGR 1010",
-    "course3d": "ENGR 101",
     "title": "Introduction to Engineering: Energy, Environment and Sustainability",
     "status": "ask"
   },
   {
     "course4d": "ENGR 1050",
-    "course3d": "ENGR 105",
     "title": "Introduction to Scientific Computing",
     "status": "ask"
   },
   {
     "course4d": "ENGR 2990",
-    "course3d": "ENGR 299",
     "title": "Eng Rsch-Prep/App/Meth",
     "status": "ask"
   },
   {
     "course4d": "ESE 1110",
-    "course3d": "ESE 111",
     "title": "Atoms, Bits, Circuits and Systems",
     "status": "yes"
   },
   {
     "course4d": "ESE 1500",
-    "course3d": "ESE 150",
     "title": "Digital Audio Basics",
     "status": "yes"
   },
   {
     "course4d": "ESE 1900",
-    "course3d": "ESE 190",
     "title": "Silicon Garage: Introduction to Open Source Hardware and Software Platforms",
     "status": "yes"
   },
   {
     "course4d": "ESE 2040",
-    "course3d": "ESE 204",
     "title": "Decision Models",
     "status": "yes"
   },
   {
     "course4d": "ESE 2100",
-    "course3d": "ESE 210",
     "title": "Introduction to Dynamic Systems",
     "status": "yes"
   },
   {
     "course4d": "ESE 2150",
-    "course3d": "ESE 215",
     "title": "Electrical Circuits and Systems",
     "status": "yes"
   },
   {
     "course4d": "ESE 2240",
-    "course3d": "ESE 224",
     "title": "Signal and Information Processing",
     "status": "yes"
   },
   {
     "course4d": "ESE 2900",
-    "course3d": "ESE 290",
     "title": "Introduction to Electrical and Systems Engineering Research Methodology",
     "status": "yes"
   },
   {
     "course4d": "ESE 2910",
-    "course3d": "ESE 291",
     "title": "Introduction to Electrical and Systems Engineering Research and Design",
     "status": "yes"
   },
   {
     "course4d": "ESE 2920",
-    "course3d": "ESE 292",
     "title": "Introduction to Electromechanical Prototyping",
     "status": "yes"
   },
   {
     "course4d": "ESE 3030",
-    "course3d": "ESE 303",
     "title": "Stochastic Systems Analysis and Simulation",
     "status": "yes"
   },
   {
     "course4d": "ESE 3050",
-    "course3d": "ESE 305",
     "title": "Foundations of Data Science",
     "status": "yes"
   },
   {
     "course4d": "ESE 3100",
-    "course3d": "ESE 310",
     "title": "Electric and Magnetic Fields I",
     "status": "yes"
   },
   {
     "course4d": "ESE 3250",
-    "course3d": "ESE 325",
     "title": "Fourier Analysis and Applications in Engineering, Mathematics, and the Sciences",
     "status": "yes"
   },
   {
     "course4d": "ESE 3500",
-    "course3d": "ESE 350",
     "title": "Embedded Systems/Microcontroller Laboratory",
     "status": "yes"
   },
   {
     "course4d": "ESE 4000",
-    "course3d": "ESE 400",
     "title": "Engineering Economics",
     "status": "yes"
   },
   {
     "course4d": "ESE 4020",
-    "course3d": "ESE 402",
     "title": "Statistics for Data Science",
     "status": "yes"
   },
   {
     "course4d": "ESE 4070",
-    "course3d": "ESE 407",
     "title": "Introduction to Networks and Protocols",
     "status": "yes"
   },
   {
     "course4d": "ESE 4210",
-    "course3d": "ESE 421",
     "title": "Control For Autonomous Robots",
     "status": "yes"
   },
   {
     "course4d": "ESE 4440",
-    "course3d": "ESE 444",
     "title": "Project Management",
     "status": "yes"
   },
   {
     "course4d": "ESE 5040",
-    "course3d": "ESE 504",
     "title": "Intro to Linear, Nonlinear and Integer Optimization",
     "status": "yes"
   },
   {
     "course4d": "ESE 5140",
-    "course3d": "ESE 514",
     "title": "Graph Neural Networks",
     "status": "yes"
   },
   {
     "course4d": "ESE 5390",
-    "course3d": "ESE 539",
     "title": "Hardware/Software Co-Design for Machine Learning",
     "status": "yes"
   },
   {
     "course4d": "ESE 5430",
-    "course3d": "ESE 543",
     "title": "Human Systems Engineering",
     "status": "yes"
   },
   {
     "course4d": "ESE 5440",
-    "course3d": "ESE 544",
     "title": "Project Management",
     "status": "yes"
   },
   {
     "course4d": "ESE 6740",
-    "course3d": "ESE 674",
     "title": "Information Theory",
     "status": "yes"
   },
   {
     "course4d": "FNAR 1010",
-    "course3d": "FNAR 061",
     "title": "Video I",
     "status": "no"
   },
   {
     "course4d": "FNAR 2030",
-    "course3d": "FNAR 065",
     "title": "Cinema Production",
     "status": "no"
   },
   {
     "course4d": "FNAR 2260",
-    "course3d": "FNAR 070",
     "title": "Film Sound: History, Aesthetics and Subversion",
     "status": "no"
   },
   {
     "course4d": "FNAR 0010",
-    "course3d": "FNAR 123",
     "title": "Drawing I",
     "status": "no"
   },
   {
     "course4d": "FNAR 1020",
-    "course3d": "FNAR 150",
     "title": "Photography Practices",
     "status": "no"
   },
   {
     "course4d": "FNAR 1090",
-    "course3d": "FNAR 231",
     "title": "Painting I",
     "status": "no"
   },
   {
     "course4d": "FNAR 1040",
-    "course3d": "FNAR 340",
     "title": "Digital Photography",
     "status": "no"
   },
   {
     "course4d": "FNCE 1010",
-    "course3d": "FNCE 101",
     "title": "Monetary Economics and the Global Economy",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2030",
-    "course3d": "FNCE 203",
     "title": "Advanced Corporate Finance",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2050",
-    "course3d": "FNCE 205",
     "title": "Investment Management",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2070",
-    "course3d": "FNCE 207",
     "title": "Valuation",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2170",
-    "course3d": "FNCE 217, FNCE 206",
     "title": "Financial Derivatives",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2190",
-    "course3d": "FNCE 219",
     "title": "International Financial Markets and Cryptocurrencies",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2250",
-    "course3d": "FNCE 225, FNCE 235",
     "title": "Fixed Income Securities",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2300",
-    "course3d": "FNCE 230",
     "title": "Urban Fiscal Policy",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2370",
-    "course3d": "FNCE 237",
     "title": "Data Science for Finance",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2380",
-    "course3d": "FNCE 238",
     "title": "Capital Markets",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2500",
-    "course3d": "FNCE 250",
     "title": "Venture Capital and the Finance of Innovation",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2510",
-    "course3d": "FNCE 251",
     "title": "The Finance of Buyouts and Acquisitions",
     "status": "yes"
   },
   {
     "course4d": "FNCE 7170",
-    "course3d": "FNCE 717",
     "title": "Financial Derivatives",
     "status": "yes"
   },
   {
     "course4d": "FNCE 1000",
-    "course3d": "FNCE 100",
     "title": "Corporate Finance",
     "status": "no"
   },
   {
     "course4d": "FNCE 2800",
-    "course3d": "FNCE 280, FNCE 385",
     "title": "FinTech",
     "status": "no"
   },
   {
     "course4d": "GCB 5360",
-    "course3d": "GCB 536",
     "title": "Fundamentals of Computational Biology",
     "status": "yes"
   },
   {
     "course4d": "IPD 5110",
-    "course3d": "IPD 511",
     "title": "How to Make Things: Production Prototyping Studio",
     "status": "yes"
   },
   {
     "course4d": "IPD 5150",
-    "course3d": "IPD 515",
     "title": "Product Design",
     "status": "yes"
   },
   {
     "course4d": "IPD 5090",
-    "course3d": "IPD 509",
     "title": "Needfinding",
     "status": "no"
   },
   {
     "course4d": "JPAN 0400",
-    "course3d": "JPAN 112",
     "title": "Intermediate Japanese II",
     "status": "no"
   },
   {
     "course4d": "JPAN 0300",
-    "course3d": "JPAN 211",
     "title": "Intermediate Japanese I",
     "status": "no"
   },
   {
     "course4d": "LAW 5770",
-    "course3d": "LAW 577",
     "title": "Internet Law",
     "status": "yes"
   },
   {
     "course4d": "LGST 2050",
-    "course3d": "LGST 205",
     "title": "Innovation, Marketing Strategy, and Antitrust",
     "status": "no"
   },
   {
     "course4d": "LGST 2220",
-    "course3d": "LGST 222",
     "title": "Internet Law, Privacy, and Cybersecurity",
     "status": "no"
   },
   {
     "course4d": "LGST 2430",
-    "course3d": "LGST 243",
     "title": "Other People's Money: The Law, Politics, and History of Financial Institutions",
     "status": "no"
   },
   {
     "course4d": "LING 2300",
-    "course3d": "LING 230",
     "title": "Sound Structure of Language",
     "status": "yes"
   },
   {
     "course4d": "LING 5150",
-    "course3d": "LING 515",
     "title": "Dynamics of Language",
     "status": "yes"
   },
   {
     "course4d": "LING 5250",
-    "course3d": "LING 525",
     "title": "Computer Analysis and Modeling of Biological Signals and Systems",
     "status": "yes"
   },
   {
     "course4d": "LING 0001",
-    "course3d": "LING 001",
     "title": "Introduction to Linguistics",
     "status": "no"
   },
   {
     "course4d": "LING 0600",
-    "course3d": "LING 102",
     "title": "Introduction to Sociolinguistics",
     "status": "no"
   },
   {
     "course4d": "LING 0500",
-    "course3d": "LING 106",
     "title": "Introduction to Formal Linguistics",
     "status": "no"
   },
   {
     "course4d": "LING 0150",
-    "course3d": "LING 115",
     "title": "Writing Systems",
     "status": "no"
   },
   {
     "course4d": "LING 0700",
-    "course3d": "LING 172",
     "title": "Data Science for studying Language and the Mind",
     "status": "no"
   },
   {
     "course4d": "LING 2500",
-    "course3d": "LING 250",
     "title": "Introduction to Syntax",
     "status": "no"
   },
   {
     "course4d": "LING 2700",
-    "course3d": "LING 270",
     "title": "Language Acquisition",
     "status": "no"
   },
   {
     "course4d": "LING 3850",
-    "course3d": "LING 455",
     "title": "Experiments in the Study of Meaning",
     "status": "no"
   },
   {
     "course4d": "MATH 2400",
-    "course3d": "MATH 240",
     "title": "Calculus, Part III",
     "status": "yes"
   },
   {
     "course4d": "MATH 2410",
-    "course3d": "MATH 241",
     "title": "Calculus, Part IV",
     "status": "yes"
   },
   {
     "course4d": "MATH 3120",
-    "course3d": "MATH 312",
     "title": "Linear Algebra",
     "status": "yes"
   },
   {
     "course4d": "MATH 3140",
-    "course3d": "MATH 314",
     "title": "Advanced Linear Algebra",
     "status": "yes"
   },
   {
     "course4d": "MATH 3200",
-    "course3d": "MATH 320",
     "title": "Computer Methods in Mathematical Science I",
     "status": "yes"
   },
   {
     "course4d": "MATH 3400",
-    "course3d": "MATH 340",
     "title": "Discrete Mathematics I",
     "status": "yes"
   },
   {
     "course4d": "MATH 3410",
-    "course3d": "MATH 341",
     "title": "Discrete Mathematics II",
     "status": "yes"
   },
   {
     "course4d": "MATH 3500",
-    "course3d": "MATH 350",
     "title": "Number Theory",
     "status": "yes"
   },
   {
     "course4d": "MATH 3600",
-    "course3d": "MATH 360",
     "title": "Advanced Calculus",
     "status": "yes"
   },
   {
     "course4d": "MATH 3610",
-    "course3d": "MATH 361",
     "title": "Advanced Calculus",
     "status": "yes"
   },
   {
     "course4d": "MATH 3700",
-    "course3d": "MATH 370",
     "title": "Algebra",
     "status": "yes"
   },
   {
     "course4d": "MATH 3710",
-    "course3d": "MATH 371",
     "title": "Algebra",
     "status": "yes"
   },
   {
     "course4d": "MATH 4200",
-    "course3d": "MATH 420",
     "title": "Ordinary Differential Equations",
     "status": "yes"
   },
   {
     "course4d": "MATH 4250",
-    "course3d": "MATH 425",
     "title": "Partial Differential Equations",
     "status": "yes"
   },
   {
     "course4d": "MATH 4320",
-    "course3d": "MATH 432",
     "title": "Game Theory.",
     "status": "yes"
   },
   {
     "course4d": "MATH 4600",
-    "course3d": "MATH 460",
     "title": "Topology",
     "status": "yes"
   },
   {
     "course4d": "MATH 5020",
-    "course3d": "MATH 502",
     "title": "Abstract Algebra",
     "status": "yes"
   },
   {
     "course4d": "MATH 5030",
-    "course3d": "MATH 503",
     "title": "Abstract Algebra",
     "status": "yes"
   },
   {
     "course4d": "MATH 5080",
-    "course3d": "MATH 508",
     "title": "Advanced Analysis",
     "status": "yes"
   },
   {
     "course4d": "MATH 5090",
-    "course3d": "MATH 509",
     "title": "Advanced Analysis",
     "status": "yes"
   },
   {
     "course4d": "MATH 5460",
-    "course3d": "MATH 546",
     "title": "Advanced Applied Probability",
     "status": "yes"
   },
   {
     "course4d": "MATH 6020",
-    "course3d": "MATH 602",
     "title": "Algebra",
     "status": "yes"
   },
   {
     "course4d": "MEAM 1010",
-    "course3d": "MEAM 101",
     "title": "Introduction to Mechanical Design",
     "status": "yes"
   },
   {
     "course4d": "MEAM 2010",
-    "course3d": "MEAM 201",
     "title": "Machine Design and Manufacturing",
     "status": "yes"
   },
   {
     "course4d": "MEAM 2030",
-    "course3d": "MEAM 203",
     "title": "Thermodynamics I",
     "status": "yes"
   },
   {
     "course4d": "MEAM 2100",
-    "course3d": "MEAM 210",
     "title": "Statics and Strength of Materials",
     "status": "yes"
   },
   {
     "course4d": "MEAM 2110",
-    "course3d": "MEAM 211",
     "title": "Engineering Mechanics: Dynamics",
     "status": "yes"
   },
   {
     "course4d": "MEAM 3020",
-    "course3d": "MEAM 302",
     "title": "Fluid Mechanics",
     "status": "yes"
   },
   {
     "course4d": "MEAM 3210",
-    "course3d": "MEAM 321",
     "title": "Dynamic Systems and Control",
     "status": "yes"
   },
   {
     "course4d": "MEAM 3330",
-    "course3d": "MEAM 333",
     "title": "Heat and Mass Transfer",
     "status": "yes"
   },
   {
     "course4d": "MEAM 3470",
-    "course3d": "MEAM 347",
     "title": "Mechanical Engineering Design Laboratory",
     "status": "yes"
   },
   {
     "course4d": "MEAM 3540",
-    "course3d": "MEAM 354",
     "title": "Mechanics of Solids",
     "status": "yes"
   },
   {
     "course4d": "MEAM 4150",
-    "course3d": "MEAM 415",
     "title": "Product Design",
     "status": "yes"
   },
   {
     "course4d": "MEAM 5100",
-    "course3d": "MEAM 510",
     "title": "Design of Mechatronic Systems",
     "status": "yes"
   },
   {
     "course4d": "MGMT 1010",
-    "course3d": "MGMT 101",
     "title": "Introduction To Management",
     "status": "no"
   },
   {
     "course4d": "MGMT 2300",
-    "course3d": "MGMT 230",
     "title": "Entrepreneurship",
     "status": "no"
   },
   {
     "course4d": "MGMT 2370",
-    "course3d": "MGMT 237",
     "title": "Management of Technology",
     "status": "no"
   },
   {
     "course4d": "MGMT 2640",
-    "course3d": "MGMT 264",
     "title": "Venture Capital and Entrepreneurial Management",
     "status": "no"
   },
   {
     "course4d": "MGMT 2910",
-    "course3d": "MGMT 291",
     "title": "Negotiations",
     "status": "no"
   },
   {
     "course4d": "MKTG 2120",
-    "course3d": "MKTG 212",
     "title": "Data and Analysis for Marketing Decisions",
     "status": "yes"
   },
   {
     "course4d": "MKTG 2710",
-    "course3d": "MKTG 271",
     "title": "Models for Marketing Strategy",
     "status": "yes"
   },
   {
     "course4d": "MKTG 3520",
-    "course3d": "MKTG 352",
     "title": "Special Topics - Marketing Analytics",
     "status": "yes"
   },
   {
     "course4d": "MKTG 4760",
-    "course3d": "MKTG 476",
     "title": "Applied Probability Models in Marketing",
     "status": "yes"
   },
   {
     "course4d": "MKTG 7120",
-    "course3d": "MKTG 712",
     "title": "Data and Analysis for Marketing Decisions",
     "status": "yes"
   },
   {
     "course4d": "MKTG 1010",
-    "course3d": "MKTG 101",
     "title": "Introduction to Marketing",
     "status": "no"
   },
   {
     "course4d": "MKTG 2110",
-    "course3d": "MKTG 211",
     "title": "Consumer Behavior",
     "status": "no"
   },
   {
     "course4d": "MKTG 2370",
-    "course3d": "MKTG 237",
     "title": "Introduction to Brain Science for Business",
     "status": "no"
   },
   {
     "course4d": "MKTG 2390",
-    "course3d": "MKTG 239",
     "title": "Visual Marketing",
     "status": "no"
   },
   {
     "course4d": "MKTG 2620",
-    "course3d": "MKTG 262",
     "title": "New Product Development",
     "status": "no"
   },
   {
     "course4d": "MKTG 2650",
-    "course3d": "MKTG 265",
     "title": "Principles of Advertising",
     "status": "no"
   },
   {
     "course4d": "MKTG 2700",
-    "course3d": "MKTG 270",
     "title": "Digital Marketing, Social Media and E-Commerce",
     "status": "no"
   },
   {
     "course4d": "MKTG 2770",
-    "course3d": "MKTG 277",
     "title": "Marketing Strategy",
     "status": "no"
   },
   {
     "course4d": "MRTI 0200",
-    "course3d": "MRTI 411",
     "title": "Beginning Marathi II",
     "status": "no"
   },
   {
     "course4d": "MRTI 1500",
-    "course3d": "MRTI 449",
     "title": "Advanced Marathi",
     "status": "no"
   },
   {
     "course4d": "MSE 2200",
-    "course3d": "MSE 220",
     "title": "Introduction to Materials Science and Engineering",
     "status": "yes"
   },
   {
     "course4d": "MSE 2600",
-    "course3d": "MSE 260",
     "title": "Energetics of Macro and Nano-scale Materials",
     "status": "yes"
   },
   {
     "course4d": "MSE 3300",
-    "course3d": "MSE 330",
     "title": "Self-Assembly of Soft Materials",
     "status": "yes"
   },
   {
     "course4d": "MSE 3600",
-    "course3d": "MSE 360",
     "title": "Structure at the Nanoscale",
     "status": "yes"
   },
   {
     "course4d": "MSE 3930",
-    "course3d": "MSE 393",
     "title": "Materials Selection",
     "status": "yes"
   },
   {
     "course4d": "MUSC 1300",
-    "course3d": "MUSC 030",
     "title": "1000 Years of Musical Listening",
     "status": "no"
   },
   {
     "course4d": "MUSC 2700",
-    "course3d": "MUSC 170",
     "title": "Theory and Musicianship I",
     "status": "no"
   },
   {
     "course4d": "NETS 1500",
-    "course3d": "NETS 150",
     "title": "Market and Social Systems on the Internet",
     "status": "yes"
   },
   {
     "course4d": "NETS 2120",
-    "course3d": "NETS 212",
     "title": "Scalable and Cloud Computing",
     "status": "yes"
   },
   {
     "course4d": "NETS 2130",
-    "course3d": "NETS 213",
     "title": "Crowdsourcing and Human Computation",
     "status": "yes"
   },
   {
     "course4d": "NETS 3120",
-    "course3d": "NETS 312",
     "title": "Theory of Networks",
     "status": "yes"
   },
   {
     "course4d": "NETS 4120",
-    "course3d": "NETS 412",
     "title": "Algorithmic Game Theory",
     "status": "yes"
   },
   {
     "course4d": "NETS 1120",
-    "course3d": "NETS 112",
     "title": "Networked Life",
     "status": "no"
   },
   {
     "course4d": "OIDD 2200",
-    "course3d": "OIDD 220",
     "title": "Introduction to Operations Management",
     "status": "yes"
   },
   {
     "course4d": "OIDD 2240",
-    "course3d": "OIDD 224",
     "title": "Analytics for Service Operations",
     "status": "yes"
   },
   {
     "course4d": "OIDD 2450",
-    "course3d": "OIDD 245",
     "title": "Analytics and the Digital Economy",
     "status": "yes"
   },
   {
     "course4d": "OIDD 3190",
-    "course3d": "OIDD 319",
     "title": "Advanced Decision Systems: Evolutionary Computation",
     "status": "yes"
   },
   {
     "course4d": "OIDD 3210",
-    "course3d": "OIDD 321",
     "title": "Introduction to Management Science",
     "status": "yes"
   },
   {
     "course4d": "OIDD 3530",
-    "course3d": "OIDD 353",
     "title": "Mathematical Modeling and its Application in Finance",
     "status": "yes"
   },
   {
     "course4d": "OIDD 4150",
-    "course3d": "OIDD 415",
     "title": "Product Design",
     "status": "yes"
   },
   {
     "course4d": "OIDD 4690",
-    "course3d": "OIDD 469",
     "title": "Information Strategy and Economics",
     "status": "yes"
   },
   {
     "course4d": "OIDD 5150",
-    "course3d": "OIDD 515",
     "title": "Product Design",
     "status": "yes"
   },
   {
     "course4d": "OIDD 6130",
-    "course3d": "OIDD 613",
     "title": "Online Business Models and the Information-Based Firm",
     "status": "yes"
   },
   {
     "course4d": "OIDD 6700",
-    "course3d": "OIDD 670",
     "title": "Special topics in Information Systems: Simulation and Dynamic Competitive Strat",
     "status": "yes"
   },
   {
     "course4d": "OIDD 9040",
-    "course3d": "OIDD 904",
     "title": "Experimental Economics",
     "status": "yes"
   },
   {
     "course4d": "OIDD 9100",
-    "course3d": "OIDD 910",
     "title": "Intro to Linear, Nonlinear and Integer Optimization",
     "status": "yes"
   },
   {
     "course4d": "OIDD 9150",
-    "course3d": "OIDD 915",
     "title": "Advanced Graph Theory",
     "status": "yes"
   },
   {
     "course4d": "OIDD 9340",
-    "course3d": "OIDD 934",
     "title": "Dynamic Programming and Stochastic Models",
     "status": "yes"
   },
   {
     "course4d": "OIDD 6530",
-    "course3d": "OIDD 653",
     "title": "Mathematical Modeling and its Application in Finance",
     "status": "yes"
   },
   {
     "course4d": "OIDD 9500",
-    "course3d": "OIDD 950",
     "title": "Perspectives on Information Systems",
     "status": "yes"
   },
   {
     "course4d": "OIDD 2990",
-    "course3d": "OIDD 299",
     "title": "Judgment & Decision Making Research Immersion",
     "status": "ask"
   },
   {
     "course4d": "OIDD 2100",
-    "course3d": "OIDD 210",
     "title": "Online Business Models and the Information-Based Firm",
     "status": "no"
   },
   {
     "course4d": "OIDD 2360",
-    "course3d": "OIDD 236",
     "title": "Scaling Operations in Technology Ventures: Linking Strategy and Execution",
     "status": "no"
   },
   {
     "course4d": "OIDD 2550",
-    "course3d": "OIDD 255",
     "title": "Artificial Intelligence, Data and Society",
     "status": "no"
   },
   {
     "course4d": "OIDD 2610",
-    "course3d": "OIDD 261",
     "title": "Risk Analysis and Environmental Management",
     "status": "no"
   },
   {
     "course4d": "OIDD 2900",
-    "course3d": "OIDD 290",
     "title": "Decision Processes",
     "status": "no"
   },
   {
     "course4d": "OIDD 2910",
-    "course3d": "OIDD 291",
     "title": "Negotiations",
     "status": "no"
   },
   {
     "course4d": "OIDD 2920",
-    "course3d": "OIDD 292",
     "title": "Advanced Negotiation",
     "status": "no"
   },
   {
     "course4d": "OIDD 2930",
-    "course3d": "OIDD 293",
     "title": "People Analytics",
     "status": "no"
   },
   {
     "course4d": "OIDD 3110",
-    "course3d": "OIDD 311",
     "title": "Business Computer Languages",
     "status": "no"
   },
   {
     "course4d": "OIDD 3140",
-    "course3d": "OIDD 314",
     "title": "Enabling Technologies",
     "status": "no"
   },
   {
     "course4d": "OIDD 3250",
-    "course3d": "OIDD 325",
     "title": "Computer Simulation Models",
     "status": "no"
   },
   {
     "course4d": "PHIL 4720",
-    "course3d": null,
     "title": "Topics in Mathematical Logic",
     "status": "yes"
   },
   {
     "course4d": "PHIL 4721",
-    "course3d": "PHIL 410",
     "title": "Logic and Computability 1",
     "status": "yes"
   },
   {
     "course4d": "PHIL 4722",
-    "course3d": "PHIL 413",
     "title": "Logic and Computability 2",
     "status": "yes"
   },
   {
     "course4d": "PHIL 4770",
-    "course3d": "PHIL 414",
     "title": "Philosophy of Mathematics",
     "status": "yes"
   },
   {
     "course4d": "PHIL 1170",
-    "course3d": "PHIL 004",
     "title": "History of Modern Philosophy",
     "status": "no"
   },
   {
     "course4d": "PHIL 1710",
-    "course3d": "PHIL 005",
     "title": "Introduction to Logic",
     "status": "no"
   },
   {
     "course4d": "PHIL 2620",
-    "course3d": "PHIL 231",
     "title": "Introduction to Epistemology and Metaphysics",
     "status": "no"
   },
   {
     "course4d": "PHIL 2640",
-    "course3d": "PHIL 244",
     "title": "Introduction to Philosophy of Mind",
     "status": "no"
   },
   {
     "course4d": "PHIL 3600",
-    "course3d": "PHIL 359",
     "title": "Topics in Theoretical Philosophy",
     "status": "no"
   },
   {
     "course4d": "PHIL 4800",
-    "course3d": "PHIL 425",
     "title": "Philosophy of Science.",
     "status": "no"
   },
   {
     "course4d": "PHIL 4840",
-    "course3d": "PHIL 426",
     "title": "Philosophy of Psychology",
     "status": "no"
   },
   {
     "course4d": "PHIL 4640",
-    "course3d": "PHIL 430",
     "title": "Philosophy of Mind",
     "status": "no"
   },
   {
     "course4d": "PHIL 4330",
-    "course3d": "PHIL 472",
     "title": "Metaethics",
     "status": "no"
   },
   {
     "course4d": "PHYS 1230",
-    "course3d": "PHYS 230",
     "title": "Principles of Physics III: Thermal Physics and Waves",
     "status": "yes"
   },
   {
     "course4d": "PHYS 1250",
-    "course3d": "PHYS 250",
     "title": "Principles of Physics IV: Modern Physics",
     "status": "yes"
   },
   {
     "course4d": "PHYS 2280",
-    "course3d": "PHYS 280",
     "title": "Physical Models of Biological Systems",
     "status": "yes"
   },
   {
     "course4d": "PHYS 3351",
-    "course3d": "PHYS 351",
     "title": "Analytical Mechanics",
     "status": "yes"
   },
   {
     "course4d": "PHYS 3361",
-    "course3d": "PHYS 361",
     "title": "Electromagnetism I: Electricity and Potential Theory",
     "status": "yes"
   },
   {
     "course4d": "PHYS 3362",
-    "course3d": "PHYS 362",
     "title": "Electromagnetism II: Magnetism, Maxwell's Equations, and Electromagnetic Waves",
     "status": "yes"
   },
   {
     "course4d": "PHYS 4401",
-    "course3d": "PHYS 401",
     "title": "Thermodynamics and the Introduction to Statistical Mechanics and Kinetic Theory",
     "status": "yes"
   },
   {
     "course4d": "PHYS 4411",
-    "course3d": "PHYS 411",
     "title": "Introduction to Quantum Mechanics I",
     "status": "yes"
   },
   {
     "course4d": "PSCI 1800",
-    "course3d": "PSCI 107",
     "title": "Introduction to Data Science",
     "status": "no"
   },
   {
     "course4d": "PSYC 1340",
-    "course3d": "PSYC 111",
     "title": "Perception",
     "status": "yes"
   },
   {
     "course4d": "PSYC 1230",
-    "course3d": "PSYC 149",
     "title": "Cognitive Neuroscience",
     "status": "yes"
   },
   {
     "course4d": "PSYC 1310",
-    "course3d": "PSYC 151",
     "title": "Language and Thought",
     "status": "yes"
   },
   {
     "course4d": "PSYC 2377",
-    "course3d": "PSYC 281",
     "title": "Cognitive Development",
     "status": "yes"
   },
   {
     "course4d": "PSYC 0001",
-    "course3d": "PSYC 001",
     "title": "Introduction to Experimental Psychology",
     "status": "no"
   },
   {
     "course4d": "PSYC 1210",
-    "course3d": "PSYC 109",
     "title": "Introduction to Brain and Behavior",
     "status": "no"
   },
   {
     "course4d": "PSYC 1440",
-    "course3d": "PSYC 170",
     "title": "Social Psychology",
     "status": "no"
   },
   {
     "course4d": "PSYC 1777",
-    "course3d": "PSYC 181",
     "title": "Introduction to Developmental Psychology",
     "status": "no"
   },
   {
     "course4d": "PSYC 2310",
-    "course3d": "PSYC 235",
     "title": "Psychology of Language",
     "status": "no"
   },
   {
     "course4d": "PSYC 2737",
-    "course3d": "PSYC 253",
     "title": "Judgment and Decisions",
     "status": "no"
   },
   {
     "course4d": "PSYC 2400",
-    "course3d": "PSYC 266",
     "title": "Introduction to Positive Psychology (SNF Paideia Program Course)",
     "status": "no"
   },
   {
     "course4d": "SAST 0001",
-    "course3d": "SAST 001",
     "title": "Introduction to Modern India",
     "status": "no"
   },
   {
     "course4d": "SAST 0050",
-    "course3d": "SAST 050",
     "title": "Introduction to Indian Philosophy",
     "status": "no"
   },
   {
     "course4d": "STAT 4310",
-    "course3d": "STAT 431",
     "title": "Statistical Inference",
     "status": "yes"
   },
   {
     "course4d": "STAT 4320",
-    "course3d": "STAT 432",
     "title": "Mathematical Statistics",
     "status": "yes"
   },
   {
     "course4d": "STAT 4330",
-    "course3d": "STAT 433",
     "title": "Stochastic Processes",
     "status": "yes"
   },
   {
     "course4d": "STAT 4350",
-    "course3d": "STAT 435",
     "title": "Forecasting Methods for Management",
     "status": "yes"
   },
   {
     "course4d": "STAT 4420",
-    "course3d": "STAT 442",
     "title": "Introduction to Bayesian Data Analysis",
     "status": "yes"
   },
   {
     "course4d": "STAT 4700",
-    "course3d": "STAT 470",
     "title": "Data Analytics and Statistical Computing",
     "status": "yes"
   },
   {
     "course4d": "STAT 4710",
-    "course3d": "STAT 471",
     "title": "Modern Data Mining",
     "status": "yes"
   },
   {
     "course4d": "STAT 4740",
-    "course3d": "STAT 474",
     "title": "Modern Regression for the Social, Behavioral and Biological Sciences",
     "status": "yes"
   },
   {
     "course4d": "STAT 4750",
-    "course3d": "STAT 475",
     "title": "Sample Survey Design",
     "status": "yes"
   },
   {
     "course4d": "STAT 4760",
-    "course3d": "STAT 476",
     "title": "Applied Probability Models in Marketing",
     "status": "yes"
   },
   {
     "course4d": "STAT 4810",
-    "course3d": "STAT 481",
     "title": "Convex Optimization for Statistics and Data Science",
     "status": "yes"
   },
   {
     "course4d": "STAT 5200",
-    "course3d": "STAT 520",
     "title": "Applied Econometrics I",
     "status": "yes"
   },
   {
     "course4d": "STAT 4050",
-    "course3d": "STAT 405",
     "title": "Statistical Computing with R",
     "status": "no"
   },
   {
     "course4d": "STAT 4770",
-    "course3d": "STAT 477",
     "title": "Introduction to Python for Data Science",
     "status": "no"
   },
   {
     "course4d": "VIPR 3999",
-    "course3d": "VIPR 399",
     "title": "Independent Study",
     "status": "ask"
   },
   {
     "course4d": "PHYS 2260",
-    "course3d": "PHYS 260",
     "title": "Introduction to Computational Physics",
     "status": "yes"
   },
@@ -2166,367 +1806,306 @@
   },
   {
     "course4d": "ESE 5300",
-    "course3d": "ESE 530",
     "title": "Elements of Probability Theory",
     "status": "yes"
   },
   {
     "course4d": "STAT 9270",
-    "course3d": "STAT 927",
     "title": "Bayesian Statistical Theory and Methods",
     "status": "yes"
   },
   {
     "course4d": "OIDD 4810",
-    "course3d": "OIDD 481",
     "title": "Convex Optimization for Statistics and Data Science",
     "status": "yes"
   },
   {
     "course4d": "ACCT 2700",
-    "course3d": "ACCT 270",
     "title": "Forensic Analytics",
     "status": "no"
   },
   {
     "course4d": "CIS 5490",
-    "course3d": "CIS 549",
     "title": "Wireless Communications for Mobile Networks and Internet of Things",
     "status": "yes"
   },
   {
     "course4d": "CIS 5220",
-    "course3d": "CIS 522",
     "title": "Deep Learning for Data Science",
     "status": "yes"
   },
   {
     "course4d": "OIDD 5250",
-    "course3d": "OIDD 525",
     "title": "Thinking with Models: Business Analytics for Energy and Sustainability",
     "status": "yes"
   },
   {
     "course4d": "CIS 7000",
-    "course3d": "CIS 700",
     "title": "Special Topics",
     "status": "yes"
   },
   {
     "course4d": "OIDD 2630",
-    "course3d": "OIDD 263",
     "title": "Environmental & Energy Economics and Policy",
     "status": "no"
   },
   {
     "course4d": "OIDD 7630",
-    "course3d": "OIDD 763",
     "title": "Energy Markets & Policy",
     "status": "no"
   },
   {
     "course4d": "CIS 5590",
-    "course3d": "CIS 559",
     "title": "Programming and Problem Solving",
     "status": "yes"
   },
   {
     "course4d": "MUSC 1270",
-    "course3d": "MUSC 077",
     "title": "Introduction to Electronic Musicmaking",
     "status": "no"
   },
   {
     "course4d": "MEAM 5200",
-    "course3d": "MEAM 520",
     "title": "Introduction to Robotics",
     "status": "yes"
   },
   {
     "course4d": "MEAM 2020",
-    "course3d": "MEAM 202",
     "title": "Introduction to Thermal-Fluids Engineering",
     "status": "yes"
   },
   {
     "course4d": "MATH 3130",
-    "course3d": "MATH 313",
     "title": "Computational Linear Algebra",
     "status": "yes"
   },
   {
     "course4d": "OIDD 3150",
-    "course3d": "OIDD 315",
     "title": "Databases for Analytics",
     "status": "no"
   },
   {
     "course4d": "MATH 2030",
-    "course3d": "MATH 203",
     "title": "Proving things: Algebra",
     "status": "yes"
   },
   {
     "course4d": "ENGR 1400",
-    "course3d": "ENGR 140",
     "title": "Penn Global Seminar: Robotics and Rehabilitation",
     "status": "yes"
   },
   {
     "course4d": "CBE 3200",
-    "course3d": "CBE 320",
     "title": "Basic Chemical Process Safety",
     "status": "no"
   },
   {
     "course4d": "FNCE 7370",
-    "course3d": "FNCE 737",
     "title": "Data Science for Finance",
     "status": "yes"
   },
   {
     "course4d": "STAT 5350",
-    "course3d": "STAT 535",
     "title": "Forecasting Methods for Management",
     "status": "yes"
   },
   {
     "course4d": "MATH 4100",
-    "course3d": "MATH 410",
     "title": "Complex Analysis",
     "status": "yes"
   },
   {
     "course4d": "COMM 3670",
-    "course3d": "COMM 367",
     "title": "Communication in the Networked Age",
     "status": "no"
   },
   {
     "course4d": "COMM 3180",
-    "course3d": "COMM 318",
     "title": "Stories From Data: Introduction to Programming for Data Journalism",
     "status": "no"
   },
   {
     "course4d": "OIDD 1010",
-    "course3d": "OIDD 101",
     "title": "An Introduction to Operations, Information and Decisions",
     "status": "no"
   },
   {
     "course4d": "ESE 6500",
-    "course3d": "ESE 650",
     "title": "Learning in Robotics",
     "status": "yes"
   },
   {
     "course4d": "BE 2000",
-    "course3d": "BE 200",
     "title": "Introduction to Biomechanics",
     "status": "yes"
   },
   {
     "course4d": "BE 2200",
-    "course3d": "BE 220",
     "title": "Biomaterials",
     "status": "yes"
   },
   {
     "course4d": "PSYC 3990",
-    "course3d": "PSYC 440",
     "title": "Sleep and Sleep Disorders",
     "status": "no"
   },
   {
     "course4d": "LGST 2440",
-    "course3d": "LGST 244",
     "title": "Blockchain & Cryptocurrencies: Business, Legal, and Regulatory Considerations",
     "status": "no"
   },
   {
     "course4d": "ESE 3060",
-    "course3d": null,
     "title": "Deep Learning: A Hands-on Introduction",
     "status": "yes"
   },
   {
     "course4d": "MUSC 1250",
-    "course3d": "MUSC 075",
     "title": "Musical Interfaces and Robotics",
     "status": "no"
   },
   {
     "course4d": "STAT 4220",
-    "course3d": "STAT 422",
     "title": "Predictive Analytics for Business",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2910",
-    "course3d": "FNCE 291",
     "title": "Corporate Restructuring",
     "status": "no"
   },
   {
     "course4d": "ENM 3750",
-    "course3d": "ENM 375",
     "title": "Biological Data Science I - Fundamentals of Biostatistics",
     "status": "yes"
   },
   {
     "course4d": "IPD 5450",
-    "course3d": "IPD 545",
     "title": "Engineering Entrepreneurship I",
     "status": "yes"
   },
   {
     "course4d": "BEPP 2200",
-    "course3d": "BEPP 220",
     "title": "Behavioral Economics, Markets, and Public Policy",
     "status": "no"
   },
   {
     "course4d": "BIOL 1123",
-    "course3d": "BIOL 123",
     "title": "Introductory Molecular Biology Laboratory",
     "status": "yes"
   },
   {
     "course4d": "PSCI 3802",
-    "course3d": null,
     "title": "Political Polling",
     "status": "no"
   },
   {
     "course4d": "ENM 3440",
-    "course3d": "ENM 344",
     "title": "Answering Questions with Data, for Everyone",
     "status": "yes"
   },
   {
     "course4d": "FNCE 4010",
-    "course3d": "FNCE 401",
     "title": "Advanced Topics in Private Equity",
     "status": "yes"
   },
   {
     "course4d": "FNCE 2090",
-    "course3d": "FNCE 209",
     "title": "Real Estate Investment: Analysis and Financing",
     "status": "yes"
   },
   {
     "course4d": "ECON 2300",
-    "course3d": "ECON 103",
     "title": "Statistics for Economists",
     "status": "yes"
   },
   {
     "course4d": "CIS 3310",
-    "course3d": "CIS 331",
     "title": "Introduction to Networks and Security",
     "status": "yes"
   },
   {
     "course4d": "EESC 4630",
-    "course3d": null,
     "title": "Hydrology",
     "status": "yes"
   },
   {
     "course4d": "FNCE 3990",
-    "course3d": "FNCE 399",
     "title": "Supervised Study in Finance",
     "status": "ask"
   },
   {
     "course4d": "MEAM 2470",
-    "course3d": "MEAM 247",
     "title": "Mechanical Engineering Laboratory I",
     "status": "yes"
   },
   {
     "course4d": "MEAM 2480",
-    "course3d": "MEAM 248",
     "title": "Mechanical Engineering Lab I",
     "status": "yes"
   },
   {
     "course4d": "HCMG 8570",
-    "course3d": "HCMG 857",
     "title": "Healthcare Data and Analytics",
     "status": "no"
   },
   {
     "course4d": "FNCE 1008",
-    "course3d": null,
     "title": "Corporate Finance (Honors)",
     "status": "no"
   },
   {
     "course4d": "CRIM 2040",
-    "course3d": "CRIM 240",
     "title": "Forensic Analysis",
     "status": "no"
   },
   {
     "course4d": "ESE 6800",
-    "course3d": "ESE 680",
     "title": "Special Topics in Electrical and Systems Engineering",
     "status": "ask"
   },
   {
     "course4d": "ESE 2000",
-    "course3d": null,
     "title": "Artificial Intelligence Lab: Data, Systems, and Decisions",
     "status": "yes"
   },
   {
     "course4d": "PSCI 3800",
-    "course3d": "PSCI 207",
     "title": "Applied Data Science",
     "status": "no"
   },
   {
     "course4d": "BE 3010",
-    "course3d": null,
     "title": "Bioengineering Signals and Systems",
     "status": "yes"
   },
   {
     "course4d": "CHEM 2210",
-    "course3d": null,
     "title": "Physical Chemistry I",
     "status": "yes"
   },
   {
     "course4d": "CBE 3600",
-    "course3d": null,
     "title": "Chemical Process Control",
     "status": "yes"
   },
   {
     "course4d": "CBE 3500",
-    "course3d": null,
     "title": "Fluid Mechanics",
     "status": "yes"
   },
   {
     "course4d": "CBE 2310",
-    "course3d": null,
     "title": "Thermodynamics of Fluids",
     "status": "yes"
   },
   {
     "course4d": "CBE 4790",
-    "course3d": null,
     "title": "Biotechnology and Biochemical Engineering",
     "status": "yes"
   },
   {
     "course4d": "CBE 2300",
-    "course3d": null,
     "title": "Material and Energy Balances of Chemical Processes",
     "status": "yes"
   }

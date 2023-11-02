@@ -31,14 +31,9 @@ function makeRows(status, courses) {
         .filter((e) => e["status"] === status)
         .sort(byCourse4d).forEach((e) => {
         // course list is in the right column
-        if (e["course3d"] === null) {
-            // no 3-digit course listed
-            html += `${e["course4d"]} ${e["title"]}<br>`
-        } else {
-            // show 3-digit course in a tooltip
-            if (encode_to_3d[e["course4d"]] != undefined) {
-                html += `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[e["course4d"]].trim()}</span></span> ${e["title"]}<br>`
-            }
+        // show 3-digit course in a tooltip
+        if (encode_to_3d[e["course4d"]] != undefined) {
+            html += `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[e["course4d"]].trim()}</span></span> ${e["title"]}<br>`
         }
     })
     html += "</td>"
