@@ -36,58 +36,78 @@ function makeRows(status, courses) {
             html += `${e["course4d"]} ${e["title"]}<br>`
         } else {
             // show 3-digit course in a tooltip
-            html += `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${e["course3d"]}</span></span> ${e["title"]}<br>`
+            if (encode_to_3d[e["course4d"]] != undefined) {
+                html += `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[e["course4d"]].trim()}</span></span> ${e["title"]}<br>`
+            }
         }
     })
     html += "</td>"
     return html
 }
+let telist = null;
+let fetched_4d_encoding = null;
+async function fetchData() {
+    try {
+        let response1 = await fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list.json");
+        let json1 = await response1.text();
+        let telist = JSON.parse(json1);
 
-fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list.json")
-    .then(response => response.text())
-    .then(json => {
+        let response2 = await fetch(window.location.origin + "/assets/json/3d_to_4d_course_translation.json");
+        let json2 = await response2.text();
+        let fetched_4d_encoding = JSON.parse(json2);
+        processFetchedData(telist, fetched_4d_encoding);
+    } catch (error) {
+        console.error(error);
+    }
+}
+fetchData();
+let encode_to_3d = {};
+function processFetchedData(telist, fetched_4d_encoding) {
+    for (const key in fetched_4d_encoding) {
+        if (fetched_4d_encoding.hasOwnProperty(key)) {
+            const new_key = fetched_4d_encoding[key]._4d;
+            encode_to_3d[new_key] = key;
+        }
+    }
+    const subjects = telist
+        .map((e) => e["course4d"].split(" ")[0].trim())
+        .filter(unique)
 
-        let telist = JSON.parse(json);
+    subjects.forEach((s) => {
+        const thisSubject = telist.filter((e) => e["course4d"].startsWith(s + " "))
 
-        const subjects = telist
-            .map((e) => e["course4d"].split(" ")[0].trim())
-            .filter(unique)
+        const statuses = thisSubject.map((e) => e["status"]).filter(unique)
 
-        subjects.forEach((s) => {
-            const thisSubject = telist.filter((e) => e["course4d"].startsWith(s + " "))
-
-            const statuses = thisSubject.map((e) => e["status"]).filter(unique)
-
-            const caret = document.querySelector('#telist');
-            let html = "";
-            let addSubject = true
-            if (statuses.includes("yes")) {
-                html += "<tr>";
-                if (addSubject) {
-                    addSubject = false
-                    // subject name is in the left column
-                    html += `<td rowSpan="${statuses.length}">${s}</td>`
-                }
-                html += makeRows("yes", thisSubject) + "</tr>"
+        const caret = document.querySelector('#telist');
+        let html = "";
+        let addSubject = true
+        if (statuses.includes("yes")) {
+            html += "<tr>";
+            if (addSubject) {
+                addSubject = false
+                // subject name is in the left column
+                html += `<td rowSpan="${statuses.length}">${s}</td>`
             }
-            if (statuses.includes("ask")) {
-                html += "<tr>";
-                if (addSubject) {
-                    addSubject = false
-                    html += `<td rowSpan="${statuses.length}">${s}</td>`
-                }
-                html += makeRows("ask", thisSubject) + "</tr>"
+            html += makeRows("yes", thisSubject) + "</tr>"
+        }
+        if (statuses.includes("ask")) {
+            html += "<tr>";
+            if (addSubject) {
+                addSubject = false
+                html += `<td rowSpan="${statuses.length}">${s}</td>`
             }
-            if (statuses.includes("no")) {
-                html += "<tr>";
-                if (addSubject) {
-                    addSubject = false
-                    html += `<td rowSpan="${statuses.length}">${s}</td>`
-                }
-                html += makeRows("no", thisSubject) + "</tr>"
+            html += makeRows("ask", thisSubject) + "</tr>"
+        }
+        if (statuses.includes("no")) {
+            html += "<tr>";
+            if (addSubject) {
+                addSubject = false
+                html += `<td rowSpan="${statuses.length}">${s}</td>`
             }
-            caret.insertAdjacentHTML("beforeend", html);
-        })
-    });
+            html += makeRows("no", thisSubject) + "</tr>"
+        }
+        caret.insertAdjacentHTML("beforeend", html);
+    })
+}
 
 
