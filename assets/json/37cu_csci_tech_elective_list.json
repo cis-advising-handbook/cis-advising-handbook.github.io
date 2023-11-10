@@ -2118,5 +2118,10 @@
     "course4d": "ESE 3190",
     "title": "Fundamentals of Solid-State Circuits",
     "status": "yes"
+  },
+  {
+    "course4d": "ESE 3700",
+    "title": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
+    "status": "yes"
   }
 ]
