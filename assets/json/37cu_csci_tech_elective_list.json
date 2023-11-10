@@ -2113,5 +2113,10 @@
     "course4d": "ESE 2180",
     "title": "Electronic, Photonic, and Electromechanical Devices",
     "status": "yes"
+  },
+  {
+    "course4d": "ESE 3190",
+    "title": "Fundamentals of Solid-State Circuits",
+    "status": "yes"
   }
 ]
