@@ -1860,7 +1860,7 @@ class CourseTaken {
             (this.subject == "NRSC" && !["0050", "0060"].includes(this.courseNumber)) ||
             (this.subject == "BIOL" && this.courseNumberInt > 1000 && this.courseNumberInt != 2510) ||
             (this.subject == "CHEM" && ![1000, 1200, 250, 1011].includes(this.courseNumberInt)) ||
-            (this.subject == "EESC" && ([1000, 1030, 1090, 2500, 4200, 4360, 4440, 4630].includes(this.courseNumberInt))) ||
+            (this.subject == "EESC" && ([1000, 1030, 1090, 2120, 2500, 4200, 4360, 4440, 4630].includes(this.courseNumberInt))) ||
             (this.subject == "PHYS" && this.courseNumberInt >= 150 && ![3314, 5500].includes(this.courseNumberInt));
     }
     /** If this returns true, the SEAS Undergraduate Handbook classifies the course as Engineering.
@@ -1890,7 +1890,7 @@ class CourseTaken {
         const noCreditStat = this.subject == "STAT" && this.courseNumberInt < 4300 && !["STAT 4050", "STAT 4220"].includes(this.code());
         const noCreditPhys = this.subject == "PHYS" && this.courseNumberInt < 140 && !["PHYS 0050", "PHYS 0051"].includes(this.code());
         const noCreditList = ["ASTRO 0001", "EAS 5030", "EAS 5050", "MATH 1510", "MATH 1700",
-            "FNCE 0001", "FNCE 0002", "HCMG 0001", "MGMT 0004", "MKTG 0001", "OIDD 0001"];
+            "FNCE 0001", "FNCE 0002", "HCMG 0001", "MGMT 0004", "MKTG 0001", "OIDD 0001", "PHYS 1100"];
         // no-credit subject areas
         return (["CIT", "MSCI", "DYNM", "MED"].includes(this.subject)) ||
             noCreditList.includes(this.code()) ||
@@ -3103,45 +3103,90 @@ function setRemainingCUs(n) {
     $(NodeRemainingCUs).empty();
     $(NodeRemainingCUs).append(`<div class="alert alert-primary" role="alert">${n} CUs needed to graduate</div>`);
 }
+/*
+ COMMAND-LINE USAGE
+ */
 if (typeof window === 'undefined') {
-    cliMain();
+    //import * as CmdTs from 'cmd-ts';
+    //import * as CmdTsFs from 'cmd-ts/batteries/fs';
+    const CmdTs = require('cmd-ts');
+    const CmdTsFs = require('cmd-ts/batteries/fs');
+    const courseAttrs = CmdTs.command({
+        name: 'course-attrs',
+        args: {
+            courseAttrCsv: CmdTs.positional({ type: CmdTsFs.File, description: 'course attributes CSV file (from Pennant Reports)' }),
+        },
+        handler: ({ courseAttrCsv }) => {
+            analyzeCourseAttributeSpreadsheet(courseAttrCsv);
+        },
+    });
+    const dwWorksheets = CmdTs.command({
+        name: 'dw-worksheets',
+        args: {
+            majorsListCsv: CmdTs.option({
+                type: CmdTsFs.File,
+                long: 'majors-list',
+                description: 'majors list CSV file (from Pennant Reports)'
+            }),
+            limit: CmdTs.option({
+                type: CmdTs.number,
+                long: 'limit',
+                description: 'process only the first K worksheets (0 for all)',
+                defaultValue() {
+                    return 0;
+                },
+                defaultValueIsSerializable: true,
+            }),
+            makePennPathwaysWorksheets: CmdTs.flag({
+                type: CmdTs.boolean,
+                long: 'pathways',
+                description: 'generate Penn Pathways anonymized degree worksheets',
+                defaultValue() {
+                    return false;
+                },
+                defaultValueIsSerializable: true,
+            }),
+            worksheets: CmdTs.restPositionals({ type: CmdTsFs.File, description: 'DW worksheet(s)' })
+        },
+        handler: async ({ majorsListCsv, makePennPathwaysWorksheets, limit, worksheets }) => {
+            await analyzeWorksheets(majorsListCsv, makePennPathwaysWorksheets, limit, worksheets);
+        }
+    });
+    const app = CmdTs.subcommands({
+        name: 'irs',
+        cmds: { courseAttrs, dwWorksheets },
+    });
+    CmdTs.run(app, process.argv.slice(2));
 }
-async function cliMain() {
-    if (process.argv.length == 3 && process.argv[2].startsWith('CourseAttributes')) {
-        analyzeCourseAttributeSpreadsheet(process.argv[2]);
-        return;
-    }
-    if (process.argv.length < 3) {
-        console.log(`Usage: ${process.argv[1]} DW_WORKSHEETS...`);
-        return;
-    }
+async function analyzeWorksheets(majorsListCsv, makePennPathwaysWorksheets, limit, worksheets) {
     const path = require('path');
     const fs = require('fs');
     const csv = require('csv-parse/sync');
-    //import { parse } from 'csv-parse/sync';
-    // TODO: this is a hack, pass this as a proper cmdline argument
     //const fileContent = fs.readFileSync('/Users/devietti/Projects/irs/2023-cis-majors.csv', { encoding: 'utf-8' });
-    const fileContent = fs.readFileSync('/Users/devietti/Projects/irs/MajorsList-202330-mse.csv', { encoding: 'utf-8' });
+    // const fileContent = fs.readFileSync('/Users/devietti/Projects/irs/MajorsList-202330-mse.csv', { encoding: 'utf-8' });
+    const fileContent = fs.readFileSync(majorsListCsv, { encoding: 'utf-8' });
     let majorCsvRecords = csv.parse(fileContent, {
         delimiter: ',',
         columns: true,
     });
-    let worksheets = process.argv.slice(2);
-    for (let i = 0; i < worksheets.length;) {
+    if (limit == 0) {
+        limit = worksheets.length;
+    }
+    for (let i = 0; i < limit;) {
         const worksheetFile = worksheets[i];
         const pennid = path.basename(worksheetFile).split("-")[0];
         const myWorksheetFiles = worksheets.filter((f) => f.includes(pennid));
         // console.log(`jld: working on ${myWorksheetFiles}...`)
         if (myWorksheetFiles.length == 1) {
             const worksheetText = fs.readFileSync(worksheetFile, 'utf8');
-            await runOneWorksheet(worksheetText, path.basename(worksheetFile), majorCsvRecords);
+            await runOneWorksheet(worksheetText, path.basename(worksheetFile), majorCsvRecords, makePennPathwaysWorksheets);
         }
         else {
             // aggregate multiple worksheets for the same student
             const allMyWorksheets = myWorksheetFiles
                 .map((f) => fs.readFileSync(f, 'utf8'))
                 .join("\n");
-            await runOneWorksheet(allMyWorksheets, path.basename(worksheetFile), majorCsvRecords);
+            await runOneWorksheet(allMyWorksheets, path.basename(worksheetFile), majorCsvRecords, makePennPathwaysWorksheets);
         }
         i += myWorksheetFiles.length;
     }
@@ -3155,8 +3200,10 @@ let wrongCatalogYearHeaderWritten = false;
 let cusRemainingHeaderWritten = false;
 let badGradeHeaderWritten = false;
 let probationRiskHeaderWritten = false;
-async function runOneWorksheet(worksheetText, analysisOutput, majorCsvRecords) {
+async function runOneWorksheet(worksheetText, analysisOutput, majorCsvRecords, makePennPathwaysWorksheets) {
+    var _a;
     const fs = require('fs');
+    const crypto = require('crypto');
     try {
         const parser = CourseParser.getParser(worksheetText);
         let parseResult;
@@ -3211,27 +3258,27 @@ async function runOneWorksheet(worksheetText, analysisOutput, majorCsvRecords) {
         const response = await fetch("https://advising.cis.upenn.edu/assets/json/37cu_csci_tech_elective_list.json");
         const telist = await response.json();
         const result = run(telist, degrees, coursesTaken);
-        // check if student needs CIS 3800
-        if (degrees.undergrad == "37cu CSCI" ||
-            degrees.undergrad == "37cu CMPE") {
-            if (!coursesTaken.some(c => ["CIS 3800", "CIS 5480", "CIS 380", "CIS 548"].includes(c.code()))) {
-                fs.appendFileSync(`${AnalysisOutputDir}needs-CIS3800.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`);
-            }
-        }
-        // check if student needs CIS 3200/5020
-        if (degrees.undergrad == "37cu CSCI" ||
-            degrees.undergrad == "37cu ASCS" ||
-            degrees.undergrad == "37cu DMD" ||
-            degrees.undergrad == "37cu NETS") {
-            if (!coursesTaken.some(c => ["CIS 3200", "CIS 5020", "CIS 320", "CIS 502"].includes(c.code()))) {
-                fs.appendFileSync(`${AnalysisOutputDir}needs-CIS3200_5020.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`);
-            }
-        }
-        if (degrees.masters == "CIS-MSE") {
-            if (!coursesTaken.some(c => ["CIS 5110", "CIS 5020", "CIS 511", "CIS 502"].includes(c.code()))) {
-                fs.appendFileSync(`${AnalysisOutputDir}needs-CIS5020.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`);
-            }
-        }
+        // // check if student needs CIS 3800
+        // if (degrees!.undergrad == "37cu CSCI" ||
+        //     degrees!.undergrad == "37cu CMPE") {
+        //     if (!coursesTaken.some(c => ["CIS 3800","CIS 5480","CIS 380","CIS 548"].includes(c.code()))) {
+        //         fs.appendFileSync(`${AnalysisOutputDir}needs-CIS3800.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`)
+        //     }
+        // }
+        // // check if student needs CIS 3200/5020
+        // if (degrees!.undergrad == "37cu CSCI" ||
+        //     degrees!.undergrad == "37cu ASCS" ||
+        //     degrees!.undergrad == "37cu DMD" ||
+        //     degrees!.undergrad == "37cu NETS") {
+        //     if (!coursesTaken.some(c => ["CIS 3200","CIS 5020","CIS 320","CIS 502"].includes(c.code()))) {
+        //         fs.appendFileSync(`${AnalysisOutputDir}needs-CIS3200_5020.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`)
+        //     }
+        // }
+        // if (degrees!.masters == "CIS-MSE") {
+        //     if (!coursesTaken.some(c => ["CIS 5110","CIS 5020","CIS 511","CIS 502"].includes(c.code()))) {
+        //         fs.appendFileSync(`${AnalysisOutputDir}needs-CIS5020.txt`, `${pennid}, ${studentName}, ${studentEmail}, ${degrees}\n`)
+        //     }
+        // }
         const unsat = result.requirementOutcomes
             .filter(ro => ro.applyResult != RequirementApplyResult.Satisfied &&
             !(ro.degreeReq instanceof RequirementLabel) &&
@@ -3262,8 +3309,36 @@ ${unconsumed}
             cusRemainingFormatted = result.cusRemaining.toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1, minimumIntegerDigits: 2 });
         }
         const outputFile = `${AnalysisOutputDir}${cusRemainingFormatted}-cusLeft-${egt}-${analysisOutput}.analysis.txt`;
-        // TODO: print out JSON version of worksheet here
         fs.writeFileSync(outputFile, summary /*+ JSON.stringify(result, null, 2)*/ + worksheetText);
+        if (makePennPathwaysWorksheets && degrees.undergrad == '37cu CSCI' && degrees.masters == 'none') {
+            const pennid = (_a = analysisOutput.split('-')[0]) !== null && _a !== void 0 ? _a : 'unknown';
+            const pennidHash = crypto.createHash('sha1').update(pennid).digest('hex');
+            const pathwaysOutputFile = `${AnalysisOutputDir}pathways-${pennidHash}.json`;
+            const ct = coursesTaken
+                .filter(c => CompletedGrades.includes(c.letterGrade) && c.letterGrade != 'F')
+                .map(c => {
+                return {
+                    course: c.code(),
+                    term: c.term,
+                    gradeType: c.grading
+                };
+            })
+                .sort((a, b) => a.course.localeCompare(b.course));
+            const dr = result.requirementOutcomes.map(ro => {
+                const coursesUsed = ro.coursesApplied.map(c => c.code());
+                return {
+                    requirement: ro.degreeReq.toString(),
+                    status: ro.applyResult,
+                    coursesUsed: coursesUsed,
+                };
+            });
+            const pathwaysObject = {
+                degree: degrees.undergrad,
+                coursesCompleted: ct,
+                degreeRequirements: dr,
+            };
+            fs.writeFileSync(pathwaysOutputFile, JSON.stringify(pathwaysObject, null, 2));
+        }
         // add to probation risk spreadsheet
         const probationRiskFile = `${AnalysisOutputDir}probation-risk.csv`;
         if (!probationRiskHeaderWritten) {
@@ -3344,9 +3419,9 @@ function probationRisk(rr, allCourses, termsThisYear) {
 }
 var RequirementApplyResult;
 (function (RequirementApplyResult) {
-    RequirementApplyResult[RequirementApplyResult["Unsatisfied"] = 0] = "Unsatisfied";
-    RequirementApplyResult[RequirementApplyResult["PartiallySatisfied"] = 1] = "PartiallySatisfied";
-    RequirementApplyResult[RequirementApplyResult["Satisfied"] = 2] = "Satisfied";
+    RequirementApplyResult["Unsatisfied"] = "unsatisfied";
+    RequirementApplyResult["PartiallySatisfied"] = "partially satisfied";
+    RequirementApplyResult["Satisfied"] = "fully satisfied";
 })(RequirementApplyResult = exports.RequirementApplyResult || (exports.RequirementApplyResult = {}));
 class RequirementOutcome {
     constructor(ugrad, req, outcome, courses) {
@@ -3872,7 +3947,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(5, "Math", ["CIS 1600"]),
                 new RequirementNamedCourses(6, "Physics", ["PHYS 0140", "PHYS 0150", "PHYS 0170", "MEAM 1100"]),
                 new RequirementNamedCourses(7, "Physics", ["ESE 1120"]).withCUs(1.5),
-                new RequirementNamedCourses(8, "Natural Science", ["CHEM 1011", "EAS 0091", "BIOL 1101", "BIOL 1121", "PHYS 1240"]),
+                new RequirementNamedCourses(8, "Natural Science", ["CHEM 1012", "EAS 0091", "BIOL 1101", "BIOL 1121", "PHYS 1240"]),
                 new RequirementAttributes(9, "Math/Natural Science Elective", [CourseAttribute.Math, CourseAttribute.NatSci]),
                 new RequirementNaturalScienceLab(10, "Natural Science Lab").withCUs(0.5),
                 new RequirementNamedCourses(11, "Major", ["CIS 1200"]),
@@ -3954,7 +4029,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(4, "Probability", ["CIS 2610", "ESE 3010", "ENM 321", "STAT 4300"]),
                 new RequirementNamedCourses(5, "Linear Algebra", ["MATH 2400", "MATH 2600", "MATH 3120", "MATH 3130", "MATH 3140"]),
                 new RequirementNamedCourses(6, "Physics", ["PHYS 0150", "PHYS 0170", "MEAM 1100", "MEAM 1470"]).withCUs(1.5),
-                new RequirementNamedCourses(7, "Natural Science", ["BIOL 1101", "BIOL 1121", "BIOL 1124", "CHEM 1011", "CHEM 1101", "PHYS 0151", "PHYS 0171", "ESE 1120"]).withCUs(1.5),
+                new RequirementNamedCourses(7, "Natural Science", ["BIOL 1101", "BIOL 1121", "BIOL 1124", "CHEM 1012", "CHEM 1101", "PHYS 0151", "PHYS 0171", "ESE 1120"]).withCUs(1.5),
                 new RequirementAttributes(8, "Math/Natural Science Elective", [CourseAttribute.Math, CourseAttribute.NatSci]),
                 new RequirementNamedCourses(10, "Major", ["CIS 1200"]),
                 new RequirementNamedCourses(11, "Major", ["CIS 1210"]),
