@@ -28,14 +28,15 @@ function makeRows(status, courses) {
     // status is in the middle column
     html += `<td style="background-color: ${color}">${status.toUpperCase()}</td><td>`
     courses
-        .filter((e) => e["status"] === status)
-        .sort(byCourse4d).forEach((e) => {
-        // course list is in the right column
-        // show 3-digit course in a tooltip
-        if (encode_to_3d[e["course4d"]] != undefined) {
-            html += `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[e["course4d"]].trim()}</span></span> ${e["title"]}<br>`
-        }
-    })
+    .filter((e) => e["status"] === status)
+    .sort(byCourse4d).forEach((e) => {
+    // course list is in the right column
+    // show 3-digit course in a tooltip if available, else just show the 4-digit course
+    const tooltip = encode_to_3d[e["course4d"]] ?
+                    `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[e["course4d"]].trim()}</span></span>` :
+                    e["course4d"];
+    html += `${tooltip} ${e["title"]}<br>`;
+})
     html += "</td>"
     return html
 }

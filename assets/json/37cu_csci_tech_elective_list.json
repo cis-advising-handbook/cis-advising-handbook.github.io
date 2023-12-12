@@ -2108,5 +2108,20 @@
     "course4d": "CBE 2300",
     "title": "Material and Energy Balances of Chemical Processes",
     "status": "yes"
+  },
+  {
+    "course4d": "ESE 2180",
+    "title": "Electronic, Photonic, and Electromechanical Devices",
+    "status": "yes"
+  },
+  {
+    "course4d": "ESE 3190",
+    "title": "Fundamentals of Solid-State Circuits",
+    "status": "yes"
+  },
+  {
+    "course4d": "ESE 3700",
+    "title": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
+    "status": "yes"
   }
 ]
