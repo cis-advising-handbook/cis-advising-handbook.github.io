@@ -2128,5 +2128,10 @@
     "course4d": "EESC 4320",
     "title": "Atmospheric Chemistry",
     "status": "no"
+  },
+  {
+    "course4d": "ENGR 2900",
+    "title": "PGS: Artificial Intelligence and Robotics",
+    "status": "yes"
   }
 ]
