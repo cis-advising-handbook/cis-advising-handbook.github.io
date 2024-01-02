@@ -2123,5 +2123,10 @@
     "course4d": "ESE 3700",
     "title": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
     "status": "yes"
+  },
+  {
+    "course4d": "EESC 4320",
+    "title": "Atmospheric Chemistry",
+    "status": "no"
   }
 ]
