@@ -2138,5 +2138,10 @@
     "course4d": "PHYS 0101",
     "title": "General Physics: Mechanics, Heat and Sound",
     "status": "no"
+  },
+  {
+    "course4d": "PHYS 0102",
+    "title": "General Physics: Electromagnetism, Optics, and Modern Physics",
+    "status": "no"
   }
 ]
