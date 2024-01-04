@@ -2133,5 +2133,10 @@
     "course4d": "ENGR 2900",
     "title": "PGS: Artificial Intelligence and Robotics",
     "status": "yes"
+  },
+  {
+    "course4d": "PHYS 0101",
+    "title": "General Physics: Mechanics, Heat and Sound",
+    "status": "no"
   }
 ]
