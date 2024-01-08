@@ -2143,5 +2143,10 @@
     "course4d": "PHYS 0102",
     "title": "General Physics: Electromagnetism, Optics, and Modern Physics",
     "status": "no"
+  },
+  {
+    "course4d": "STAT 5330",
+    "title": "Stochastic Processes",
+    "status": "yes"
   }
 ]
