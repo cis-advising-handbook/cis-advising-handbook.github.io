@@ -2148,5 +2148,10 @@
     "course4d": "STAT 5330",
     "title": "Stochastic Processes",
     "status": "yes"
+  },
+  {
+    "course4d": "ESE 6050",
+    "title": "Modern Convex Optimization",
+    "status": "yes"
   }
 ]
