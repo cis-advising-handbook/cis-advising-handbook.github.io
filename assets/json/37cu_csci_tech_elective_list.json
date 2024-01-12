@@ -2153,5 +2153,10 @@
     "course4d": "ESE 6050",
     "title": "Modern Convex Optimization",
     "status": "yes"
+  },
+  {
+    "course4d": "BEPP 2010",
+    "title": "Public Finance and Policy",
+    "status": "no"
   }
 ]
