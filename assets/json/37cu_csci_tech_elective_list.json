@@ -2163,5 +2163,10 @@
     "course4d": "MATH 2020",
     "title": "Proving Things: Analysis",
     "status": "yes"
+  },
+  {
+    "course4d": "ECON 4210",
+    "title": "Numerical Methods for Macroeconomists",
+    "status": "yes"
   }
 ]
