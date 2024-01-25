@@ -2173,5 +2173,10 @@
     "course4d": "PSCI 5800",
     "title": "Game Theory",
     "status": "yes"
+  },
+  {
+    "course4d": "STAT 5710",
+    "title": "Modern Data Mining",
+    "status": "yes"
   }
 ]
