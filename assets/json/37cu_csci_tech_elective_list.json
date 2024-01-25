@@ -2158,5 +2158,10 @@
     "course4d": "BEPP 2010",
     "title": "Public Finance and Policy",
     "status": "no"
+  },
+  {
+    "course4d": "MATH 2020",
+    "title": "Proving Things: Analysis",
+    "status": "yes"
   }
 ]
