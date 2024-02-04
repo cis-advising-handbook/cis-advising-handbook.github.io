@@ -2183,5 +2183,10 @@
     "course4d": "CIS 4120",
     "title": "Introduction to Human Computer Interaction",
     "status": "yes"
+  },
+  {
+    "course4d": "CIS 5050",
+    "title": "Software Systems",
+    "status": "yes"
   }
 ]
