@@ -2193,5 +2193,10 @@
     "course4d": "MATH 4650",
     "title": "Differential Geometry",
     "status": "yes"
+  },
+  {
+    "course4d": "PHIL 4722",
+    "title": "Logic and Computability 2",
+    "status": "yes"
   }
 ]
