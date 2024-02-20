@@ -2123,5 +2123,85 @@
     "course4d": "ESE 3700",
     "title": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
     "status": "yes"
+  },
+  {
+    "course4d": "EESC 4320",
+    "title": "Atmospheric Chemistry",
+    "status": "no"
+  },
+  {
+    "course4d": "ENGR 2900",
+    "title": "PGS: Artificial Intelligence and Robotics",
+    "status": "yes"
+  },
+  {
+    "course4d": "PHYS 0101",
+    "title": "General Physics: Mechanics, Heat and Sound",
+    "status": "no"
+  },
+  {
+    "course4d": "PHYS 0102",
+    "title": "General Physics: Electromagnetism, Optics, and Modern Physics",
+    "status": "no"
+  },
+  {
+    "course4d": "STAT 5330",
+    "title": "Stochastic Processes",
+    "status": "yes"
+  },
+  {
+    "course4d": "ESE 6050",
+    "title": "Modern Convex Optimization",
+    "status": "yes"
+  },
+  {
+    "course4d": "BEPP 2010",
+    "title": "Public Finance and Policy",
+    "status": "no"
+  },
+  {
+    "course4d": "MATH 2020",
+    "title": "Proving Things: Analysis",
+    "status": "yes"
+  },
+  {
+    "course4d": "ECON 4210",
+    "title": "Numerical Methods for Macroeconomists",
+    "status": "yes"
+  },
+  {
+    "course4d": "PSCI 5800",
+    "title": "Game Theory",
+    "status": "yes"
+  },
+  {
+    "course4d": "STAT 5710",
+    "title": "Modern Data Mining",
+    "status": "yes"
+  },
+  {
+    "course4d": "CIS 4120",
+    "title": "Introduction to Human Computer Interaction",
+    "status": "yes"
+  },
+  {
+    "course4d": "CIS 5050",
+    "title": "Software Systems",
+    "status": "yes"
+  },
+  {
+    "course4d": "MATH 4650",
+    "title": "Differential Geometry",
+    "status": "yes"
+  },
+  {
+    "course4d": "PHIL 4722",
+    "title": "Logic and Computability 2",
+    "status": "yes"
+  },
+  {
+    "course4d": "FNCE 9110",
+    "title": "Financial Economics",
+    "status": "yes"
   }
 ]

@@ -85,6 +85,13 @@ Due to an inability to revoke approved PRs and, as a result, students sitting on
 
 Once you've registered for a waitlist class, please be careful not to accidentally drop it. If you do this, we **cannot guarantee** that you will be able to register again!
 
+## Switching between cross-listed courses
+
+If you are registered for a cross-listed CIS course (like CIS 4190) and wish to switch to the other cross-listed course (CIS 5190), Waitlisty can help you with the transition. You need to submit a PR for **both** courses, *including the one you are registered for*. About 1 business day after both PRs are submitted, Waitlisty will see and approve your other PR, allowing you to *swap* into the new course. Please don't drop and then add as two separate actions, in a full course you can lose your spot as soon as you drop!
+
+You can use this mechanism to switch between any two cross-listed CIS courses, e.g., from CIS 4190 to CIS 5190 or vice-versa.
+
+Why do you need to submit a PR for a course you're already registered for? This is because our waitlist system can only "see" PRs, so if you are registered for a course but don't have a PR for it then Waitlisty won't be able to tell. But once you submit the PR, Waitlisty can see your registered status.
 
 ## Leaving the waitlist
 
