@@ -4108,7 +4108,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(1, "Math", ["MATH 1400"]),
                 new RequirementNamedCourses(2, "Math", ["MATH 1410", "MATH 1610"]),
                 new RequirementNamedCourses(3, "Math", ["CIS 1600"]),
-                new RequirementNamedCourses(4, "Math", ["ESE 2030"]),
+                new RequirementNamedCourses(4, "Math", ["MATH 2400", "MATH 2600", "ESE 2030"]),
                 new RequirementNamedCourses(5, "Math", ["ESE 3010", "STAT 4300"]),
                 new RequirementNamedCourses(6, "Math", ["ESE 4020", "ESE 5420"]),
                 new RequirementAttributes(7, "Natural Science", [CourseAttribute.NatSci]),
