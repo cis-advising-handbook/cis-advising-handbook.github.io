@@ -2203,5 +2203,10 @@
     "course4d": "PHYS 3364",
     "title": "Laboratory Electronics",
     "status": "yes"
+  },
+  {
+    "course4d": "ACCT 1020",
+    "title": "Strategic Cost Analysis",
+    "status": "no"
   }
 ]
