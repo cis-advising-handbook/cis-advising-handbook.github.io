@@ -2208,5 +2208,10 @@
     "course4d": "ACCT 1020",
     "title": "Strategic Cost Analysis",
     "status": "no"
+  },
+  {
+    "course4d": "ESE 5090",
+    "title": "Quantum Circuits and Systems",
+    "status": "yes"
   }
 ]
