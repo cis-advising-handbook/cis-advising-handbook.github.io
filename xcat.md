@@ -37,7 +37,7 @@ University of Edinburgh and are planning to take INFR08018 there. This course ha
 requirement just as if you had taken <span class="tooltip">CIS 2400<span class="tooltiptext">formerly CIS 240</span></span> at Penn. However, the bar for approval is also relatively high. 
 This is because the course needs to be pretty close to its Penn equivalent: if it is in the same subject area but covers different
 material, it may not prepare you properly for other courses that have the Penn course as a prerequisite.
-Sometimes Penn courses fulfill multiple requirements: for instance, <span class="tooltip">CIS 3800<span class="tooltiptext">formerly CIS 380</span></span> can count as a Project 
+Sometimes Penn courses fulfill multiple requirements: for instance, <span class="tooltip">CIS 4480<span class="tooltiptext">formerly CIS 3800</span></span> can count as a Project 
 Elective for ASCS students, so an operating systems course without a substantial project may not be approved.
 
 ### CIS 1100
