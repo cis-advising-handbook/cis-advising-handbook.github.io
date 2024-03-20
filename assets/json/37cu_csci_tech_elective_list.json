@@ -2198,5 +2198,20 @@
     "course4d": "FNCE 9110",
     "title": "Financial Economics",
     "status": "yes"
+  },
+  {
+    "course4d": "PHYS 3364",
+    "title": "Laboratory Electronics",
+    "status": "yes"
+  },
+  {
+    "course4d": "ACCT 1020",
+    "title": "Strategic Cost Analysis",
+    "status": "no"
+  },
+  {
+    "course4d": "ESE 5090",
+    "title": "Quantum Circuits and Systems",
+    "status": "yes"
   }
 ]
