@@ -245,52 +245,57 @@
     "status": "yes"
   },
   {
-    "course4d": "CIS 1880",
+    "course4d": "CIS 1912",
     "title": "DevOps",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1890",
+    "course4d": "CIS 1921",
     "title": "Solving Hard Problems in Practice",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1900",
+    "course4d": "CIS 1901",
     "title": "C++ Programming",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1910",
+    "course4d": "CIS 1911",
     "title": "Using and Understanding Unix and Linux",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1920",
+    "course4d": "CIS 1902",
     "title": "Python Programming",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1930",
+    "course4d": "CIS 1903",
     "title": "Go Programming",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1950",
-    "title": "Mobile App Development",
+    "course4d": "CIS 1951",
+    "title": "iOS Programming",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1960",
+    "course4d": "CIS 1952",
+    "title": "Android Programming",
+    "status": "yes"
+  },
+  {
+    "course4d": "CIS 1961",
     "title": "Ruby on Rails Web Development",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1970",
-    "title": "Javascript",
+    "course4d": "CIS 1962",
+    "title": "JavaScript Programming",
     "status": "yes"
   },
   {
-    "course4d": "CIS 1980",
+    "course4d": "CIS 1905",
     "title": "Rust Programming",
     "status": "yes"
   },
