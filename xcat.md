@@ -52,7 +52,7 @@ A third kind of credit is **<span class="tooltip">CIS 2970<span class="tooltipte
 it is meant as an opportunity for you to broaden or deepen your study of Computer Science by taking courses that you do not have 
 the opportunity to take here. The difference
 between <span class="tooltip">CIS 2970<span class="tooltiptext">formerly CIS 297</span></span> and <span class="tooltip">CIS 2980<span class="tooltiptext">formerly CIS 298</span></span> is that <span class="tooltip">CIS 2980<span class="tooltiptext">formerly CIS 298</span></span> credit is given for major-related courses and can be used in the Engineering category; <span class="tooltip">CIS 2970<span class="tooltiptext">formerly CIS 297</span></span> is awarded 
-for courses that do not qualify for the Engineering category but are still suitable as Technical Electives. Note that this kind of credit is meant for fairly advanced courses - you would not be able to get these credits for introductory 
+for courses that do not qualify for the Engineering category. Note that this kind of credit is meant for fairly advanced courses - you would not be able to get these credits for introductory 
 courses. Additionally, <span class="tooltip">CIS 2970<span class="tooltiptext">formerly CIS 297</span></span>/<span class="tooltip">2980<span class="tooltiptext">formerly CIS 298</span></span> credit is available *only* for courses in Computer Science and not,
 e.g., business or music courses.
 
