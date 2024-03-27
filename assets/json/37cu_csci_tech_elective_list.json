@@ -2203,5 +2203,10 @@
     "course4d": "ESE 5090",
     "title": "Quantum Circuits and Systems",
     "status": "yes"
+  },
+  {
+    "course4d": "LING 3810",
+    "title": "Semantics I",
+    "status": "yes"
   }
 ]
