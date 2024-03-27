@@ -1230,11 +1230,6 @@
     "status": "yes"
   },
   {
-    "course4d": "MEAM 4150",
-    "title": "Product Design",
-    "status": "yes"
-  },
-  {
     "course4d": "MEAM 5100",
     "title": "Design of Mechatronic Systems",
     "status": "yes"
@@ -1435,18 +1430,8 @@
     "status": "yes"
   },
   {
-    "course4d": "OIDD 4150",
-    "title": "Product Design",
-    "status": "yes"
-  },
-  {
     "course4d": "OIDD 4690",
     "title": "Information Strategy and Economics",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 5150",
-    "title": "Product Design",
     "status": "yes"
   },
   {
