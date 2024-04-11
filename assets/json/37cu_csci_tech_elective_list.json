@@ -2208,5 +2208,10 @@
     "course4d": "LING 3810",
     "title": "Semantics I",
     "status": "yes"
+  },
+  {
+    "course4d": "CBE 5450",
+    "title": "Electrochemical Energy Conversion and Storage",
+    "status": "yes"
   }
 ]
