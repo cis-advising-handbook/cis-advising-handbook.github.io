@@ -185,7 +185,7 @@ const CoursesWithLab15CUs = [
     "BIOL 1101", "BIOL 1102",
     "PHYS 0150", "PHYS 0151",
     "PHYS 0170", "PHYS 0171",
-    "ESE 1120",
+    "ESE 1120" //, "ESE 2240"
 ];
 /** 0.5 CU standalone Natural Science lab courses */
 const StandaloneLabCourses05CUs = [
@@ -973,7 +973,7 @@ class DegreeRequirement {
     }
     /** internal method for actually applying `c` to this requirement, decrementing CUs for both `c` and `this` */
     applyCourse(c) {
-        if (0 == c.getCUs()) {
+        if (!this.doesntConsume && 0 == c.getCUs()) {
             return false;
         }
         if (this.doesntConsume) {
@@ -1440,7 +1440,7 @@ class RequirementAscs40Concentration extends RequirementCsci40TechElective {
             .sort(byHighestCUsFirst)
             .find((c) => {
             return c.grading == GradeType.ForCredit &&
-                ["ACCT", "BEPP", "FNCE", "LGST", "MGMT", "MKTG", "OIDD"].includes(c.subject) &&
+                ["ACCT", "BEPP", "FNCE", "LGST", "MGMT", "MKTG", "OIDD", "REAL"].includes(c.subject) &&
                 c.courseNumberInt >= this.minLevel &&
                 !c.suhSaysNoCredit() &&
                 this.applyCourse(c);
@@ -1815,12 +1815,12 @@ class CourseTaken {
         }
         if (attr == CourseAttribute.MathNatSciEngr) {
             // Math and NS courses should have EUMS attribute, too
-            if (this.attributes.includes(CourseAttribute.Math) || this.attributes.includes(CourseAttribute.NatSci)) {
-                if (!this.attributes.includes(CourseAttribute.MathNatSciEngr)) {
-                    this.attributes.push(CourseAttribute.MathNatSciEngr);
-                }
-                return;
-            }
+            // if (this.attributes.includes(CourseAttribute.Math) || this.attributes.includes(CourseAttribute.NatSci)) {
+            //     if (!this.attributes.includes(CourseAttribute.MathNatSciEngr)) {
+            //         this.attributes.push(CourseAttribute.MathNatSciEngr)
+            //     }
+            //     return
+            // }
         }
         if (this.attributes.includes(attr) && !groundTruth) {
             this.attributes.splice(this.attributes.indexOf(attr), 1);
@@ -1884,12 +1884,12 @@ class CourseTaken {
         // TODO: ASAM except where cross-listed with AMES, ENGL, FNAR, HIST, or SAST. NB: in 37cu CIS majors, SS-vs-H distinction is moot
         // TODO: ECON except statistics, probability, and math courses, [ECON 104/2310 is not allowed]. Xlist not helpful
         // TODO: PSYC, SOCI except statistics, probability, and math courses. Xlist not helpful
-        const ssSubjects = ["COMM", "CRIM", "EDUC", "GSWS", "HSOC", "INTR", "PPE", "PSCI", "STSC", "URBS"];
+        const ssSubjects = ["COMM", "CRIM", "GSWS", "HSOC", "INTR", "PPE", "PSCI", "STSC", "URBS"];
         const beppCourseNums = [
             1000, 2010, 2020, 2030, 2080, 2110, 2120, 2140, 2200, 2300, 2330, 2500, 2610, 2630, 2650, 2800, 2840, 2890, 3050
         ];
         const ssCourses = [
-            "EAS 2030", "EESC 1060", "EESC 2300", "EESC 3003", "ENVS 4250", "FNCE 1010",
+            "EAS 2030", "EDUC 5437", "EESC 1060", "EESC 2300", "EESC 3003", "ENVS 4250", "FNCE 1010",
             "LGST 1000", "LGST 1010", "LGST 2120", "LGST 2150", "LGST 2200",
             "NURS 3130", "NURS 3150", "NURS 3160", "NURS 3300", "NURS 5250"
         ];
@@ -1991,7 +1991,7 @@ class CourseTaken {
         if (["VIPR 1200", "VIPR 1210", "NSCI 3010", "OIDD 4110", "OIDD 4150"].includes(this.code())) {
             return true;
         }
-        const engrSubjects = ["ENGR", "TCOM", "NETS", "BE", "CBE", "CIS", "ESE", "MEAM", "MSE"];
+        const engrSubjects = ["ENGR", "TCOM", "NETS", "BE", "CBE", "CIS", "ESE", "MEAM", "MSE", "IPD"];
         const notEngrCourses = [
             "CIS 1050", "CIS 1070", "CIS 1250", "CIS 1600", "CIS 2610", "CIS 4230", "CIS 5230", "CIS 7980",
             "ESE 3010", "ESE 4020",
@@ -2194,12 +2194,14 @@ class CourseParser {
                     ["37cu CSCI", "37cu NETS"].includes(degrees.undergrad)) ||
                 "37cu DMD" == degrees.undergrad;
             if (c.getCUs() > 0 && CoursesWithLab15CUs.includes(c.code()) && !nosplit) {
+                console.log(`splittingA ${c}`);
                 c.setCUs(c.getCUs() - 0.5);
                 const lab = c.split(0.5, c.courseNumber + "lab");
                 halfCuCourses.push(lab);
             }
             let ese3500NotCmpe = c.code() == "ESE 3500" && degrees.undergrad != "37cu CMPE";
-            if (c.getCUs() > 0 && (CoursesWith15CUsToSplit.includes(c.code()) || ese3500NotCmpe)) {
+            if (c.getCUs() > 0 && (CoursesWith15CUsToSplit.includes(c.code()) || ese3500NotCmpe) && !nosplit) {
+                console.log(`splittingB ${c}`);
                 c.setCUs(c.getCUs() - 0.5);
                 const half = c.split(0.5, c.courseNumber + "half");
                 halfCuCourses.push(half);
@@ -3990,15 +3992,15 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementCisElective(22).withMinLevel(2000),
                 new RequirementCisElective(19),
                 new RequirementNamedCourses(23, "Technical Elective", csci37TechElectives).withConcise(),
-                new RequirementNamedCourses(24, "Technical Elective", csci37TechElectives)
+                new RequirementNamedCourses(24, "Technical Elective ≥2000-level", csci37TechElectives)
                     .withConcise().withMinLevel(2000),
-                new RequirementNamedCourses(25, "Technical Elective", csci37TechElectives)
+                new RequirementNamedCourses(25, "Technical Elective ≥2000-level", csci37TechElectives)
                     .withConcise().withMinLevel(2000),
-                new RequirementNamedCourses(26, "Technical Elective", csci37TechElectives)
+                new RequirementNamedCourses(26, "Technical Elective ≥2000-level", csci37TechElectives)
                     .withConcise().withMinLevel(2000),
-                new RequirementNamedCourses(27, "Technical Elective", csci37TechElectives)
+                new RequirementNamedCourses(27, "Technical Elective ≥2000-level", csci37TechElectives)
                     .withConcise().withMinLevel(2000),
-                new RequirementNamedCourses(28, "Technical Elective", csci37TechElectives)
+                new RequirementNamedCourses(28, "Technical Elective ≥2000-level", csci37TechElectives)
                     .withConcise().withMinLevel(2000),
                 // elective "breadth" requirements
                 new RequirementNamedCourses(29, "Networking Elective", ["NETS 1500", "NETS 2120", "CIS 3310", "CIS 4510", "CIS 5510", "CIS 4550", "CIS 5550", "CIS 5050", "CIS 5530"]).withNoConsume(),
@@ -4129,19 +4131,20 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(22, aiElecTag, ArinAiElectives).withConcise(),
                 new RequirementNamedCourses(23, aiElecTag, ArinAiElectives).withConcise(),
                 new RequirementNamedCourses(24, aiElecTag, ArinAiElectives).withConcise(),
+                // NB: buckets are filled from AI Electives so need to do AI Elecs first
                 new RequirementLabel(25, "AI Electives must satisfy these 6 buckets. A single course cannot satisfy multiple buckets."),
-                new RequireBucketNamedCourses(26, "Intro to AI", ["CIS 4210", "CIS 5210", "ESE 2000"], aiElecGroup),
-                new RequireBucketNamedCourses(27, "Machine Learning", ["CIS 4190", "CIS 5190", "CIS 5200"], aiElecGroup),
-                new RequireBucketNamedCourses(28, "Signals & Systems", ["ESE 2100", "ESE 2240"], aiElecGroup),
-                new RequireBucketNamedCourses(29, "Optimization & Control", ["ESE 2040", "ESE 3040", "ESE 4210"], aiElecGroup),
-                new RequireBucketNamedCourses(30, "Vision & Language", ["CIS 4300", "CIS 5300", "CIS 4810", "CIS 5810"], aiElecGroup),
-                new RequireBucketNamedCourses(31, "Project", ArinProjectElectives, aiElecGroup),
+                new RequireBucketNamedCourses(26, "Intro to AI", ["CIS 4210", "CIS 5210", "ESE 2000"], aiElecGroup).withNoConsume(),
+                new RequireBucketNamedCourses(27, "Machine Learning", ["CIS 4190", "CIS 5190", "CIS 5200"], aiElecGroup).withNoConsume(),
+                new RequireBucketNamedCourses(28, "Signals & Systems", ["ESE 2100", "ESE 2240"], aiElecGroup).withCUs(1.5).withNoConsume(),
+                new RequireBucketNamedCourses(29, "Optimization & Control", ["ESE 2040", "ESE 3040", "ESE 4210"], aiElecGroup).withNoConsume(),
+                new RequireBucketNamedCourses(30, "Vision & Language", ["CIS 4300", "CIS 5300", "CIS 4810", "CIS 5810"], aiElecGroup).withNoConsume(),
+                new RequireBucketNamedCourses(31, "Project", ArinProjectElectives, aiElecGroup).withNoConsume(),
                 new RequirementNamedCourses(32, "Senior Design", SeniorDesign1stSem),
                 new RequirementNamedCourses(33, "Senior Design", SeniorDesign2ndSem),
                 new RequirementNamedCoursesOrAttributes(34, "Technical Elective", csci37TechElectives, [CourseAttribute.Math, CourseAttribute.NatSci, CourseAttribute.MathNatSciEngr]).withConcise(),
-                new RequirementNamedCoursesOrAttributes(35, "Technical Elective", csci37TechElectives, [CourseAttribute.Math, CourseAttribute.NatSci, CourseAttribute.MathNatSciEngr])
+                new RequirementNamedCoursesOrAttributes(35, "Technical Elective ≥2000-level", csci37TechElectives, [CourseAttribute.Math, CourseAttribute.NatSci, CourseAttribute.MathNatSciEngr])
                     .withConcise().withMinLevel(2000),
-                new RequirementNamedCoursesOrAttributes(36, "Technical Elective", csci37TechElectives, [CourseAttribute.Math, CourseAttribute.NatSci, CourseAttribute.MathNatSciEngr])
+                new RequirementNamedCoursesOrAttributes(36, "Technical Elective ≥2000-level", csci37TechElectives, [CourseAttribute.Math, CourseAttribute.NatSci, CourseAttribute.MathNatSciEngr])
                     .withConcise().withMinLevel(2000),
                 new RequirementNamedCourses(37, "Ethics", ["CIS 4230", "CIS 5230", "LAWM 5060"]),
                 new RequirementNamedCourses(38, "Cognitive Science", ArinCogSciCourses),
