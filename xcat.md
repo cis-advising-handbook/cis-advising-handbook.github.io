@@ -6,16 +6,16 @@ tags: howto
 
 In general, there are three situations where you would request credit for a course at another university:
 
-* **Study abroad:** The most common reason is that you are planning to spend some time at another university abroad.
+* **Study Abroad:** The most common reason is that you are planning to spend some time at another university abroad.
 Once you return, you will probably want to count some or all of the courses you took towards your degree at Penn.
 In this case, it is very important that you get permission **well in advance**, and certainly before you leave -
 you wouldn't want to come back to Penn and discover that your courses won't count!
 
-* **Summer courses:** You may want to take courses over the summer, e.g., at a university 
+* **Credit Away:** You may want to take courses over the summer, e.g., at a university 
 that is close to your home town. This can be a good way to take extra courses, e.g., after a difficult semester. 
 As with study abroad, it is very important that you get permission **before** you take the course!
 
-* **Transfer credit:** Finally, a third reason is that you transferred to Penn from another university and would
+* **Transfer Credit:** Finally, a third reason is that you transferred to Penn from another university and would
 now like to count the courses you previously took towards your Penn degree.
 
 Please review the [rules
@@ -114,5 +114,4 @@ can involve some back-and-forth between the undergraduate chair and the instruct
 
 ## When will the credit appear on my transcript?
 
-Once the course is approved in XCAT and you have completed the course, it will take about a semester(!) for the credit to post
-to your transcript. Please be patient!
+Once the course is approved in XCAT and you have completed the course, Penn needs to receive an official transcript from the other institution. For Study Abroad credit, your transcript will automatically be sent to the Penn Abroad office once you've completed your course - there's no action needed by you.
