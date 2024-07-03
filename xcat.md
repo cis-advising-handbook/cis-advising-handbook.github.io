@@ -58,7 +58,7 @@ e.g., business or music courses.
 
 ### CIS 0000
 
-A fourth option is **CIS 0000 credit**. This is a "free CIS credit". It can be used as a CIS Elective (despite its diminutive course number), Technical Elective, or Free Elective. Since <span class="tooltip">CIS 2970<span class="tooltiptext">formerly CIS 297</span></span>/<span class="tooltip">2980<span class="tooltiptext">formerly CIS 298</span></span> is meant for Study Abroad, CIS 0000 credit is more commonly given to students who are transferring to Penn from another school.
+A fourth option is **CIS 0000 credit**. This is a "free CIS credit". It can be used as a 1000-level CIS Elective (despite its diminutive course number), Technical Elective, or Free Elective. Since <span class="tooltip">CIS 2970<span class="tooltiptext">formerly CIS 297</span></span>/<span class="tooltip">2980<span class="tooltiptext">formerly CIS 298</span></span> is meant for Study Abroad, CIS 0000 credit is more commonly given to students who are transferring to Penn from another school.
 
 ## Preparing your request
 
