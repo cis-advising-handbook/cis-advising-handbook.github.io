@@ -2223,5 +2223,10 @@
     "course4d": "CHEM 2421",
     "title": "Principles of Organic Chemistry II with Laboratory",
     "status": "yes"
+  },
+  {
+    "course4d": "MATH 5300",
+    "title": "Mathematics of Finance",
+    "status": "yes"
   }
 ]
