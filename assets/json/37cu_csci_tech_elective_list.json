@@ -2218,5 +2218,10 @@
     "course4d": "MSE 5150",
     "title": "Mathematical Methods for Engineering Applications",
     "status": "yes"
+  },
+  {
+    "course4d": "CHEM 2421",
+    "title": "Principles of Organic Chemistry II with Laboratory",
+    "status": "yes"
   }
 ]
