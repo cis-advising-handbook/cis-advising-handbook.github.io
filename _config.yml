@@ -84,7 +84,6 @@ defaults:
       show_date: false
       # NB: we put commonly-used links here for simpler updating across the handbook
       links:
-        seas_letter_form: https://upenn.co1.qualtrics.com/jfe/form/SV_7PxPrmlMndDzuaV
         seas_petition_form: https://upenn.bplogix.net/form.aspx?pid=e6634b2b-e441-4279-8c38-a89adb52152c&formid=202ebf6e-0adf-4554-80e9-ba5749c24320&nohome=1&completepageprompt=0&completepage=https://upenn.bplogix.net/custom/ThankYou.html&completetext= 
         cis_course_sub_form: https://apps.cis.upenn.edu/forms/student/add-ciscoursesub
         path_major_minor_form: https://upenn.bplogix.net/form.aspx?pid=e6634b2b-e441-4279-8c38-a89adb52152c&formid=8f13f1e2-eef6-491c-b45f-65e95860986c&nohome=1&completepageprompt=0&completepage=https://upenn.bplogix.net/custom/ThankYou.html&completetext=
