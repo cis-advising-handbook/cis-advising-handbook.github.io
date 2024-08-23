@@ -39,12 +39,14 @@ Waitlisty is the mechanism we use in CIS for approving PRs in a customized and s
 
 ## Missing prerequisites
 
-Penn recently started enforcing course prerequisites. If you are missing a prereq for a course but still want to register for it, you should submit a Permission Request via Path@Penn (see below). While as a student you won't see anything different in Waitlisty, when Waitlisty processes your request, it will (internally) note which prereqs you are missing and trigger the extra (again, internal) approvals needed to allow you to register for the course.
+Penn recently started enforcing course prerequisites. If you are missing a prereq for a course but still want to register for it, you should submit a Permission Request via Path@Penn (see [below](#using-waitlisty)). 
+
+While as a student you won't see anything different in Waitlisty, when Waitlisty processes your request, it will (internally) note which prereqs you are missing and trigger the extra (again, internal) approvals needed to allow you to register for the course.
 
 ## Using Waitlisty
 
 {: .notice--danger} 
-**Please do not reach out to individual faculty with permission requests!**
+**Please do not reach out to individual faculty about permission requests!**
 
 {: .notice--info}
 See our [short video of how to request permission](https://bit.ly/3Ru2uVr) for a course.
