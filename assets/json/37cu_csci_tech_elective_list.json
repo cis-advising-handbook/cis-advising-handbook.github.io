@@ -2228,5 +2228,10 @@
     "course4d": "MATH 5300",
     "title": "Mathematics of Finance",
     "status": "yes"
+  },
+  {
+    "course4d": "CIS 3333",
+    "title": "Mathematics of Machine Learning",
+    "status": "yes"
   }
 ]
