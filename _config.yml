@@ -91,7 +91,7 @@ defaults:
         cis_cu_limit_form: https://upenn.bplogix.net/form.aspx?pid=e6634b2b-e441-4279-8c38-a89adb52152c&formid=7a7d9a98-b25c-47f3-9d64-930036a79f25&nohome=1&completepageprompt=0&completepage=https://upenn.bplogix.net/custom/ThankYou.html&completetext=
         cis_waitlist: https://apps.cis.upenn.edu/waitlist/student/dashboard
         seas_cu_policy: https://ugrad.seas.upenn.edu/student-handbook/undergraduate-policies/course-load/
-        path_forms: https://srfs.upenn.edu/registrar/forms
+        path_forms: https://srfs.upenn.edu/registrar/studentforms
         path_help: https://srfs.upenn.edu/path-at-penn
         ras: https://ras.seas.upenn.edu/
         ras_contacts: https://ras.seas.upenn.edu/ras-contacts-list/
