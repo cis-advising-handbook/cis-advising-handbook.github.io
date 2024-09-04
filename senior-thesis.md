@@ -22,13 +22,13 @@ To enroll in <span class="tooltip">CIS 4100<span class="tooltiptext">formerly CI
 
 The supervisor and reader can be anyone on [this list](https://directory.seas.upenn.edu/computer-and-information-science/), except for those with a role of *Lecturer* or *Senior Lecturer*.
 
-Once an abstract, supervisor and reader are identified, a student should email this information to the CIS Undergraduate Chair to formally apply for Senior Thesis. 
+Once an abstract, supervisor and reader are identified, you can formally apply for Senior Thesis [using this form]({{page.links.cis_4100_form}}).
 
 {: .notice--info}
 Applications must be received 7 days before the end of the Add period for the fall semester.
 
 ## Milestones
 
-At the end of the first semester, students must submit an intermediate report. If the supervisor and reader accept it, the student can enroll in <span class="tooltip">CIS 4110<span class="tooltiptext">formerly CIS 411</span></span>.
+At the end of the first semester, students must submit an intermediate report. If the supervisor and reader accept it, the student can enroll in <span class="tooltip">CIS 4110<span class="tooltiptext">formerly CIS 411</span></span>. You do not need to submit the CIS 4100 application form again.
 
 At the end of the second semester, students must describe their results in a written thesis and must present them publicly, either in a talk at Penn or in a presentation at a conference or workshop. Grades are based on the quality of the research itself (which should ideally be published or at least of publishable quality), as well as on the quality of the thesis and the oral presentation. The latter are evaluated jointly by the supervisor and the reader. 
