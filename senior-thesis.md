@@ -22,7 +22,7 @@ To enroll in <span class="tooltip">CIS 4100<span class="tooltiptext">formerly CI
 
 The supervisor and reader can be anyone on [this list](https://directory.seas.upenn.edu/computer-and-information-science/), except for those with a role of *Lecturer* or *Senior Lecturer*.
 
-Once an abstract, supervisor and reader are identified, you can formally apply for Senior Thesis [using this form]({{page.links.cis_4100_form}}).
+Once an abstract, supervisor and reader are identified, you can formally apply for Senior Thesis [using this form]({{page.links.cis_4100_form}}). If you have questions, please reach out to the [CIS Undergraduate Chair](mailto:{{page.links.ugc_email}}).
 
 {: .notice--info}
 Applications must be received 7 days before the end of the Add period for the fall semester.
