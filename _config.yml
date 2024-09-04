@@ -86,6 +86,7 @@ defaults:
       links:
         seas_petition_form: https://upenn.bplogix.net/form.aspx?pid=e6634b2b-e441-4279-8c38-a89adb52152c&formid=202ebf6e-0adf-4554-80e9-ba5749c24320&nohome=1&completepageprompt=0&completepage=https://upenn.bplogix.net/custom/ThankYou.html&completetext= 
         cis_course_sub_form: https://apps.cis.upenn.edu/forms/student/add-ciscoursesub
+        cis_4100_form: https://apps.cis.upenn.edu/forms/student/add-cis4100reg
         path_major_minor_form: https://upenn.bplogix.net/form.aspx?pid=e6634b2b-e441-4279-8c38-a89adb52152c&formid=8f13f1e2-eef6-491c-b45f-65e95860986c&nohome=1&completepageprompt=0&completepage=https://upenn.bplogix.net/custom/ThankYou.html&completetext=
         cis_te_form: https://apps.cis.upenn.edu/forms/student/add-tech-elective
         cis_cu_limit_form: https://upenn.bplogix.net/form.aspx?pid=e6634b2b-e441-4279-8c38-a89adb52152c&formid=7a7d9a98-b25c-47f3-9d64-930036a79f25&nohome=1&completepageprompt=0&completepage=https://upenn.bplogix.net/custom/ThankYou.html&completetext=
