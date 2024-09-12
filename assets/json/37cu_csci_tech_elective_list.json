@@ -2233,5 +2233,10 @@
     "course4d": "CIS 3333",
     "title": "Mathematics of Machine Learning",
     "status": "yes"
+  },
+  {
+    "course4d": "FNCE 2530",
+    "title": "Distressed Investing and Value Creation",
+    "status": "yes"
   }
 ]
