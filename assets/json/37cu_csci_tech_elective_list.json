@@ -2238,5 +2238,25 @@
     "course4d": "FNCE 2530",
     "title": "Distressed Investing and Value Creation",
     "status": "yes"
+  },
+  {
+    "course4d": "CIS 4300",
+    "title": "Computational Linguistics",
+    "status": "yes"
+  },
+  {
+    "course4d": "CIS 4510",
+    "title": "Computer and Network Security",
+    "status": "yes"
+  },
+  {
+    "course4d": "CIS 5521",
+    "title": "Compilers and Interpreters",
+    "status": "yes"
+  },
+  {
+    "course4d": "CIS 4521",
+    "title": "Compilers and Interpreters",
+    "status": "yes"
   }
 ]
