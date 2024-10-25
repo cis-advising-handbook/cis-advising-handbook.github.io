@@ -64,3 +64,29 @@ a .tooltip {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+/* Styles for Tech Electives table */
+td.te_status_no {
+    text-align: center;
+    background-color: Crimson;
+    color: white;
+}
+td.te_status_yes, td.te_status_unrestricted {
+    text-align: center;
+    background-color: SeaGreen;
+    color: white;
+}
+td.te_status_restricted {
+    text-align: center;
+    background-color: DarkSeaGreen;
+}
+td.te_status_ask {
+    text-align: center;
+    background-color: Gold;
+}
+td.te_subject {
+    text-align: center;
+}
+th {
+    text-align: center;
+}

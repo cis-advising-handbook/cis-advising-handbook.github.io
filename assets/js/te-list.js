@@ -8,38 +8,6 @@ function byCourse4d(a, b) {
     return a["course4d"].localeCompare(b["course4d"]);
 }
 
-/** return an HTML string for all the courses with the given status */
-function makeRows(status, courses) {
-    let color = "white"
-    switch (status) {
-        case "yes":
-            color = "green"
-            break
-        case "ask":
-            color = "yellow"
-            break;
-        case "no":
-            color = "red"
-            break
-        default:
-            throw new Error("invalid status: " + status)
-    }
-    let html = ""
-    // status is in the middle column
-    html += `<td style="background-color: ${color}">${status.toUpperCase()}</td><td>`
-    courses
-    .filter((e) => e["status"] === status)
-    .sort(byCourse4d).forEach((e) => {
-    // course list is in the right column
-    // show 3-digit course in a tooltip if available, else just show the 4-digit course
-    const tooltip = encode_to_3d[e["course4d"]] ?
-                    `<span class="tooltip">${e["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[e["course4d"]].trim()}</span></span>` :
-                    e["course4d"];
-    html += `${tooltip} ${e["title"]}<br>`;
-})
-    html += "</td>"
-    return html
-}
 let telist = null;
 let fetched_4d_encoding = null;
 async function fetchData() {
@@ -69,39 +37,66 @@ function processFetchedData(telist, fetched_4d_encoding) {
         .map((e) => e["course4d"].split(" ")[0].trim())
         .filter(unique)
 
-    subjects.forEach((s) => {
-        const thisSubject = telist.filter((e) => e["course4d"].startsWith(s + " "))
-
-        const statuses = thisSubject.map((e) => e["status"]).filter(unique)
+    subjects.forEach((subject) => {
+        const coursesThisSubject = telist.filter((e) => e["course4d"].startsWith(subject + " "))
 
         const caret = document.querySelector('#telist');
         let html = "";
         let addSubject = true
-        if (statuses.includes("yes")) {
-            html += "<tr>";
+        let suppressPreStatusUntil = 0
+        let suppressCurStatusUntil = 0
+        coursesThisSubject.forEach((course,courseIdx) => {
+            html += '<tr>'
             if (addSubject) {
+                html += `<td class="te_subject" rowspan="${coursesThisSubject.length}">${subject}</td>`
                 addSubject = false
-                // subject name is in the left column
-                html += `<td rowSpan="${statuses.length}">${s}</td>`
             }
-            html += makeRows("yes", thisSubject) + "</tr>"
-        }
-        if (statuses.includes("ask")) {
-            html += "<tr>";
-            if (addSubject) {
-                addSubject = false
-                html += `<td rowSpan="${statuses.length}">${s}</td>`
+
+            // course code and title
+            // show 3-digit course in a tooltip if available, else just show the 4-digit course
+            const tooltip = encode_to_3d[course["course4d"]] ?
+                  `<span class="tooltip">${course["course4d"]}<span class="tooltiptext">formerly ${encode_to_3d[course["course4d"]].trim()}</span></span>` : course["course4d"];
+            html += `<td>${tooltip} ${course["title"]}</td>`;
+
+            // statuses
+            preStatus = course["status_prefall24"]
+            curStatus = course["status"]
+            // check how many subsequent rows have the same preStatus
+            if (courseIdx >= suppressPreStatusUntil) {
+                const suffixCourses = coursesThisSubject.slice(courseIdx+1)
+                let matchedPreStatus = 0
+                for (let i = 0; i < suffixCourses.length; i++) {
+                    if (suffixCourses[i]['status_prefall24'] != preStatus) {
+                        break
+                    }
+                    matchedPreStatus++
+                }
+                let rowspan = ""
+                if (matchedPreStatus > 0) {
+                    rowspan = `rowspan="${matchedPreStatus+1}"`
+                    suppressPreStatusUntil = courseIdx + matchedPreStatus + 1
+                }
+                html += `<td ${rowspan} class="te_status_${preStatus}">${preStatus}</td>`
             }
-            html += makeRows("ask", thisSubject) + "</tr>"
-        }
-        if (statuses.includes("no")) {
-            html += "<tr>";
-            if (addSubject) {
-                addSubject = false
-                html += `<td rowSpan="${statuses.length}">${s}</td>`
+            // check how many subsequent rows have the same curStatus
+            if (courseIdx >= suppressCurStatusUntil) {
+                const suffixCourses = coursesThisSubject.slice(courseIdx+1)
+                let matchedCurStatus = 0
+                for (let i = 0; i < suffixCourses.length; i++) {
+                    if (suffixCourses[i]['status'] != curStatus) {
+                        break
+                    }
+                    matchedCurStatus++
+                }
+                let rowspan = ""
+                if (matchedCurStatus > 0) {
+                    rowspan = `rowspan="${matchedCurStatus+1}"`
+                    suppressCurStatusUntil = courseIdx + matchedCurStatus + 1
+                }
+                html += `<td ${rowspan} class="te_status_${curStatus}">${curStatus}</td>`
             }
-            html += makeRows("no", thisSubject) + "</tr>"
-        }
+            html += '</tr>'
+        })        
         caret.insertAdjacentHTML("beforeend", html);
     })
 }

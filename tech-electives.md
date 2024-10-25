@@ -9,27 +9,32 @@ This article outlines the underlying motivation and rules for the **Technical El
 
 The term *technical elective* is unfortunately overloaded and used in several of our degrees:
 
-* the [ASCS (BAS) degree's Technical Electives](https://catalog.upenn.edu/undergraduate/programs/computer-science-bas/) are more flexible, though everything approved on the list below *does count* for ASCS as well
-* the [NETS](https://catalog.upenn.edu/undergraduate/programs/networked-social-systems-engineering-bse/) Technical Electives have different rules, not discussed here
-* the [40CU CSCI](https://www.cis.upenn.edu/undergraduate/advising/all-degree-requirements/csci-requirements-2017/) Technical Electives have yet different rules again, though everything approved on the list below *does count* as a 40CU Technical Elective as well
+* the Technical Electives for the [ASCS (BAS) degree](https://catalog.upenn.edu/undergraduate/programs/computer-science-bas/), the [ARIN degree](https://catalog.upenn.edu/undergraduate/programs/artificial-intelligence-bse/), and the [40CU CSCI degree](https://www.cis.upenn.edu/undergraduate/advising/all-degree-requirements/csci-requirements-2017/) are each a bit different, though everything approved (i.e., yes/unrestricted/restricted) on the CSCI list below *does count* as a Technical Elective for these degrees as well
+* the [NETS](https://catalog.upenn.edu/undergraduate/programs/networked-social-systems-engineering-bse/) Technical Electives have different rules which are not directly comparable to the CSCI rules, and are not discussed here
 
 With these provisos out of the way, the rest of this article focuses solely on the 37CU CSCI Technical Electives.
 
 ## The purpose of Technical Electives
 
-Technical Electives give you technical depth; they are also an opportunity to specialize and to develop your own profile that goes beyond the required courses which everyone takes. Because of this, **not all courses are suitable as Technical Electives**. The expectation is that the courses will be 1) rigorous or quantitative, and 2) have at least one nontrivial prerequisite. Thus, a course that is mostly based on discussions or case studies will generally not work in this category. Such courses can still be wonderful, and you should certainly take them if you are interested! They would just have to go elsewhere on your CPG.
+Technical Electives give you technical depth; they are also an opportunity to specialize and to develop your own profile that goes beyond the required courses which everyone takes. Because of this, **not all courses are suitable as Technical Electives**. The expectation is that the courses will be 1) rigorous or quantitative, and 2) have at least one nontrivial prerequisite. Thus, a course that is mostly based on discussions or case studies will generally not work in this category. Such courses can still be wonderful, and you should certainly take them if you are interested! They just need to go elsewhere on your worksheet.
 
-For some areas of specialization, it is necessary to take an introductory (1000-level) course first, e.g., because the other courses you want to take have it as a prerequisite. In this case, it is okay to count the 1000-level course as a Technical Elective, even if it does not meet the criteria above. However, **you can have no more than one CU of 1000-level coursework** among your Technical Electives. Additional 1000-level courses must go elsewhere on your CPG.
+{: .notice--info}
+The Tech Elective rules have changed notably for students entering in Fall 2024 and later. We enacted this change to allow for fine-grained classification of courses that is independent of course number, as sometimes introductory courses have high course numbers, and in-depth courses have 1000-level numbers.
 
-An excellent way to choose four of the technical electives is to [declare a concentration]({% link concentration.md %}). Courses from a declared concentration will automatically count as Technical Electives. However, please keep in mind that concentrations are optional for CSCI, and that there are many possible areas of specialization for which the department does not (yet?) offer a concentration. If you do not want to pursue a concentration, you can pick your own courses, subject to the constraints outlined in this article.
+To avoid surprises at graduation time, it is important to make sure that a course counts as a Technical Elective *before*
+you take it. The easiest way to do that is to check [the list below](#list-of-courses).
 
-## Will my course count?
+## Rules for students entering Fall 2024 and later
 
-To avoid surprises at graduation time, it is important to make sure that a course counts as a Technical Elective *before* you take it. The easiest way to do that is to check the list below.
+Students can have at most 1 CU of **restricted** courses in their Technical Electives. The remaining CUs must be fulfilled with **unrestricted** courses. For courses that are marked **ask**, the undergrad chair will determine whether the course is unrestricted, restricted or cannot count.
+
+## Rules for students entering before Fall 2024
+
+Students can have **no more than one CU of 1000-level coursework** among their Technical Electives. Additional 1000-level courses must go elsewhere on the worksheet. Only courses that are marked as **yes** in the table below, or that are marked **ask** and have been approved by the undergrad chair, can be used as TEs.
 
 ## My course is not on the list
 
-If the course you are interested in is not yet listed, that does not necessarily mean that it does not count; it may simply mean that we have not made a decision yet. There are *lots* of courses that could be suitable, so we cannot maintain a definitive list! If your course is not yet listed, please [fill in this form]({{page.links.cis_te_form}}), and attach a recent syllabus. The department will make a decision and then add it to the list below.
+If the course you are interested in is not listed, that does not necessarily mean that it does not count; it simply means that we have not considered the course yet. If your course is not yet listed, please [fill in this form]({{page.links.cis_te_form}}) and attach a recent syllabus. The department will make a decision and then add it to the list below.
 
 {: .notice--info}
 Classifying courses isn't trivial, so please do this only for courses you actually want to take!
@@ -38,12 +43,20 @@ Classifying courses isn't trivial, so please do this only for courses you actual
 
 <div id="course_list"></div>
 
-Below is the list of all classes whose eligibility as a Technical Elective has been determined thus far. If a course is listed as "ASK" (yellow), its classification depends on the circumstances; in this case, you should **always ask** by [emailing the CIS Undergraduate Chair](mailto:{{page.links.ugc_email}}) and attaching any relevant documentation. For instance, if you are asking about <span class="tooltip">CIS 0099<span class="tooltiptext">formerly CIS 099</span></span>, please attach a copy of your project proposal.
+Below is the list of all classes whose eligibility as a Technical Elective has been determined thus far. If a course is listed as **ask**, its classification depends on the circumstances; in this case, you should **always ask** by [emailing the CIS Undergraduate Chair](mailto:{{page.links.ugc_email}}) and attaching any relevant documentation. For instance, if you are asking about <span class="tooltip">CIS 0099<span class="tooltiptext">formerly CIS 099</span></span>, please attach a copy of your project proposal.
 
 For the curious, this list is also available [in JSON format](/assets/json/37cu_csci_tech_elective_list.json).
 
 <table id="telist" border="1" cellspacing="0" cellpadding="5">
-  <tr><th><i>Subject</i></th><th colspan="2"><i>Courses</i></th></tr>
+  <tr>
+    <th rowspan="2">Subject</th>
+    <th rowspan="2" style="text-align: left">Course</th>
+    <th colspan="2" style="text-align: center;">entering Penn</th>
+  </tr>
+  <tr>
+    <th>before Fall '24</th>
+    <th>Fall '24 or later</th>
+  </tr>
   <!-- NB: rows of actual data are added by javascript, below -->
 </table>
 
@@ -63,6 +76,8 @@ Other courses can be counted by special approval as a "sequence of approved cour
 -->
 
 ## Revision history
+
+* Changes since September 2022 are [on github](https://github.com/cis-advising-handbook/cis-advising-handbook.github.io/blob/main/assets/json/37cu_csci_tech_elective_list.json).
 
 * September 2022: added approval for PHIL 4720
 
