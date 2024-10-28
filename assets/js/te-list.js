@@ -12,7 +12,7 @@ let telist = null;
 let fetched_4d_encoding = null;
 async function fetchData() {
     try {
-        let response1 = await fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list.json");
+        let response1 = await fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list_new.json");
         let json1 = await response1.text();
         let telist = JSON.parse(json1);
 
