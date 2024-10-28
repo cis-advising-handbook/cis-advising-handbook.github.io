@@ -492,6 +492,12 @@
     "status": "unrestricted"
   },
   {
+    "course4d": "CIS 2450",
+    "title": "Big Data Analytics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
     "course4d": "CIS 3310",
     "title": "Introduction to Networks and Security",
     "status_prefall24": "yes",
