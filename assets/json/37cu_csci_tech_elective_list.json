@@ -1,2257 +1,2708 @@
 [
   {
+    "course4d": "ACCT 1010",
+    "title": "Accounting and Financial Reporting",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "ACCT 1020",
+    "title": "Strategic Cost Analysis",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "ACCT 2700",
+    "title": "Forensic Analytics",
+    "status_prefall24": "no",
+    "status": "restricted"
+  },
+  {
     "course4d": "ARAB 0100",
     "title": "Elementary Arabic I",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ARAB 0200",
     "title": "Elementary Arabic II",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ARAB 0300",
     "title": "Intermediate Arabic III",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ARAB 0400",
     "title": "Intermediate Arabic IV",
-    "status": "no"
-  },
-  {
-    "course4d": "ACCT 1010",
-    "title": "Accounting and Financial Reporting",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ASLD 0100",
     "title": "American Sign Language I",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ASLD 0200",
     "title": "American Sign Language II",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ASLD 0300",
     "title": "American Sign Language III",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ASLD 0400",
     "title": "American Sign Language IV",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ASTR 1211",
     "title": "Introduction to Astrophysics I",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "ASTR 1250",
     "title": "Astronomical Techniques",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "BE 1000",
     "title": "Introduction to Bioengineering",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "BE 2000",
+    "title": "Introduction to Biomechanics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "BE 2200",
+    "title": "Biomaterials",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "BE 3010",
+    "title": "Bioengineering Signals and Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BE 3060",
     "title": "Cellular Engineering",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BE 4700",
     "title": "Medical Devices",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BE 4800",
     "title": "Introduction to Biomedical Imaging",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BE 5210",
     "title": "Brain-Computer Interfaces",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BE 5300",
     "title": "Theoretical and Computational Neuroscience",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BE 5690",
     "title": "Systems Biology of Cell Signaling Behavior",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "BEPP 2500",
-    "title": "Managerial Economics",
-    "status": "yes"
+    "course4d": "BEPP 2010",
+    "title": "Public Finance and Policy",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "BEPP 2800",
-    "title": "Applied Data Analysis",
-    "status": "yes"
+    "course4d": "BEPP 2200",
+    "title": "Behavioral Economics, Markets, and Public Policy",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
     "course4d": "BEPP 2330",
     "title": "Consumers, Firms and Markets in Developing Countries",
+    "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "BEPP 2500",
+    "title": "Managerial Economics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BEPP 2610",
     "title": "Risk Analysis and Environmental Management",
+    "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "BEPP 2800",
+    "title": "Applied Data Analysis",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BEPP 2840",
     "title": "Game Theory for Business and Life",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "BIOL 1101",
     "title": "Introduction to Biology A",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "BIOL 1121",
     "title": "Introduction to Biology - The Molecular Biology of Life",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "BIOL 1123",
+    "title": "Introductory Molecular Biology Laboratory",
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "BIOL 2210",
     "title": "Molecular Biology and Genetics",
-    "status": "yes"
-  },
-  {
-    "course4d": "BIOL 4231",
-    "title": "Genome Science and Genomic Medicine",
-    "status": "yes"
-  },
-  {
-    "course4d": "BIOL 4536",
-    "title": "Introduction to Computational Biology & Biological Modeling",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BIOL 2510",
     "title": "Statistics for Biologists",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "BIOL 4231",
+    "title": "Genome Science and Genomic Medicine",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "BIOL 4536",
+    "title": "Introduction to Computational Biology & Biological Modeling",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BIOL 5536",
     "title": "Fundamentals of Computational Biology",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "BIOL 5571",
     "title": "Topics in Computational Biology",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CBE 1500",
     "title": "Introduction to Biotechnology",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "CBE 1600",
     "title": "Introduction to Chemical Engineering",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CBE 2300",
+    "title": "Material and Energy Balances of Chemical Processes",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CBE 2310",
+    "title": "Thermodynamics of Fluids",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CBE 3200",
+    "title": "Basic Chemical Process Safety",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "CBE 3500",
+    "title": "Fluid Mechanics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CBE 3600",
+    "title": "Chemical Process Control",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CBE 3750",
     "title": "Engineering and the Environment",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "CHEM 1101",
-    "title": "General Chemistry Laboratory I",
-    "status": "yes"
+    "course4d": "CBE 4790",
+    "title": "Biotechnology and Biochemical Engineering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "CHEM 1102",
-    "title": "General Chemistry Laboratory II",
-    "status": "yes"
+    "course4d": "CBE 5450",
+    "title": "Electrochemical Energy Conversion and Storage",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CHEM 1012",
     "title": "General Chemistry I",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "CHEM 1022",
     "title": "General Chemistry II",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CHEM 1101",
+    "title": "General Chemistry Laboratory I",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CHEM 1102",
+    "title": "General Chemistry Laboratory II",
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "CHEM 1151",
     "title": "Honors Chemistry I",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "CHEM 1161",
     "title": "Honors Chemistry II",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CHEM 2210",
+    "title": "Physical Chemistry I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CHEM 2220",
     "title": "Physical Chemistry II",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CHEM 2410",
     "title": "Principles of Organic Chemistry I",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CHEM 2411",
     "title": "Principles of Organic Chemistry I with Laboratory",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CHEM 2420",
     "title": "Principles of Organic Chemistry II",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CHEM 2421",
+    "title": "Principles of Organic Chemistry II with Laboratory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIMS 0590",
+    "title": "Benjamin Franklin Seminar: Film Studies",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
     "course4d": "CIMS 1010",
     "title": "World Film History to 1945",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "CIMS 1020",
     "title": "World Film History 1945-Present",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "CIMS 1160",
     "title": "Screenwriting Workshop",
+    "status_prefall24": "no",
     "status": "no"
-  },
-  {
-    "course4d": "CIMS 0590",
-    "title": "Benjamin Franklin Seminar: Film Studies",
-    "status": "no"
-  },
-  {
-    "course4d": "CIS 1400",
-    "title": "Introduction to Cognitive Science",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1912",
-    "title": "DevOps",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1921",
-    "title": "Solving Hard Problems in Practice",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1901",
-    "title": "C++ Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1911",
-    "title": "Using and Understanding Unix and Linux",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1902",
-    "title": "Python Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1903",
-    "title": "Go Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1951",
-    "title": "iOS Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1952",
-    "title": "Android Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1961",
-    "title": "Ruby on Rails Web Development",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1962",
-    "title": "JavaScript Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 1905",
-    "title": "Rust Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 2330",
-    "title": "Introduction to Blockchain",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 3410",
-    "title": "Compilers and Interpreters",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 3500",
-    "title": "Software Design/Engineering",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 3980",
-    "title": "Quantum Computer and Information Science",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 3990",
-    "title": "Special Topics",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4190",
-    "title": "Applied Machine Learning",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4210",
-    "title": "Artificial Integlligence",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4410",
-    "title": "Embedded Software for Life-Critical Applications",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4500",
-    "title": "Database and Information Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4550",
-    "title": "Internet and Web Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4600",
-    "title": "Interactive Computer Graphics",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4610",
-    "title": "Advanced Rendering",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5000",
-    "title": "Software Foundations",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5020",
-    "title": "Analysis of Algorithms",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5200",
-    "title": "Machine Learning",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5210",
-    "title": "Artificial Intelligence",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5300",
-    "title": "Computational Linguistics",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5450",
-    "title": "Big Data Analytics",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5500",
-    "title": "Database and Information Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5510",
-    "title": "Computer and Network Security",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5520",
-    "title": "Advanced Programming",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5530",
-    "title": "Networked Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5550",
-    "title": "Internet and Web Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5560",
-    "title": "Cryptography",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5650",
-    "title": "GPU Programming and Architecture",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5660",
-    "title": "Procedural Computer Graphics",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5800",
-    "title": "Machine Perception",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5810",
-    "title": "Computer Vision & Computational Photography",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 6250",
-    "title": "Theory of Machine Learning",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 6770",
-    "title": "Advanced Topics in Algorithms and Complexity",
-    "status": "yes"
   },
   {
     "course4d": "CIS 0099",
     "title": "Undergraduate Research/Independent Study",
-    "status": "ask"
-  },
-  {
-    "course4d": "CIS 5990",
-    "title": "Independent Study for Masters Students",
-    "status": "ask"
-  },
-  {
-    "course4d": "CIS 7980",
-    "title": "Explaining Explanation",
+    "status_prefall24": "ask",
     "status": "ask"
   },
   {
     "course4d": "CIS 1050",
     "title": "Computational Data Exploration",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "CIS 1060",
     "title": "Visualizing the Past",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "CIS 1070",
     "title": "Visual Culture through the Computer's Eye",
+    "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "CIS 1400",
+    "title": "Introduction to Cognitive Science",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1901",
+    "title": "C++ Programming",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1902",
+    "title": "Python Programming",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1903",
+    "title": "Go Programming",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1905",
+    "title": "Rust Programming",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1911",
+    "title": "Using and Understanding Unix and Linux",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1912",
+    "title": "DevOps",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1921",
+    "title": "Solving Hard Problems in Practice",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1951",
+    "title": "iOS Programming",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1952",
+    "title": "Android Programming",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1961",
+    "title": "Ruby on Rails Web Development",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 1962",
+    "title": "JavaScript Programming",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "CIS 2330",
+    "title": "Introduction to Blockchain",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 3310",
+    "title": "Introduction to Networks and Security",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 3333",
+    "title": "Mathematics of Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 3410",
+    "title": "Compilers and Interpreters",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 3500",
+    "title": "Software Design/Engineering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 3980",
+    "title": "Quantum Computer and Information Science",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 3990",
+    "title": "Special Topics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4120",
+    "title": "Introduction to Human Computer Interaction",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4190",
+    "title": "Applied Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4210",
+    "title": "Artificial Integlligence",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "CIS 4230",
     "title": "Ethical Algorithm Design",
+    "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "CIS 4300",
+    "title": "Computational Linguistics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4410",
+    "title": "Embedded Software for Life-Critical Applications",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4500",
+    "title": "Database and Information Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4510",
+    "title": "Computer and Network Security",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4521",
+    "title": "Compilers and Interpreters",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4550",
+    "title": "Internet and Web Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4600",
+    "title": "Interactive Computer Graphics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 4610",
+    "title": "Advanced Rendering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5000",
+    "title": "Software Foundations",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5020",
+    "title": "Analysis of Algorithms",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5050",
+    "title": "Software Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5200",
+    "title": "Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5210",
+    "title": "Artificial Intelligence",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5220",
+    "title": "Deep Learning for Data Science",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5300",
+    "title": "Computational Linguistics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5450",
+    "title": "Big Data Analytics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5490",
+    "title": "Wireless Communications for Mobile Networks and Internet of Things",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5500",
+    "title": "Database and Information Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5510",
+    "title": "Computer and Network Security",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5520",
+    "title": "Advanced Programming",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5521",
+    "title": "Compilers and Interpreters",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5530",
+    "title": "Networked Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5550",
+    "title": "Internet and Web Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5560",
+    "title": "Cryptography",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5590",
+    "title": "Programming and Problem Solving",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5650",
+    "title": "GPU Programming and Architecture",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5660",
+    "title": "Procedural Computer Graphics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5800",
+    "title": "Machine Perception",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5810",
+    "title": "Computer Vision & Computational Photography",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 5990",
+    "title": "Independent Study for Masters Students",
+    "status_prefall24": "ask",
+    "status": "ask"
+  },
+  {
+    "course4d": "CIS 6250",
+    "title": "Theory of Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 6770",
+    "title": "Advanced Topics in Algorithms and Complexity",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 7000",
+    "title": "Special Topics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CIS 7980",
+    "title": "Explaining Explanation",
+    "status_prefall24": "ask",
+    "status": "ask"
   },
   {
     "course4d": "COGS 1001",
     "title": "Introduction to Cognitive Science",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "COGS 3999",
     "title": "Independent Study",
+    "status_prefall24": "ask",
     "status": "ask"
+  },
+  {
+    "course4d": "COMM 3180",
+    "title": "Stories From Data: Introduction to Programming for Data Journalism",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "COMM 3670",
+    "title": "Communication in the Networked Age",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
     "course4d": "COMM 4590",
     "title": "Social Networks and the Spread of Behavior",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "DSGN 2570",
-    "title": "User Experience (UX) and User Interface (UI) Design",
-    "status": "yes"
-  },
-  {
-    "course4d": "DSGN 1020",
-    "title": "Art of the web: Interactive Concepts for Art & Design",
-    "status": "no"
-  },
-  {
-    "course4d": "DSGN 1030",
-    "title": "3-D Computer Modeling",
+    "course4d": "CRIM 2040",
+    "title": "Forensic Analysis",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "DSGN 0010",
     "title": "Art, Design and Digital Culture",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "DSGN 1020",
+    "title": "Art of the web: Interactive Concepts for Art & Design",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "DSGN 1030",
+    "title": "3-D Computer Modeling",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "DSGN 1060",
     "title": "Visual Narrative",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "EAS 3010",
-    "title": "Climate Policy and Technology",
-    "status": "yes"
-  },
-  {
-    "course4d": "EAS 4030",
-    "title": "Energy Systems and Policy",
-    "status": "yes"
-  },
-  {
-    "course4d": "EAS 5070",
-    "title": "Intellectual Property and Business Law for Engineers",
-    "status": "yes"
-  },
-  {
-    "course4d": "EAS 5120",
-    "title": "Engineering Negotiation",
-    "status": "yes"
-  },
-  {
-    "course4d": "EAS 5450",
-    "title": "Engineering Entrepreneurship I",
-    "status": "yes"
-  },
-  {
-    "course4d": "EAS 5460",
-    "title": "Engineering Entrepreneurship II",
-    "status": "yes"
-  },
-  {
-    "course4d": "EAS 5490",
-    "title": "Engineering Entrepreneurship Lab",
-    "status": "yes"
-  },
-  {
-    "course4d": "EAS 2970",
-    "title": "Study Abroad",
-    "status": "ask"
+    "course4d": "DSGN 2570",
+    "title": "User Experience (UX) and User Interface (UI) Design",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "EAS 2030",
     "title": "Engineering Ethics",
+    "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "EAS 2970",
+    "title": "Study Abroad",
+    "status_prefall24": "ask",
+    "status": "ask"
+  },
+  {
+    "course4d": "EAS 3010",
+    "title": "Climate Policy and Technology",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "EAS 4030",
+    "title": "Energy Systems and Policy",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "EAS 5070",
+    "title": "Intellectual Property and Business Law for Engineers",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "EAS 5120",
+    "title": "Engineering Negotiation",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "EAS 5450",
+    "title": "Engineering Entrepreneurship I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "EAS 5460",
+    "title": "Engineering Entrepreneurship II",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "EAS 5490",
+    "title": "Engineering Entrepreneurship Lab",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "EAS 5950",
     "title": "Foundations of Leadership",
+    "status_prefall24": "no",
     "status": "no"
-  },
-  {
-    "course4d": "ECON 0200",
-    "title": "Introductory Economics: Macro",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 0420",
-    "title": "Political Economy",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 0630",
-    "title": "The Economics and Financing of Health Care Delivery",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 2100",
-    "title": "Intermediate Microeconomics",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 2200",
-    "title": "Intermediate Macroeconomics",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 2310",
-    "title": "Econometric Methods and Models",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4100",
-    "title": "Game Theory",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4430",
-    "title": "Labor Economics",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4450",
-    "title": "Industrial Organization",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4460",
-    "title": "Health Economics",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4230",
-    "title": "Macro-Modeling",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4240",
-    "title": "Money and Banking",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4510",
-    "title": "International Trade",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 4130",
-    "title": "Market Design",
-    "status": "yes"
   },
   {
     "course4d": "ECON 0100",
     "title": "Introduction to Micro Economics",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ECON 0110",
     "title": "Introduction to Economics for Business",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ECON 0120",
     "title": "Strategic Reasoning",
+    "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "ECON 0200",
+    "title": "Introductory Economics: Macro",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "ECON 0420",
+    "title": "Political Economy",
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "ECON 0620",
     "title": "Financial Meltdown, Past and Present",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "ENGL 3010",
-    "title": "Introduction to Creative Writing: Poetry and Fiction",
+    "course4d": "ECON 0630",
+    "title": "The Economics and Financing of Health Care Delivery",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "ECON 2100",
+    "title": "Intermediate Microeconomics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 2200",
+    "title": "Intermediate Macroeconomics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 2300",
+    "title": "Statistics for Economists",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 2310",
+    "title": "Econometric Methods and Models",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4100",
+    "title": "Game Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4130",
+    "title": "Market Design",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4210",
+    "title": "Numerical Methods for Macroeconomists",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4230",
+    "title": "Macro-Modeling",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4240",
+    "title": "Money and Banking",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4430",
+    "title": "Labor Economics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4450",
+    "title": "Industrial Organization",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4460",
+    "title": "Health Economics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ECON 4510",
+    "title": "International Trade",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "EESC 4320",
+    "title": "Atmospheric Chemistry",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "ENGL 1820",
-    "title": "British Poetry 1660 - 1914",
+    "course4d": "EESC 4630",
+    "title": "Hydrology",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ENGL 0999",
+    "title": "Independent Study in Language and Literature",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "ENGL 1310",
     "title": "Gender, Sexuality, and Literature",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "ENGL 0999",
-    "title": "Independent Study in Language and Literature",
+    "course4d": "ENGL 1820",
+    "title": "British Poetry 1660 - 1914",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "ENGR 2120",
-    "title": "Concepts in Micro- and Nanotechnology",
-    "status": "yes"
-  },
-  {
-    "course4d": "ENGR 2500",
-    "title": "Energy Systems, Resources and Technology",
-    "status": "yes"
-  },
-  {
-    "course4d": "ENGR 3440",
-    "title": "Answering Questions with Data, for Everyone",
-    "status": "yes"
-  },
-  {
-    "course4d": "ENGR 4500",
-    "title": "Biotechnology, Immunology, Vaccines and COVID-19",
-    "status": "yes"
-  },
-  {
-    "course4d": "ENGR 5030",
-    "title": "Engineering in Oil, Gas and Coal, from Production to End Use",
-    "status": "yes"
+    "course4d": "ENGL 3010",
+    "title": "Introduction to Creative Writing: Poetry and Fiction",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
     "course4d": "ENGR 1010",
     "title": "Introduction to Engineering: Energy, Environment and Sustainability",
+    "status_prefall24": "ask",
     "status": "ask"
   },
   {
     "course4d": "ENGR 1050",
     "title": "Introduction to Scientific Computing",
+    "status_prefall24": "ask",
     "status": "ask"
+  },
+  {
+    "course4d": "ENGR 1400",
+    "title": "Penn Global Seminar: Robotics and Rehabilitation",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "ENGR 2120",
+    "title": "Concepts in Micro- and Nanotechnology",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ENGR 2500",
+    "title": "Energy Systems, Resources and Technology",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "ENGR 2900",
+    "title": "PGS: Artificial Intelligence and Robotics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ENGR 2990",
     "title": "Eng Rsch-Prep/App/Meth",
+    "status_prefall24": "ask",
     "status": "ask"
+  },
+  {
+    "course4d": "ENGR 3440",
+    "title": "Answering Questions with Data, for Everyone",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ENGR 4500",
+    "title": "Biotechnology, Immunology, Vaccines and COVID-19",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ENGR 5030",
+    "title": "Engineering in Oil, Gas and Coal, from Production to End Use",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "ENM 3440",
+    "title": "Answering Questions with Data, for Everyone",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ENM 3750",
+    "title": "Biological Data Science I - Fundamentals of Biostatistics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 1110",
     "title": "Atoms, Bits, Circuits and Systems",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "ESE 1500",
     "title": "Digital Audio Basics",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
     "course4d": "ESE 1900",
     "title": "Silicon Garage: Introduction to Open Source Hardware and Software Platforms",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "ESE 2000",
+    "title": "Artificial Intelligence Lab: Data, Systems, and Decisions",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 2040",
     "title": "Decision Models",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 2100",
     "title": "Introduction to Dynamic Systems",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 2150",
     "title": "Electrical Circuits and Systems",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 2180",
+    "title": "Electronic, Photonic, and Electromechanical Devices",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 2240",
     "title": "Signal and Information Processing",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 2900",
     "title": "Introduction to Electrical and Systems Engineering Research Methodology",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 2910",
     "title": "Introduction to Electrical and Systems Engineering Research and Design",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 2920",
     "title": "Introduction to Electromechanical Prototyping",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 3030",
     "title": "Stochastic Systems Analysis and Simulation",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 3050",
     "title": "Foundations of Data Science",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 3060",
+    "title": "Deep Learning: A Hands-on Introduction",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 3100",
     "title": "Electric and Magnetic Fields I",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 3190",
+    "title": "Fundamentals of Solid-State Circuits",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 3250",
     "title": "Fourier Analysis and Applications in Engineering, Mathematics, and the Sciences",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 3500",
     "title": "Embedded Systems/Microcontroller Laboratory",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 3600",
+    "title": "Machine Learning on Embedded Edge Devices",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 3700",
+    "title": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 4000",
     "title": "Engineering Economics",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 4020",
     "title": "Statistics for Data Science",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 4070",
     "title": "Introduction to Networks and Protocols",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 4210",
     "title": "Control For Autonomous Robots",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 4440",
     "title": "Project Management",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 5040",
     "title": "Intro to Linear, Nonlinear and Integer Optimization",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 5090",
+    "title": "Quantum Circuits and Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 5140",
     "title": "Graph Neural Networks",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 5300",
+    "title": "Elements of Probability Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 5390",
     "title": "Hardware/Software Co-Design for Machine Learning",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 5430",
     "title": "Human Systems Engineering",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 5440",
     "title": "Project Management",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 6050",
+    "title": "Modern Convex Optimization",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 6500",
+    "title": "Learning in Robotics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "ESE 6740",
     "title": "Information Theory",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "FNAR 1010",
-    "title": "Video I",
-    "status": "no"
-  },
-  {
-    "course4d": "FNAR 2030",
-    "title": "Cinema Production",
-    "status": "no"
-  },
-  {
-    "course4d": "FNAR 2260",
-    "title": "Film Sound: History, Aesthetics and Subversion",
-    "status": "no"
+    "course4d": "ESE 6800",
+    "title": "Special Topics in Electrical and Systems Engineering",
+    "status_prefall24": "ask",
+    "status": "ask"
   },
   {
     "course4d": "FNAR 0010",
     "title": "Drawing I",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "FNAR 1010",
+    "title": "Video I",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "FNAR 1020",
     "title": "Photography Practices",
-    "status": "no"
-  },
-  {
-    "course4d": "FNAR 1090",
-    "title": "Painting I",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "FNAR 1040",
     "title": "Digital Photography",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "FNCE 1010",
-    "title": "Monetary Economics and the Global Economy",
-    "status": "yes"
+    "course4d": "FNAR 1090",
+    "title": "Painting I",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "FNCE 2030",
-    "title": "Advanced Corporate Finance",
-    "status": "yes"
+    "course4d": "FNAR 2030",
+    "title": "Cinema Production",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "FNCE 2050",
-    "title": "Investment Management",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2070",
-    "title": "Valuation",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2170",
-    "title": "Financial Derivatives",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2190",
-    "title": "International Financial Markets and Cryptocurrencies",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2250",
-    "title": "Fixed Income Securities",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2300",
-    "title": "Urban Fiscal Policy",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2370",
-    "title": "Data Science for Finance",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2380",
-    "title": "Capital Markets",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2500",
-    "title": "Venture Capital and the Finance of Innovation",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2510",
-    "title": "The Finance of Buyouts and Acquisitions",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 7170",
-    "title": "Financial Derivatives",
-    "status": "yes"
+    "course4d": "FNAR 2260",
+    "title": "Film Sound: History, Aesthetics and Subversion",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
     "course4d": "FNCE 1000",
     "title": "Corporate Finance",
-    "status": "no"
-  },
-  {
-    "course4d": "FNCE 2800",
-    "title": "FinTech",
-    "status": "no"
-  },
-  {
-    "course4d": "GCB 5360",
-    "title": "Fundamentals of Computational Biology",
-    "status": "yes"
-  },
-  {
-    "course4d": "IPD 5110",
-    "title": "How to Make Things: Production Prototyping Studio",
-    "status": "yes"
-  },
-  {
-    "course4d": "IPD 5150",
-    "title": "Product Design",
-    "status": "yes"
-  },
-  {
-    "course4d": "IPD 5090",
-    "title": "Needfinding",
-    "status": "no"
-  },
-  {
-    "course4d": "JPAN 0400",
-    "title": "Intermediate Japanese II",
-    "status": "no"
-  },
-  {
-    "course4d": "JPAN 0300",
-    "title": "Intermediate Japanese I",
-    "status": "no"
-  },
-  {
-    "course4d": "LAW 5770",
-    "title": "Internet Law",
-    "status": "yes"
-  },
-  {
-    "course4d": "LGST 2050",
-    "title": "Innovation, Marketing Strategy, and Antitrust",
-    "status": "no"
-  },
-  {
-    "course4d": "LGST 2220",
-    "title": "Internet Law, Privacy, and Cybersecurity",
-    "status": "no"
-  },
-  {
-    "course4d": "LGST 2430",
-    "title": "Other People's Money: The Law, Politics, and History of Financial Institutions",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 2300",
-    "title": "Sound Structure of Language",
-    "status": "yes"
-  },
-  {
-    "course4d": "LING 5150",
-    "title": "Dynamics of Language",
-    "status": "yes"
-  },
-  {
-    "course4d": "LING 5250",
-    "title": "Computer Analysis and Modeling of Biological Signals and Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "LING 0001",
-    "title": "Introduction to Linguistics",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 0600",
-    "title": "Introduction to Sociolinguistics",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 0500",
-    "title": "Introduction to Formal Linguistics",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 0150",
-    "title": "Writing Systems",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 0700",
-    "title": "Data Science for studying Language and the Mind",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 2500",
-    "title": "Introduction to Syntax",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 2700",
-    "title": "Language Acquisition",
-    "status": "no"
-  },
-  {
-    "course4d": "LING 3850",
-    "title": "Experiments in the Study of Meaning",
-    "status": "no"
-  },
-  {
-    "course4d": "MATH 2400",
-    "title": "Calculus, Part III",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 2410",
-    "title": "Calculus, Part IV",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3120",
-    "title": "Linear Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3140",
-    "title": "Advanced Linear Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3200",
-    "title": "Computer Methods in Mathematical Science I",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3400",
-    "title": "Discrete Mathematics I",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3410",
-    "title": "Discrete Mathematics II",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3500",
-    "title": "Number Theory",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3600",
-    "title": "Advanced Calculus",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3610",
-    "title": "Advanced Calculus",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3700",
-    "title": "Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3710",
-    "title": "Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 4200",
-    "title": "Ordinary Differential Equations",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 4250",
-    "title": "Partial Differential Equations",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 4320",
-    "title": "Game Theory.",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 4600",
-    "title": "Topology",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 5020",
-    "title": "Abstract Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 5030",
-    "title": "Abstract Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 5080",
-    "title": "Advanced Analysis",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 5090",
-    "title": "Advanced Analysis",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 5460",
-    "title": "Advanced Applied Probability",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 6020",
-    "title": "Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 1010",
-    "title": "Introduction to Mechanical Design",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 2010",
-    "title": "Machine Design and Manufacturing",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 2030",
-    "title": "Thermodynamics I",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 2100",
-    "title": "Statics and Strength of Materials",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 2110",
-    "title": "Engineering Mechanics: Dynamics",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 3020",
-    "title": "Fluid Mechanics",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 3210",
-    "title": "Dynamic Systems and Control",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 3330",
-    "title": "Heat and Mass Transfer",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 3470",
-    "title": "Mechanical Engineering Design Laboratory",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 3540",
-    "title": "Mechanics of Solids",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 5100",
-    "title": "Design of Mechatronic Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "MGMT 1010",
-    "title": "Introduction To Management",
-    "status": "no"
-  },
-  {
-    "course4d": "MGMT 2300",
-    "title": "Entrepreneurship",
-    "status": "no"
-  },
-  {
-    "course4d": "MGMT 2370",
-    "title": "Management of Technology",
-    "status": "no"
-  },
-  {
-    "course4d": "MGMT 2640",
-    "title": "Venture Capital and Entrepreneurial Management",
-    "status": "no"
-  },
-  {
-    "course4d": "MGMT 2910",
-    "title": "Negotiations",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2120",
-    "title": "Data and Analysis for Marketing Decisions",
-    "status": "yes"
-  },
-  {
-    "course4d": "MKTG 2710",
-    "title": "Models for Marketing Strategy",
-    "status": "yes"
-  },
-  {
-    "course4d": "MKTG 3520",
-    "title": "Special Topics - Marketing Analytics",
-    "status": "yes"
-  },
-  {
-    "course4d": "MKTG 4760",
-    "title": "Applied Probability Models in Marketing",
-    "status": "yes"
-  },
-  {
-    "course4d": "MKTG 7120",
-    "title": "Data and Analysis for Marketing Decisions",
-    "status": "yes"
-  },
-  {
-    "course4d": "MKTG 1010",
-    "title": "Introduction to Marketing",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2110",
-    "title": "Consumer Behavior",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2370",
-    "title": "Introduction to Brain Science for Business",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2390",
-    "title": "Visual Marketing",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2620",
-    "title": "New Product Development",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2650",
-    "title": "Principles of Advertising",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2700",
-    "title": "Digital Marketing, Social Media and E-Commerce",
-    "status": "no"
-  },
-  {
-    "course4d": "MKTG 2770",
-    "title": "Marketing Strategy",
-    "status": "no"
-  },
-  {
-    "course4d": "MRTI 0200",
-    "title": "Beginning Marathi II",
-    "status": "no"
-  },
-  {
-    "course4d": "MRTI 1500",
-    "title": "Advanced Marathi",
-    "status": "no"
-  },
-  {
-    "course4d": "MSE 2200",
-    "title": "Introduction to Materials Science and Engineering",
-    "status": "yes"
-  },
-  {
-    "course4d": "MSE 2600",
-    "title": "Energetics of Macro and Nano-scale Materials",
-    "status": "yes"
-  },
-  {
-    "course4d": "MSE 3300",
-    "title": "Self-Assembly of Soft Materials",
-    "status": "yes"
-  },
-  {
-    "course4d": "MSE 3600",
-    "title": "Structure at the Nanoscale",
-    "status": "yes"
-  },
-  {
-    "course4d": "MSE 3930",
-    "title": "Materials Selection",
-    "status": "yes"
-  },
-  {
-    "course4d": "MUSC 1300",
-    "title": "1000 Years of Musical Listening",
-    "status": "no"
-  },
-  {
-    "course4d": "MUSC 2700",
-    "title": "Theory and Musicianship I",
-    "status": "no"
-  },
-  {
-    "course4d": "NETS 1500",
-    "title": "Market and Social Systems on the Internet",
-    "status": "yes"
-  },
-  {
-    "course4d": "NETS 2120",
-    "title": "Scalable and Cloud Computing",
-    "status": "yes"
-  },
-  {
-    "course4d": "NETS 2130",
-    "title": "Crowdsourcing and Human Computation",
-    "status": "yes"
-  },
-  {
-    "course4d": "NETS 3120",
-    "title": "Theory of Networks",
-    "status": "yes"
-  },
-  {
-    "course4d": "NETS 4120",
-    "title": "Algorithmic Game Theory",
-    "status": "yes"
-  },
-  {
-    "course4d": "NETS 1120",
-    "title": "Networked Life",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2200",
-    "title": "Introduction to Operations Management",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 2240",
-    "title": "Analytics for Service Operations",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 2450",
-    "title": "Analytics and the Digital Economy",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 3190",
-    "title": "Advanced Decision Systems: Evolutionary Computation",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 3210",
-    "title": "Introduction to Management Science",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 3530",
-    "title": "Mathematical Modeling and its Application in Finance",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 4690",
-    "title": "Information Strategy and Economics",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 6130",
-    "title": "Online Business Models and the Information-Based Firm",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 6700",
-    "title": "Special topics in Information Systems: Simulation and Dynamic Competitive Strat",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 9040",
-    "title": "Experimental Economics",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 9100",
-    "title": "Intro to Linear, Nonlinear and Integer Optimization",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 9150",
-    "title": "Advanced Graph Theory",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 9340",
-    "title": "Dynamic Programming and Stochastic Models",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 6530",
-    "title": "Mathematical Modeling and its Application in Finance",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 9500",
-    "title": "Perspectives on Information Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 2990",
-    "title": "Judgment & Decision Making Research Immersion",
-    "status": "ask"
-  },
-  {
-    "course4d": "OIDD 2100",
-    "title": "Online Business Models and the Information-Based Firm",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2360",
-    "title": "Scaling Operations in Technology Ventures: Linking Strategy and Execution",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2550",
-    "title": "Artificial Intelligence, Data and Society",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2610",
-    "title": "Risk Analysis and Environmental Management",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2900",
-    "title": "Decision Processes",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2910",
-    "title": "Negotiations",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2920",
-    "title": "Advanced Negotiation",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 2930",
-    "title": "People Analytics",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 3110",
-    "title": "Business Computer Languages",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 3140",
-    "title": "Enabling Technologies",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 3250",
-    "title": "Computer Simulation Models",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 4720",
-    "title": "Topics in Mathematical Logic",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHIL 4721",
-    "title": "Logic and Computability 1",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHIL 4722",
-    "title": "Logic and Computability 2",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHIL 4770",
-    "title": "Philosophy of Mathematics",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHIL 1170",
-    "title": "History of Modern Philosophy",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 1710",
-    "title": "Introduction to Logic",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 2620",
-    "title": "Introduction to Epistemology and Metaphysics",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 2640",
-    "title": "Introduction to Philosophy of Mind",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 3600",
-    "title": "Topics in Theoretical Philosophy",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 4800",
-    "title": "Philosophy of Science.",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 4840",
-    "title": "Philosophy of Psychology",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 4640",
-    "title": "Philosophy of Mind",
-    "status": "no"
-  },
-  {
-    "course4d": "PHIL 4330",
-    "title": "Metaethics",
-    "status": "no"
-  },
-  {
-    "course4d": "PHYS 1230",
-    "title": "Principles of Physics III: Thermal Physics and Waves",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHYS 1250",
-    "title": "Principles of Physics IV: Modern Physics",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHYS 2280",
-    "title": "Physical Models of Biological Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHYS 3351",
-    "title": "Analytical Mechanics",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHYS 3361",
-    "title": "Electromagnetism I: Electricity and Potential Theory",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHYS 3362",
-    "title": "Electromagnetism II: Magnetism, Maxwell's Equations, and Electromagnetic Waves",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHYS 4401",
-    "title": "Thermodynamics and the Introduction to Statistical Mechanics and Kinetic Theory",
-    "status": "yes"
-  },
-  {
-    "course4d": "PHYS 4411",
-    "title": "Introduction to Quantum Mechanics I",
-    "status": "yes"
-  },
-  {
-    "course4d": "PSCI 1800",
-    "title": "Introduction to Data Science",
-    "status": "no"
-  },
-  {
-    "course4d": "PSYC 1340",
-    "title": "Perception",
-    "status": "yes"
-  },
-  {
-    "course4d": "PSYC 1230",
-    "title": "Cognitive Neuroscience",
-    "status": "yes"
-  },
-  {
-    "course4d": "PSYC 1310",
-    "title": "Language and Thought",
-    "status": "yes"
-  },
-  {
-    "course4d": "PSYC 2377",
-    "title": "Cognitive Development",
-    "status": "yes"
-  },
-  {
-    "course4d": "PSYC 0001",
-    "title": "Introduction to Experimental Psychology",
-    "status": "no"
-  },
-  {
-    "course4d": "PSYC 1210",
-    "title": "Introduction to Brain and Behavior",
-    "status": "no"
-  },
-  {
-    "course4d": "PSYC 1440",
-    "title": "Social Psychology",
-    "status": "no"
-  },
-  {
-    "course4d": "PSYC 1777",
-    "title": "Introduction to Developmental Psychology",
-    "status": "no"
-  },
-  {
-    "course4d": "PSYC 2310",
-    "title": "Psychology of Language",
-    "status": "no"
-  },
-  {
-    "course4d": "PSYC 2737",
-    "title": "Judgment and Decisions",
-    "status": "no"
-  },
-  {
-    "course4d": "PSYC 2400",
-    "title": "Introduction to Positive Psychology (SNF Paideia Program Course)",
-    "status": "no"
-  },
-  {
-    "course4d": "SAST 0001",
-    "title": "Introduction to Modern India",
-    "status": "no"
-  },
-  {
-    "course4d": "SAST 0050",
-    "title": "Introduction to Indian Philosophy",
-    "status": "no"
-  },
-  {
-    "course4d": "STAT 4310",
-    "title": "Statistical Inference",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4320",
-    "title": "Mathematical Statistics",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4330",
-    "title": "Stochastic Processes",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4350",
-    "title": "Forecasting Methods for Management",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4420",
-    "title": "Introduction to Bayesian Data Analysis",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4700",
-    "title": "Data Analytics and Statistical Computing",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4710",
-    "title": "Modern Data Mining",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4740",
-    "title": "Modern Regression for the Social, Behavioral and Biological Sciences",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4750",
-    "title": "Sample Survey Design",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4760",
-    "title": "Applied Probability Models in Marketing",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4810",
-    "title": "Convex Optimization for Statistics and Data Science",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 5200",
-    "title": "Applied Econometrics I",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 4050",
-    "title": "Statistical Computing with R",
-    "status": "no"
-  },
-  {
-    "course4d": "STAT 4770",
-    "title": "Introduction to Python for Data Science",
-    "status": "no"
-  },
-  {
-    "course4d": "VIPR 3999",
-    "title": "Independent Study",
-    "status": "ask"
-  },
-  {
-    "course4d": "PHYS 2260",
-    "title": "Introduction to Computational Physics",
-    "status": "yes"
-  },
-  {
-    "course4d": "ESE 3600",
-    "title": "Machine Learning on Embedded Edge Devices",
-    "status": "yes"
-  },
-  {
-    "course4d": "ESE 5300",
-    "title": "Elements of Probability Theory",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 9270",
-    "title": "Bayesian Statistical Theory and Methods",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 4810",
-    "title": "Convex Optimization for Statistics and Data Science",
-    "status": "yes"
-  },
-  {
-    "course4d": "ACCT 2700",
-    "title": "Forensic Analytics",
-    "status": "no"
-  },
-  {
-    "course4d": "CIS 5490",
-    "title": "Wireless Communications for Mobile Networks and Internet of Things",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5220",
-    "title": "Deep Learning for Data Science",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 5250",
-    "title": "Thinking with Models: Business Analytics for Energy and Sustainability",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 7000",
-    "title": "Special Topics",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 2630",
-    "title": "Environmental & Energy Economics and Policy",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 7630",
-    "title": "Energy Markets & Policy",
-    "status": "no"
-  },
-  {
-    "course4d": "CIS 5590",
-    "title": "Programming and Problem Solving",
-    "status": "yes"
-  },
-  {
-    "course4d": "MUSC 1270",
-    "title": "Introduction to Electronic Musicmaking",
-    "status": "no"
-  },
-  {
-    "course4d": "MEAM 5200",
-    "title": "Introduction to Robotics",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 2020",
-    "title": "Introduction to Thermal-Fluids Engineering",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 3130",
-    "title": "Computational Linear Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "OIDD 3150",
-    "title": "Databases for Analytics",
-    "status": "no"
-  },
-  {
-    "course4d": "MATH 2030",
-    "title": "Proving things: Algebra",
-    "status": "yes"
-  },
-  {
-    "course4d": "ENGR 1400",
-    "title": "Penn Global Seminar: Robotics and Rehabilitation",
-    "status": "yes"
-  },
-  {
-    "course4d": "CBE 3200",
-    "title": "Basic Chemical Process Safety",
-    "status": "no"
-  },
-  {
-    "course4d": "FNCE 7370",
-    "title": "Data Science for Finance",
-    "status": "yes"
-  },
-  {
-    "course4d": "STAT 5350",
-    "title": "Forecasting Methods for Management",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 4100",
-    "title": "Complex Analysis",
-    "status": "yes"
-  },
-  {
-    "course4d": "COMM 3670",
-    "title": "Communication in the Networked Age",
-    "status": "no"
-  },
-  {
-    "course4d": "COMM 3180",
-    "title": "Stories From Data: Introduction to Programming for Data Journalism",
-    "status": "no"
-  },
-  {
-    "course4d": "OIDD 1010",
-    "title": "An Introduction to Operations, Information and Decisions",
-    "status": "no"
-  },
-  {
-    "course4d": "ESE 6500",
-    "title": "Learning in Robotics",
-    "status": "yes"
-  },
-  {
-    "course4d": "BE 2000",
-    "title": "Introduction to Biomechanics",
-    "status": "yes"
-  },
-  {
-    "course4d": "BE 2200",
-    "title": "Biomaterials",
-    "status": "yes"
-  },
-  {
-    "course4d": "PSYC 3990",
-    "title": "Sleep and Sleep Disorders",
-    "status": "no"
-  },
-  {
-    "course4d": "LGST 2440",
-    "title": "Blockchain & Cryptocurrencies: Business, Legal, and Regulatory Considerations",
-    "status": "no"
-  },
-  {
-    "course4d": "ESE 3060",
-    "title": "Deep Learning: A Hands-on Introduction",
-    "status": "yes"
-  },
-  {
-    "course4d": "MUSC 1250",
-    "title": "Musical Interfaces and Robotics",
-    "status": "no"
-  },
-  {
-    "course4d": "STAT 4220",
-    "title": "Predictive Analytics for Business",
-    "status": "no"
-  },
-  {
-    "course4d": "FNCE 2910",
-    "title": "Corporate Restructuring",
-    "status": "no"
-  },
-  {
-    "course4d": "ENM 3750",
-    "title": "Biological Data Science I - Fundamentals of Biostatistics",
-    "status": "yes"
-  },
-  {
-    "course4d": "BEPP 2200",
-    "title": "Behavioral Economics, Markets, and Public Policy",
-    "status": "no"
-  },
-  {
-    "course4d": "BIOL 1123",
-    "title": "Introductory Molecular Biology Laboratory",
-    "status": "yes"
-  },
-  {
-    "course4d": "PSCI 3802",
-    "title": "Political Polling",
-    "status": "no"
-  },
-  {
-    "course4d": "ENM 3440",
-    "title": "Answering Questions with Data, for Everyone",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 4010",
-    "title": "Advanced Topics in Private Equity",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 2090",
-    "title": "Real Estate Investment: Analysis and Financing",
-    "status": "yes"
-  },
-  {
-    "course4d": "ECON 2300",
-    "title": "Statistics for Economists",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 3310",
-    "title": "Introduction to Networks and Security",
-    "status": "yes"
-  },
-  {
-    "course4d": "EESC 4630",
-    "title": "Hydrology",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 3990",
-    "title": "Supervised Study in Finance",
-    "status": "ask"
-  },
-  {
-    "course4d": "MEAM 2470",
-    "title": "Mechanical Engineering Laboratory I",
-    "status": "yes"
-  },
-  {
-    "course4d": "MEAM 2480",
-    "title": "Mechanical Engineering Lab I",
-    "status": "yes"
-  },
-  {
-    "course4d": "HCMG 8570",
-    "title": "Healthcare Data and Analytics",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "FNCE 1008",
     "title": "Corporate Finance (Honors)",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "CRIM 2040",
-    "title": "Forensic Analysis",
+    "course4d": "FNCE 1010",
+    "title": "Monetary Economics and the Global Economy",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "FNCE 2030",
+    "title": "Advanced Corporate Finance",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2050",
+    "title": "Investment Management",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2070",
+    "title": "Valuation",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2090",
+    "title": "Real Estate Investment: Analysis and Financing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2170",
+    "title": "Financial Derivatives",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2190",
+    "title": "International Financial Markets and Cryptocurrencies",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2250",
+    "title": "Fixed Income Securities",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2300",
+    "title": "Urban Fiscal Policy",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "FNCE 2370",
+    "title": "Data Science for Finance",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2380",
+    "title": "Capital Markets",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2500",
+    "title": "Venture Capital and the Finance of Innovation",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2510",
+    "title": "The Finance of Buyouts and Acquisitions",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2530",
+    "title": "Distressed Investing and Value Creation",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2800",
+    "title": "FinTech",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "ESE 6800",
-    "title": "Special Topics in Electrical and Systems Engineering",
+    "course4d": "FNCE 2910",
+    "title": "Corporate Restructuring",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "FNCE 3990",
+    "title": "Supervised Study in Finance",
+    "status_prefall24": "ask",
     "status": "ask"
   },
   {
-    "course4d": "ESE 2000",
-    "title": "Artificial Intelligence Lab: Data, Systems, and Decisions",
-    "status": "yes"
+    "course4d": "FNCE 4010",
+    "title": "Advanced Topics in Private Equity",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "PSCI 3800",
-    "title": "Applied Data Science",
+    "course4d": "FNCE 7170",
+    "title": "Financial Derivatives",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 7370",
+    "title": "Data Science for Finance",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "FNCE 9110",
+    "title": "Financial Economics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "GCB 5360",
+    "title": "Fundamentals of Computational Biology",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "HCMG 8570",
+    "title": "Healthcare Data and Analytics",
+    "status_prefall24": "no",
+    "status": "restricted"
+  },
+  {
+    "course4d": "IPD 5090",
+    "title": "Needfinding",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "BE 3010",
-    "title": "Bioengineering Signals and Systems",
-    "status": "yes"
+    "course4d": "IPD 5110",
+    "title": "How to Make Things: Production Prototyping Studio",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "CHEM 2210",
-    "title": "Physical Chemistry I",
-    "status": "yes"
+    "course4d": "IPD 5150",
+    "title": "Product Design",
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
-    "course4d": "CBE 3600",
-    "title": "Chemical Process Control",
-    "status": "yes"
+    "course4d": "JPAN 0300",
+    "title": "Intermediate Japanese I",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "CBE 3500",
+    "course4d": "JPAN 0400",
+    "title": "Intermediate Japanese II",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LAW 5770",
+    "title": "Internet Law",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "LGST 2050",
+    "title": "Innovation, Marketing Strategy, and Antitrust",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LGST 2220",
+    "title": "Internet Law, Privacy, and Cybersecurity",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LGST 2430",
+    "title": "Other People's Money: The Law, Politics, and History of Financial Institutions",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LGST 2440",
+    "title": "Blockchain & Cryptocurrencies: Business, Legal, and Regulatory Considerations",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 0001",
+    "title": "Introduction to Linguistics",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 0150",
+    "title": "Writing Systems",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 0500",
+    "title": "Introduction to Formal Linguistics",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 0600",
+    "title": "Introduction to Sociolinguistics",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 0700",
+    "title": "Data Science for studying Language and the Mind",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 2300",
+    "title": "Sound Structure of Language",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "LING 2500",
+    "title": "Introduction to Syntax",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 2700",
+    "title": "Language Acquisition",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 3810",
+    "title": "Semantics I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "LING 3850",
+    "title": "Experiments in the Study of Meaning",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "LING 5150",
+    "title": "Dynamics of Language",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "LING 5250",
+    "title": "Computer Analysis and Modeling of Biological Signals and Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 2020",
+    "title": "Proving Things: Analysis",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 2030",
+    "title": "Proving things: Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 2400",
+    "title": "Calculus, Part III",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 2410",
+    "title": "Calculus, Part IV",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3120",
+    "title": "Linear Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3130",
+    "title": "Computational Linear Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3140",
+    "title": "Advanced Linear Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3200",
+    "title": "Computer Methods in Mathematical Science I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3400",
+    "title": "Discrete Mathematics I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3410",
+    "title": "Discrete Mathematics II",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3500",
+    "title": "Number Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3600",
+    "title": "Advanced Calculus",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3610",
+    "title": "Advanced Calculus",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3700",
+    "title": "Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3710",
+    "title": "Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 4100",
+    "title": "Complex Analysis",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 4200",
+    "title": "Ordinary Differential Equations",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 4250",
+    "title": "Partial Differential Equations",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 4320",
+    "title": "Game Theory.",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 4600",
+    "title": "Topology",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 4650",
+    "title": "Differential Geometry",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 5020",
+    "title": "Abstract Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 5030",
+    "title": "Abstract Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 5080",
+    "title": "Advanced Analysis",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 5090",
+    "title": "Advanced Analysis",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 5300",
+    "title": "Mathematics of Finance",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 5460",
+    "title": "Advanced Applied Probability",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 6020",
+    "title": "Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 1010",
+    "title": "Introduction to Mechanical Design",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "MEAM 2010",
+    "title": "Machine Design and Manufacturing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 2020",
+    "title": "Introduction to Thermal-Fluids Engineering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 2030",
+    "title": "Thermodynamics I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 2100",
+    "title": "Statics and Strength of Materials",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 2110",
+    "title": "Engineering Mechanics: Dynamics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 2470",
+    "title": "Mechanical Engineering Laboratory I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 2480",
+    "title": "Mechanical Engineering Lab I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MEAM 3020",
     "title": "Fluid Mechanics",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "CBE 2310",
-    "title": "Thermodynamics of Fluids",
-    "status": "yes"
+    "course4d": "MEAM 3210",
+    "title": "Dynamic Systems and Control",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "CBE 4790",
-    "title": "Biotechnology and Biochemical Engineering",
-    "status": "yes"
+    "course4d": "MEAM 3330",
+    "title": "Heat and Mass Transfer",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "CBE 2300",
-    "title": "Material and Energy Balances of Chemical Processes",
-    "status": "yes"
+    "course4d": "MEAM 3470",
+    "title": "Mechanical Engineering Design Laboratory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "ESE 2180",
-    "title": "Electronic, Photonic, and Electromechanical Devices",
-    "status": "yes"
+    "course4d": "MEAM 3540",
+    "title": "Mechanics of Solids",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "ESE 3190",
-    "title": "Fundamentals of Solid-State Circuits",
-    "status": "yes"
+    "course4d": "MEAM 5100",
+    "title": "Design of Mechatronic Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "ESE 3700",
-    "title": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
-    "status": "yes"
+    "course4d": "MEAM 5200",
+    "title": "Introduction to Robotics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "EESC 4320",
-    "title": "Atmospheric Chemistry",
+    "course4d": "MGMT 1010",
+    "title": "Introduction To Management",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "ENGR 2900",
-    "title": "PGS: Artificial Intelligence and Robotics",
-    "status": "yes"
+    "course4d": "MGMT 2300",
+    "title": "Entrepreneurship",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MGMT 2370",
+    "title": "Management of Technology",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MGMT 2640",
+    "title": "Venture Capital and Entrepreneurial Management",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MGMT 2910",
+    "title": "Negotiations",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 1010",
+    "title": "Introduction to Marketing",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2110",
+    "title": "Consumer Behavior",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2120",
+    "title": "Data and Analysis for Marketing Decisions",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MKTG 2370",
+    "title": "Introduction to Brain Science for Business",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2390",
+    "title": "Visual Marketing",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2620",
+    "title": "New Product Development",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2650",
+    "title": "Principles of Advertising",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2700",
+    "title": "Digital Marketing, Social Media and E-Commerce",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2710",
+    "title": "Models for Marketing Strategy",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MKTG 2770",
+    "title": "Marketing Strategy",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 3520",
+    "title": "Special Topics - Marketing Analytics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MKTG 4760",
+    "title": "Applied Probability Models in Marketing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MKTG 7120",
+    "title": "Data and Analysis for Marketing Decisions",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MRTI 0200",
+    "title": "Beginning Marathi II",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MRTI 1500",
+    "title": "Advanced Marathi",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MSE 2200",
+    "title": "Introduction to Materials Science and Engineering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MSE 2600",
+    "title": "Energetics of Macro and Nano-scale Materials",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MSE 3300",
+    "title": "Self-Assembly of Soft Materials",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MSE 3600",
+    "title": "Structure at the Nanoscale",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MSE 3930",
+    "title": "Materials Selection",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MSE 5150",
+    "title": "Mathematical Methods for Engineering Applications",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MUSC 1250",
+    "title": "Musical Interfaces and Robotics",
+    "status_prefall24": "no",
+    "status": "restricted"
+  },
+  {
+    "course4d": "MUSC 1270",
+    "title": "Introduction to Electronic Musicmaking",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MUSC 1300",
+    "title": "1000 Years of Musical Listening",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MUSC 2700",
+    "title": "Theory and Musicianship I",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "NETS 1120",
+    "title": "Networked Life",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "NETS 1500",
+    "title": "Market and Social Systems on the Internet",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "NETS 2120",
+    "title": "Scalable and Cloud Computing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "NETS 2130",
+    "title": "Crowdsourcing and Human Computation",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "NETS 3120",
+    "title": "Theory of Networks",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "NETS 4120",
+    "title": "Algorithmic Game Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 1010",
+    "title": "An Introduction to Operations, Information and Decisions",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2100",
+    "title": "Online Business Models and the Information-Based Firm",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2200",
+    "title": "Introduction to Operations Management",
+    "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "OIDD 2240",
+    "title": "Analytics for Service Operations",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 2360",
+    "title": "Scaling Operations in Technology Ventures: Linking Strategy and Execution",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2450",
+    "title": "Analytics and the Digital Economy",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 2550",
+    "title": "Artificial Intelligence, Data and Society",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2610",
+    "title": "Risk Analysis and Environmental Management",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2630",
+    "title": "Environmental & Energy Economics and Policy",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2900",
+    "title": "Decision Processes",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2910",
+    "title": "Negotiations",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2920",
+    "title": "Advanced Negotiation",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2930",
+    "title": "People Analytics",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 2990",
+    "title": "Judgment & Decision Making Research Immersion",
+    "status_prefall24": "ask",
+    "status": "ask"
+  },
+  {
+    "course4d": "OIDD 3110",
+    "title": "Business Computer Languages",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 3140",
+    "title": "Enabling Technologies",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 3150",
+    "title": "Databases for Analytics",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 3190",
+    "title": "Advanced Decision Systems: Evolutionary Computation",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 3210",
+    "title": "Introduction to Management Science",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 3250",
+    "title": "Computer Simulation Models",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 3530",
+    "title": "Mathematical Modeling and its Application in Finance",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 4690",
+    "title": "Information Strategy and Economics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 4810",
+    "title": "Convex Optimization for Statistics and Data Science",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 5250",
+    "title": "Thinking with Models: Business Analytics for Energy and Sustainability",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 6130",
+    "title": "Online Business Models and the Information-Based Firm",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 6530",
+    "title": "Mathematical Modeling and its Application in Finance",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 6700",
+    "title": "Special topics in Information Systems: Simulation and Dynamic Competitive Strat",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 7630",
+    "title": "Energy Markets & Policy",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "OIDD 9040",
+    "title": "Experimental Economics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 9100",
+    "title": "Intro to Linear, Nonlinear and Integer Optimization",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 9150",
+    "title": "Advanced Graph Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 9340",
+    "title": "Dynamic Programming and Stochastic Models",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 9500",
+    "title": "Perspectives on Information Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PHIL 1170",
+    "title": "History of Modern Philosophy",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 1710",
+    "title": "Introduction to Logic",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 2620",
+    "title": "Introduction to Epistemology and Metaphysics",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 2640",
+    "title": "Introduction to Philosophy of Mind",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 3600",
+    "title": "Topics in Theoretical Philosophy",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 4330",
+    "title": "Metaethics",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 4640",
+    "title": "Philosophy of Mind",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 4720",
+    "title": "Topics in Mathematical Logic",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PHIL 4721",
+    "title": "Logic and Computability 1",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PHIL 4722",
+    "title": "Logic and Computability 2",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PHIL 4770",
+    "title": "Philosophy of Mathematics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PHIL 4800",
+    "title": "Philosophy of Science.",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHIL 4840",
+    "title": "Philosophy of Psychology",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
     "course4d": "PHYS 0101",
     "title": "General Physics: Mechanics, Heat and Sound",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
     "course4d": "PHYS 0102",
     "title": "General Physics: Electromagnetism, Optics, and Modern Physics",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "STAT 5330",
-    "title": "Stochastic Processes",
-    "status": "yes"
+    "course4d": "PHYS 1230",
+    "title": "Principles of Physics III: Thermal Physics and Waves",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "ESE 6050",
-    "title": "Modern Convex Optimization",
-    "status": "yes"
+    "course4d": "PHYS 1250",
+    "title": "Principles of Physics IV: Modern Physics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "BEPP 2010",
-    "title": "Public Finance and Policy",
-    "status": "no"
+    "course4d": "PHYS 2260",
+    "title": "Introduction to Computational Physics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "MATH 2020",
-    "title": "Proving Things: Analysis",
-    "status": "yes"
+    "course4d": "PHYS 2280",
+    "title": "Physical Models of Biological Systems",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "ECON 4210",
-    "title": "Numerical Methods for Macroeconomists",
-    "status": "yes"
+    "course4d": "PHYS 3351",
+    "title": "Analytical Mechanics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "PSCI 5800",
-    "title": "Game Theory",
-    "status": "yes"
+    "course4d": "PHYS 3361",
+    "title": "Electromagnetism I: Electricity and Potential Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "STAT 5710",
-    "title": "Modern Data Mining",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 4120",
-    "title": "Introduction to Human Computer Interaction",
-    "status": "yes"
-  },
-  {
-    "course4d": "CIS 5050",
-    "title": "Software Systems",
-    "status": "yes"
-  },
-  {
-    "course4d": "MATH 4650",
-    "title": "Differential Geometry",
-    "status": "yes"
-  },
-  {
-    "course4d": "FNCE 9110",
-    "title": "Financial Economics",
-    "status": "yes"
+    "course4d": "PHYS 3362",
+    "title": "Electromagnetism II: Magnetism, Maxwell's Equations, and Electromagnetic Waves",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
     "course4d": "PHYS 3364",
     "title": "Laboratory Electronics",
-    "status": "yes"
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "ACCT 1020",
-    "title": "Strategic Cost Analysis",
+    "course4d": "PHYS 4401",
+    "title": "Thermodynamics and the Introduction to Statistical Mechanics and Kinetic Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PHYS 4411",
+    "title": "Introduction to Quantum Mechanics I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PSCI 1800",
+    "title": "Introduction to Data Science",
+    "status_prefall24": "no",
     "status": "no"
   },
   {
-    "course4d": "ESE 5090",
-    "title": "Quantum Circuits and Systems",
-    "status": "yes"
+    "course4d": "PSCI 3800",
+    "title": "Applied Data Science",
+    "status_prefall24": "no",
+    "status": "restricted"
   },
   {
-    "course4d": "LING 3810",
-    "title": "Semantics I",
-    "status": "yes"
+    "course4d": "PSCI 3802",
+    "title": "Political Polling",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "CBE 5450",
-    "title": "Electrochemical Energy Conversion and Storage",
-    "status": "yes"
+    "course4d": "PSCI 5800",
+    "title": "Game Theory",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "MSE 5150",
-    "title": "Mathematical Methods for Engineering Applications",
-    "status": "yes"
+    "course4d": "PSYC 0001",
+    "title": "Introduction to Experimental Psychology",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "CHEM 2421",
-    "title": "Principles of Organic Chemistry II with Laboratory",
-    "status": "yes"
+    "course4d": "PSYC 1210",
+    "title": "Introduction to Brain and Behavior",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "MATH 5300",
-    "title": "Mathematics of Finance",
-    "status": "yes"
+    "course4d": "PSYC 1230",
+    "title": "Cognitive Neuroscience",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   },
   {
-    "course4d": "CIS 3333",
-    "title": "Mathematics of Machine Learning",
-    "status": "yes"
+    "course4d": "PSYC 1310",
+    "title": "Language and Thought",
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
-    "course4d": "FNCE 2530",
-    "title": "Distressed Investing and Value Creation",
-    "status": "yes"
+    "course4d": "PSYC 1340",
+    "title": "Perception",
+    "status_prefall24": "yes",
+    "status": "restricted"
   },
   {
-    "course4d": "CIS 4300",
-    "title": "Computational Linguistics",
-    "status": "yes"
+    "course4d": "PSYC 1440",
+    "title": "Social Psychology",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "CIS 4510",
-    "title": "Computer and Network Security",
-    "status": "yes"
+    "course4d": "PSYC 1777",
+    "title": "Introduction to Developmental Psychology",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "CIS 5521",
-    "title": "Compilers and Interpreters",
-    "status": "yes"
+    "course4d": "PSYC 2310",
+    "title": "Psychology of Language",
+    "status_prefall24": "no",
+    "status": "no"
   },
   {
-    "course4d": "CIS 4521",
-    "title": "Compilers and Interpreters",
-    "status": "yes"
+    "course4d": "PSYC 2377",
+    "title": "Cognitive Development",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PSYC 2400",
+    "title": "Introduction to Positive Psychology (SNF Paideia Program Course)",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PSYC 2737",
+    "title": "Judgment and Decisions",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PSYC 3990",
+    "title": "Sleep and Sleep Disorders",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "SAST 0001",
+    "title": "Introduction to Modern India",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "SAST 0050",
+    "title": "Introduction to Indian Philosophy",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "STAT 4050",
+    "title": "Statistical Computing with R",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "STAT 4220",
+    "title": "Predictive Analytics for Business",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "STAT 4310",
+    "title": "Statistical Inference",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4320",
+    "title": "Mathematical Statistics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4330",
+    "title": "Stochastic Processes",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4350",
+    "title": "Forecasting Methods for Management",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4420",
+    "title": "Introduction to Bayesian Data Analysis",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4700",
+    "title": "Data Analytics and Statistical Computing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4710",
+    "title": "Modern Data Mining",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4740",
+    "title": "Modern Regression for the Social, Behavioral and Biological Sciences",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4750",
+    "title": "Sample Survey Design",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4760",
+    "title": "Applied Probability Models in Marketing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4770",
+    "title": "Introduction to Python for Data Science",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "STAT 4810",
+    "title": "Convex Optimization for Statistics and Data Science",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 5200",
+    "title": "Applied Econometrics I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 5330",
+    "title": "Stochastic Processes",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 5350",
+    "title": "Forecasting Methods for Management",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 5710",
+    "title": "Modern Data Mining",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 9270",
+    "title": "Bayesian Statistical Theory and Methods",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "VIPR 3999",
+    "title": "Independent Study",
+    "status_prefall24": "ask",
+    "status": "ask"
   }
 ]

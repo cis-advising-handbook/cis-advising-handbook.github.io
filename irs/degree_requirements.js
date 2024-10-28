@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.run = exports.RequirementApplyResult = exports.Degrees = exports.CourseTaken = exports.GradeType = exports.SsHTbsTag = void 0;
+// global list of CSCI Tech Electives. Used sporadically in a few places so it's easier to have it as a global.
+let TECH_ELECTIVE_LIST = [];
 /** For checking whether Path course attributes are correct or not */
 class CourseWithAttrs {
     constructor(code, title) {
@@ -43,7 +45,7 @@ class CourseWithAttrs {
         return JSON.stringify(js);
     }
 }
-function analyzeCourseAttributeSpreadsheet(csvFilePath) {
+async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
     const fs = require('fs');
     const csv = require('csv-parse/sync');
     const csvStringify = require('csv-stringify/sync');
@@ -135,6 +137,20 @@ function analyzeCourseAttributeSpreadsheet(csvFilePath) {
             }
         }
     }
+    // check that CSCI TE list does not intersect SEAS No-Credit List
+    {
+        for (const te of TECH_ELECTIVE_LIST) {
+            const subjectNumber = te.course4d.split(' ');
+            const teCourse = new CourseTaken(subjectNumber[0], subjectNumber[1], te.title, null, 1.0, GradeType.ForCredit, 'C', 202510, '', true);
+            if (teCourse.suhSaysNoCredit()) {
+                errorsFound.push({
+                    codes: te.course4d,
+                    title: te.title,
+                    reason: 'CSCI TE on the No-Credit List'
+                });
+            }
+        }
+    }
     const csvStr = csvStringify.stringify(errorsFound, {
         header: true,
         columns: {
@@ -149,6 +165,50 @@ function analyzeCourseAttributeSpreadsheet(csvFilePath) {
     const attrWrong = errorsFound.filter(e => e.reason.startsWith('has incorrect attribute')).length;
     console.log(`SUMMARY: ${suhInconsistencies} SUH inconsistencies, ${attrMissing} missing attrs and ${attrWrong} wrong attrs`);
 }
+function generateApcProbationList(csvFilePath) {
+    const fs = require('fs');
+    const csv = require('csv-parse/sync');
+    // start probation risk spreadsheet
+    const probationRiskFile = `${AnalysisOutputDir}apc-probation-risk.csv`;
+    fs.writeFileSync(probationRiskFile, "PennID;name;email;overall GPA;stem GPA;fall CUs;spring CUs;AY CUs;probation risk\n");
+    const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
+    const courseTakenCsvRecords = csv.parse(fileContent, {
+        delimiter: ',',
+        columns: true,
+    });
+    const coursesForStudent = new Map();
+    courseTakenCsvRecords.forEach((row) => {
+        const pennid = Number.parseInt(row['pennid']);
+        myAssert(!Number.isNaN(pennid));
+        if (!coursesForStudent.has(pennid)) {
+            const psi = {
+                name: row['student name'],
+                pennid: pennid,
+                email: row['email'],
+                coursesTaken: []
+            };
+            coursesForStudent.set(pennid, psi);
+        }
+        const existingCourses = coursesForStudent.get(pennid);
+        const cus = Number.parseFloat(row['CUs']);
+        myAssert(!Number.isNaN(cus));
+        const term = Number.parseInt(row['term']);
+        myAssert(!Number.isNaN(term));
+        const newCourse = new CourseTaken(row['course subject'], row['course number'], row['course title'], null, cus, row['grade mode'] == "P" ? GradeType.PassFail : GradeType.ForCredit, row['grade'], term, '', true);
+        existingCourses.coursesTaken.push(newCourse);
+    });
+    let numStudentsFlagged = 0;
+    coursesForStudent.forEach((psi, pennid) => {
+        const result = run([], new Degrees(), psi.coursesTaken);
+        const pcr = probationRisk(result, psi.coursesTaken, [PREVIOUS_TERM, CURRENT_TERM]);
+        if (pcr.hasProbationRisk()) {
+            fs.appendFileSync(probationRiskFile, `${pennid}; ${psi.name}; ${psi.email}; ${pcr.overallGpa.toFixed(2)}; ${pcr.stemGpa.toFixed(2)}; ${pcr.fallCUs}; ${pcr.springCUs}; ${pcr.fallCUs + pcr.springCUs}; ${pcr}\n`);
+            numStudentsFlagged += 1;
+        }
+    });
+    console.log(`processed ${courseTakenCsvRecords.length} courses from ${coursesForStudent.size} students`);
+    console.log(`${numStudentsFlagged} students flagged for probation risk`);
+}
 const AnalysisOutputDir = "/Users/devietti/Projects/irs/dw-analysis/";
 const DraggableDataGetCourseTaken = "CourseTaken";
 const DraggableOriginalRequirement = "OriginalDegreeRequirement";
@@ -160,8 +220,8 @@ const Math1400RetroTitle = "Calculus 1 retro credit";
 const CompletedGrades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F", "P", "TR"];
 /** academic terms during which students could take unlimited P/F courses */
 const CovidTerms = [202010, 202020, 202030, 202110];
-const CURRENT_TERM = 202310;
-const PREVIOUS_TERM = 202230;
+const CURRENT_TERM = 202410;
+const PREVIOUS_TERM = 202330;
 var CourseAttribute;
 (function (CourseAttribute) {
     CourseAttribute["Writing"] = "AUWR";
@@ -179,6 +239,8 @@ var CourseAttribute;
     CourseAttribute["RoboGeneralElective"] = "EMRE";
     CourseAttribute["NetsLightTechElective"] = "NetsLightTE";
     CourseAttribute["NetsFullTechElective"] = "NetsFullTE";
+    CourseAttribute["CsciRestrictedTechElective"] = "EUCR";
+    CourseAttribute["CsciUnrestrictedTechElective"] = "EUCU";
 })(CourseAttribute || (CourseAttribute = {}));
 /** 1.5 CU Natural Science courses with labs */
 const CoursesWithLab15CUs = [
@@ -1784,6 +1846,20 @@ class CourseTaken {
             this.attributes.push(CourseAttribute.Humanities);
             IncorrectCMAttributes.add(`${this.code()} missing ${CourseAttribute.Humanities}`);
         }
+        // add EUCR/EUCU attributes, which only entered use in Spring 2024
+        const teHit = TECH_ELECTIVE_LIST.find((ted) => { return ted.course4d == this.code(); });
+        if (teHit != undefined) {
+            switch (teHit.status) {
+                case "restricted":
+                    this.attributes.push(CourseAttribute.CsciRestrictedTechElective);
+                    break;
+                case "unrestricted":
+                    this.attributes.push(CourseAttribute.CsciUnrestrictedTechElective);
+                    break;
+                default:
+                    break;
+            }
+        }
         // we have definitive categorization for TBS, Math, Natural Science and Engineering courses
         this.validateAttribute(this.suhSaysTbs(), CourseAttribute.TBS);
         this.validateAttribute(this.suhSaysMath(), CourseAttribute.Math);
@@ -1847,6 +1923,13 @@ class CourseTaken {
     disable() {
         this.courseUnits = 0;
         this.courseUnitsRemaining = 0;
+    }
+    /** get the number of CUs that were completed, used for APC Probation calculations */
+    getCompletedCUs() {
+        if (CompletedGrades.includes(this.letterGrade) && this.letterGrade != 'F') {
+            return this.courseUnits;
+        }
+        return 0;
     }
     countsTowardsGpa() {
         // failed P/F courses do count towards GPA, as do disabled equivalent courses
@@ -1929,13 +2012,14 @@ class CourseTaken {
     suhSaysTbs() {
         const easCourseNums = [
             2020, 2040, 2200, 2210, 2220, 2230, 2240, 2250, 2260, 2270, 2280, 2420, 2900, 3010, 3060, 3200,
-            4010, 4020, 4030, 4080, 5010, 5020, 5050, 5070, 5100, 5120, 5450, 5460, 5490, 5900, 5950
+            4010, 4020, 4030, 4080, 5010, 5020, 5050, 5070, 5100, 5120, 5410, 5430, 5450, 5460, 5470, 5490,
+            5900, 5950
         ];
         const tbsCourses = [
             "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230",
             "DSGN 0020", "EAS 0010", "ENVS 3700", "IPD 5090", "IPD 5450",
-            "LGST 2440", "LAWM 5060", "MGMT 2370", "MKTG 2470", "NURS 3570",
-            "OIDD 2360", "OIDD 2340", "OIDD 2550", "OIDD 3140", "OIDD 3990", "WH 1010",
+            "LGST 2440", "LAWM 5060", "MKTG 2270",
+            "OIDD 2360", "OIDD 2340", "OIDD 2550", "OIDD 3140", "OIDD 3150", "OIDD 3990", "WH 1010",
         ];
         return tbsCourses.includes(this.code()) ||
             (this.subject == "EAS" && easCourseNums.includes(this.courseNumberInt)) ||
@@ -1978,7 +2062,7 @@ class CourseTaken {
         return nsCourses.includes(this.code()) ||
             nsSubjects.includes(this.subject) ||
             (this.subject == "BIBB" && !["010", "050", "060", "160", "227"].includes(this.courseNumber)) ||
-            (this.subject == "NRSC" && !["0050", "0060"].includes(this.courseNumber)) ||
+            (this.subject == "NRSC" && !["0050", "0060", "1160", "2249"].includes(this.courseNumber)) ||
             (this.subject == "BIOL" && this.courseNumberInt > 1000 && this.courseNumberInt != 2510) ||
             (this.subject == "CHEM" && ![1000, 1200, 250, 1011].includes(this.courseNumberInt)) ||
             (this.subject == "EESC" && ([1000, 1030, 1090, 2120, 2500, 4200, 4360, 4440, 4630].includes(this.courseNumberInt))) ||
@@ -2101,6 +2185,9 @@ class CourseParser {
                     default:
                         break;
                 }
+            }
+            if (degrees.undergrad == "37cu CSCI" && degrees.firstTerm < 202430) { // new TE rules in Fall 2024
+                degrees.undergrad = "37cu CSCI preFall24";
             }
         }
         const newCourses = courses.slice();
@@ -2872,6 +2959,10 @@ async function webMain() {
     // reset output
     $(".requirementsList").empty();
     $(".clear-on-init").empty();
+    // download the latest Technical Elective list
+    const response = await fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list.json");
+    TECH_ELECTIVE_LIST = await response.json();
+    console.log(`parsed ${TECH_ELECTIVE_LIST.length} entries from CSCI technical electives list`);
     let autoDegrees = $("#auto_degree").is(":checked");
     $(NodeMessages).append("<h3>Notes</h3>");
     const worksheetText = $(NodeCoursesTaken).val();
@@ -2927,10 +3018,7 @@ async function webMain() {
     </div>
   </div>
 </div>`);
-    // download the latest Technical Elective list
-    const response = await fetch(window.location.origin + "/assets/json/37cu_csci_tech_elective_list.json");
-    const telist = await response.json();
-    const result = run(telist, degrees, coursesTaken);
+    const result = run(TECH_ELECTIVE_LIST, degrees, coursesTaken);
     setRemainingCUs(result.cusRemaining);
     $(NodeGpa).append(`<div class="alert alert-secondary" role="alert">
 GPAs Overall = ${result.gpaOverall.toFixed(2)} 
@@ -3240,8 +3328,17 @@ if (typeof window === 'undefined') {
         args: {
             courseAttrCsv: CmdTs.positional({ type: CmdTsFs.File, description: 'course attributes CSV file (from Pennant Reports)' }),
         },
-        handler: ({ courseAttrCsv }) => {
-            analyzeCourseAttributeSpreadsheet(courseAttrCsv);
+        handler: async ({ courseAttrCsv }) => {
+            await analyzeCourseAttributeSpreadsheet(courseAttrCsv);
+        },
+    });
+    const apcProbationList = CmdTs.command({
+        name: 'apc-probation-list',
+        args: {
+            allGradesCsv: CmdTs.positional({ type: CmdTsFs.File, description: 'grades CSV file (from Data Warehouse)' }),
+        },
+        handler: ({ allGradesCsv }) => {
+            generateApcProbationList(allGradesCsv);
         },
     });
     const dwWorksheets = CmdTs.command({
@@ -3278,7 +3375,7 @@ if (typeof window === 'undefined') {
     });
     const app = CmdTs.subcommands({
         name: 'irs',
-        cmds: { courseAttrs, dwWorksheets },
+        cmds: { courseAttrs, apcProbationList, dwWorksheets },
     });
     CmdTs.run(app, process.argv.slice(2));
 }
@@ -3286,6 +3383,9 @@ async function analyzeWorksheets(majorsListCsv, makePennPathwaysWorksheets, limi
     const path = require('path');
     const fs = require('fs');
     const csv = require('csv-parse/sync');
+    const response = await fetch("https://advising.cis.upenn.edu/assets/json/37cu_csci_tech_elective_list.json");
+    TECH_ELECTIVE_LIST = await response.json();
+    console.log(`parsed ${TECH_ELECTIVE_LIST.length} entries from CSCI technical electives list`);
     //const fileContent = fs.readFileSync('/Users/devietti/Projects/irs/2023-cis-majors.csv', { encoding: 'utf-8' });
     // const fileContent = fs.readFileSync('/Users/devietti/Projects/irs/MajorsList-202330-mse.csv', { encoding: 'utf-8' });
     const fileContent = fs.readFileSync(majorsListCsv, { encoding: 'utf-8' });
@@ -3379,9 +3479,7 @@ async function runOneWorksheet(worksheetText, analysisOutput, majorCsvRecords, m
                 fs.appendFileSync(badGradeFile, `${pennid}, "${studentName}", ${studentEmail}, ${degrees}, ${ct.code()}, ${ct.term}, ${ct.letterGrade}\n`);
             }
         }
-        const response = await fetch("https://advising.cis.upenn.edu/assets/json/37cu_csci_tech_elective_list.json");
-        const telist = await response.json();
-        const result = run(telist, degrees, coursesTaken);
+        const result = run(TECH_ELECTIVE_LIST, degrees, coursesTaken);
         // // check if student needs CIS 3800
         // if (degrees!.undergrad == "37cu CSCI" ||
         //     degrees!.undergrad == "37cu CMPE") {
@@ -3500,7 +3598,11 @@ class ProbationCheckResult {
         this.notEnoughCUs = null;
         this.lowOverallGpa = null;
         this.lowStemGpa = null;
-        this.notes = '';
+        this.overallGpa = 0;
+        this.stemGpa = 0;
+        this.fallCUs = 0;
+        this.springCUs = 0;
+        this.notes = [];
     }
     hasProbationRisk() {
         return this.notEnoughCUs != null || this.lowOverallGpa != null || this.lowStemGpa != null;
@@ -3509,17 +3611,17 @@ class ProbationCheckResult {
         if (!this.hasProbationRisk()) {
             return '';
         }
-        let s = '';
+        let n = this.notes;
         if (this.notEnoughCUs != null) {
-            s += `notEnoughCUs: ${this.notEnoughCUs}, `;
+            n.push(`notEnoughCUs: ${this.notEnoughCUs}`);
         }
         if (this.lowStemGpa != null) {
-            s += `lowStemGpa: ${this.lowStemGpa}, `;
+            n.push(`lowStemGpa: ${this.lowStemGpa}`);
         }
         if (this.lowOverallGpa != null) {
-            s += `lowOverallGpa: ${this.lowOverallGpa}, `;
+            n.push(`lowOverallGpa: ${this.lowOverallGpa}`);
         }
-        return s + this.notes;
+        return n.join(', ');
     }
 }
 /** Check if student is at risk of being placed on academic probation */
@@ -3527,16 +3629,25 @@ function probationRisk(rr, allCourses, termsThisYear) {
     const pcr = new ProbationCheckResult();
     // completed 8 CUs this past academic year?
     const cusThisYear = allCourses.filter(c => termsThisYear.includes(c.term))
-        .map(c => c.letterGrade == 'P' ? c.getCUs() : c.getGpaCUs())
+        .map(c => c.getCompletedCUs())
         .reduce((psum, a) => psum + a, 0);
     const fallCourses = allCourses.filter(c => termsThisYear[0] == c.term);
-    if (fallCourses.length > 0 && cusThisYear < 8) {
+    const springCourses = allCourses.filter(c => termsThisYear[1] == c.term);
+    pcr.fallCUs = fallCourses.reduce((psum, c) => psum + c.getCompletedCUs(), 0);
+    pcr.springCUs = springCourses.reduce((psum, c) => psum + c.getCompletedCUs(), 0);
+    if (fallCourses.length > 0 && springCourses.length > 0 && cusThisYear < 8) {
         pcr.notEnoughCUs = cusThisYear;
     }
-    else if (fallCourses.length == 0 && cusThisYear < 4) {
+    if (fallCourses.length == 0 && cusThisYear < 4) {
         pcr.notEnoughCUs = cusThisYear;
-        pcr.notes += 'on leave in ' + termsThisYear[0];
+        pcr.notes.push('on leave in ' + termsThisYear[0]);
     }
+    if (springCourses.length == 0 && cusThisYear < 4) {
+        pcr.notEnoughCUs = cusThisYear;
+        pcr.notes.push('on leave in ' + termsThisYear[1]);
+    }
+    pcr.overallGpa = rr.gpaOverall;
+    pcr.stemGpa = rr.gpaStem;
     pcr.lowOverallGpa = rr.gpaOverall < 2.0 ? rr.gpaOverall : null;
     pcr.lowStemGpa = rr.gpaStem < 2.0 ? rr.gpaStem : null;
     return pcr;
@@ -3585,12 +3696,12 @@ class RunResult {
 }
 function run(csci37techElectiveList, degrees, coursesTaken) {
     csci37techElectiveList
-        .filter((te) => te.status == "yes")
+        .filter((te) => te.status_prefall24 == "yes")
         .forEach((te) => {
         RequirementCsci40TechElective.techElectives.add(te.course4d);
     });
     const csci37TechElectives = csci37techElectiveList
-        .filter((te) => te.status == "yes")
+        .filter((te) => te.status_prefall24 == "yes")
         .map(te => te.course4d);
     const bothLightAndFull = [...NetsFullTechElectives].filter(full => NetsLightTechElectives.has(full));
     myAssertEquals(bothLightAndFull.length, 0, `Uh-oh, some NETS TEs are both light AND full: ${bothLightAndFull}`);
@@ -3967,7 +4078,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementFreeElective(46),
             ];
             break;
-        case "37cu CSCI":
+        case "37cu CSCI preFall24":
             ugradDegreeRequirements = [
                 new RequirementNamedCourses(1, "Math", ["MATH 1400"]),
                 new RequirementNamedCourses(2, "Math", ["MATH 1410", "MATH 1610"]),
@@ -4002,6 +4113,54 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                     .withConcise().withMinLevel(2000),
                 new RequirementNamedCourses(28, "Technical Elective ≥2000-level", csci37TechElectives)
                     .withConcise().withMinLevel(2000),
+                // elective "breadth" requirements
+                new RequirementNamedCourses(29, "Networking Elective", ["NETS 1500", "NETS 2120", "CIS 3310", "CIS 4510", "CIS 5510", "CIS 4550", "CIS 5550", "CIS 5050", "CIS 5530"]).withNoConsume(),
+                new RequirementNamedCourses(30, "Database Elective", ["CIS 4500", "CIS 5500", "CIS 4550", "CIS 5550", "CIS 5450"]).withNoConsume(),
+                new RequirementNamedCourses(31, "Distributed Systems Elective", ["NETS 2120", "CIS 4410", "CIS 5410", "CIS 4500", "CIS 5500", "CIS 5050", "CIS 5450"]).withNoConsume(),
+                new RequirementNamedCourses(32, "Machine Learning/AI Elective", ["CIS 4190", "CIS 5190", "CIS 4210", "CIS 5210", "CIS 5200", "CIS 5450", "CIS 6200"]).withNoConsume(),
+                new RequirementNamedCourses(33, "Project Elective", ["NETS 2120", "CIS 3410", "CIS 3500", "CIS 4410", "CIS 5410", "CIS 4500", "CIS 5500",
+                    "CIS 4550", "CIS 5550", "CIS 4600", "CIS 5600", "CIS 5050", "CIS 5530", "ESE 3500"]).withNoConsume(),
+                new RequirementNamedCourses(34, "Ethics", CsciEthicsCourses),
+                new RequirementSsh(35, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(36, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(37, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(38, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(39, [CourseAttribute.TBS, CourseAttribute.Humanities, CourseAttribute.SocialScience]),
+                new RequirementSsh(40, [CourseAttribute.TBS, CourseAttribute.Humanities, CourseAttribute.SocialScience]),
+                // NB: Writing requirement is @ index 45
+                new RequirementFreeElective(50),
+            ];
+            break;
+        case "37cu CSCI":
+            ugradDegreeRequirements = [
+                new RequirementNamedCourses(1, "Math", ["MATH 1400"]),
+                new RequirementNamedCourses(2, "Math", ["MATH 1410", "MATH 1610"]),
+                new RequirementNamedCourses(3, "Math", ["CIS 1600"]),
+                new RequirementNamedCourses(4, "Probability", ["CIS 2610", "ESE 3010", "ENM 321", "STAT 4300"]),
+                new RequirementNamedCourses(5, "Linear Algebra", ["MATH 2400", "MATH 2600", "MATH 3120", "MATH 3130", "MATH 3140"]),
+                new RequirementNamedCourses(6, "Physics", ["PHYS 0150", "PHYS 0170", "MEAM 1100", "MEAM 1470"]).withCUs(1.5),
+                new RequirementNamedCourses(7, "Physics", ["PHYS 0151", "PHYS 0171", "ESE 1120"]).withCUs(1.5),
+                new RequirementAttributes(8, "Math/Natural Science Elective", [CourseAttribute.Math, CourseAttribute.NatSci]),
+                new RequirementNamedCourses(10, "Major", ["CIS 1200"]),
+                new RequirementNamedCourses(11, "Major", ["CIS 1210"]),
+                new RequirementNamedCourses(12, "Major", ["CIS 2400"]),
+                new RequirementNamedCourses(13, "Math", ["CIS 2620", "CIS 5110"]),
+                new RequirementNamedCourses(14, "Major", ["CIS 3200", "CIS 5020"]),
+                new RequirementNamedCourses(15, "Major", ["CIS 3800", "CIS 5480"]),
+                new RequirementNamedCourses(16, "Major", ["CIS 4710", "CIS 5710"]),
+                new RequirementNamedCourses(17, "Senior Design", SeniorDesign1stSem),
+                new RequirementNamedCourses(18, "Senior Design", SeniorDesign2ndSem),
+                new RequireCis1100(9),
+                new RequirementCisElective(20).withMinLevel(2000),
+                new RequirementCisElective(21).withMinLevel(2000),
+                new RequirementCisElective(22).withMinLevel(2000),
+                new RequirementCisElective(19),
+                new RequirementAttributes(23, "(Un)restricted Tech Elective", [CourseAttribute.CsciRestrictedTechElective, CourseAttribute.CsciUnrestrictedTechElective]),
+                new RequirementAttributes(24, "Unrestricted Tech Elective", [CourseAttribute.CsciUnrestrictedTechElective]),
+                new RequirementAttributes(25, "Unrestricted Tech Elective", [CourseAttribute.CsciUnrestrictedTechElective]),
+                new RequirementAttributes(26, "Unrestricted Tech Elective", [CourseAttribute.CsciUnrestrictedTechElective]),
+                new RequirementAttributes(27, "Unrestricted Tech Elective", [CourseAttribute.CsciUnrestrictedTechElective]),
+                new RequirementAttributes(28, "Unrestricted Tech Elective", [CourseAttribute.CsciUnrestrictedTechElective]),
                 // elective "breadth" requirements
                 new RequirementNamedCourses(29, "Networking Elective", ["NETS 1500", "NETS 2120", "CIS 3310", "CIS 4510", "CIS 5510", "CIS 4550", "CIS 5550", "CIS 5050", "CIS 5530"]).withNoConsume(),
                 new RequirementNamedCourses(30, "Database Elective", ["CIS 4500", "CIS 5500", "CIS 4550", "CIS 5550", "CIS 5450"]).withNoConsume(),
