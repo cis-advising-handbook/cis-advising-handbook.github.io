@@ -2716,5 +2716,11 @@
     "title": "Data Collection and Acquisition: Strategies and Platforms",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "ESE 4380",
+    "title": "Machine Learning for Time-Series Data",
+    "status_prefall24": "unrestricted",
+    "status": "unrestricted"
   }
 ]
