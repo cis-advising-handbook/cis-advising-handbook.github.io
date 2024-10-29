@@ -2720,7 +2720,7 @@
   {
     "course4d": "ESE 4380",
     "title": "Machine Learning for Time-Series Data",
-    "status_prefall24": "unrestricted",
+    "status_prefall24": "yes",
     "status": "unrestricted"
   }
 ]
