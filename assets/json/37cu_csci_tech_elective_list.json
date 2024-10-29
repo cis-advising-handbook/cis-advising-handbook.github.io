@@ -2710,5 +2710,11 @@
     "title": "Independent Study",
     "status_prefall24": "ask",
     "status": "ask"
+  },
+  {
+    "course4d": "STAT 4100",
+    "title": "Data Collection and Acquisition: Strategies and Platforms",
+    "status_prefall24": "no",
+    "status": "no"
   }
 ]
