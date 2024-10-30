@@ -2734,5 +2734,11 @@
     "title": "Stochastic Models",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4830",
+    "title": "Numerical Optimization for Data Science and Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
