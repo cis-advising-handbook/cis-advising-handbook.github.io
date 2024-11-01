@@ -2740,5 +2740,11 @@
     "title": "Numerical Optimization for Data Science and Machine Learning",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 5160",
+    "title": "IoT Edge Computing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
