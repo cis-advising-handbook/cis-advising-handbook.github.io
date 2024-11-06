@@ -2746,5 +2746,11 @@
     "title": "IoT Edge Computing",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 3040",
+    "title": "Introduction to Optimization",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
