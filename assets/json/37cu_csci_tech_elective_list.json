@@ -2710,5 +2710,53 @@
     "title": "Independent Study",
     "status_prefall24": "ask",
     "status": "ask"
+  },
+  {
+    "course4d": "STAT 4100",
+    "title": "Data Collection and Acquisition: Strategies and Platforms",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "ESE 4380",
+    "title": "Machine Learning for Time-Series Data",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "MSE 4050",
+    "title": "Mechanical Properties of Macro/Nanoscale Materials",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "OIDD 9300",
+    "title": "Stochastic Models",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4830",
+    "title": "Numerical Optimization for Data Science and Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 5160",
+    "title": "IoT Edge Computing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 3040",
+    "title": "Introduction to Optimization",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "NSCI 3010",
+    "title": "Engineering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
