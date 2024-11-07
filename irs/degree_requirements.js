@@ -88,7 +88,7 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
     console.log(`checking ${AllCourses.length} courses...`);
     // 2: CHECK ATTRIBUTES
     const attrsToCheck = [
-        CourseAttribute.MathNatSciEngr,
+        CourseAttribute.Engineering,
         CourseAttribute.Math,
         CourseAttribute.NatSci,
         CourseAttribute.SocialScience,
@@ -114,7 +114,7 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
                         return { c: pathCourse.courses[i].code(), al: al };
                     })
                         .filter(cal => cal.al.length > 0)
-                        .map(cal => cal.c + ' has ' + cal.al.map(a => a).join('')).join(', ')
+                        .map(cal => cal.c + ' has ' + cal.al.map(a => a).join(',')).join(', ')
             });
             // don't bother reporting on attrs, since we aren't sure what the right answer is
             continue;
@@ -122,11 +122,20 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         // check if Path course has correct attrs
         for (const atc of attrsToCheck) {
             if (biggestAttrSet.has(atc) && !pathCourse.attributes.has(atc)) {
-                errorsFound.push({
-                    codes: pathCourse.codesStr(),
-                    title: pathCourse.title,
-                    reason: 'missing attribute ' + atc
-                });
+                if (atc == CourseAttribute.Engineering && pathCourse.attributes.has(CourseAttribute.MathNatSciEngr)) {
+                    errorsFound.push({
+                        codes: pathCourse.codesStr(),
+                        title: pathCourse.title,
+                        reason: `replace ${CourseAttribute.MathNatSciEngr} with ${CourseAttribute.Engineering}`
+                    });
+                }
+                else {
+                    errorsFound.push({
+                        codes: pathCourse.codesStr(),
+                        title: pathCourse.title,
+                        reason: 'missing attribute ' + atc
+                    });
+                }
             }
             if (!biggestAttrSet.has(atc) && pathCourse.attributes.has(atc)) {
                 errorsFound.push({
@@ -135,6 +144,14 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
                     reason: 'has incorrect attribute ' + atc
                 });
             }
+        }
+        // no more EUMS
+        if (pathCourse.attributes.has(CourseAttribute.MathNatSciEngr) && !biggestAttrSet.has(CourseAttribute.Engineering)) {
+            errorsFound.push({
+                codes: pathCourse.codesStr(),
+                title: pathCourse.title,
+                reason: 'has deprecated attribute ' + CourseAttribute.MathNatSciEngr
+            });
         }
     }
     // check that CSCI TE list does not intersect SEAS No-Credit List
@@ -228,6 +245,7 @@ var CourseAttribute;
     CourseAttribute["Math"] = "EUMA";
     CourseAttribute["NatSci"] = "EUNS";
     CourseAttribute["MathNatSciEngr"] = "EUMS";
+    CourseAttribute["Engineering"] = "EUNG";
     CourseAttribute["SocialScience"] = "EUSS";
     CourseAttribute["Humanities"] = "EUHS";
     CourseAttribute["TBS"] = "EUTB";
@@ -1864,7 +1882,7 @@ class CourseTaken {
         this.validateAttribute(this.suhSaysTbs(), CourseAttribute.TBS);
         this.validateAttribute(this.suhSaysMath(), CourseAttribute.Math);
         this.validateAttribute(this.suhSaysNatSci(), CourseAttribute.NatSci);
-        this.validateAttribute(this.suhSaysEngr(), CourseAttribute.MathNatSciEngr);
+        this.validateAttribute(this.suhSaysEngr(), CourseAttribute.Engineering);
         this.validateAttribute(RoboTechElectives.has(this.code()), CourseAttribute.RoboTechElective);
         this.validateAttribute(RoboGeneralElectives.has(this.code()), CourseAttribute.RoboGeneralElective);
         if (this.suhSaysEngr() && this.attributes.includes(CourseAttribute.NonEngr)) {
@@ -1888,15 +1906,6 @@ class CourseTaken {
         if (groundTruth && !this.attributes.includes(attr)) {
             this.attributes.push(attr);
             IncorrectCMAttributes.add(`${this.code()} missing ${attr}`);
-        }
-        if (attr == CourseAttribute.MathNatSciEngr) {
-            // Math and NS courses should have EUMS attribute, too
-            // if (this.attributes.includes(CourseAttribute.Math) || this.attributes.includes(CourseAttribute.NatSci)) {
-            //     if (!this.attributes.includes(CourseAttribute.MathNatSciEngr)) {
-            //         this.attributes.push(CourseAttribute.MathNatSciEngr)
-            //     }
-            //     return
-            // }
         }
         if (this.attributes.includes(attr) && !groundTruth) {
             this.attributes.splice(this.attributes.indexOf(attr), 1);
@@ -1972,7 +1981,7 @@ class CourseTaken {
             1000, 2010, 2020, 2030, 2080, 2110, 2120, 2140, 2200, 2300, 2330, 2500, 2610, 2630, 2650, 2800, 2840, 2890, 3050
         ];
         const ssCourses = [
-            "EAS 2030", "EDUC 5437", "EESC 1060", "EESC 2300", "EESC 3003", "ENVS 4250", "FNCE 1010",
+            "ANTH 0330", "ASAM 1020", "EAS 2030", "EDUC 5437", "EESC 1060", "EESC 2300", "EESC 3003", "ENVS 4250", "FNCE 1010",
             "LGST 1000", "LGST 1010", "LGST 2120", "LGST 2150", "LGST 2200",
             "NURS 3130", "NURS 3150", "NURS 3160", "NURS 3300", "NURS 5250"
         ];
@@ -1994,9 +2003,10 @@ class CourseTaken {
             "SWAH", "CHIN", "JPAN", "KORN", "ARAB", "HEBR", "TURK", "PERS",
         ];
         const humCourses = [
+            "ASAM 1520", "CIMS 3203",
             "DSGN 0010", "DSGN 1020", "DSGN 1030", "DSGN 1040", "DSGN 1050", "DSGN 2010", "DSGN 2030", "DSGN 2040", "DSGN 2510", "DSGN 5001",
             "ARCH 1010", "ARCH 2010", "ARCH 2020", "ARCH 3010", "ARCH 3020", "ARCH 4010", "ARCH 4110", "ARCH 4120",
-            "CIS 1060", "IPD 5090", "BIOE 4020",
+            "AFRC 2321", "CIS 1060", "IPD 5090", "BIOE 4020",
         ];
         return (this.courseNumberInt < 5000 && humSubjects.includes(this.subject)) ||
             // "any foreign language course", leverage attrs from SAS
@@ -2018,7 +2028,7 @@ class CourseTaken {
         const tbsCourses = [
             "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230",
             "DSGN 0020", "EAS 0010", "ENVS 3700", "IPD 5090", "IPD 5450",
-            "LGST 2440", "LAWM 5060", "MKTG 2270",
+            "LGST 2220", "LGST 2440", "LAWM 5060", "MKTG 2270",
             "OIDD 2360", "OIDD 2340", "OIDD 2550", "OIDD 3140", "OIDD 3150", "OIDD 3990", "WH 1010",
         ];
         return tbsCourses.includes(this.code()) ||
@@ -2030,9 +2040,9 @@ class CourseTaken {
      * NB: this IS intended to be a definitive classification */
     suhSaysMath() {
         const mathCourses = [
-            "CIS 1600", "CIS 2610",
+            "CIS 1600", "CIS 2610", "CIS 3333",
             "EAS 205",
-            "ESE 3010", "ESE 4020",
+            "ESE 2030", "ESE 3010", "ESE 4020",
             "PHIL 1710", "PHIL 4723",
             "STAT 4300", "STAT 4310", "STAT 4320", "STAT 4330"
         ];
@@ -2278,7 +2288,7 @@ class CourseParser {
                 (["PHYS 0150", "PHYS 0170", "PHYS 0151", "PHYS 0171"].includes(c.code()) &&
                     degrees.undergrad == "40cu NETS") ||
                 (["PHYS 0150", "PHYS 0170", "PHYS 0151", "PHYS 0171", "ESE 1120"].includes(c.code()) &&
-                    ["37cu CSCI", "37cu NETS"].includes(degrees.undergrad)) ||
+                    ["37cu CSCI", "37cu CSCI preFall24", "37cu NETS"].includes(degrees.undergrad)) ||
                 "37cu DMD" == degrees.undergrad;
             if (c.getCUs() > 0 && CoursesWithLab15CUs.includes(c.code()) && !nosplit) {
                 console.log(`splittingA ${c}`);
@@ -4386,7 +4396,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementCisElective(20),
                 new RequirementNamedCourses(23, "Drawing", ["FNAR 0010", "FNAR 2200", "FNAR 1080"]),
                 new RequirementNamedCourses(24, "3D Modeling", ["DSGN 1030", "DSGN 2010"]),
-                new RequirementDmdElective(25),
+                new RequirementNamedCourses(25, "Animation", ["DSGN 2040", "FNAR 1050", "FNAR 2090", "FNAR 2100"]),
                 new RequirementDmdElective(26),
                 new RequirementDmdElective(27),
                 new RequirementDmdElective(28),
