@@ -2764,5 +2764,11 @@
     "title": "Applied Machine Learning",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "CBE 5000",
+    "title": "Special Topics in Chemical and Biomolecular Engineering",
+    "status_prefall24": "ask",
+    "status": "ask"
   }
 ]
