@@ -2770,5 +2770,11 @@
     "title": "Special Topics in Chemical and Biomolecular Engineering",
     "status_prefall24": "ask",
     "status": "ask"
+  },
+  {
+    "course4d": "MPHY 6120",
+    "title": "Artificial Intelligence for Medicine",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
