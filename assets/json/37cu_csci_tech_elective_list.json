@@ -2788,5 +2788,11 @@
     "title": "Bicycles: The Mechanical Advantage",
     "status_prefall24": "yes",
     "status": "restricted"
+  },
+  {
+    "course4d": "EAS 5470",
+    "title": "Engineering Product Management from Theory to Practice",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
