@@ -2776,5 +2776,11 @@
     "title": "Artificial Intelligence for Medicine",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "ACCT 2420",
+    "title": "Accounting and Business Analysis",
+    "status_prefall24": "no",
+    "status": "no"
   }
 ]
