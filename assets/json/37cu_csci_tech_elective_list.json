@@ -2782,5 +2782,11 @@
     "title": "Accounting and Business Analysis",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "MEAM 2300",
+    "title": "Bicycles: The Mechanical Advantage",
+    "status_prefall24": "yes",
+    "status": "restricted"
   }
 ]
