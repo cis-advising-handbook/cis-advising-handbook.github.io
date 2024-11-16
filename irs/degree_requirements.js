@@ -2027,7 +2027,7 @@ class CourseTaken {
         ];
         const tbsCourses = [
             "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230",
-            "DSGN 0020", "EAS 0010", "ENVS 3700", "IPD 5090", "IPD 5450",
+            "DSGN 0020", "DSGN 2570", "EAS 0010", "ENGR 5020", "ENVS 3700", "IPD 5090", "IPD 5450",
             "LGST 2220", "LGST 2440", "LAWM 5060", "MKTG 2270",
             "OIDD 2360", "OIDD 2340", "OIDD 2550", "OIDD 3140", "OIDD 3150", "OIDD 3990", "WH 1010",
         ];
@@ -2087,8 +2087,7 @@ class CourseTaken {
         }
         const engrSubjects = ["ENGR", "TCOM", "NETS", "BE", "CBE", "CIS", "ESE", "MEAM", "MSE", "IPD"];
         const notEngrCourses = [
-            "CIS 1050", "CIS 1070", "CIS 1250", "CIS 1600", "CIS 2610", "CIS 4230", "CIS 5230", "CIS 7980",
-            "ESE 3010", "ESE 4020",
+            "CIS 1050", "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230", "CIS 7980",
             // IPD courses cross listed with ARCH, EAS or FNAR do not count as Engineering
             // TODO: these IPD cross-lists are hard-coded, look them up automatically instead
             "IPD 5090", "IPD 5210", "IPD 5270", "IPD 5280", "IPD 5440", "IPD 5450", "IPD 5720",
@@ -2097,6 +2096,7 @@ class CourseTaken {
         ];
         return (engrSubjects.includes(this.subject) && this.courseNumberInt < 6000) &&
             !notEngrCourses.includes(this.code()) &&
+            !this.suhSaysMath() &&
             this.courseNumberInt != 2960 && this.courseNumberInt != 2970;
     }
     /** Returns true if this course is on the SUH No-Credit List */
@@ -4094,7 +4094,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(2, "Math", ["MATH 1410", "MATH 1610"]),
                 new RequirementNamedCourses(3, "Math", ["CIS 1600"]),
                 new RequirementNamedCourses(4, "Probability", ["CIS 2610", "ESE 3010", "ENM 321", "STAT 4300"]),
-                new RequirementNamedCourses(5, "Linear Algebra", ["MATH 2400", "MATH 2600", "MATH 3120", "MATH 3130", "MATH 3140"]),
+                new RequirementNamedCourses(5, "Linear Algebra", ["ESE 2030", "MATH 2400", "MATH 2600", "MATH 3120", "MATH 3130", "MATH 3140"]),
                 new RequirementNamedCourses(6, "Physics", ["PHYS 0150", "PHYS 0170", "MEAM 1100", "MEAM 1470"]).withCUs(1.5),
                 new RequirementNamedCourses(7, "Physics", ["PHYS 0151", "PHYS 0171", "ESE 1120"]).withCUs(1.5),
                 new RequirementAttributes(8, "Math/Natural Science Elective", [CourseAttribute.Math, CourseAttribute.NatSci]),
@@ -4147,7 +4147,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(2, "Math", ["MATH 1410", "MATH 1610"]),
                 new RequirementNamedCourses(3, "Math", ["CIS 1600"]),
                 new RequirementNamedCourses(4, "Probability", ["CIS 2610", "ESE 3010", "ENM 321", "STAT 4300"]),
-                new RequirementNamedCourses(5, "Linear Algebra", ["MATH 2400", "MATH 2600", "MATH 3120", "MATH 3130", "MATH 3140"]),
+                new RequirementNamedCourses(5, "Linear Algebra", ["ESE 2030", "MATH 2400", "MATH 2600", "MATH 3120", "MATH 3130", "MATH 3140"]),
                 new RequirementNamedCourses(6, "Physics", ["PHYS 0150", "PHYS 0170", "MEAM 1100", "MEAM 1470"]).withCUs(1.5),
                 new RequirementNamedCourses(7, "Physics", ["PHYS 0151", "PHYS 0171", "ESE 1120"]).withCUs(1.5),
                 new RequirementAttributes(8, "Math/Natural Science Elective", [CourseAttribute.Math, CourseAttribute.NatSci]),
@@ -4461,7 +4461,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementEngineeringElective(16),
                 new RequirementNamedCourses(17, "Math", ["MATH 1400"]),
                 new RequirementNamedCourses(18, "Math", ["MATH 1410", "MATH 1610"]),
-                new RequirementNamedCourses(19, "Math", ["ENM 2400", "MATH 2400"]),
+                new RequirementNamedCourses(19, "Math", ["ESE 2030", "ENM 2400", "MATH 2400"]),
                 new RequirementNamedCourses(20, "Math", ["ENM 3750", "ESE 4020", "STAT 4310", "ENM 3210"]),
                 new RequirementNamedCourses(21, "Physics", ["PHYS 0140", "PHYS 0150", "PHYS 0170"]),
                 new RequirementNamedCourses(22, "Physics", ["PHYS 0141", "PHYS 0151", "PHYS 0171"]),
