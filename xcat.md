@@ -20,7 +20,7 @@ now like to count the courses you previously took towards your Penn degree.
 
 Please review the [rules
 in the Undergraduate Handbook](https://ugrad.seas.upenn.edu/student-handbook/undergraduate-policies/courses-at-other-institutions/) for details. In particular, three rules that sometimes surprise students are that:
- * **online courses do not count** unless they were taken at Penn.
+ * **online courses** are permissable but must meet the rigorous standards of Penn Engineering.
 
 {: .notice--info}
 Courses that would normally have been in-person but were held online due to the Covid-19 pandemic _are_ eligible for transfer credit.
