@@ -1974,9 +1974,7 @@ class CourseTaken {
      * NB: this is NOT an exhaustive list, and should be used in addition to course attributes. */
     suhSaysSS() {
         // TODO: ASAM except where cross-listed with AMES, ENGL, FNAR, HIST, or SAST. NB: in 37cu CIS majors, SS-vs-H distinction is moot
-        // TODO: ECON except statistics, probability, and math courses, [ECON 104/2310 is not allowed]. Xlist not helpful
-        // TODO: PSYC, SOCI except statistics, probability, and math courses. Xlist not helpful
-        const ssSubjects = ["COMM", "CRIM", "GSWS", "HSOC", "INTR", "PPE", "PSCI", "STSC", "URBS"];
+        const ssSubjects = ["COMM", "CRIM", "GSWS", "HSOC", "INTR", "PPE", "PSCI", "PSYC", "SOCI", "STSC", "URBS"];
         const beppCourseNums = [
             1000, 2010, 2020, 2030, 2080, 2110, 2120, 2140, 2200, 2300, 2330, 2500, 2610, 2630, 2650, 2800, 2840, 2890, 3050
         ];
@@ -1989,6 +1987,7 @@ class CourseTaken {
             ssCourses.includes(this.code()) ||
             (this.subject == "LING" && this.courseNumber != "0700") ||
             (this.subject == "BEPP" && beppCourseNums.includes(this.courseNumberInt)) ||
+            (this.subject == "ECON" && !["2300", "2310"].includes(this.courseNumber)) ||
             WritingSeminarSsHTbs.get(this.code()) == CourseAttribute.SocialScience;
     }
     /** If this returns true, the SEAS Undergraduate Handbook classifies this course as Humanities.
@@ -2021,7 +2020,7 @@ class CourseTaken {
      * NB: this IS intended to be a definitive classification */
     suhSaysTbs() {
         const easCourseNums = [
-            2020, 2040, 2200, 2210, 2220, 2230, 2240, 2250, 2260, 2270, 2280, 2420, 2900, 3010, 3060, 3200,
+            2020, 2040, 2200, 2210, 2220, 2230, 2240, 2250, 2260, 2270, 2280, 2900, 3010, 3060, 3200,
             4010, 4020, 4030, 4080, 5010, 5020, 5050, 5070, 5100, 5120, 5410, 5430, 5450, 5460, 5470, 5490,
             5900, 5950
         ];
@@ -2075,7 +2074,7 @@ class CourseTaken {
             (this.subject == "NRSC" && !["0050", "0060", "1160", "2249"].includes(this.courseNumber)) ||
             (this.subject == "BIOL" && this.courseNumberInt > 1000 && this.courseNumberInt != 2510) ||
             (this.subject == "CHEM" && ![1000, 1200, 250, 1011].includes(this.courseNumberInt)) ||
-            (this.subject == "EESC" && ([1000, 1030, 1090, 2120, 2500, 4200, 4360, 4440, 4630].includes(this.courseNumberInt))) ||
+            (this.subject == "EESC" && ([1000, 1030, 1090, 2120, 2500, 3300, 3600, 4200, 4360, 4440, 4630].includes(this.courseNumberInt))) ||
             (this.subject == "PHYS" && this.courseNumberInt >= 150 && ![3314, 5500].includes(this.courseNumberInt));
     }
     /** If this returns true, the SEAS Undergraduate Handbook classifies the course as Engineering.
