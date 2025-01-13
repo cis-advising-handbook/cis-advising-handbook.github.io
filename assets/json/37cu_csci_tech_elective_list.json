@@ -2800,5 +2800,11 @@
     "title": "Accounting for Mergers, Acquisitions, and Complex Financial Structures",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "ESE 6450",
+    "title": "Deep Generative Models",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
