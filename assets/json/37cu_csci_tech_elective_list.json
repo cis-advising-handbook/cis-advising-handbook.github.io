@@ -2807,4 +2807,10 @@
     "status_prefall24": "yes",
     "status": "unrestricted"
   }
+  ,{
+    "course4d": "STAT 4730",
+    "title": "Data Science using ChatGPT",
+    "status_prefall24": "no",
+    "status": "no",
+}
 ]
