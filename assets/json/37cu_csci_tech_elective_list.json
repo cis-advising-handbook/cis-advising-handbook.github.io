@@ -2149,7 +2149,7 @@
   },
   {
     "course4d": "OIDD 2200",
-    "title": "Introduction to Operations Management",
+    "title": "Operations Management Analytics",
     "status_prefall24": "yes",
     "status": "restricted"
   },
@@ -2800,5 +2800,17 @@
     "title": "Accounting for Mergers, Acquisitions, and Complex Financial Structures",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "ESE 6450",
+    "title": "Deep Generative Models",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
+  ,{
+    "course4d": "STAT 4730",
+    "title": "Data Science using ChatGPT",
+    "status_prefall24": "no",
+    "status": "no"
+}
 ]
