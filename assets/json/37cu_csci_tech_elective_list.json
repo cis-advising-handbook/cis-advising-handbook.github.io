@@ -2806,11 +2806,17 @@
     "title": "Deep Generative Models",
     "status_prefall24": "yes",
     "status": "unrestricted"
-  }
-  ,{
+  },
+  {
     "course4d": "STAT 4730",
     "title": "Data Science using ChatGPT",
     "status_prefall24": "no",
     "status": "no"
-}
+  },
+  {
+    "course4d": "EESC 3600",
+    "title": "Earth's Surface",
+    "status_prefall24": "no",
+    "status": "no"
+  }
 ]
