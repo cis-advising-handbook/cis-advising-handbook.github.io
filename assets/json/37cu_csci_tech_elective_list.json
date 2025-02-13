@@ -2824,5 +2824,11 @@
     "title": "AI in Our Lives: The Behavioral Science of Autonomous Technology",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "PHYS 3359",
+    "title": "Data Analysis for the Natural Sciences II: Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
