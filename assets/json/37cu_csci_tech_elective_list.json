@@ -2806,11 +2806,41 @@
     "title": "Deep Generative Models",
     "status_prefall24": "yes",
     "status": "unrestricted"
-  }
-  ,{
+  },
+  {
     "course4d": "STAT 4730",
     "title": "Data Science using ChatGPT",
     "status_prefall24": "no",
     "status": "no"
-}
+  },
+  {
+    "course4d": "EESC 3600",
+    "title": "Earth's Surface",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "MKTG 2790",
+    "title": "AI in Our Lives: The Behavioral Science of Autonomous Technology",
+    "status_prefall24": "no",
+    "status": "no"
+  },
+  {
+    "course4d": "PHYS 3359",
+    "title": "Data Analysis for the Natural Sciences II: Machine Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2310",
+    "title": "Global Valuation and Risk Analysis",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "CBE 5215",
+    "title": "Energy and Sustainability: Science, Engineering and Technology",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  }
 ]
