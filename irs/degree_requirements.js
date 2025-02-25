@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.run = exports.RequirementApplyResult = exports.Degrees = exports.CourseTaken = exports.GradeType = exports.SsHTbsTag = void 0;
+exports.RequirementApplyResult = exports.Degrees = exports.CourseTaken = exports.GradeType = exports.SsHTbsTag = void 0;
+exports.run = run;
 // global list of CSCI Tech Electives. Used sporadically in a few places so it's easier to have it as a global.
 let TECH_ELECTIVE_LIST = [];
 /** For checking whether Path course attributes are correct or not */
@@ -54,6 +55,7 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         delimiter: ',',
         columns: true,
     });
+    console.log(`parsed ${cattrCsvRecords.length} CSV records`);
     // 1: BUILD UP LIST OF ALL COURSES
     // each object has ≥1 course code (like "ACCT1010") and a list of attributes (like "EUHS")
     const AllCourses = [];
@@ -84,7 +86,12 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         currentCourse.addCode(crs);
         attrs.forEach(a => currentCourse.attributes.add(a));
     }
-    console.log(`skipped ${skippedCourses.length} courses that couldn't be parsed: ${skippedCourses}`);
+    // push the last course
+    currentCourse.finalize();
+    AllCourses.push(currentCourse);
+    if (skippedCourses.length > 0) {
+        console.log(`skipped ${skippedCourses.length} courses that couldn't be parsed: ${skippedCourses}`);
+    }
     console.log(`checking ${AllCourses.length} courses...`);
     // 2: CHECK ATTRIBUTES
     const attrsToCheck = [
@@ -94,10 +101,20 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         CourseAttribute.SocialScience,
         CourseAttribute.Humanities,
         CourseAttribute.TBS,
-        CourseAttribute.Writing
+        CourseAttribute.CsciRestrictedTechElective,
+        CourseAttribute.CsciUnrestrictedTechElective
     ];
-    const errorsFound = [];
+    const mutuallyExclusiveAttrs = [
+        CourseAttribute.Engineering,
+        CourseAttribute.Math,
+        CourseAttribute.NatSci,
+        CourseAttribute.SocialScience,
+        CourseAttribute.Humanities,
+        CourseAttribute.TBS
+    ];
+    let errorsFound = [];
     for (const pathCourse of AllCourses.slice(0)) {
+        const errorReasons = [];
         // check if attrs are consistent across xlists
         const allAttrLists = pathCourse.courses.map(xl => xl.attributes);
         const biggestAttrList = [...allAttrLists]
@@ -105,52 +122,49 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         const biggestAttrSet = new Set(biggestAttrList);
         const biggestIsSuperset = allAttrLists.every(al => al.every(a => biggestAttrSet.has(a)));
         if (!biggestIsSuperset) {
+            errorReasons.push('attributes inconsistent across crosslists ' +
+                allAttrLists
+                    .map((al, i) => {
+                    return { c: pathCourse.courses[i].code(), al: al };
+                })
+                    .filter(cal => cal.al.length > 0)
+                    .map(cal => cal.c + ' has ' + cal.al.map(a => a).join(',')).join(', '));
+            // don't bother reporting on attrs, since we aren't sure what the right answer is
             errorsFound.push({
                 codes: pathCourse.codesStr(),
                 title: pathCourse.title,
-                reason: 'attributes inconsistent across crosslists ' +
-                    allAttrLists
-                        .map((al, i) => {
-                        return { c: pathCourse.courses[i].code(), al: al };
-                    })
-                        .filter(cal => cal.al.length > 0)
-                        .map(cal => cal.c + ' has ' + cal.al.map(a => a).join(',')).join(', ')
+                reason: errorReasons.join('; ')
             });
-            // don't bother reporting on attrs, since we aren't sure what the right answer is
             continue;
+        }
+        // check if attributes are non-mutually-exclusive
+        const attrIntersection = mutuallyExclusiveAttrs.filter(mea => biggestAttrSet.has(mea));
+        if (attrIntersection.length > 1) {
+            errorReasons.push('has incompatible attributes ' + attrIntersection);
         }
         // check if Path course has correct attrs
         for (const atc of attrsToCheck) {
             if (biggestAttrSet.has(atc) && !pathCourse.attributes.has(atc)) {
                 if (atc == CourseAttribute.Engineering && pathCourse.attributes.has(CourseAttribute.MathNatSciEngr)) {
-                    errorsFound.push({
-                        codes: pathCourse.codesStr(),
-                        title: pathCourse.title,
-                        reason: `replace ${CourseAttribute.MathNatSciEngr} with ${CourseAttribute.Engineering}`
-                    });
+                    errorReasons.push(`replace ${CourseAttribute.MathNatSciEngr} with ${CourseAttribute.Engineering}`);
                 }
                 else {
-                    errorsFound.push({
-                        codes: pathCourse.codesStr(),
-                        title: pathCourse.title,
-                        reason: 'missing attribute ' + atc
-                    });
+                    errorReasons.push('missing attribute ' + atc);
                 }
             }
             if (!biggestAttrSet.has(atc) && pathCourse.attributes.has(atc)) {
-                errorsFound.push({
-                    codes: pathCourse.codesStr(),
-                    title: pathCourse.title,
-                    reason: 'has incorrect attribute ' + atc
-                });
+                errorReasons.push('has incorrect attribute ' + atc);
             }
         }
         // no more EUMS
         if (pathCourse.attributes.has(CourseAttribute.MathNatSciEngr) && !biggestAttrSet.has(CourseAttribute.Engineering)) {
+            errorReasons.push('has deprecated attribute ' + CourseAttribute.MathNatSciEngr);
+        }
+        if (errorReasons.length > 0) {
             errorsFound.push({
                 codes: pathCourse.codesStr(),
                 title: pathCourse.title,
-                reason: 'has deprecated attribute ' + CourseAttribute.MathNatSciEngr
+                reason: errorReasons.join('; ')
             });
         }
     }
@@ -168,6 +182,37 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
             }
         }
     }
+    // ignore study abroad, transfer credit and credit away courses
+    const badTitles = ['study abroad', 'transfer credit', 'trans credit', 'credit away'];
+    errorsFound = errorsFound.filter(e => !badTitles.some(bad => e.title.toLowerCase().includes(bad)));
+    errorsFound = errorsFound.filter(e => // filter out non-SEAS IS courses
+     !e.title.toLowerCase().includes('independent study') ||
+        e.reason.includes('has deprecated attribute EUMS'));
+    const badSubjects = ['BCHE', 'BMB', 'CAMB', 'GCB', 'IMUN']; // filter out some PSOM courses
+    errorsFound = errorsFound.filter(e => !badSubjects.some(bad => e.codes.includes(bad)));
+    // sort by severity
+    const order = [
+        'has incorrect attribute',
+        'missing attribute',
+        'replace EUMS',
+        'has deprecated attribute EUMS',
+        // SUH ambiguity
+        'has incompatible attributes',
+        'attributes inconsistent across crosslists',
+    ];
+    // const orderMap = new Map(order.map((item, index) => [item, index]));
+    errorsFound.sort((a, b) => {
+        if (a.reason < b.reason)
+            return -1;
+        if (a.reason > b.reason)
+            return 1;
+        return 0;
+    });
+    errorsFound.sort((a, b) => {
+        const aIndex = order.findIndex(o => a.reason.startsWith(o));
+        const bIndex = order.findIndex(o => b.reason.startsWith(o));
+        return aIndex - bIndex;
+    });
     const csvStr = csvStringify.stringify(errorsFound, {
         header: true,
         columns: {
@@ -177,9 +222,10 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         }
     });
     fs.writeFileSync('course-attr-problems.csv', csvStr);
-    const suhInconsistencies = errorsFound.filter(e => e.reason.startsWith('attributes inconsistent across')).length;
-    const attrMissing = errorsFound.filter(e => e.reason.startsWith('missing attribute')).length;
-    const attrWrong = errorsFound.filter(e => e.reason.startsWith('has incorrect attribute')).length;
+    const suhInconsistencies = errorsFound.filter(e => e.reason.includes('attributes inconsistent across')).length +
+        errorsFound.filter(e => e.reason.includes('has incompatible attributes')).length;
+    const attrMissing = errorsFound.filter(e => e.reason.includes('missing attribute')).length;
+    const attrWrong = errorsFound.filter(e => e.reason.includes('has incorrect attribute')).length;
     console.log(`SUMMARY: ${suhInconsistencies} SUH inconsistencies, ${attrMissing} missing attrs and ${attrWrong} wrong attrs`);
 }
 function generateApcProbationList(csvFilePath) {
@@ -300,7 +346,7 @@ const CsciProjectElectives = [
     "CIS 5050", "CIS 5530",
     "ESE 3500"
 ];
-const AscsProjectElectives = CsciProjectElectives.concat(["CIS 4710", "CIS 5710", "CIS 3800", "CIS 5480"]);
+const AscsProjectElectives = CsciProjectElectives.concat(["CIS 4710", "CIS 5710", "CIS 3800", "CIS 4480", "CIS 5480"]);
 const ArinCogSciCourses = [
     "COGS 1001",
     "LING 0500",
@@ -395,7 +441,7 @@ const DatsMinorElectives = DatsMinorStatBucket.concat(DatsMinorDataMgmtBucket, D
 const SseIseElectives = [
     "CIS 2400", "CIS 4500", "CIS 5500",
     "ESE 3050", "ESE 3250", "ESE 4070", "ESE 4200", "ESE 5000", "ESE 5040", "ESE 5050", "ESE 5120",
-    "ESE 520",
+    "ESE 520", // NB: doesn't have a 4-digit equivalent, seems retired
     "ESE 5280", "ESE 5310", "ESE 5450", "ESE 6050", "ESE 6190",
     "NETS 2120", "NETS 3120", "NETS 4120",
 ];
@@ -1028,7 +1074,7 @@ var GradeType;
 (function (GradeType) {
     GradeType["PassFail"] = "PassFail";
     GradeType["ForCredit"] = "ForCredit";
-})(GradeType = exports.GradeType || (exports.GradeType = {}));
+})(GradeType || (exports.GradeType = GradeType = {}));
 let IncorrectCMAttributes = new Set();
 class DegreeRequirement {
     constructor(displayIndex) {
@@ -1803,6 +1849,19 @@ function byLowestLevelFirst(a, b) {
 }
 /** Records a course that was taken and passed, so it can conceivably count towards some requirement */
 class CourseTaken {
+    copy() {
+        return new CourseTaken(this.subject, this.courseNumber, this.title, this._3dName, this.courseUnits, this.grading, this.letterGrade, this.term, this.allAttributes.join(";"), this.completed);
+    }
+    /** make a copy of this course, but the copy has only the given number of CUs */
+    split(cus, courseNumber) {
+        const course = new CourseTaken(this.subject, courseNumber, this.title, this._3dName, cus, this.grading, this.letterGrade, this.term, "", this.completed);
+        this.attributes.forEach(a => {
+            if (!course.attributes.includes(a)) {
+                course.attributes.push(a);
+            }
+        });
+        return course;
+    }
     constructor(subject, courseNumber, title, _3dName, cus, grading, letterGrade, term, rawAttributes, completed) {
         /** true iff this course is used as part of an official minor */
         this.partOfMinor = false;
@@ -1889,19 +1948,6 @@ class CourseTaken {
             IncorrectCMAttributes.add(`${this.code()} incorrectly has ${CourseAttribute.NonEngr}`);
         }
     }
-    copy() {
-        return new CourseTaken(this.subject, this.courseNumber, this.title, this._3dName, this.courseUnits, this.grading, this.letterGrade, this.term, this.allAttributes.join(";"), this.completed);
-    }
-    /** make a copy of this course, but the copy has only the given number of CUs */
-    split(cus, courseNumber) {
-        const course = new CourseTaken(this.subject, courseNumber, this.title, this._3dName, cus, this.grading, this.letterGrade, this.term, "", this.completed);
-        this.attributes.forEach(a => {
-            if (!course.attributes.includes(a)) {
-                course.attributes.push(a);
-            }
-        });
-        return course;
-    }
     validateAttribute(groundTruth, attr) {
         if (groundTruth && !this.attributes.includes(attr)) {
             this.attributes.push(attr);
@@ -1985,9 +2031,9 @@ class CourseTaken {
         ];
         return (this.courseNumberInt < 5000 && ssSubjects.includes(this.subject)) ||
             ssCourses.includes(this.code()) ||
-            (this.subject == "LING" && this.courseNumber != "0700") ||
+            (this.subject == "LING" && this.courseNumber != "0700" && this.courseNumberInt < 5000) ||
             (this.subject == "BEPP" && beppCourseNums.includes(this.courseNumberInt)) ||
-            (this.subject == "ECON" && !["2300", "2310"].includes(this.courseNumber)) ||
+            (this.subject == "ECON" && !["2300", "2310"].includes(this.courseNumber) && this.courseNumberInt < 5000) ||
             WritingSeminarSsHTbs.get(this.code()) == CourseAttribute.SocialScience;
     }
     /** If this returns true, the SEAS Undergraduate Handbook classifies this course as Humanities.
@@ -2027,8 +2073,9 @@ class CourseTaken {
         const tbsCourses = [
             "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230",
             "DSGN 0020", "DSGN 2570", "EAS 0010", "ENGR 5020", "ENVS 3700", "IPD 5090", "IPD 5450",
-            "LGST 2220", "LGST 2440", "LAWM 5060", "MKTG 2270",
+            "LGST 2220", "LGST 2440", "LAWM 5060", "MKTG 2270", "MKTG 2470",
             "MGMT 2370", "MGMT 2640", "MGMT 2650",
+            "NURS 3570",
             "OIDD 2360", "OIDD 2340", "OIDD 2550", "OIDD 3140", "OIDD 3150", "OIDD 3990", "WH 1010",
         ];
         return tbsCourses.includes(this.code()) ||
@@ -2042,7 +2089,7 @@ class CourseTaken {
         const mathCourses = [
             "CIS 1600", "CIS 2610", "CIS 3333",
             "EAS 205",
-            "ESE 2030", "ESE 3010", "ESE 4020",
+            "ESE 2030", "ESE 3010", "ESE 4020", "ESE 5420",
             "PHIL 1710", "PHIL 4723",
             "STAT 4300", "STAT 4310", "STAT 4320", "STAT 4330"
         ];
@@ -2061,7 +2108,8 @@ class CourseTaken {
     suhSaysNatSci() {
         const nsCourses = [
             "ASTR 1211", "ASTR 1212", "ASTR 1250", "ASTR 3392",
-            "BE 3050", "BIOL 0992", "CIS 3980", "EESC 4320", "ESE 1120", "MSE 2210",
+            //"CIS 3980", // NB: CIS 3980 is EUNS only for CIS majors
+            "BE 3050", "BIOL 0992", "EESC 4320", "ESE 1120", "MSE 2210",
             "MEAM 1100", "MEAM 1470",
             "PHYS 0050", "PHYS 0051", "PHYS 0140", "PHYS 0141",
             // jld: EAS 0091 is, practically speaking, EUNS. We check for the conflict with CHEM 1012 elsewhere
@@ -2087,8 +2135,8 @@ class CourseTaken {
         }
         const engrSubjects = ["ENGR", "TCOM", "NETS", "BE", "CBE", "CIS", "ESE", "MEAM", "MSE", "IPD"];
         const notEngrCourses = [
-            "CIS 1050", "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230", "CIS 7980",
-            "ESE 5670",
+            "CIS 1050", "CIS 1060", "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230", "CIS 7980",
+            "ESE 1120", "ESE 5670",
             // IPD courses cross listed with ARCH, EAS or FNAR do not count as Engineering
             // TODO: these IPD cross-lists are hard-coded, look them up automatically instead
             "IPD 5090", "IPD 5210", "IPD 5270", "IPD 5280", "IPD 5440", "IPD 5450", "IPD 5720",
@@ -2300,6 +2348,13 @@ class CourseParser {
             let ese3500NotCmpe = c.code() == "ESE 3500" && degrees.undergrad != "37cu CMPE";
             if (c.getCUs() > 0 && (CoursesWith15CUsToSplit.includes(c.code()) || ese3500NotCmpe) && !nosplit) {
                 console.log(`splittingB ${c}`);
+                c.setCUs(c.getCUs() - 0.5);
+                const half = c.split(0.5, c.courseNumber + "half");
+                halfCuCourses.push(half);
+            }
+            // some students got 1.5 CUs for CIS 4190 when abroad
+            if (c.code() == "CIS 4190" && c.getCUs() == 1.5) {
+                console.log(`splitting ${c}`);
                 c.setCUs(c.getCUs() - 0.5);
                 const half = c.split(0.5, c.courseNumber + "half");
                 halfCuCourses.push(half);
@@ -3096,7 +3151,7 @@ Math+Natural Science = ${result.gpaMathNatSci.toFixed(2)}
     $(".course").delay(100).draggable({
         cursor: "move",
         scroll: true,
-        stack: ".course",
+        stack: ".course", // make the currently-selected course appear above all others
         // runs once when the course is created, binding a CourseTaken object to its HTML element
         create: function (e, _) {
             const ct = coursesTaken.find(c => c.uuid == e.target.id);
@@ -3668,7 +3723,7 @@ var RequirementApplyResult;
     RequirementApplyResult["Unsatisfied"] = "unsatisfied";
     RequirementApplyResult["PartiallySatisfied"] = "partially satisfied";
     RequirementApplyResult["Satisfied"] = "fully satisfied";
-})(RequirementApplyResult = exports.RequirementApplyResult || (exports.RequirementApplyResult = {}));
+})(RequirementApplyResult || (exports.RequirementApplyResult = RequirementApplyResult = {}));
 class RequirementOutcome {
     constructor(ugrad, req, outcome, courses) {
         this.ugrad = ugrad;
@@ -3746,7 +3801,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(15, "Major", ["CIS 2620", "CIS 5110"]),
                 new RequirementNamedCourses(16, "Major", ["CIS 3200", "CIS 5020"]),
                 new RequirementNamedCourses(17, "Major", ["CIS 4710", "CIS 5710"]),
-                new RequirementNamedCourses(18, "Major", ["CIS 3800", "CIS 5480"]),
+                new RequirementNamedCourses(18, "Major", ["CIS 3800", "CIS 4480", "CIS 5480"]),
                 new RequirementNamedCourses(19, "Senior Design", SeniorDesign1stSem),
                 new RequirementNamedCourses(20, "Senior Design", SeniorDesign2ndSem),
                 new RequirementNamedCourses(21, "Project Elective", CsciProjectElectives),
@@ -3887,7 +3942,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(17, "Major", ["CIS 3500", "CIS 4600", "CIS 5600"]),
                 new RequirementNamedCourses(18, "Major", ["ESE 3700"]),
                 new RequirementNamedCourses(19, "Major", ["CIS 4710", "CIS 5710"]),
-                new RequirementNamedCourses(20, "Major", ["CIS 3800", "CIS 5480"]),
+                new RequirementNamedCourses(20, "Major", ["CIS 3800", "CIS 4480", "CIS 5480"]),
                 new RequirementNamedCourses(21, "Major", ["CIS 4410", "CIS 5410"]),
                 new RequirementNamedCourses(22, "Networking", ["ESE 4070", "CIS 5530"]),
                 new RequirementNamedCourses(23, "Concurrency Lab", ["CIS 4550", "CIS 5550", "CIS 5050", "ESE 5320", "CIS 5650"]),
@@ -4104,7 +4159,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(12, "Major", ["CIS 2400"]),
                 new RequirementNamedCourses(13, "Math", ["CIS 2620", "CIS 5110"]),
                 new RequirementNamedCourses(14, "Major", ["CIS 3200", "CIS 5020"]),
-                new RequirementNamedCourses(15, "Major", ["CIS 3800", "CIS 5480"]),
+                new RequirementNamedCourses(15, "Major", ["CIS 3800", "CIS 4480", "CIS 5480"]),
                 new RequirementNamedCourses(16, "Major", ["CIS 4710", "CIS 5710"]),
                 new RequirementNamedCourses(17, "Senior Design", SeniorDesign1stSem),
                 new RequirementNamedCourses(18, "Senior Design", SeniorDesign2ndSem),
@@ -4157,7 +4212,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(12, "Major", ["CIS 2400"]),
                 new RequirementNamedCourses(13, "Math", ["CIS 2620", "CIS 5110"]),
                 new RequirementNamedCourses(14, "Major", ["CIS 3200", "CIS 5020"]),
-                new RequirementNamedCourses(15, "Major", ["CIS 3800", "CIS 5480"]),
+                new RequirementNamedCourses(15, "Major", ["CIS 3800", "CIS 4480", "CIS 5480"]),
                 new RequirementNamedCourses(16, "Major", ["CIS 4710", "CIS 5710"]),
                 new RequirementNamedCourses(17, "Senior Design", SeniorDesign1stSem),
                 new RequirementNamedCourses(18, "Senior Design", SeniorDesign2ndSem),
@@ -4252,7 +4307,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(16, "Major", ["ESE 3500"]).withCUs(1.5),
                 new RequirementNamedCourses(17, "Major", ["CIS 3500", "CIS 4600", "CIS 5600"]),
                 new RequirementNamedCourses(18, "Major", ["ESE 3700"]),
-                new RequirementNamedCourses(19, "Major", ["CIS 3800", "CIS 5480"]),
+                new RequirementNamedCourses(19, "Major", ["CIS 3800", "CIS 4480", "CIS 5480"]),
                 new RequirementNamedCourses(20, "Major", ["CIS 4410", "CIS 5410", "CIS 5470"]),
                 new RequirementNamedCourses(21, "Major", ["CIS 4710", "CIS 5710"]),
                 new RequirementNamedCourses(22, "Networking", ["ESE 4070", "ESE 5070", "CIS 5530"]),
@@ -4700,5 +4755,4 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
         return new RequirementOutcome(!mastersDegreeRequirements.includes(o[1]), o[1], o[2], o[3]);
     }), totalRemainingCUs, coursesTaken.filter(c => c.courseUnitsRemaining > 0), gpaOverall, gpaStem, gpaMns);
 }
-exports.run = run;
 //# sourceMappingURL=degree_requirements.js.map
