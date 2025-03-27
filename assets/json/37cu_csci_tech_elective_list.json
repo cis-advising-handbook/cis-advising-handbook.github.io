@@ -2854,5 +2854,11 @@
     "title": "Bioengineering Laboratory Principles",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2020",
+    "title": "Consumer Financial Decision Making",
+    "status_prefall24": "no",
+    "status": "no"
   }
 ]
