@@ -2860,5 +2860,11 @@
     "title": "Consumer Financial Decision Making",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "FNCE 1018",
+    "title": "Monetary Economics and the Global Economy (Honors)",
+    "status_prefall24": "yes",
+    "status": "restricted"
   }
 ]
