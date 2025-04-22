@@ -70,7 +70,6 @@ def main():
         contents = json.load(f);
 
     for category,courses in contents.items():
-        # print(category)
         with open(os.path.join(DATA_DIR, category + ".yml"), "w") as f:
             populate_yml(f, courses)
 
