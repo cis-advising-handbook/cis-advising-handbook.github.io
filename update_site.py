@@ -17,7 +17,7 @@ def update_link(template:str, style:list[str], start:str) -> list[str]:
 
     if (response.status_code != 200):
         print(link)
-        print("FUCK")
+        print("UH-OH")
         exit()
 
     now = datetime.now()
