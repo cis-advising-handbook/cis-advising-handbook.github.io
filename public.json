@@ -1,0 +1,640 @@
+{
+  "intro": [
+    {
+      "subject": "CIS",
+      "number": "1050",
+      "name": "Computational Data Exploration",
+      "link": "https://www.seas.upenn.edu/~bhusnur4/cis105/16fa/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1100",
+      "name": "Introduction to Computer Programming",
+      "link": "https://www.seas.upenn.edu/~cis110/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1070",
+      "name": "Visual Culture",
+      "link": ""
+    },
+    {
+      "subject": "CIS",
+      "number": "1200",
+      "name": " Programming Languages and Techniques I",
+      "link": "https://www.seas.upenn.edu/~cis120/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1600",
+      "name": "Mathematical Foundations of Computer Science",
+      "link": "https://www.cis.upenn.edu/~cis1600/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1210",
+      "name": "Programming Languages and Techniques II",
+      "link": "https://www.seas.upenn.edu/~cis1210/current/"
+    }
+  ],
+  "mini": [
+    {
+      "subject": "CIS",
+      "number": "19XX",
+      "name": "Overall Mini Course Site",
+      "link": "https://www.cis.upenn.edu/~cis19x/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1901",
+      "name": "C++ Programming",
+      "start": "Fall 2022",
+      "link": "https://www.seas.upenn.edu/~cis1900/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1902",
+      "name": "Python Programming",
+      "start": "Spring 2025",
+      "link": "https://www.cis.upenn.edu/~cis1902/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1903",
+      "name": "Go Programming",
+      "link": "https://www.seas.upenn.edu/~cis1930/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1904",
+      "name": "Introduction to Haskell Programming",
+      "link": "https://www.cis.upenn.edu/~cis1904/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1905",
+      "name": "Rust Programming",
+      "link": "https://www.cis.upenn.edu/~cis1905/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1911",
+      "name": "Using and Understanding Unix and Linux",
+      "link": ""
+    },
+    {
+      "subject": "CIS",
+      "number": "1912",
+      "name": "DevOps",
+      "link": "https://cis1912.org/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1921",
+      "name": "Solving Hard Problems in Practice",
+      "link": "https://www.cis.upenn.edu/~cis1921/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1951",
+      "name": "iOS Programming",
+      "link": "https://www.seas.upenn.edu/~cis1951/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1952",
+      "name": "Android Programming",
+      "link": "https://github.com/cis1950android"
+    },
+    {
+      "subject": "CIS",
+      "number": "1961",
+      "name": "Ruby on Rails",
+      "link": "https://www.seas.upenn.edu/~cis1960/"
+    },
+    {
+      "subject": "CIS",
+      "number": "1962",
+      "name": "JavaScript Programming",
+      "link": "https://www.seas.upenn.edu/~cis1962/"
+    }
+  ],
+  "pl": [
+    {
+      "subject": "CIS",
+      "number": "3500",
+      "name": "Software Design/Engineering",
+      "link": "https://github.com/CIS-3500"
+    },
+    {
+      "subject": "CIS",
+      "number": "5000",
+      "name": "Software Foundations",
+      "link": "https://www.seas.upenn.edu/~cis5000/current/index.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "5470",
+      "name": "Software Analysis",
+      "link": "https://cis547.github.io/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5520",
+      "name": "Advanced Programming",
+      "link": "https://www.seas.upenn.edu/~cis5520/current/index.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "4521/5521",
+      "name": "Compilers",
+      "link": "https://www.seas.upenn.edu/~cis5521/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5570",
+      "name": "Programming for the Web",
+      "link": "https://www.seas.upenn.edu/~cis5570/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5590",
+      "name": "Programming and problem solving",
+      "link": "https://www.cis.upenn.edu/~cis5590/"
+    },
+    {
+      "subject": "CIS",
+      "number": "6700",
+      "name": "Advanced Topics in Programming Languages (Benjamin Pierce)",
+      "link": "https://www.cis.upenn.edu/~bcpierce/courses/6700-SL-2024/current/index.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "6700/7000",
+      "name": "Advanced Topics in Programming Languages (Stephanie Weirich)",
+      "link": "https://github.com/plclub/cis6700-23sp"
+    },
+    {
+      "subject": "CIS",
+      "number": "6700",
+      "name": "Advanced Topics in Programming Languages (Steve Zdancewic)",
+      "link": "https://www.cis.upenn.edu/~stevez/cis670/index.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "6730",
+      "name": "Computer-Aided Verification",
+      "link": "https://www.cis.upenn.edu/~alur/cis673.html"
+    }
+  ],
+  "systems": [
+    {
+      "subject": "NETS",
+      "number": "2120",
+      "name": "Scalable and Cloud Computing",
+      "link": "https://nets2120.seas.upenn.edu/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4480/5480",
+      "name": "Operating Systems Design and Implementation",
+      "link": "https://www.seas.upenn.edu/~cis5480/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4510/5510",
+      "name": "Computer and Network Security",
+      "link": "https://www.cis.upenn.edu/~sga001/classes/cis551f24/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4550/5550",
+      "name": "Internet and Web Systems",
+      "link": "https://cis5550.seas.upenn.edu/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5050",
+      "name": "Software Sysetms",
+      "link": "https://www.cis.upenn.edu/~cis5050/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5530",
+      "name": "Networked Systems",
+      "link": "https://www.seas.upenn.edu/~cis5530/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5490",
+      "name": "Wireless Communication for Mobile Networks and Internet of Things",
+      "link": "https://www.cis.upenn.edu/~kimbong/cis549-23fa/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5560",
+      "name": "Cryptography",
+      "link": "https://pratyushmishra.com/classes/cis-5560-s25/"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Security Special Topic (Pratyush Mishra)",
+      "link": "https://pratyushmishra.com/classes/cis-7000-f23/"
+    }
+  ],
+  "embed": [
+    {
+      "subject": "CIS",
+      "number": "4410/5410",
+      "name": "Embedded Software for Life-Critical Applications",
+      "start": "Fall 2010",
+      "link": "https://www.seas.upenn.edu/~lee/10cis441/"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Health, Healthcare and Technology",
+      "link": "https://www.med.upenn.edu/kbjohnsonlab/hhct/"
+    }
+  ],
+  "aiml": [
+    {
+      "subject": "NETS",
+      "number": "2130",
+      "name": "Crowdsourcing and Human Computation",
+      "link": "https://crowdsourcing.wiki/"
+    },
+    {
+      "subject": "CIS",
+      "number": "3333",
+      "name": "Mathematics of Machine Learning",
+      "link": "https://www.cis.upenn.edu/~exwong/moml/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4190/5190",
+      "name": "Applied Machine Learning",
+      "link": "https://www.seas.upenn.edu/~cis5190/spring2025/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4210/5210",
+      "name": "Artificial Intelligence",
+      "link": "https://github.com/artificial-intelligence-class/artificial-intelligence-class.github.io"
+    },
+    {
+      "subject": "CIS",
+      "number": "4300/5300",
+      "name": "Natural Language Processing",
+      "link": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_fa24/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4810/5810",
+      "name": "Computer Vision & Computational Photography",
+      "link": ""
+    },
+    {
+      "subject": "CIS",
+      "number": "5200",
+      "name": "Machine Learning",
+      "link": "https://machine-learning-upenn.github.io/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5800",
+      "name": "Machine Perception",
+      "link": "https://sites.google.com/seas.upenn.edu/cis5800fall24/home"
+    },
+    {
+      "subject": "CIS",
+      "number": "6200",
+      "name": "Topics in Deep Learning",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
+      "link": "https://docs.google.com/document/d/1dkQ4XRhaiZFjGu5i_8Qcoi6MkHwOfivmFFWhBrBF30I/edit?tab=t.0"
+    },
+    {
+      "subject": "CIS",
+      "number": "6300",
+      "name": "Advanced Topics in Natural Language Processing",
+      "link": "https://www.cis.upenn.edu/~myatskar/teaching/cis6300_sp25/index.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Special Topics: Machine Learning (Eric Wong)",
+      "link": "https://www.cis.upenn.edu/~exwong/teaching/"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Special Topics: Vision (Dinesh Jayaraman)",
+      "link": "https://www.seas.upenn.edu/~dineshj/teaching/"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Special Topics: Large Language Models (Mayur Naik)",
+      "link": "https://llm-class.github.io/syllabus.html"
+    }
+  ],
+  "db": [
+    {
+      "subject": "CIS",
+      "number": "2450",
+      "name": "Big Data Analytics",
+      "link": "https://sites.google.com/seas.upenn.edu/cis-2450-fall-2024/home"
+    },
+    {
+      "subject": "CIS",
+      "number": "4500/5500",
+      "name": "Database and Information Systems",
+      "link": "https://www.seas.upenn.edu/~cis5500/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5450",
+      "name": "Big Data Analytics",
+      "link": "https://sites.google.com/seas.upenn.edu/cis545"
+    },
+    {
+      "subject": "CIS",
+      "number": "6500",
+      "name": "Advanced Topics in Database Systems",
+      "link": "https://rmarcus.info/syllabi/Penn_CIS6500_F23.pdf"
+    }
+  ],
+  "arch": [
+    {
+      "subject": "CIS",
+      "number": "2400",
+      "name": "Introduction to Computer Systems",
+      "link": "https://www.seas.upenn.edu/~cis2400/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4710/5710",
+      "name": "Computer Organization and Design",
+      "link": "https://www.cis.upenn.edu/~cis5710/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5650",
+      "name": "GPU Programming and Architecture",
+      "link": "https://theboilingpoint.github.io/"
+    },
+    {
+      "subject": "CIS",
+      "number": "6010",
+      "name": "Special Topics in Computer Architecture",
+      "link": "https://www.cis.upenn.edu/~devietti/classes/cis6010-fall2024/index.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Special Topics on Quantum Computer Systems (Gushu Li)",
+      "link": "https://drive.google.com/file/d/1X7GXTAZfmzrAINGVZJKOyLokBp16a3qx/view"
+    }
+  ],
+  "theory": [
+    {
+      "subject": "CIS",
+      "number": "2620",
+      "name": "Automata, Computability, and Complexity",
+      "link": "https://www.cis.upenn.edu/~cis2620/"
+    },
+    {
+      "subject": "CIS",
+      "number": "3200",
+      "name": "Introduction to Algorithms",
+      "link": "https://www.seas.upenn.edu/~cis3200/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5020",
+      "name": "Analysis of Algorithms",
+      "link": ""
+    },
+    {
+      "subject": "CIS",
+      "number": "5110",
+      "name": "Theory of Computation",
+      "link": "https://www.cis.upenn.edu/~cis5110/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5150",
+      "name": "Fundamentals of Linear Algebra and Optimization",
+      "link": "https://www.cis.upenn.edu/~cis5150/"
+    },
+    {
+      "subject": "CIS",
+      "number": "6100",
+      "name": "Advanced Geometric Methods in Computer Science",
+      "link": "https://www.cis.upenn.edu/~cis6100/"
+    },
+    {
+      "subject": "CIS",
+      "number": "6250",
+      "name": "Theory of Machine Learning",
+      "link": "https://www.cis.upenn.edu/~mkearns/teaching/CIS625/"
+    },
+    {
+      "subject": "CIS",
+      "number": "6770",
+      "name": "Randomized Algorithms",
+      "link": "https://www.cis.upenn.edu/~sanjeev/courses/cis6770.html"
+    },
+    {
+      "subject": "NETS",
+      "number": "4120",
+      "name": "Algorithmic Game Theory",
+      "link": "https://www.cis.upenn.edu/~aaroth/courses/agtS25.html"
+    }
+  ],
+  "hci": [
+    {
+      "subject": "CIS",
+      "number": "4120/5120",
+      "name": "Introduction to Human-Computer Interaction",
+      "link": "https://cis4120.seas.upenn.edu/"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Algorithmic Justice (Danae Metaxa)",
+      "link": "https://metaxa.net"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Special Topics in HCI (Andrew Head)",
+      "link": "https://andrewhead.info/#teaching"
+    }
+  ],
+  "nets": [
+    {
+      "subject": "NETS",
+      "number": "1120",
+      "name": "Networked Life",
+      "link": "https://duncanjwatts.com/teaching/networked-life-syllabus/"
+    },
+    {
+      "subject": "NETS",
+      "number": "1500",
+      "name": "Market and Social Systems on the Internet",
+      "link": ""
+    },
+    {
+      "subject": "NETS",
+      "number": "7980",
+      "name": "Explaining Explanation",
+      "link": "https://duncanjwatts.com/teaching/explaining-explanation-syllabus/"
+    }
+  ],
+  "graphics": [
+    {
+      "subject": "CIS",
+      "number": "4600/5600",
+      "name": "Interactive Computer Graphics",
+      "link": "https://www.cis.upenn.edu/~cis4600/current/"
+    },
+    {
+      "subject": "CIS",
+      "number": "4610/5610",
+      "name": "Advanced Rendering",
+      "link": ""
+    },
+    {
+      "subject": "CIS",
+      "number": "4620/5620",
+      "name": "Computer Animation",
+      "link": "https://www.seas.upenn.edu/~shlane/CIS462-562_Syllabus.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "5640",
+      "name": "Introduction to Game Design",
+      "link": "https://cis-5640-spring-2025.github.io/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5660",
+      "name": "Procedural Graphics",
+      "link": "https://cis566-procedural-graphics.github.io/"
+    },
+    {
+      "subject": "CIS",
+      "number": "5680",
+      "name": "Game Design Practicum",
+      "link": "https://www.seas.upenn.edu/~shlane/CIS568_Syllabus.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "6600",
+      "name": "Advanced Topics in Computer Graphics and Animation",
+      "link": "https://www.seas.upenn.edu/~shlane/CIS660_Syllabus.html"
+    },
+    {
+      "subject": "CIS",
+      "number": "7000",
+      "name": "Special Topics: Neural Rednering (Lingjie Liu)",
+      "link": ""
+    }
+  ],
+  "mcit": [
+    {
+      "subject": "CIT",
+      "number": "5900",
+      "name": "Programming Languages and Techniques",
+      "link": ""
+    },
+    {
+      "subject": "CIS",
+      "number": "5910",
+      "name": "Introduction to Software Development",
+      "link": "https://upenn.github.io/cit5910-24fa-site/"
+    },
+    {
+      "subject": "CIT",
+      "number": "5920",
+      "name": "",
+      "link": "https://math4cs.university/"
+    },
+    {
+      "subject": "CIT",
+      "number": "5930",
+      "name": "Introduction to Computer Systems",
+      "link": ""
+    },
+    {
+      "subject": "CIT",
+      "number": "5940",
+      "name": "Data Structures and Software Design",
+      "link": "https://www.seas.upenn.edu/~cit5940/current/"
+    },
+    {
+      "subject": "CIT",
+      "number": "5950",
+      "name": "Computer Systems Programming",
+      "link": "https://www.seas.upenn.edu/~cit5950/current/"
+    },
+    {
+      "subject": "CIT",
+      "number": "5960",
+      "name": "Algorithms and Computation",
+      "link": ""
+    }
+  ],
+  "ese": [
+    {
+      "subject": "ESE",
+      "number": "1100",
+      "name": "Atoms, Bits, Circuits and Systems",
+      "link": "https://ese1110.seas.upenn.edu/"
+    },
+    {
+      "subject": "ESE",
+      "number": "3500",
+      "name": "Embedded Systems",
+      "link": "https://ese3500.seas.upenn.edu/"
+    },
+    {
+      "subject": "ESE",
+      "number": "3600",
+      "name": "Tiny ML",
+      "link": "https://tinyml.seas.upenn.edu/"
+    },
+    {
+      "subject": "ESE",
+      "number": "3700",
+      "name": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
+      "link": "https://www.seas.upenn.edu/~ese3700/"
+    },
+    {
+      "subject": "ESE",
+      "number": "5180",
+      "name": "IoT Wirless, Security, and Scaling",
+      "link": "https://ese5180.seas.upenn.edu/"
+    },
+    {
+      "subject": "ESE",
+      "number": "5190",
+      "name": "Smart Devices",
+      "link": "https://ese5190.seas.upenn.edu/"
+    },
+    {
+      "subject": "ESE",
+      "number": "5320",
+      "name": "System-on-a-Chip Architecture",
+      "link": "https://www.seas.upenn.edu/~ese5320/"
+    },
+    {
+      "subject": "ESE",
+      "number": "6150",
+      "name": "RoboRacer Autonomous Racing Cars",
+      "link": "https://ahmadamine998.github.io/6150-Spring2024-Website/lectures/"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import term
 
 CORE_JSON = "core.json"
 DATA_DIR = "_data/"
+PUBLIC_JSON = "public.json"
 
 def update_link(template:str, style:list[str], start:str) -> list[str]:
     start = term.str_to_term(start)
@@ -37,6 +38,26 @@ def update_link(template:str, style:list[str], start:str) -> list[str]:
         start.incr()
 
     return new_start
+
+def update_json(json_contents):
+    """
+    update the json contents to create a public version of it
+    """
+
+    for category, courses in json_contents.items():
+        for course in courses:
+            if course['update-style'] == 'AUTO':
+                start = term.str_to_term(course['start'])
+                link: str = course['link-template'].format(**start.format_dict())
+                course.pop('start', None)
+            elif course['update-style'] == "DNE":
+                link: str = ""
+            else:
+                link: str = course['link-template']
+            course.pop('update-style', None)
+            course.pop('link-template', None)
+            course['link'] = link
+
 
 def populate_yml(f, courses):
     for course in courses:
@@ -73,7 +94,12 @@ def main():
             populate_yml(f, courses)
 
     with open(CORE_JSON, "w") as f:
-        contents = json.dump(contents, f, indent=2)
+        json.dump(contents, f, indent=2)
+
+    with open(PUBLIC_JSON, "w") as f:
+        update_json(contents)
+        json.dump(contents, f, indent=2)
+
 
 if __name__ == "__main__":
     main()
