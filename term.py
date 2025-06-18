@@ -26,7 +26,7 @@ class Term():
         res['yr'] = str(self.year % 100)
         res['year'] = str(self.year)
         res['semester'] = self.sem.name.lower()
-        res['SEMSETER'] = self.sem.name.upper()
+        res['SEMESTER'] = self.sem.name.upper()
         res['Semester'] = self.sem.name.title()
         res['sm'] = self.sem.name[0:2].lower()
         res['SM'] = self.sem.name[0:2].upper()

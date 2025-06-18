@@ -11,7 +11,7 @@ DATA_DIR = "_data/"
 def update_link(template:str, style:list[str], start:str) -> list[str]:
     start = term.str_to_term(start)
 
-    link: str = template.format(**start.format_dict());
+    link: str = template.format(**start.format_dict())
 
     response = requests.get(link, allow_redirects=False)
 
@@ -41,8 +41,8 @@ def update_link(template:str, style:list[str], start:str) -> list[str]:
 def populate_yml(f, courses):
     for course in courses:
         f.write("- subject: \"%s\"\n" % course['subject'])
-        f.write("  number: \"%s\"\n" % course['number']);
-        f.write("  name: \"%s\"\n" % course['name']);
+        f.write("  number: \"%s\"\n" % course['number'])
+        f.write("  name: \"%s\"\n" % course['name'])
         if (course['update-style'] == "AUTO"):
             new_start = update_link(course['link-template'], course['update-style'], course['start'])
             course['start'] = "{Semester} {year}".format(**new_start.format_dict())
@@ -66,14 +66,14 @@ def main():
     #     exit()
 
     with open(CORE_JSON, "r") as f:
-        contents = json.load(f);
+        contents = json.load(f)
 
     for category,courses in contents.items():
         with open(os.path.join(DATA_DIR, category + ".yml"), "w") as f:
             populate_yml(f, courses)
 
     with open(CORE_JSON, "w") as f:
-        contents = json.dump(contents, f, indent=2);
+        contents = json.dump(contents, f, indent=2)
 
 if __name__ == "__main__":
     main()

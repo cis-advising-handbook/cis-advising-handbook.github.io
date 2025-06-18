@@ -273,7 +273,7 @@
       "number": "5560",
       "name": "Cryptography",
       "link-template": "https://pratyushmishra.com/classes/cis-5560-{s}{yr}/",
-      "start": "Spring 2025",
+      "start": "Summer 2025",
       "update-style": "AUTO"
     },
     {
@@ -530,7 +530,7 @@
       "number": "4120",
       "name": "Algorithmic Game Theory",
       "link-template": "https://www.cis.upenn.edu/~aaroth/courses/agt{S}{yr}.html",
-      "start": "Spring 2025",
+      "start": "Summer 2025",
       "update-style": "AUTO"
     }
   ],
