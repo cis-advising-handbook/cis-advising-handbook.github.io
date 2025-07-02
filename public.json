@@ -632,6 +632,12 @@
     },
     {
       "subject": "ESE",
+      "number": "5390",
+      "name": "Hardware/Software Co-Design for Machine Learning",
+      "link": "https://li.seas.upenn.edu/courses/ese539_fall2021/"
+    },
+    {
+      "subject": "ESE",
       "number": "6150",
       "name": "RoboRacer Autonomous Racing Cars",
       "link": "https://ahmadamine998.github.io/6150-Spring2024-Website/lectures/"
