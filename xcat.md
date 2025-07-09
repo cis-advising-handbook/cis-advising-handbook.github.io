@@ -98,7 +98,7 @@ do not submit requests retroactively, i.e., for courses that you are already tak
 "just want to see what would count"! This process takes a fairly substantial amount of faculty
 time (see below), so we reserve the right to start rejecting requests if we think you are abusing the system. If you are not 
 sure yet which university to attend abroad, or which courses you might want to take there, please speak with someone from 
-[RAS]({{page.links.ras}}) (Towne 109) first. They will be able to suggest universities whose curricula align well with Penn's, and they will
+[OAS]({{page.links.ras}}) (Towne 109) first. They will be able to suggest universities whose curricula align well with Penn's, and they will
 know which kinds of courses can be approved. This is critical so that you can still graduate on time once you return!
 
 

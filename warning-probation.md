@@ -25,7 +25,7 @@ The committee considers primarily students who are not in [good academic standin
   mostly taking classes in philosophy or economics, the committee will be concerned that you are not 
   making enough progress towards your declared major.
 
-If your case is discussed, the committee will gather information from various sources, such as your academic advisor, your undergraduate chair, and the [RAS office]({{page.links.ras}}), and it will
+If your case is discussed, the committee will gather information from various sources, such as your academic advisor, your undergraduate chair, and the [OAS office]({{page.links.ras}}), and it will
 then decide whether to take an action. The committee can give you a _warning_, it can put you on _academic
 probation_, or it can _drop_ you from the program. These actions are discussed in more detail below.
 
@@ -45,7 +45,7 @@ probably happen after the grades for the following Fall or Spring semester have 
 
 
 **The warning will not appear on your transcript**, and it will
-not be visible to anyone other than RAS, advising staff, and your academic advisor. All you need to do in
+not be visible to anyone other than OAS, advising staff, and your academic advisor. All you need to do in
 this case is to promptly fix whatever the issue was. This can be as easy as declaring your actual major
 (if you have been following a different one than the one you originally declared), or taking more CUs the 
 next semester (if you had taken too few). If your GPA was dangerously low, you can pick some easier 
