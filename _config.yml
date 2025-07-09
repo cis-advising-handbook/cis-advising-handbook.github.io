@@ -94,15 +94,15 @@ defaults:
         seas_cu_policy: https://ugrad.seas.upenn.edu/student-handbook/undergraduate-policies/course-load/
         path_forms: https://srfs.upenn.edu/registrar/studentforms
         path_help: https://srfs.upenn.edu/path-at-penn
-        ras: https://ras.seas.upenn.edu/
-        ras_contacts: https://ras.seas.upenn.edu/ras-contacts-list/
+        ras: https://academics.seas.upenn.edu
+        ras_contacts: https://academics.seas.upenn.edu/ras-contacts-list/
         # NB: next two links are also in the `author` info above
         cis_adv_home: https://www.cis.upenn.edu/undergraduate/advising/
         seas_ugrad_hbook: https://ugrad.seas.upenn.edu/student-handbook/
-        ugc_name: Joe Devietti
-        ugc_email: devietti@cis.upenn.edu
-        ugc_feedback_email: devietti+advisinghandbook@cis.upenn.edu
-        ugc_website: https://www.cis.upenn.edu/~devietti/
+        ugc_name: Sebastian Angel
+        ugc_email: sebastian.angel@cis.upenn.edu
+        ugc_feedback_email: sebastian.angel+advisinghandbook@cis.upenn.edu
+        ugc_website: https://www.cis.upenn.edu/~sga001/
 
 # Reading Files
 # include:
