@@ -6,7 +6,7 @@ tags: howto
 
 ## Who is my undergraduate chair?
 
-Often we abbreviate _Undergraduate Curriculum Chair_ as just _Undergraduate Chair_. If you are in CIS, NETS, or DMD, your Undergraduate Curriculum Chair is [{{page.links.ugc_name}}]({{page.links.ugc_website}}) (not to be confused with the _CIS Department Chair_ [Zack Ives](https://www.cis.upenn.edu/~zives/)). If you are in CMPE, your Undergraduate Curriculum Chair is [Firooz Aflatouni](https://www.seas.upenn.edu/~firooz/People.html) from the ESE Department.
+Often we abbreviate _Undergraduate Curriculum Chair_ as just _Undergraduate Chair_. If you are in CIS, NETS, or DMD, your Undergraduate Curriculum Chair is [{{page.links.ugc_name}}]({{page.links.ugc_website}}) (not to be confused with the _CIS Department Chair_ [Zack Ives](https://www.cis.upenn.edu/~zives/)).
 
 If you are in another department, check your department's web pages to see who your Undergraduate Curriculum Chair is.
 
@@ -22,8 +22,4 @@ approval or a signature from your undergraduate chair, **if you have no question
 
 ## How do I make an appointment?
 
-You can book an appointment with Joe [via his Google Calendar](https://calendar.google.com/calendar/selfsched?sstoken=UUlHb0pTbG1mMkRlfGRlZmF1bHR8NTkwNzA3OWNkZTBlYjJiMGU4NzBkMzk5OGM5YTgxOTE). His office is [Levine](https://www.facilities.upenn.edu/maps/locations/levine-hall-melvin-and-claire-weiss-tech-house) 572: take the Levine elevator to the fifth floor, go down the ramp to the right of the restrooms, and 
-make the 2nd right. Joe's office will then be the second office on your left.
-
-If this is a true emergency (e.g., your graduation is in jeopardy) and you absolutely can't wait until the next available
-slot, please speak with the [the CIS Advising staff]({{page.links.cis_adv_home}}) immediately via appointment or walk-in hours, and they will try to find a solution.
+The [CIS Advising homepage]({{page.links.cis_adv_home}}) has appointment links.
