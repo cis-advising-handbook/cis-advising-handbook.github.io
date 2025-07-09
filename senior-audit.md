@@ -8,7 +8,7 @@ Degrees, majors and minors have many different course requirements, which are li
 
 ## What is a senior audit?
 
-Senior audits start at the department level. A member of the advising team will pull together your worksheet(s), your transcript, and information about any approved petitions. They will then go over your requirements carefully, checking that each is satisfied, and fixing any issues that are immediately fixable (such as Technical Electives that are acceptable but not yet approved on the worksheet, or petition results that are not yet reflected on the worksheet). A similar process then happens at the school level (in the case of SEAS, this is handled by the RAS office), and you will receive an email to notify you of the results.
+Senior audits start at the department level. A member of the advising team will pull together your worksheet(s), your transcript, and information about any approved petitions. They will then go over your requirements carefully, checking that each is satisfied, and fixing any issues that are immediately fixable (such as Technical Electives that are acceptable but not yet approved on the worksheet, or petition results that are not yet reflected on the worksheet). A similar process then happens at the school level (in the case of SEAS, this is handled by the OAS office), and you will receive an email to notify you of the results.
 
 If you do not receive an email with the results of the audit by the end of your penultimate semester at Penn, you should follow up with your academic advisor. This sometimes happens, e.g., because your graduation date in Path is wrong (see below).
 
