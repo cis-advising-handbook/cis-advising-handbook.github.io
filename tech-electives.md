@@ -10,7 +10,7 @@ This article outlines the underlying motivation and rules for the **Technical El
 The term *technical elective* is unfortunately overloaded and used in several of our degrees:
 
 * the Technical Electives for the [ASCS (BAS) degree](https://catalog.upenn.edu/undergraduate/programs/computer-science-bas/), the [ARIN degree](https://catalog.upenn.edu/undergraduate/programs/artificial-intelligence-bse/), and the [40CU CSCI degree](https://www.cis.upenn.edu/undergraduate/advising/all-degree-requirements/csci-requirements-2017/) are each a bit different, though everything approved (i.e., yes/unrestricted/restricted) on the CSCI list below *does count* as a Technical Elective for these degrees as well
-* the [NETS](https://catalog.upenn.edu/undergraduate/programs/networked-social-systems-engineering-bse/) Technical Electives have different rules which are not directly comparable to the CSCI rules, and are not discussed here
+* the NETS Technical Electives have different rules which are not directly comparable to the CSCI rules, and are not discussed here
 
 With these provisos out of the way, the rest of this article focuses solely on the 37CU CSCI Technical Electives.
 
