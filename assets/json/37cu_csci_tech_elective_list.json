@@ -2872,5 +2872,11 @@
     "title": "Negotiations",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "CIS 6500",
+    "title": "Advanced Topics in Databases",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
