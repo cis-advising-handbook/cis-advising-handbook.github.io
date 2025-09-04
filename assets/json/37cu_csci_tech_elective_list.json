@@ -2878,5 +2878,11 @@
     "title": "Advanced Topics in Databases",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4230",
+    "title": "Applied Machine Learning in Business",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
