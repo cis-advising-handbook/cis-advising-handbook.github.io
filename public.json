@@ -108,6 +108,12 @@
     },
     {
       "subject": "CIS",
+      "number": "1953",
+      "name": "3D Game Development in Unreal Engine",
+      "link": ""
+    },
+    {
+      "subject": "CIS",
       "number": "1961",
       "name": "Ruby on Rails",
       "link": "https://www.seas.upenn.edu/~cis1960/"
@@ -165,19 +171,22 @@
     {
       "subject": "CIS",
       "number": "6700",
-      "name": "Advanced Topics in Programming Languages (Benjamin Pierce)",
+      "name": "Advanced Topics in Programming Languages: Foundations and Applications of Separation Logic (Benjamin Pierce)",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "link": "https://www.cis.upenn.edu/~bcpierce/courses/6700-SL-2024/current/index.html"
     },
     {
       "subject": "CIS",
       "number": "6700/7000",
       "name": "Advanced Topics in Programming Languages (Stephanie Weirich)",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "link": "https://github.com/plclub/cis6700-23sp"
     },
     {
       "subject": "CIS",
       "number": "6700",
       "name": "Advanced Topics in Programming Languages (Steve Zdancewic)",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "link": "https://www.cis.upenn.edu/~stevez/cis670/index.html"
     },
     {
@@ -204,7 +213,7 @@
       "subject": "CIS",
       "number": "4510/5510",
       "name": "Computer and Network Security",
-      "link": "https://www.cis.upenn.edu/~sga001/classes/cis551f24/"
+      "link": "https://www.cis.upenn.edu/~sga001/classes/cis551f25/"
     },
     {
       "subject": "CIS",
@@ -240,7 +249,7 @@
       "subject": "CIS",
       "number": "7000",
       "name": "Security Special Topic (Pratyush Mishra)",
-      "link": "https://pratyushmishra.com/classes/cis-7000-f23/"
+      "link": "https://pratyushmishra.com/classes/cis-7000-f25/"
     }
   ],
   "embed": [
@@ -275,7 +284,7 @@
       "subject": "CIS",
       "number": "4190/5190",
       "name": "Applied Machine Learning",
-      "link": "https://www.seas.upenn.edu/~cis5190/spring2025/"
+      "link": "https://www.seas.upenn.edu/~cis5190/fall2025/"
     },
     {
       "subject": "CIS",
@@ -287,7 +296,7 @@
       "subject": "CIS",
       "number": "4300/5300",
       "name": "Natural Language Processing",
-      "link": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_fa24/"
+      "link": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_fa25/"
     },
     {
       "subject": "CIS",
@@ -310,9 +319,16 @@
     {
       "subject": "CIS",
       "number": "6200",
-      "name": "Topics in Deep Learning",
+      "name": "Advanced Topics in Machine Learning: Topics in Deep Learning (Lyle Ungar)",
       "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "link": "https://docs.google.com/document/d/1dkQ4XRhaiZFjGu5i_8Qcoi6MkHwOfivmFFWhBrBF30I/edit?tab=t.0"
+    },
+    {
+      "subject": "CIS",
+      "number": "6200",
+      "name": "Advanced Topics in Machine Learning: Learning With Conditional Guarantees (Aaron Roth)",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
+      "link": "https://uncertaintyclass.com/"
     },
     {
       "subject": "CIS",
@@ -388,7 +404,7 @@
       "subject": "CIS",
       "number": "6010",
       "name": "Special Topics in Computer Architecture",
-      "link": "https://www.cis.upenn.edu/~devietti/classes/cis6010-fall2024/index.html"
+      "link": "https://www.cis.upenn.edu/~devietti/classes/cis6010-fall2025/index.html"
     },
     {
       "subject": "CIS",
@@ -596,6 +612,18 @@
     },
     {
       "subject": "ESE",
+      "number": "2000",
+      "name": "Artificial Intelligence Lab: Data, Systems, and Decisions",
+      "link": "https://ailab.seas.upenn.edu/"
+    },
+    {
+      "subject": "ESE",
+      "number": "3060",
+      "name": "Deep Learning: A Hands-on Introduction",
+      "link": ""
+    },
+    {
+      "subject": "ESE",
       "number": "3500",
       "name": "Embedded Systems",
       "link": "https://ese3500.seas.upenn.edu/"
@@ -611,6 +639,18 @@
       "number": "3700",
       "name": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
       "link": "https://www.seas.upenn.edu/~ese3700/"
+    },
+    {
+      "subject": "ESE",
+      "number": "4210",
+      "name": "Control For Autonomous Robots",
+      "link": ""
+    },
+    {
+      "subject": "ESE",
+      "number": "5070",
+      "name": "Introduction to Networks and Protocols",
+      "link": ""
     },
     {
       "subject": "ESE",
@@ -632,9 +672,21 @@
     },
     {
       "subject": "ESE",
+      "number": "5380",
+      "name": "Machine Learning for Time-Series Data",
+      "link": ""
+    },
+    {
+      "subject": "ESE",
       "number": "5390",
       "name": "Hardware/Software Co-Design for Machine Learning",
       "link": "https://li.seas.upenn.edu/courses/ese539_fall2021/"
+    },
+    {
+      "subject": "ESE",
+      "number": "5460",
+      "name": "Principles of Deep Learning",
+      "link": ""
     },
     {
       "subject": "ESE",

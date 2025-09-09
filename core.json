@@ -124,6 +124,12 @@
     },
     {
       "subject": "CIS",
+      "number": "1953",
+      "name": "3D Game Development in Unreal Engine",
+      "update-style": "DNE"
+    },
+    {
+      "subject": "CIS",
       "number": "1961",
       "name": "Ruby on Rails",
       "link-template": "https://www.seas.upenn.edu/~cis1960/",
@@ -190,8 +196,9 @@
     {
       "subject": "CIS",
       "number": "6700",
-      "name": "Advanced Topics in Programming Languages (Benjamin Pierce)",
+      "name": "Advanced Topics in Programming Languages: Foundations and Applications of Separation Logic (Benjamin Pierce)",
       "link-template": "https://www.cis.upenn.edu/~bcpierce/courses/6700-SL-2024/current/index.html",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "update-style": "MANUAL"
     },
     {
@@ -199,6 +206,7 @@
       "number": "6700/7000",
       "name": "Advanced Topics in Programming Languages (Stephanie Weirich)",
       "link-template": "https://github.com/plclub/cis6700-23sp",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "update-style": "MANUAL"
     },
     {
@@ -206,6 +214,7 @@
       "number": "6700",
       "name": "Advanced Topics in Programming Languages (Steve Zdancewic)",
       "link-template": "https://www.cis.upenn.edu/~stevez/cis670/index.html",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "update-style": "MANUAL"
     },
     {
@@ -237,7 +246,7 @@
       "name": "Computer and Network Security",
       "link-template": "https://www.cis.upenn.edu/~sga001/classes/cis551{s}{yr}/",
       "update-style": "AUTO",
-      "start": "Fall 2024"
+      "start": "Fall 2025"
     },
     {
       "subject": "CIS",
@@ -281,7 +290,7 @@
       "number": "7000",
       "name": "Security Special Topic (Pratyush Mishra)",
       "link-template": "https://pratyushmishra.com/classes/cis-7000-{s}{yr}/",
-      "start": "Fall 2023",
+      "start": "Fall 2025",
       "update-style": "AUTO"
     }
   ],
@@ -292,7 +301,7 @@
       "name": "Embedded Software for Life-Critical Applications",
       "link-template": "https://www.seas.upenn.edu/~lee/10cis441/",
       "start": "Fall 2010",
-      "update-style": "MANUAL"
+      "update-style": "CURR"
     },
     {
       "subject": "CIS",
@@ -323,7 +332,7 @@
       "name": "Applied Machine Learning",
       "link-template": "https://www.seas.upenn.edu/~cis5190/{semester}{year}/",
       "update-style": "AUTO",
-      "start": "Spring 2025"
+      "start": "Fall 2025"
     },
     {
       "subject": "CIS",
@@ -337,7 +346,7 @@
       "number": "4300/5300",
       "name": "Natural Language Processing",
       "link-template": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_{sm}{yr}/",
-      "start": "Fall 2024",
+      "start": "Fall 2025",
       "update-style": "AUTO"
     },
     {
@@ -364,10 +373,18 @@
     {
       "subject": "CIS",
       "number": "6200",
-      "name": "Topics in Deep Learning",
+      "name": "Advanced Topics in Machine Learning: Topics in Deep Learning (Lyle Ungar)",
       "link-template": "https://docs.google.com/document/d/1dkQ4XRhaiZFjGu5i_8Qcoi6MkHwOfivmFFWhBrBF30I/edit?tab=t.0",
       "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
       "update-style": "MANUAL"
+    },
+    {
+      "subject": "CIS",
+      "number": "6200",
+      "name": "Advanced Topics in Machine Learning: Learning With Conditional Guarantees (Aaron Roth)",
+      "link-template": "https://uncertaintyclass.com/",
+      "note": "This is a special topic course. It changes a lot from professor to professor. Your best bet is to go the personal site of the professor to see if there is any information there.",
+      "update-style": "CURR"
     },
     {
       "subject": "CIS",
@@ -458,7 +475,7 @@
       "number": "6010",
       "name": "Special Topics in Computer Architecture",
       "link-template": "https://www.cis.upenn.edu/~devietti/classes/cis6010-{semester}{year}/index.html",
-      "start": "Fall 2024",
+      "start": "Fall 2025",
       "update-style": "AUTO"
     },
     {
@@ -695,6 +712,19 @@
     },
     {
       "subject": "ESE",
+      "number": "2000",
+      "name": "Artificial Intelligence Lab: Data, Systems, and Decisions",
+      "link-template": "https://ailab.seas.upenn.edu/",
+      "update-style": "CURR"
+    },
+    {
+      "subject": "ESE",
+      "number": "3060",
+      "name": "Deep Learning: A Hands-on Introduction",
+      "update-style": "DNE"
+    },
+    {
+      "subject": "ESE",
       "number": "3500",
       "name": "Embedded Systems",
       "link-template": "https://ese3500.seas.upenn.edu/",
@@ -713,6 +743,18 @@
       "name": "Circuit-Level Modeling, Design, and Optimization for Digital Systems",
       "link-template": "https://www.seas.upenn.edu/~ese3700/",
       "update-style": "CURR"
+    },
+    {
+      "subject": "ESE",
+      "number": "4210",
+      "name": "Control For Autonomous Robots",
+      "update-style": "DNE"
+    },
+    {
+      "subject": "ESE",
+      "number": "5070",
+      "name": "Introduction to Networks and Protocols",
+      "update-style": "DNE"
     },
     {
       "subject": "ESE",
@@ -737,10 +779,22 @@
     },
     {
       "subject": "ESE",
+      "number": "5380",
+      "name": "Machine Learning for Time-Series Data",
+      "update-style": "DNE"
+    },
+    {
+      "subject": "ESE",
       "number": "5390",
       "name": "Hardware/Software Co-Design for Machine Learning",
       "link-template": "https://li.seas.upenn.edu/courses/ese539_fall2021/",
       "update-style": "MANUAL"
+    },
+    {
+      "subject": "ESE",
+      "number": "5460",
+      "name": "Principles of Deep Learning",
+      "update-style": "DNE"
     },
     {
       "subject": "ESE",

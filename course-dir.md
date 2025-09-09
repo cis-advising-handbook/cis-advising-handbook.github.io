@@ -50,6 +50,9 @@ Hopefully you are doing well and this helps!
 
 ## Mini Courses
 
+{: .note }
+> The main website for mini courses can be found here <a href="https://www.cis.upenn.edu/~cis19x/">CIS 19XX - Minicourses</a>.
+
 {% for course in site.data.mini %}
 <div class="staffer">
   <div>
@@ -149,6 +152,9 @@ Hopefully you are doing well and this helps!
 {% endfor %}
 
 ## AI, ML, NLP, CV
+
+{: .note }
+> There are A LOT of AI courses in ESE, you may want to look at those too <a href="#electrical-and-systems-engineering">ESE Courses</a>.
 
 {% for course in site.data.aiml %}
 <div class="staffer">
@@ -325,7 +331,7 @@ Hopefully you are doing well and this helps!
 
 ## Electrical and Systems Engineering
 
-Yeah these ones aren't taught by CIS faculty, but these are taken sometimes by CIS and CMPE students that I felt ok including them.
+Yeah these ones aren't taught by CIS faculty, but these ones are taken often enough by CIS and CMPE students that I felt ok including them.
 
 {% for course in site.data.ese %}
 <div class="staffer">
