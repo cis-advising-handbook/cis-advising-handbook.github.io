@@ -12,7 +12,7 @@ The articles are part of a [Jekyll](https://jekyllrb.com) site, which is hosted 
 
 The articles here are written in Markdown, a simple markup language. Github has a nice [Markdown tutorial](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) to learn the basics of writing text in Markdown.
 
-If you want to link to another article on this site, in addition to the typical Markdown link syntax of `\[\]\(\)`, we require that you use Jekyll's `link` filter to specify the name of the page you are referencing:
+If you want to link to another article on this site, in addition to the typical Markdown link syntax of `[]()`, we require that you use Jekyll's `link` filter to specify the name of the page you are referencing:
 ```
 [link-name]({% link article.md %})
 ```
