@@ -552,6 +552,12 @@
     "status": "unrestricted"
   },
   {
+    "course4d": "CIS 2210",
+    "title": "Introduction to Artificial Integlligence",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
     "course4d": "CIS 4230",
     "title": "Ethical Algorithm Design",
     "status_prefall24": "no",
