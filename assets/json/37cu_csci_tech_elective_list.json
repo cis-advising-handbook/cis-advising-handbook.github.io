@@ -2884,5 +2884,17 @@
     "title": "Applied Machine Learning in Business",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 5190",
+    "title": "Smart Devices",
+    "status_prefall24": "yes",
+    "status": "unrestricted",
+  },
+  {
+    "course4d": "MEAM 5170",
+    "title": "Control and Optimization with Applications in Robotics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
