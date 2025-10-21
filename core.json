@@ -664,9 +664,8 @@
       "subject": "CIT",
       "number": "5910",
       "name": "Introduction to Software Development",
-      "link-template": "https://upenn.github.io/cit5910-{yr}{sm}-site/",
-      "start": "Fall 2024",
-      "update-style": "AUTO"
+      "link-template": "https://upenn.github.io/cit5910/",
+      "update-style": "CURR"
     },
     {
       "subject": "CIT",
