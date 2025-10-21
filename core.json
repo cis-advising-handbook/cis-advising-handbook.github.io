@@ -661,7 +661,7 @@
       "update-style": "DNE"
     },
     {
-      "subject": "CIS",
+      "subject": "CIT",
       "number": "5910",
       "name": "Introduction to Software Development",
       "link-template": "https://upenn.github.io/cit5910-{yr}{sm}-site/",
