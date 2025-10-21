@@ -378,7 +378,7 @@
       "subject": "CIS",
       "number": "6500",
       "name": "Advanced Topics in Database Systems",
-      "link": "https://rmarcus.info/syllabi/Penn_CIS6500_F23.pdf"
+      "link": "https://rmarcus.info/syllabi/Penn_CIS6500_F25.pdf"
     }
   ],
   "arch": [
@@ -567,10 +567,10 @@
       "link": ""
     },
     {
-      "subject": "CIS",
+      "subject": "CIT",
       "number": "5910",
       "name": "Introduction to Software Development",
-      "link": "https://upenn.github.io/cit5910-24fa-site/"
+      "link": "https://upenn.github.io/cit5910/"
     },
     {
       "subject": "CIT",
