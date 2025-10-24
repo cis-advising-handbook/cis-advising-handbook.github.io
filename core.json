@@ -343,6 +343,13 @@
     },
     {
       "subject": "CIS",
+      "number": "4270/5270",
+      "name": "Trustworthy Machine Learning",
+      "link-template": "https://cis5270.seas.upenn.edu/index.html",
+      "update-style": "CURR"
+    },
+    {
+      "subject": "CIS",
       "number": "4300/5300",
       "name": "Natural Language Processing",
       "link-template": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_{sm}{yr}/",
