@@ -2908,5 +2908,11 @@
     "title": "ESG and Impact Investing",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "STAT 5160",
+    "title": "Advanced Statistical Inference II",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
