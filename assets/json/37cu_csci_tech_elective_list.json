@@ -2914,5 +2914,11 @@
     "title": "Advanced Statistical Inference II",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 5460",
+    "title": "Principles of Deep Learning",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
