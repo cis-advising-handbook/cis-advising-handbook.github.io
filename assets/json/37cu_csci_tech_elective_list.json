@@ -2920,5 +2920,11 @@
     "title": "Principles of Deep Learning",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "ACCT 2900",
+    "title": "Accounting for Entrepreneurs",
+    "status_prefall24": "no",
+    "status": "no"
   }
 ]
