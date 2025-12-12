@@ -28,6 +28,9 @@ jobs:
     - name: check 3-to-4-digit translation table is valid JSON
       run: python3 -c "import json; json.load(open('assets/json/3d_to_4d_course_translation.json'))"
 
+    - name: build course directory
+      run: python3 update_site.py
+      
     - name: setup ruby
       uses: ruby/setup-ruby-pkgs@v1
       with:
