@@ -103,6 +103,9 @@ Why do you need to submit a PR for a course you're already registered for? This 
 
 If you are no longer interested in registering for a waitlist course, you should withdraw your request. You can do so via the [Waitlisty site]({{page.links.cis_waitlist}}).
 
+## Quaker Consortium & exchange students
+
+If you are a non-Penn student (e.g., Quaker Consortium, foreign exchange student) taking a course at Penn, make sure that your email address in Penn's student record system is set via [https://srfs.upenn.edu/student-records/update-data](https://srfs.upenn.edu/student-records/update-data). By default, your email address is unset, and when you submit a Permission Request it will have your name but no email address associated with it, so Waitlisty doesn't know how to import your request. Once you set your email address, your existing Permission Requests will be updated to include your email and Waitlisty will be able to import them; there is no need to resubmit the requests.
 
 ## Problems with Waitlisty
 
