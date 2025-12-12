@@ -450,8 +450,9 @@
       "subject": "CIS",
       "number": "5650",
       "name": "GPU Programming and Architecture",
-      "link-template": "https://theboilingpoint.github.io/",
-      "update-style": "CURR"
+      "link-template": "https://cis5650-{semester}-{year}.github.io/",
+      "start": "Fall 2025",
+      "update-style": "AUTO"
     },
     {
       "subject": "CIS",
