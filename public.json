@@ -404,9 +404,7 @@
       "subject": "CIS",
       "number": "5650",
       "name": "GPU Programming and Architecture",
-      "link-template": "https://cis5650-{semester}-{year}.github.io/",
-      "start": "Fall 2025",
-      "update-style": "AUTO"
+      "link": "https://cis5650-fall-2025.github.io/"
     },
     {
       "subject": "CIS",
