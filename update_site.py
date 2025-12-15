@@ -60,6 +60,7 @@ def update_json(json_contents):
 
 
 def populate_yml(f, courses):
+    f.write(f"# NOTE: This file is auto-generated, do not edit directly! Edit {CORE_JSON} instead.\n\n")
     for course in courses:
         f.write("- subject: \"%s\"\n" % course['subject'])
         f.write("  number: \"%s\"\n" % course['number'])
