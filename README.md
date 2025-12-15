@@ -19,3 +19,12 @@ If you want to link to another article on this site, in addition to the typical 
 Using this link syntax 1) prevents broken links and 2) provides more flexibility to reorganize the site without breaking said links.
 
 If you want to add a new article, add a new `.md` file in the root directory. You can look at existing articles for examples of how to format the code so that Jekyll sees the right title, tags, etc.
+
+## Course Directory
+
+There is a directory of CS-related courses in `core.json`, with course titles and links to course homepages. To add/edit the directory:
+1. edit `core.json`
+2. run `python3 update_site.py` to re-generate `_data/*.yml` (used by Jekyll) and `public.json` (used by external sites).
+3. commit & push updated yaml/json files
+
+Edits made directly on github.com will *not* trigger `update_site.py`, and hence will not appear to have any effect. This is because the GitHub site build process cannot run `update_site.py` before the Jekyll build. So course directory updates must be done on a working copy of the repo and then pushed to GitHub.
