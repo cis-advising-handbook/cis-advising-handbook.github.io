@@ -2926,5 +2926,11 @@
     "title": "Accounting for Entrepreneurs",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "STAT 4240",
+    "title": "Text Analytics",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
