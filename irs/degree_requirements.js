@@ -56,9 +56,12 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         columns: true,
     });
     console.log(`parsed ${cattrCsvRecords.length} CSV records`);
+    const response = await fetch("https://advising.cis.upenn.edu/assets/json/37cu_csci_tech_elective_list.json");
+    TECH_ELECTIVE_LIST = await response.json();
+    console.log(`parsed ${TECH_ELECTIVE_LIST.length} entries from CSCI technical electives list`);
     // 1: BUILD UP LIST OF ALL COURSES
     // each object has ≥1 course code (like "ACCT1010") and a list of attributes (like "EUHS")
-    const AllCourses = [];
+    let AllCourses = [];
     let currentCourse = new CourseWithAttrs(cattrCsvRecords[0]['Primary Course'], cattrCsvRecords[0]['Course Title']);
     const skippedCourses = [];
     for (const r of cattrCsvRecords) {
@@ -91,6 +94,13 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
     AllCourses.push(currentCourse);
     if (skippedCourses.length > 0) {
         console.log(`skipped ${skippedCourses.length} courses that couldn't be parsed: ${skippedCourses}`);
+    }
+    // exclude some courses from the attribute analysis
+    const priorCourseCount = AllCourses.length;
+    AllCourses = AllCourses.filter(c => 0 == [...c.codes].filter(code => COURSES_TO_EXCLUDE_FROM_ATTR_ANALYSIS.has(code)).length);
+    const excludedCourseCount = priorCourseCount - AllCourses.length;
+    if (excludedCourseCount > 0) {
+        console.log(`excluding ${excludedCourseCount} courses...`);
     }
     console.log(`checking ${AllCourses.length} courses...`);
     // 2: CHECK ATTRIBUTES
@@ -173,7 +183,7 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         for (const te of TECH_ELECTIVE_LIST) {
             const subjectNumber = te.course4d.split(' ');
             const teCourse = new CourseTaken(subjectNumber[0], subjectNumber[1], te.title, null, 1.0, GradeType.ForCredit, 'C', 202510, '', true);
-            if (teCourse.suhSaysNoCredit()) {
+            if (teCourse.suhSaysNoCredit() && te.status != "no") {
                 errorsFound.push({
                     codes: te.course4d,
                     title: te.title,
@@ -242,7 +252,7 @@ function generateApcProbationList(csvFilePath) {
     const coursesForStudent = new Map();
     courseTakenCsvRecords.forEach((row) => {
         const pennid = Number.parseInt(row['pennid']);
-        myAssert(!Number.isNaN(pennid));
+        myAssert(!Number.isNaN(pennid), `bad pennid ${JSON.stringify(row)}`);
         if (!coursesForStudent.has(pennid)) {
             const psi = {
                 name: row['student name'],
@@ -254,9 +264,9 @@ function generateApcProbationList(csvFilePath) {
         }
         const existingCourses = coursesForStudent.get(pennid);
         const cus = Number.parseFloat(row['CUs']);
-        myAssert(!Number.isNaN(cus));
+        myAssert(!Number.isNaN(cus), `bad CUs ${JSON.stringify(row)}`);
         const term = Number.parseInt(row['term']);
-        myAssert(!Number.isNaN(term));
+        myAssert(!Number.isNaN(term), `bad term ${JSON.stringify(row)}`);
         const newCourse = new CourseTaken(row['course subject'], row['course number'], row['course title'], null, cus, row['grade mode'] == "P" ? GradeType.PassFail : GradeType.ForCredit, row['grade'], term, '', true);
         existingCourses.coursesTaken.push(newCourse);
     });
@@ -283,8 +293,37 @@ const Math1400RetroTitle = "Calculus 1 retro credit";
 const CompletedGrades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F", "P", "TR"];
 /** academic terms during which students could take unlimited P/F courses */
 const CovidTerms = [202010, 202020, 202030, 202110];
-const CURRENT_TERM = 202410;
-const PREVIOUS_TERM = 202330;
+// TODO: these should get computed automatically...
+const CURRENT_TERM = 202530;
+const PREVIOUS_TERM = 202510;
+/** These are courses that we exclude from the course attribute analysis. Usually
+ * this is because the dept that owns the course doesn't want SEAS attributes on their
+ * courses, e.g., the course is for study abroad and they don't anticipate it being used
+ * in a SEAS degree. While this technically contradicts the SEAS Ugrad Handbook and some
+ * dual-degree/dual-major student might end up taking the course, it didn't seem worthwhile
+ * to try to argue these cases so we just defer to the dept. */
+const COURSES_TO_EXCLUDE_FROM_ATTR_ANALYSIS = new Set([
+    'BIOL1850',
+    'BIOL2301',
+    'BIOL2701',
+    'BIOL3431',
+    'BIOL5062',
+    'BIOL5262',
+    'BIOL6010',
+    'CHIN3999',
+    'CHIN4982',
+    'HEBR4983',
+    'HEBR4984',
+    'HEBR4999',
+    'JPAN4982',
+    'PERS1999',
+    'PERS2982',
+    'PERS2999',
+    'PERS3999',
+    'PHYS5501',
+    'TURK4999',
+    'URBS4050',
+]);
 var CourseAttribute;
 (function (CourseAttribute) {
     CourseAttribute["Writing"] = "AUWR";
@@ -1069,6 +1108,13 @@ function myAssertEquals(a, b, message = "") {
 }
 function myAssertUnreachable(x) {
     throw new Error("Didn't expect to get here");
+}
+/** Helper function to pluralize a word. Return "s" if i>1, "" otherwise */
+function plrl(i) {
+    if (i > 1) {
+        return "s";
+    }
+    return "";
 }
 var GradeType;
 (function (GradeType) {
@@ -1929,13 +1975,21 @@ class CourseTaken {
             switch (teHit.status) {
                 case "restricted":
                     this.attributes.push(CourseAttribute.CsciRestrictedTechElective);
+                    this.validateAttribute(true, CourseAttribute.CsciRestrictedTechElective);
+                    this.validateAttribute(false, CourseAttribute.CsciUnrestrictedTechElective);
                     break;
                 case "unrestricted":
                     this.attributes.push(CourseAttribute.CsciUnrestrictedTechElective);
+                    this.validateAttribute(true, CourseAttribute.CsciUnrestrictedTechElective);
+                    this.validateAttribute(false, CourseAttribute.CsciRestrictedTechElective);
                     break;
                 default:
                     break;
             }
+        }
+        else {
+            this.validateAttribute(false, CourseAttribute.CsciRestrictedTechElective);
+            this.validateAttribute(false, CourseAttribute.CsciUnrestrictedTechElective);
         }
         // we have definitive categorization for TBS, Math, Natural Science and Engineering courses
         this.validateAttribute(this.suhSaysTbs(), CourseAttribute.TBS);
@@ -2130,10 +2184,11 @@ class CourseTaken {
      * NB: this IS intended to be a definitive classification */
     suhSaysEngr() {
         // OIDD courses are cross-listed with MEAM
-        if (["VIPR 1200", "VIPR 1210", "NSCI 3010", "OIDD 4110", "OIDD 4150"].includes(this.code())) {
+        if (["VIPR 1200", "VIPR 1210", "NSCI 3010", "OIDD 4110", "OIDD 4150", "ESE 6650"].includes(this.code())) {
             return true;
         }
-        const engrSubjects = ["ENGR", "TCOM", "NETS", "BE", "CBE", "CIS", "ESE", "MEAM", "MSE", "IPD"];
+        const engrSubjects = ["ENGR", "TCOM", "NETS", "BE", "CBE", "CIS", "ESE", "MEAM", "MSE", "IPD",
+            "NANO", "ROBO", "SCMP", "BIOT", "DATS"];
         const notEngrCourses = [
             "CIS 1050", "CIS 1060", "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230", "CIS 7980",
             "ESE 1120", "ESE 5670",
@@ -2153,7 +2208,7 @@ class CourseTaken {
         const noCreditNsci = this.subject == "NSCI" && ![1020, 2010, 2020, 3010, 4010, 4020].includes(this.courseNumberInt);
         const noCreditStat = this.subject == "STAT" && this.courseNumberInt < 4300 && !["STAT 4050", "STAT 4220"].includes(this.code());
         const noCreditPhys = this.subject == "PHYS" && this.courseNumberInt < 140 && !["PHYS 0050", "PHYS 0051"].includes(this.code());
-        const noCreditList = ["ASTRO 0001", "EAS 5030", "EAS 5050", "MATH 1510", "MATH 1700",
+        const noCreditList = ["ASTRO 0001", "EAS 5030", "EAS 5050", "MATH 1300", "MATH 1510", "MATH 1700",
             "FNCE 0001", "FNCE 0002", "HCMG 0001", "MGMT 0004", "MKTG 0001", "OIDD 0001", "PHYS 1100"];
         // no-credit subject areas
         return (["CIT", "MSCI", "DYNM", "MED"].includes(this.subject)) ||
@@ -3668,6 +3723,8 @@ class ProbationCheckResult {
         this.stemGpa = 0;
         this.fallCUs = 0;
         this.springCUs = 0;
+        this.fallIncompletes = 0;
+        this.springIncompletes = 0;
         this.notes = [];
     }
     hasProbationRisk() {
@@ -3681,11 +3738,17 @@ class ProbationCheckResult {
         if (this.notEnoughCUs != null) {
             n.push(`notEnoughCUs: ${this.notEnoughCUs}`);
         }
+        if (this.fallIncompletes > 0) {
+            n.push(`${this.fallIncompletes} Incomplete${plrl(this.fallIncompletes)} in Fall`);
+        }
+        if (this.springIncompletes > 0) {
+            n.push(`${this.springIncompletes} Incomplete${plrl(this.springIncompletes)} in Spring`);
+        }
         if (this.lowStemGpa != null) {
-            n.push(`lowStemGpa: ${this.lowStemGpa}`);
+            n.push(`lowStemGpa: ${this.lowStemGpa.toFixed(2)}`);
         }
         if (this.lowOverallGpa != null) {
-            n.push(`lowOverallGpa: ${this.lowOverallGpa}`);
+            n.push(`lowOverallGpa: ${this.lowOverallGpa.toFixed(2)}`);
         }
         return n.join(', ');
     }
@@ -3695,12 +3758,29 @@ function probationRisk(rr, allCourses, termsThisYear) {
     const pcr = new ProbationCheckResult();
     // completed 8 CUs this past academic year?
     const cusThisYear = allCourses.filter(c => termsThisYear.includes(c.term))
-        .map(c => c.getCompletedCUs())
+        .map(c => {
+        if (c.code() == 'INTL 2980') {
+            return c.getCUs();
+        }
+        return c.getCompletedCUs();
+    })
         .reduce((psum, a) => psum + a, 0);
     const fallCourses = allCourses.filter(c => termsThisYear[0] == c.term);
     const springCourses = allCourses.filter(c => termsThisYear[1] == c.term);
     pcr.fallCUs = fallCourses.reduce((psum, c) => psum + c.getCompletedCUs(), 0);
     pcr.springCUs = springCourses.reduce((psum, c) => psum + c.getCompletedCUs(), 0);
+    pcr.fallIncompletes = fallCourses.reduce((psum, c) => {
+        if (c.letterGrade == 'I') {
+            return psum + 1;
+        }
+        return psum;
+    }, 0);
+    pcr.springIncompletes = springCourses.reduce((psum, c) => {
+        if (c.letterGrade == 'I') {
+            return psum + 1;
+        }
+        return psum;
+    }, 0);
     if (fallCourses.length > 0 && springCourses.length > 0 && cusThisYear < 8) {
         pcr.notEnoughCUs = cusThisYear;
     }
