@@ -2944,5 +2944,11 @@
     "title": "Computer Animation",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "IPD 5350",
+    "title": "Escape the Algorithm",
+    "status_prefall24": "yes",
+    "status": "restricted"
   }
 ]
