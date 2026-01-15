@@ -2950,5 +2950,11 @@
     "title": "Escape the Algorithm",
     "status_prefall24": "yes",
     "status": "restricted"
+  },
+  {
+    "course4d": "FNCE 2570",
+    "title": "Foundations of Asset Pricing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
