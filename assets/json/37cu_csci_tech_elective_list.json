@@ -2956,5 +2956,11 @@
     "title": "Foundations of Asset Pricing",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "CHEM 2510",
+    "title": "Principles of Biological Chemistry",
+    "status_prefall24": "no",
+    "status": "no"
   }
 ]
