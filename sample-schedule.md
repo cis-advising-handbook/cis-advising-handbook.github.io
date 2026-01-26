@@ -6,7 +6,7 @@ tags: 1styear advice
 
 To help you with planning your courses each semester, we've put together two sample schedules for the CSCI degree. These sample schedules assume no incoming AP course credit.
 
-There are **many** paths through the degree requirements, and these sample schedules each represent just one possible path. There is intentionally a lot of flexibility to accommodate each student's interests and preferences. We hope these sample schedules will be a starting point for you to plan your own 4-year journey through the degree. As you begin to fill in and customize your 4-year plan, you'll want to check the [official degree requirements](https://www.cis.upenn.edu/undergraduate/advising/all-degree-requirements/csci-requirements-2020/), the [SEAS Undergraduate Handbook]({{page.links.seas_ugrad_hbook}}), consider a [degree concentration]({% link concentration.md %}), and read other articles here that discuss [degree requirements](/tag_index/#rules).
+There are **many** paths through the degree requirements, and these sample schedules each represent just one possible path. There is intentionally a lot of flexibility to accommodate each student's interests and preferences. We hope these sample schedules will be a starting point for you to plan your own 4-year journey through the degree. As you begin to fill in and customize your 4-year plan, you'll want to check the [official degree requirements](https://catalog.upenn.edu/undergraduate/programs/computer-science-bse/), the [SEAS Undergraduate Handbook]({{page.links.seas_ugrad_hbook}}), consider a [degree concentration]({% link concentration.md %}), and read other articles here that discuss [degree requirements](/tag_index/#rules).
 
 ## Start with CIS 1100
 

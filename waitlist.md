@@ -27,7 +27,7 @@ Sometimes students with certain majors can register directly, but other majors n
 
 ![Path grad-only course]({% link /assets/images/enrollment-restricted-grad-course-path.png %})
 
-This message above lists all of the graduate programs in CIS (here, _Computer & Information Science_ refers specifically to our [CIS Master's degree](https://www.cis.upenn.edu/graduate/program-offerings/mse-in-cis/)), so CIS grad students can register directly but everyone else (e.g., CSCI undergrads) needs a PR.
+This message above lists all of the graduate programs in CIS (here, _Computer & Information Science_ refers specifically to our [CIS Master's degree](https://www.cis.upenn.edu/mse-in-cis/)), so CIS grad students can register directly but everyone else (e.g., CSCI undergrads) needs a PR.
 
 Finally, if you see the text "Enrollment in this course is restricted. Request Permission to register", as below, then it means that again **all students** need a PR -- the PR requirement overrides the ability for undergrad CIS students to register directly:
 

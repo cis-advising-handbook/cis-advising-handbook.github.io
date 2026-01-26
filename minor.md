@@ -14,20 +14,14 @@ A minor is a nice way to specialize in an area you are interested in. It require
 
 ## Declaring a minor
 
-Unfortunately, there is no standard process for declaring a minor.
-
-Minors offered by the CIS department [can be declared online]({{page.links.path_major_minor_form}}).
-
-If you are declaring a minor offered by another SEAS department, you can follow the instructions at the [SEAS Undergraduate Handbook](https://ugrad.seas.upenn.edu/student-handbook/programs-options/minors/).
-
-For other departments, you should have a look at the website of the department that is offering the minor. Usually, the process involves filling out a form and/or a meeting with an undergraduate coordinator. After that, a worksheet will be created in Path@Penn for you, so you can keep track of your progress towards completing the minor's requirements.
+Minors [can be declared via the Registrar's online form]({{page.links.path_major_minor_form}}).
 
 ## Special rules
 
 For minors offered by SEAS departments, please have a close look at the [Minors section](https://ugrad.seas.upenn.edu/student-handbook/programs-options/minors/) of the SEAS Undergraduate Handbook. There are a couple of rules that sometimes surprise students - e.g., that none of the courses in the minor can be pass/fail, or that no more than two _specified_ courses on your CPG can be double-counted towards a minor.
 
 {: .notice--info}
-A course is **specified** on your CPG if there is a requirement that can be fulfilled by _only_ that single course. For example, on the [CSCI requirements](https://www.cis.upenn.edu/undergraduate/advising/all-degree-requirements/csci-requirements-2020/), <span class="tooltip">CIS 1200<span class="tooltiptext">formerly CIS 120</span></span> is a specified course because everyone must take it. In the _Math and Natural Science_ section, <span class="tooltip">CIS 2610<span class="tooltiptext">formerly CIS 261</span></span>, <span class="tooltip">ESE 3010<span class="tooltiptext">formerly ESE 301</span></span>, <span class="tooltip">ENM 3210<span class="tooltiptext">formerly ENM 321</span></span> and <span class="tooltip">STAT 4300<span class="tooltiptext">formerly STAT 430</span></span> do _not_ count as specified courses because students have a choice among these courses.
+A course is **specified** on your CPG if there is a requirement that can be fulfilled by _only_ that single course. For example, on the [CSCI requirements](https://catalog.upenn.edu/undergraduate/programs/computer-science-bse/), <span class="tooltip">CIS 1200<span class="tooltiptext">formerly CIS 120</span></span> is a specified course because everyone must take it. In the _Math and Natural Science_ section, <span class="tooltip">CIS 2610<span class="tooltiptext">formerly CIS 261</span></span>, <span class="tooltip">ESE 3010<span class="tooltiptext">formerly ESE 301</span></span>, <span class="tooltip">ENM 3210<span class="tooltiptext">formerly ENM 321</span></span> and <span class="tooltip">STAT 4300<span class="tooltiptext">formerly STAT 430</span></span> do _not_ count as specified courses because students have a choice among these courses.
 
 For minors in other schools, different rules may apply. Please ask the department that offers the minor; knowing the relevant rules is *your* responsibility.
 
