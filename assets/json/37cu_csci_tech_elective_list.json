@@ -2968,5 +2968,11 @@
     "title": "Consumer Neuroscience",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "ENM 2510",
+    "title": "Analytical Methods for Engineering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
