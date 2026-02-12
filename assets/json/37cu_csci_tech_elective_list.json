@@ -2986,5 +2986,11 @@
     "title": "F1/10 Autonomous Racing Cars",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "ASTR 1212",
+    "title": "Introduction to Astrophysics II",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
