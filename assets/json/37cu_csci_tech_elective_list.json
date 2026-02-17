@@ -2992,5 +2992,11 @@
     "title": "Introduction to Astrophysics II",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "LING 2220",
+    "title": "Phonetics II: Data Science",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
