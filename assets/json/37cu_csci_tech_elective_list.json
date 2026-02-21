@@ -2968,5 +2968,35 @@
     "title": "Consumer Neuroscience",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "ENM 2510",
+    "title": "Analytical Methods for Engineering",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "PHYS 5531",
+    "title": "Quantum Mechanics I",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ESE 6150",
+    "title": "F1/10 Autonomous Racing Cars",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "ASTR 1212",
+    "title": "Introduction to Astrophysics II",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
+  },
+  {
+    "course4d": "LING 2220",
+    "title": "Phonetics II: Data Science",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
