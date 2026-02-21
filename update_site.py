@@ -16,7 +16,7 @@ def update_link(template:str, style:list[str], start:str) -> list[str]:
 
     response = requests.get(link, allow_redirects=False)
 
-    if (response.status_code != 200):
+    if (response.status_code not in [200,301]):
         print(link)
         print("UH-OH")
         exit()
