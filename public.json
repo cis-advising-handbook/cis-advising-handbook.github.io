@@ -243,7 +243,7 @@
       "subject": "CIS",
       "number": "5560",
       "name": "Cryptography",
-      "link": "https://pratyushmishra.com/classes/cis-5560-s25/"
+      "link": "https://pratyushmishra.com/classes/cis-5560/s25/"
     },
     {
       "subject": "CIS",
@@ -284,7 +284,7 @@
       "subject": "CIS",
       "number": "4190/5190",
       "name": "Applied Machine Learning",
-      "link": "https://www.seas.upenn.edu/~cis5190/fall2025/"
+      "link": "https://www.seas.upenn.edu/~cis5190/spring2026/"
     },
     {
       "subject": "CIS",
@@ -366,7 +366,7 @@
       "subject": "CIS",
       "number": "2450",
       "name": "Big Data Analytics",
-      "link": "https://sites.google.com/seas.upenn.edu/cis-2450-fall-2024/home"
+      "link": "https://sites.google.com/seas.upenn.edu/cis-2450-spring-2026/home"
     },
     {
       "subject": "CIS",
@@ -472,7 +472,7 @@
       "subject": "NETS",
       "number": "4120",
       "name": "Algorithmic Game Theory",
-      "link": "https://www.cis.upenn.edu/~aaroth/courses/agtS25.html"
+      "link": "https://www.cis.upenn.edu/~aaroth/courses/agtS26.html"
     }
   ],
   "hci": [
@@ -538,7 +538,7 @@
       "subject": "CIS",
       "number": "5640",
       "name": "Introduction to Game Design",
-      "link": "https://cis-5640-spring-2025.github.io/"
+      "link": "https://cis-5640-spring-2026.github.io/"
     },
     {
       "subject": "CIS",
@@ -698,7 +698,7 @@
       "subject": "ESE",
       "number": "6150",
       "name": "RoboRacer Autonomous Racing Cars",
-      "link": "https://ahmadamine998.github.io/6150-Spring2024-Website/lectures/"
+      "link": "https://ahmadamine998.github.io/ESE6150-Website/"
     }
   ]
 }

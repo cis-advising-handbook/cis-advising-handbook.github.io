@@ -281,7 +281,7 @@
       "subject": "CIS",
       "number": "5560",
       "name": "Cryptography",
-      "link-template": "https://pratyushmishra.com/classes/cis-5560-{s}{yr}/",
+      "link-template": "https://pratyushmishra.com/classes/cis-5560/{s}{yr}/",
       "start": "Summer 2025",
       "update-style": "AUTO"
     },
@@ -332,7 +332,7 @@
       "name": "Applied Machine Learning",
       "link-template": "https://www.seas.upenn.edu/~cis5190/{semester}{year}/",
       "update-style": "AUTO",
-      "start": "Fall 2025"
+      "start": "Spring 2026"
     },
     {
       "subject": "CIS",
@@ -429,7 +429,7 @@
       "number": "2450",
       "name": "Big Data Analytics",
       "link-template": "https://sites.google.com/seas.upenn.edu/cis-2450-{semester}-{year}/home",
-      "start": "Fall 2024",
+      "start": "Spring 2026",
       "update-style": "AUTO"
     },
     {
@@ -555,7 +555,7 @@
       "number": "4120",
       "name": "Algorithmic Game Theory",
       "link-template": "https://www.cis.upenn.edu/~aaroth/courses/agt{S}{yr}.html",
-      "start": "Summer 2025",
+      "start": "Spring 2026",
       "update-style": "AUTO"
     }
   ],
@@ -630,7 +630,7 @@
       "number": "5640",
       "name": "Introduction to Game Design",
       "link-template": "https://cis-5640-{semester}-{year}.github.io/",
-      "start": "Spring 2025",
+      "start": "Spring 2026",
       "update-style": "AUTO"
     },
     {
@@ -807,7 +807,7 @@
       "subject": "ESE",
       "number": "6150",
       "name": "RoboRacer Autonomous Racing Cars",
-      "link-template": "https://ahmadamine998.github.io/6150-Spring2024-Website/lectures/",
+      "link-template": "https://ahmadamine998.github.io/ESE6150-Website/",
       "update-style": "MANUAL"
     }
   ]
