@@ -3010,5 +3010,11 @@
     "title": "Drugs, Brain and Mind",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4920",
+    "title": "Community Data Science (A)",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
