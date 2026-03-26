@@ -8,7 +8,7 @@ The goal of a Senior Thesis project (<span class="tooltip">CIS 4100<span class="
 
 ## Eligibility
 
-Senior Thesis is only open to CSCI and NETS majors. If you have multiple majors, and one of your majors is another SEAS major (e.g., Mechanical Engineering) then you are ineligible for Senior Thesis. Having a major outside of SEAS (e.g., Economics), however, does not preclude you from participating in Senior Thesis.
+Senior Thesis is only open to CSCI, NETS, and AI majors. If you have multiple majors, and one of your majors is another SEAS major (e.g., Mechanical Engineering) then you are ineligible for Senior Thesis. Having a major outside of SEAS (e.g., Economics), however, does not preclude you from participating in Senior Thesis.
 
 The Senior Thesis program is selective, and students are generally expected to have a GPA in the top 10-20% to qualify.
 
