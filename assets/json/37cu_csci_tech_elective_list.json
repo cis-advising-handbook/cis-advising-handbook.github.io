@@ -3016,5 +3016,11 @@
     "title": "Community Data Science (A)",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "STAT 4850",
+    "title": "Foundations of Deep Learning with Applications",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
