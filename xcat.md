@@ -78,7 +78,7 @@ is the closest match.
 ## Submitting your request
 
 The College has some 
-[guidance on using XCAT](https://www.college.upenn.edu/xcat). You can file your requests via [the XCAT website](https://xcat.at.upenn.edu/). 
+[guidance on using XCAT](https://www.college.upenn.edu/academics/academic-options/campus-options/xcat-external-credit-approval-tool). You can file your requests via [the XCAT website](https://xcat.at.upenn.edu/). 
 
 Some computer science courses at other universities are recorded as XCAT precedents. This means that other students have recently taken this course and been awarded Penn credit for it, so your request can be approved as well. We do periodically review these precedents, since course content (at both Penn and other universities) changes over time, so a precedent is not a guarantee in perpetuity that credit will be awarded.
 
