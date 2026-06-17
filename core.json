@@ -367,7 +367,8 @@
       "number": "5210",
       "name": "Artificial Intelligence",
       "link-template": "https://www.engineering.upenn.edu/~jyzh/courses/cis5210/{yr}{sm}/",
-      "update-style": "CURR"
+      "start": "Summer 2026",
+      "update-style": "AUTO"
     },
     {
       "subject": "CIS",
