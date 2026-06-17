@@ -71,7 +71,7 @@ e.g., by looking up the instructors' ratings in [Penn Course Review](https://pen
 other students who have taken these courses before.
 * If you have sufficient experience in Calculus, you could take <span class="tooltip">MATH 1410<span class="tooltiptext">formerly MATH 114</span></span>. This is a good idea if you have AP credit for 
 <span class="tooltip">MATH 1400<span class="tooltiptext">formerly MATH 104</span></span>. Even if not, the MATH department grants retroactive credit for <span class="tooltip">MATH 1400<span class="tooltiptext">formerly MATH 104</span></span> if you get a high enough grade in
-<span class="tooltip">MATH 1410<span class="tooltiptext">formerly MATH 114</span></span>, or you could take their internal placement exam. Please carefully review the MATH department's [current policies](https://www.math.upenn.edu/undergraduate/advice-new-students/advanced-placement-transfer-retroactive-credit).
+<span class="tooltip">MATH 1410<span class="tooltiptext">formerly MATH 114</span></span>, or you could take their internal placement exam. Please carefully review the MATH department's [current policies](https://www.math.upenn.edu/advanced-placement-transfer-retroactive-credit).
 * If you love mathematical analysis and are good at it, you could take the honors section of <span class="tooltip">MATH 1410<span class="tooltiptext">formerly MATH 114</span></span>, which is <span class="tooltip">MATH 1610<span class="tooltiptext">formerly MATH 116</span></span>.
 This will be significantly more work, but, depending on your preferences, you might enjoy it more.
 
