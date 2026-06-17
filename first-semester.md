@@ -5,7 +5,7 @@ tags: 1styear advice
 ---
 
 {: .notice--info}
-This article discusses how to decide which classes to take in your first year in CIS. For an overview of the mechanics and deadlines of registering for classes, see [this helpful page from the College](https://www.college.upenn.edu/registration-process).
+This article discusses how to decide which classes to take in your first year in CIS. For an overview of the mechanics and deadlines of registering for classes, see [this helpful page from the College](https://www.college.upenn.edu/academics/course-selection/course-registration).
 
 The task of picking the right classes for your first semester can be a bit daunting. You have probably received lots
 of advice already - perhaps some suggestions

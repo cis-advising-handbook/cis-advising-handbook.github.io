@@ -5,7 +5,7 @@ tags: howto 1styear
 ---
 
 {: .notice--info}
-This article discusses some CIS-specific tips for Advance and Regular Registration. For an overview of registering for courses at Penn, see this [helpful page from the College](https://www.college.upenn.edu/registration-process).
+This article discusses some CIS-specific tips for Advance and Regular Registration. For an overview of registering for courses at Penn, see this [helpful page from the College](https://www.college.upenn.edu/academics/course-selection/course-registration).
 
 
 ## Before Advance Registration
