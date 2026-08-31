@@ -3022,5 +3022,11 @@
     "title": "Foundations of Deep Learning with Applications",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "MATH 3000",
+    "title": "Introduction to Proofs and Linear Algebra",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
