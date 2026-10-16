@@ -22,7 +22,7 @@ For CSCI, concentrations were introduced with the new curricula for students ent
 
 ## Available concentrations
 
-Please see the lists of [CSCI concentrations](https://www.cis.upenn.edu/undergraduate/undergraduate-program-options/concentrations/) and [CMPE concentrations](https://cmpe.seas.upenn.edu/curriculum-resources/).
+Please see the lists of [CSCI concentrations](https://catalog.upenn.edu/undergraduate/programs/computer-science-bse/#concentrationstext) and [CMPE concentrations](https://cmpe.seas.upenn.edu/curriculum-resources/).
 
 ## Does a concentration require extra classes?
 
