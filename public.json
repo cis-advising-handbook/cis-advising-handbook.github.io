@@ -213,7 +213,7 @@
       "subject": "CIS",
       "number": "4510/5510",
       "name": "Computer and Network Security",
-      "link": "https://www.cis.upenn.edu/~sga001/classes/cis551f25/"
+      "link": "https://www.cis.upenn.edu/~sga001/classes/cis551f26/"
     },
     {
       "subject": "CIS",
@@ -296,7 +296,7 @@
       "subject": "CIS",
       "number": "4300/5300",
       "name": "Natural Language Processing",
-      "link": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_fa25/"
+      "link": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_fa26/"
     },
     {
       "subject": "CIS",
@@ -577,7 +577,7 @@
       "subject": "CIT",
       "number": "5910",
       "name": "Introduction to Software Development",
-      "link": "https://upenn.github.io/cit5910/"
+      "link": ""
     },
     {
       "subject": "CIT",

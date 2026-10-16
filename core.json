@@ -246,7 +246,7 @@
       "name": "Computer and Network Security",
       "link-template": "https://www.cis.upenn.edu/~sga001/classes/cis551{s}{yr}/",
       "update-style": "AUTO",
-      "start": "Fall 2025"
+      "start": "Fall 2026"
     },
     {
       "subject": "CIS",
@@ -346,7 +346,7 @@
       "number": "4300/5300",
       "name": "Natural Language Processing",
       "link-template": "https://www.cis.upenn.edu/~myatskar/teaching/cis5300_{sm}{yr}/",
-      "start": "Fall 2025",
+      "start": "Fall 2026",
       "update-style": "AUTO"
     },
     {
@@ -673,8 +673,7 @@
       "subject": "CIT",
       "number": "5910",
       "name": "Introduction to Software Development",
-      "link-template": "https://upenn.github.io/cit5910/",
-      "update-style": "CURR"
+      "update-style": "DNE"
     },
     {
       "subject": "CIT",
