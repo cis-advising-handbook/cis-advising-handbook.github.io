@@ -40,7 +40,7 @@ jobs:
     - name: setup ruby
       uses: ruby/setup-ruby-pkgs@v1
       with:
-        ruby-version: '3.4'
+        ruby-version: '3.3'
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - name: check for broken links
