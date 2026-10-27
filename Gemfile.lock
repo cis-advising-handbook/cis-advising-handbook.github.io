@@ -291,7 +291,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  github-pages (~> 228)
+  github-pages
   html-proofer
   http_parser.rb (~> 0.6.0)
   jekyll-include-cache
