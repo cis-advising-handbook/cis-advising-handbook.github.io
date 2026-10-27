@@ -1,7 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RequirementApplyResult = exports.Degrees = exports.CourseTaken = exports.GradeType = exports.SsHTbsTag = void 0;
 exports.run = run;
+const fs_1 = __importDefault(require("fs"));
 // global list of CSCI Tech Electives. Used sporadically in a few places so it's easier to have it as a global.
 let TECH_ELECTIVE_LIST = [];
 /** For checking whether Path course attributes are correct or not */
@@ -46,7 +50,7 @@ class CourseWithAttrs {
         return JSON.stringify(js);
     }
 }
-async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
+async function analyzeCourseAttributeSpreadsheet(csvFilePath, makeChatbotBenchmark) {
     const fs = require('fs');
     const csv = require('csv-parse/sync');
     const csvStringify = require('csv-stringify/sync');
@@ -122,6 +126,41 @@ async function analyzeCourseAttributeSpreadsheet(csvFilePath) {
         CourseAttribute.Humanities,
         CourseAttribute.TBS
     ];
+    let benchmarkQuestions = [];
+    for (const pathCourse of AllCourses.slice(0)) {
+        for (const crs of pathCourse.courses) {
+            benchmarkQuestions.push({
+                question: `Does ${crs.code()} count as a SEAS Mathematics course?`,
+                answer: crs.suhSaysMath()
+            });
+            benchmarkQuestions.push({
+                question: `Does ${crs.code()} count as a SEAS Natural Science course?`,
+                answer: crs.suhSaysNatSci()
+            });
+            benchmarkQuestions.push({
+                question: `Does ${crs.code()} count as a SEAS Engineering course?`,
+                answer: crs.suhSaysEngr()
+            });
+            benchmarkQuestions.push({
+                question: `Does ${crs.code()} count as a SEAS Technology in Business & Society course?`,
+                answer: crs.suhSaysTbs()
+            });
+            benchmarkQuestions.push({
+                question: `Is ${crs.code()} on the SEAS No-Credit List?`,
+                answer: crs.suhSaysNoCredit()
+            });
+            benchmarkQuestions.push({
+                question: `Does ${crs.code()} count as a SEAS Humanities course?`,
+                answer: crs.suhSaysHum()
+            });
+            benchmarkQuestions.push({
+                question: `Does ${crs.code()} count as a SEAS Social Science course?`,
+                answer: crs.suhSaysSS()
+            });
+        }
+    }
+    console.log(`writing ${benchmarkQuestions.length} chatbot benchmark questions...`);
+    fs.writeFileSync('suh-chatbot-benchmark-questions.json', JSON.stringify(benchmarkQuestions, null, 2));
     let errorsFound = [];
     for (const pathCourse of AllCourses.slice(0)) {
         const errorReasons = [];
@@ -750,6 +789,54 @@ const NetsLightTechElectives = new Set([
     "OIDD 4690",
     "SOCI 5350",
     "STAT 4350",
+]);
+const VicCisElectiveAlternatives = [
+    "ESE 3030",
+    "ESE 3600",
+    "ESE 5390",
+    "ESE 5460",
+    "BMIN 5010"
+];
+const VicFineArtsDesignElectives = new Set([
+    "DSGN 0010",
+    "DSGN 0020",
+    "DSGN 1020",
+    "DSGN 1030",
+    "DSGN 1050",
+    "DSGN 1070",
+    "DSGN 1200",
+    "DSGN 2010",
+    "DSGN 2060",
+    "DSGN 2220",
+    "DSGN 2230",
+    "DSGN 2260",
+    "DSGN 2500",
+    "DSGN 2550",
+    "DSGN 2540",
+    "DSGN 2570",
+    "DSGN 2580",
+    "DSGN 3030",
+    "DSGN 3060",
+    "DSGN 3070",
+    //"DSGN XXXX", Design for the Body, can't find it anywhere
+    "FNAR 0010",
+    "FNAR 1010",
+    "FNAR 1040",
+    "FNAR 1050",
+    "FNAR 1060",
+    "FNAR 1070",
+    "FNAR 1080",
+    "FNAR 1090",
+    "FNAR 1100",
+    "FNAR 2010",
+    "FNAR 2030",
+    "FNAR 2040",
+    "FNAR 2090",
+    "FNAR 2100",
+    "FNAR 2110",
+    "FNAR 2200",
+    "FNAR 2210",
+    "FNAR 3180",
 ]);
 // CIS MSE imported 16 Oct 2022
 const CisMseNonCisElectivesRestrictions1 = new Set([
@@ -1512,6 +1599,91 @@ class RequireCis1100 extends DegreeRequirement {
         return "Major: CIS 1100";
     }
 }
+/** Require CIS 1100, or a CIS/NETS Engineering course, or other VIC-approved courses */
+class RequireCis1100Vic extends DegreeRequirement {
+    constructor(displayIndex) {
+        super(displayIndex);
+    }
+    satisfiedBy(courses) {
+        const found1100 = courses.find((c) => {
+            return c.code() == "CIS 1100" &&
+                c.grading == GradeType.ForCredit &&
+                this.applyCourse(c);
+        });
+        if (found1100 != undefined) {
+            return found1100;
+        }
+        const foundSpecificCourse = courses.find((c) => {
+            return VicCisElectiveAlternatives.includes(c.code()) &&
+                c.grading == GradeType.ForCredit &&
+                this.applyCourse(c);
+        });
+        if (foundSpecificCourse != undefined) {
+            return foundSpecificCourse;
+        }
+        // they didn't take CIS 1100, use a CIS/NETS Engineering course instead
+        return courses.slice() // NB: have to use slice since sort() is in-place
+            // try lower-number courses first
+            .sort((a, b) => a.courseNumberInt - b.courseNumberInt)
+            .find((c) => {
+            const cisNetsEngr = (c.subject == "CIS" || c.subject == "NETS") && !c.attributes.includes(CourseAttribute.NonEngr);
+            return (cisNetsEngr || c.code() == "ENGR 1050") &&
+                c.grading == GradeType.ForCredit &&
+                c.courseNumberInt >= this.minLevel &&
+                this.applyCourse(c);
+        });
+    }
+    toString() {
+        return "Major: VIC CIS 1100";
+    }
+}
+class RequirementVicCisElective extends DegreeRequirement {
+    constructor(displayIndex) {
+        super(displayIndex);
+    }
+    satisfiedBy(courses) {
+        // prefer VIC-specific CIS alternatives
+        const foundSpecificCourse = courses.find((c) => {
+            return VicCisElectiveAlternatives.includes(c.code()) &&
+                c.grading == GradeType.ForCredit &&
+                this.applyCourse(c);
+        });
+        if (foundSpecificCourse != undefined) {
+            return foundSpecificCourse;
+        }
+        return courses.slice() // NB: have to use slice since sort() is in-place
+            // try to pull in CIS 19x courses
+            .sort((a, b) => a.courseNumberInt - b.courseNumberInt)
+            .find((c) => {
+            const foundMatch = (c.subject == "CIS" || c.subject == "NETS") && c.suhSaysEngr();
+            return foundMatch &&
+                c.grading == GradeType.ForCredit &&
+                c.courseNumberInt >= this.minLevel &&
+                this.applyCourse(c);
+        });
+    }
+    toString() {
+        return `VIC CIS Elective >= ${this.minLevel}`;
+    }
+}
+class RequirementFineArtsDesignElective extends DegreeRequirement {
+    constructor(displayIndex) {
+        super(displayIndex);
+    }
+    satisfiedBy(courses) {
+        return courses.slice()
+            .sort(byHighestCUsFirst)
+            .find((c) => {
+            return VicFineArtsDesignElectives.has(c.code()) &&
+                c.grading == GradeType.ForCredit &&
+                c.courseNumberInt >= this.minLevel &&
+                this.applyCourse(c);
+        });
+    }
+    toString() {
+        return "Fine Arts & Design Elective";
+    }
+}
 class RequirementCisElective extends DegreeRequirement {
     constructor(displayIndex) {
         super(displayIndex);
@@ -2127,8 +2299,9 @@ class CourseTaken {
         const tbsCourses = [
             "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230",
             "DSGN 0020", "DSGN 2570", "EAS 0010", "ENGR 5020", "ENVS 3700", "IPD 5090", "IPD 5450",
-            "LGST 2220", "LGST 2440", "LAWM 5060", "MKTG 2270", "MKTG 2470",
+            "LGST 2220", "LGST 2440", "LAWM 5060",
             "MGMT 2370", "MGMT 2640", "MGMT 2650",
+            "MKTG 2270", "MKTG 2470",
             "NURS 3570",
             "OIDD 2360", "OIDD 2340", "OIDD 2550", "OIDD 3140", "OIDD 3150", "OIDD 3990", "WH 1010",
         ];
@@ -2143,7 +2316,7 @@ class CourseTaken {
         const mathCourses = [
             "CIS 1600", "CIS 2610", "CIS 3333",
             "EAS 205",
-            "ESE 2030", "ESE 3010", "ESE 4020", "ESE 5420",
+            "ESE 2030", "ESE 2100", "ESE 3010", "ESE 4020", "ESE 5420", "ESE 5300",
             "PHIL 1710", "PHIL 4723",
             "STAT 4300", "STAT 4310", "STAT 4320", "STAT 4330"
         ];
@@ -2151,7 +2324,7 @@ class CourseTaken {
             // 3-digit MATH courses that don't have translations
             150, 151, 172, 174, 180, 212, 220, 475,
             // 4-digit MATH courses
-            1100, 1510, 1234, 1248, 1300, 1700, 2100, 2800
+            1100, 1234, 1248, 1300, 1510, 1700, 1720, 1800, 2100, 2800
         ];
         return this.subject == "ENM" ||
             mathCourses.includes(this.code()) ||
@@ -2163,22 +2336,23 @@ class CourseTaken {
         const nsCourses = [
             "ASTR 1211", "ASTR 1212", "ASTR 1250", "ASTR 3392",
             //"CIS 3980", // NB: CIS 3980 is EUNS only for CIS majors
-            "BE 3050", "BIOL 0992", "EESC 4320", "ESE 1120", "MSE 2210",
+            "BE 3050", "BE 5130", "BIOL 0992", "ESE 1120", "MSE 2210",
             "MEAM 1100", "MEAM 1470",
             "PHYS 0050", "PHYS 0051", "PHYS 0140", "PHYS 0141",
+            "PSYC 1210",
             // jld: EAS 0091 is, practically speaking, EUNS. We check for the conflict with CHEM 1012 elsewhere
             "EAS 0091"
         ];
-        // all courses with these subjects are ook
+        // all courses with these subjects are ok
         const nsSubjects = ["BCHE", "BMB", "CAMB", "GCB"];
         return nsCourses.includes(this.code()) ||
             nsSubjects.includes(this.subject) ||
             (this.subject == "BIBB" && !["010", "050", "060", "160", "227"].includes(this.courseNumber)) ||
-            (this.subject == "NRSC" && !["0050", "0060", "1160", "2249"].includes(this.courseNumber)) ||
+            (this.subject == "NRSC" && !["0050", "0060", "1159", "1160", "2217", "2227", "2249", "4417"].includes(this.courseNumber)) ||
             (this.subject == "BIOL" && this.courseNumberInt > 1000 && this.courseNumberInt != 2510) ||
-            (this.subject == "CHEM" && ![1000, 1200, 250, 1011].includes(this.courseNumberInt)) ||
-            (this.subject == "EESC" && ([1000, 1030, 1090, 2120, 2500, 3300, 3600, 4200, 4360, 4440, 4630].includes(this.courseNumberInt))) ||
-            (this.subject == "PHYS" && this.courseNumberInt >= 150 && ![3314, 5500].includes(this.courseNumberInt));
+            (this.subject == "CHEM" && ![1000, 1011, 1200, 250].includes(this.courseNumberInt)) ||
+            (this.subject == "EESC" && ([1000, 1030, 1090, 2120, 2500, 3300, 3600, 4200, 4320, 4360, 4440, 4630].includes(this.courseNumberInt))) ||
+            (this.subject == "PHYS" && this.courseNumberInt >= 150 && ![3314, 3360, 5500].includes(this.courseNumberInt));
     }
     /** If this returns true, the SEAS Undergraduate Handbook classifies the course as Engineering.
      * NB: this IS intended to be a definitive classification */
@@ -2190,7 +2364,10 @@ class CourseTaken {
         const engrSubjects = ["ENGR", "TCOM", "NETS", "BE", "CBE", "CIS", "ESE", "MEAM", "MSE", "IPD",
             "NANO", "ROBO", "SCMP", "BIOT", "DATS"];
         const notEngrCourses = [
+            "BE 5130",
+            // NB: CIS/ESE EUMA courses are handled via suhSaysMath(), below
             "CIS 1050", "CIS 1060", "CIS 1070", "CIS 1250", "CIS 4230", "CIS 5230", "CIS 7980",
+            "ENGR 5020",
             "ESE 1120", "ESE 5670",
             // IPD courses cross listed with ARCH, EAS or FNAR do not count as Engineering
             // TODO: these IPD cross-lists are hard-coded, look them up automatically instead
@@ -2208,7 +2385,7 @@ class CourseTaken {
         const noCreditNsci = this.subject == "NSCI" && ![1020, 2010, 2020, 3010, 4010, 4020].includes(this.courseNumberInt);
         const noCreditStat = this.subject == "STAT" && this.courseNumberInt < 4300 && !["STAT 4050", "STAT 4220"].includes(this.code());
         const noCreditPhys = this.subject == "PHYS" && this.courseNumberInt < 140 && !["PHYS 0050", "PHYS 0051"].includes(this.code());
-        const noCreditList = ["ASTRO 0001", "EAS 5030", "EAS 5050", "MATH 1300", "MATH 1510", "MATH 1700",
+        const noCreditList = ["ASTRO 0001", "CHEM 1011", "EAS 5030", "EAS 5050", "MATH 1300", "MATH 1510", "MATH 1700",
             "FNCE 0001", "FNCE 0002", "HCMG 0001", "MGMT 0004", "MKTG 0001", "OIDD 0001", "PHYS 1100"];
         // no-credit subject areas
         return (["CIT", "MSCI", "DYNM", "MED"].includes(this.subject)) ||
@@ -2701,6 +2878,9 @@ class DegreeWorksDiagnosticsReportParser extends CourseParser {
             }
             else if (worksheetText.search(new RegExp(String.raw `^RA\d+:\s+MAJOR\s+=\s+DMD\s+`, "m")) != -1) {
                 d.undergrad = "37cu DMD";
+            }
+            else if (worksheetText.search(new RegExp(String.raw `^RA\d+:\s+MAJOR\s+=\s+VIC\s+`, "m")) != -1) {
+                d.undergrad = "37cu VIC";
                 // } else if (worksheetText.search(new RegExp(String.raw`^RA\d+:\s+MAJOR\s+=\s+EE\s+`, "m")) != -1) {
                 //     d.undergrad = "40cu EE"
                 // } else if (worksheetText.search(new RegExp(String.raw`^RA\d+:\s+MAJOR\s+=\s+SSE\s+`, "m")) != -1) {
@@ -3448,9 +3628,18 @@ if (typeof window === 'undefined') {
         name: 'course-attrs',
         args: {
             courseAttrCsv: CmdTs.positional({ type: CmdTsFs.File, description: 'course attributes CSV file (from Pennant Reports)' }),
+            chatbotBenchmark: CmdTs.flag({
+                type: CmdTs.boolean,
+                long: 'chatbot-benchmark',
+                description: 'create SEAS Undergrad Handbook course attribute questions (in JSON) for chatbot benchmark',
+                defaultValue() {
+                    return false;
+                },
+                defaultValueIsSerializable: true,
+            })
         },
-        handler: async ({ courseAttrCsv }) => {
-            await analyzeCourseAttributeSpreadsheet(courseAttrCsv);
+        handler: async ({ courseAttrCsv, chatbotBenchmark }) => {
+            await analyzeCourseAttributeSpreadsheet(courseAttrCsv, chatbotBenchmark);
         },
     });
     const apcProbationList = CmdTs.command({
@@ -3494,11 +3683,37 @@ if (typeof window === 'undefined') {
             await analyzeWorksheets(majorsListCsv, makePennPathwaysWorksheets, limit, worksheets);
         }
     });
+    const checkAttrList = CmdTs.command({
+        name: 'check-attr-list',
+        args: {
+            courseListFile: CmdTs.positional({ type: CmdTsFs.File, description: 'list of courses with a given attribute (from AI)' }),
+        },
+        handler: ({ courseListFile }) => {
+            checkAttributeList(courseListFile);
+        },
+    });
     const app = CmdTs.subcommands({
         name: 'irs',
-        cmds: { courseAttrs, apcProbationList, dwWorksheets },
+        cmds: { courseAttrs, apcProbationList, dwWorksheets, checkAttrList },
     });
     CmdTs.run(app, process.argv.slice(2));
+}
+async function checkAttributeList(courseListFile) {
+    const fileContent = fs_1.default.readFileSync(courseListFile, { encoding: 'utf-8' });
+    const courseList = JSON.parse(fileContent);
+    let numCorrect = 0, numIncorrect = 0;
+    for (const cs of courseList) {
+        const parts = cs.split(' ');
+        const ct = new CourseTaken(parts[0], parts[1], "", null, 1.0, GradeType.ForCredit, 'A', 202510, "", true);
+        if (!ct.suhSaysNatSci()) {
+            numIncorrect++;
+            console.log(`AI put ${ct} in the list but IRS says it's not`);
+        }
+        else {
+            numCorrect++;
+        }
+    }
+    console.log(`Checked ${courseList.length} courses, ${numCorrect} correct and ${numIncorrect} wrong`);
 }
 async function analyzeWorksheets(majorsListCsv, makePennPathwaysWorksheets, limit, worksheets) {
     const path = require('path');
@@ -4462,6 +4677,49 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementFreeElective(50),
             ];
             const __ = new BucketGroup(6, ugradDegreeRequirements, aiElecGroup, aiElecTag, false);
+            break;
+        case "37cu VIC":
+            const vicIntermediate = ["CIS 4610", "CIS 5610", "CIS 4620", "CIS 5620", "CIS 3500", "CIS 4710", "CIS 5710", "CIS 4120", "CIS 5120"];
+            ugradDegreeRequirements = [
+                new RequirementNamedCourses(1, "Math", ["MATH 1400"]),
+                new RequirementNamedCourses(2, "Math", ["MATH 1410", "MATH 1610"]),
+                new RequirementNamedCourses(3, "Linear Algebra", ["ESE 2030", "ENM 2030", "ENM 2400"]),
+                new RequirementNamedCourses(4, "Math", ["CIS 1600"]),
+                new RequirementNamedCourses(5, "Probability", ["ESE 3010", "STAT 4300"]),
+                new RequirementNamedCourses(6, "Physics", ["PHYS 0150", "PHYS 0170", "MEAM 1100", "MEAM 1470"]).withCUs(1.5),
+                new RequirementNamedCourses(7, "Natural Science", ["BIOL 1101", "BIOL 1121", "BIOL 1123", "CHEM 1012", "CHEM 1101", "PHYS 0151", "PHYS 0171", "ESE 1120"]).withCUs(1.5),
+                new RequirementAttributes(8, "Math/Natural Science Elective", [CourseAttribute.Math, CourseAttribute.NatSci]),
+                // NB: CIS 1100 below
+                new RequirementNamedCourses(10, "Major", ["CIS 1200"]),
+                new RequirementNamedCourses(11, "Major", ["CIS 1210"]),
+                new RequirementNamedCourses(12, "Major", ["CIS 2400"]),
+                new RequirementNamedCourses(13, "AI", ["CIS 2210"]),
+                new RequirementNamedCourses(14, "Major", ["CIS 3200", "CIS 5020"]),
+                new RequirementNamedCourses(15, "Major", ["CIS 4600", "CIS 5600"]),
+                new RequirementNamedCourses(16, "Major", vicIntermediate),
+                new RequirementNamedCourses(17, "Major", vicIntermediate),
+                new RequirementNamedCourses(18, "DMD Senior Project", ["CIS 4970"]),
+                new RequireCis1100Vic(9),
+                new RequirementVicCisElective(18).withMinLevel(2000),
+                new RequirementVicCisElective(21).withMinLevel(2000),
+                new RequirementVicCisElective(22).withMinLevel(2000),
+                new RequirementVicCisElective(20),
+                new RequirementNamedCourses(23, "Drawing", ["FNAR 0010", "FNAR 1080", "FNAR 2090", "FNAR 2200",]),
+                new RequirementNamedCourses(24, "3D Modeling", ["DSGN 1030", "DSGN 2220"]),
+                new RequirementNamedCourses(25, "Animation", ["DSGN 2040", "FNAR 1050", "FNAR 2100"]),
+                new RequirementFineArtsDesignElective(26),
+                new RequirementFineArtsDesignElective(27),
+                new RequirementFineArtsDesignElective(28),
+                new RequirementSsh(29, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(30, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(31, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(32, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(33, [CourseAttribute.SocialScience, CourseAttribute.Humanities]),
+                new RequirementSsh(34, [CourseAttribute.TBS, CourseAttribute.Humanities, CourseAttribute.SocialScience]),
+                new RequirementSsh(35, [CourseAttribute.TBS, CourseAttribute.Humanities, CourseAttribute.SocialScience]),
+                // NB: Writing requirement is @ index 45
+                new RequirementFreeElective(50),
+            ];
             break;
         case "37cu NETS":
             ugradDegreeRequirements = [
