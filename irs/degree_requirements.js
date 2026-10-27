@@ -3291,6 +3291,7 @@ async function webMain() {
         degrees.masters = $("input[name='masters_degree']:checked").val();
         parseResults = await parser.parse(worksheetText, degrees);
     }
+    console.log(`${autoDegrees} ${JSON.stringify(degrees)}`);
     const coursesTaken = parseResults.courses;
     if (parseResults.degrees.hasWrongDwCatalogYear()) {
         const dwCatalogYear = parseResults.degrees.undergradMajorCatalogYear;
