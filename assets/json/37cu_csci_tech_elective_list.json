@@ -3039,6 +3039,12 @@
     "course4d": "CIS 1904",
     "title": "Introduction to Haskell Programming",
     "status_prefall24": "yes",
+    "status": "restricted"
+  },
+  {
+    "course4d": "FNCE 2450",
+    "title": "Hedge Funds",
+    "status_prefall24": "yes",
     "status": "unrestricted"
   }
 ]
