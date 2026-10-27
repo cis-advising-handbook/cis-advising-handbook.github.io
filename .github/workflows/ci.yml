@@ -31,10 +31,11 @@ jobs:
     - name: build course directory
       run: python3 update_site.py
 
-    - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-          bundle-cache: true
+    - name: setup ruby  
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundle-cache: true
           
 #    - name: setup ruby
 #      uses: ruby/setup-ruby-pkgs@v1
