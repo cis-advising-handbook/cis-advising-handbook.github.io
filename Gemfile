@@ -20,6 +20,9 @@ gem "github-pages", group: :jekyll_plugins
 # for minimal-mistakes theme
 gem "jekyll-include-cache", group: :jekyll_plugins
 
+gem "csv"
+gem "base64"
+gem "bigdecimal"
 gem 'html-proofer'
 
 # If you have any plugins, put them here!
