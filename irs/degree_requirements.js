@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RequirementApplyResult = exports.Degrees = exports.CourseTaken = exports.GradeType = exports.SsHTbsTag = void 0;
 exports.run = run;
-const fs_1 = __importDefault(require("fs"));
 // global list of CSCI Tech Electives. Used sporadically in a few places so it's easier to have it as a global.
 let TECH_ELECTIVE_LIST = [];
 /** For checking whether Path course attributes are correct or not */
@@ -3700,7 +3696,8 @@ if (typeof window === 'undefined') {
     CmdTs.run(app, process.argv.slice(2));
 }
 async function checkAttributeList(courseListFile) {
-    const fileContent = fs_1.default.readFileSync(courseListFile, { encoding: 'utf-8' });
+    const fs = require('fs');
+    const fileContent = fs.readFileSync(courseListFile, { encoding: 'utf-8' });
     const courseList = JSON.parse(fileContent);
     let numCorrect = 0, numIncorrect = 0;
     for (const cs of courseList) {
