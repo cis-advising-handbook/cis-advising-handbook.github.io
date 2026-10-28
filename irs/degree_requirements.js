@@ -4698,7 +4698,7 @@ function run(csci37techElectiveList, degrees, coursesTaken) {
                 new RequirementNamedCourses(17, "Major", vicIntermediate),
                 new RequirementNamedCourses(18, "DMD Senior Project", ["CIS 4970"]),
                 new RequireCis1100Vic(9),
-                new RequirementVicCisElective(18).withMinLevel(2000),
+                new RequirementVicCisElective(19).withMinLevel(2000),
                 new RequirementVicCisElective(21).withMinLevel(2000),
                 new RequirementVicCisElective(22).withMinLevel(2000),
                 new RequirementVicCisElective(20),
