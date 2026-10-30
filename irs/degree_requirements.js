@@ -2379,7 +2379,7 @@ class CourseTaken {
     /** Returns true if this course is on the SUH No-Credit List */
     suhSaysNoCredit() {
         const noCreditNsci = this.subject == "NSCI" && ![1020, 2010, 2020, 3010, 4010, 4020].includes(this.courseNumberInt);
-        const noCreditStat = this.subject == "STAT" && this.courseNumberInt < 4300 && !["STAT 4050", "STAT 4220"].includes(this.code());
+        const noCreditStat = this.subject == "STAT" && this.courseNumberInt < 4300 && !["STAT 4050", "STAT 4220", "STAT 4230"].includes(this.code());
         const noCreditPhys = this.subject == "PHYS" && this.courseNumberInt < 140 && !["PHYS 0050", "PHYS 0051"].includes(this.code());
         const noCreditList = ["ASTRO 0001", "CHEM 1011", "EAS 5030", "EAS 5050", "MATH 1300", "MATH 1510", "MATH 1700",
             "FNCE 0001", "FNCE 0002", "HCMG 0001", "MGMT 0004", "MKTG 0001", "OIDD 0001", "PHYS 1100"];
