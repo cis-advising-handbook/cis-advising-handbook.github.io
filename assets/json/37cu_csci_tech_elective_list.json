@@ -3046,5 +3046,11 @@
     "title": "Hedge Funds",
     "status_prefall24": "yes",
     "status": "unrestricted"
+  },
+  {
+    "course4d": "FNCE 2680",
+    "title": "Trading Securities",
+    "status_prefall24": "no",
+    "status": "no"
   }
 ]
