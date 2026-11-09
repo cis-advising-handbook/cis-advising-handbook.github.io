@@ -3052,5 +3052,11 @@
     "title": "Trading Securities",
     "status_prefall24": "no",
     "status": "no"
+  },
+  {
+    "course4d": "STAT 4800",
+    "title": "Advanced Statistical Computing",
+    "status_prefall24": "yes",
+    "status": "unrestricted"
   }
 ]
